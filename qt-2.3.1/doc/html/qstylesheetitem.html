@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QStyleSheetItem Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QStyleSheetItem Class Reference</h1><br clear="all">
+<p>
+The QStyleSheetItem class encapsulates a text format.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qstylesheet-h.html">qstylesheet.h</a>&gt;</code>
+<p>
+Inherits <a href="qt.html">Qt</a>.
+<p><a href="qstylesheetitem-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#b2f6e3"><b>QStyleSheetItem</b></a> ( QStyleSheet * parent, const QString &amp; name ) </div>
+<li><div class="fn"><a href="#1319e0"><b>QStyleSheetItem</b></a> ( const QStyleSheetItem &amp; ) </div>
+<li><div class="fn"><a href="#7f3d92"><b>~QStyleSheetItem</b></a> () </div>
+<li><div class="fn">QString <a href="#2c86f5"><b>name</b></a> () const</div>
+<li><div class="fn">QStyleSheet* <a href="#c517ca"><b>styleSheet</b></a> () </div>
+<li><div class="fn">const QStyleSheet* <a href="#e40950"><b>styleSheet</b></a> () const</div>
+<li><div class="fn">enum <b>AdditionalStyleValues</b> { Undefined = - 1}</div>
+<li><div class="fn">enum <a href="#DisplayMode"><b>DisplayMode</b></a> { DisplayBlock, DisplayInline, DisplayListItem, DisplayNone }</div>
+<li><div class="fn">DisplayMode <a href="#a52ddd"><b>displayMode</b></a> () const</div>
+<li><div class="fn">void <a href="#01155c"><b>setDisplayMode</b></a> ( DisplayMode m ) </div>
+<li><div class="fn">int <a href="#e7283d"><b>alignment</b></a> () const</div>
+<li><div class="fn">void <a href="#3d22ad"><b>setAlignment</b></a> ( int f ) </div>
+<li><div class="fn">int <a href="#85ef85"><b>fontWeight</b></a> () const</div>
+<li><div class="fn">void <a href="#8292b5"><b>setFontWeight</b></a> ( int w ) </div>
+<li><div class="fn">int <a href="#9f8f30"><b>logicalFontSize</b></a> () const</div>
+<li><div class="fn">void <a href="#885160"><b>setLogicalFontSize</b></a> ( int s ) </div>
+<li><div class="fn">int <a href="#65a204"><b>logicalFontSizeStep</b></a> () const</div>
+<li><div class="fn">void <a href="#d41cb4"><b>setLogicalFontSizeStep</b></a> ( int s ) </div>
+<li><div class="fn">int <a href="#67c06c"><b>fontSize</b></a> () const</div>
+<li><div class="fn">void <a href="#6c6e97"><b>setFontSize</b></a> ( int s ) </div>
+<li><div class="fn">QString <a href="#5bbe79"><b>fontFamily</b></a> () const</div>
+<li><div class="fn">void <a href="#21be86"><b>setFontFamily</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">int numberOfColumns () const <em>(obsolete)</em></div>
+<li><div class="fn">void setNumberOfColumns ( int ncols ) <em>(obsolete)</em></div>
+<li><div class="fn">QColor <a href="#c04b3b"><b>color</b></a> () const</div>
+<li><div class="fn">void <a href="#aad84f"><b>setColor</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn">bool <a href="#44db5f"><b>fontItalic</b></a> () const</div>
+<li><div class="fn">void <a href="#c18bde"><b>setFontItalic</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#15e2ac"><b>definesFontItalic</b></a> () const</div>
+<li><div class="fn">bool <a href="#a0ae7b"><b>fontUnderline</b></a> () const</div>
+<li><div class="fn">void <a href="#f7ac89"><b>setFontUnderline</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#bc95d4"><b>definesFontUnderline</b></a> () const</div>
+<li><div class="fn">bool <a href="#fc0413"><b>isAnchor</b></a> () const</div>
+<li><div class="fn">void <a href="#c4ae7f"><b>setAnchor</b></a> ( bool anc ) </div>
+<li><div class="fn">enum <a href="#WhiteSpaceMode"><b>WhiteSpaceMode</b></a> { WhiteSpaceNormal, WhiteSpacePre, WhiteSpaceNoWrap }</div>
+<li><div class="fn">WhiteSpaceMode <a href="#c7eedd"><b>whiteSpaceMode</b></a> () const</div>
+<li><div class="fn">void <a href="#5cf861"><b>setWhiteSpaceMode</b></a> ( WhiteSpaceMode m ) </div>
+<li><div class="fn">enum <a href="#Margin"><b>Margin</b></a> { MarginLeft, MarginRight, MarginTop, MarginBottom, MarginAll, MarginVertical, MarginHorizontal }</div>
+<li><div class="fn">int <a href="#d3adc4"><b>margin</b></a> ( Margin m ) const</div>
+<li><div class="fn">void <a href="#c6870c"><b>setMargin</b></a> ( Margin, int ) </div>
+<li><div class="fn">enum <a href="#ListStyle"><b>ListStyle</b></a> { ListDisc, ListCircle, ListSquare, ListDecimal, ListLowerAlpha, ListUpperAlpha }</div>
+<li><div class="fn">ListStyle <a href="#bca680"><b>listStyle</b></a> () const</div>
+<li><div class="fn">void <a href="#ab40c6"><b>setListStyle</b></a> ( ListStyle ) </div>
+<li><div class="fn">QString <a href="#d4fd6c"><b>contexts</b></a> () const</div>
+<li><div class="fn">void <a href="#bbd619"><b>setContexts</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">bool <a href="#134d33"><b>allowedInContext</b></a> ( const QStyleSheetItem * ) const</div>
+<li><div class="fn">bool <a href="#a5c31a"><b>selfNesting</b></a> () const</div>
+<li><div class="fn">void <a href="#6e8ef1"><b>setSelfNesting</b></a> ( bool ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QStyleSheetItem class encapsulates a text format.
+<p>
+A style consists of a name and a set of font, color, and other
+display properties.  When used in a <a href="qstylesheet.html">style
+sheet</a>, items define the name of a rich text tag, and the
+display property changes associated with it.
+
+<hr><h2>Member Type Documentation</h2>
+<h3 class="fn"><a name="DisplayMode">QStyleSheetItem::DisplayMode</a></h3>
+This enum type defines the way adjacent elements are displayed.  The possible values are: <ul>
+<li> <code>DisplayBlock</code>
+- elements are displayed as a rectangular block.
+(eg. &lt;P&gt; ... &lt;/P&gt;)
+<li> <code>DisplayInline</code>
+- elements are displayed in a horizontally flowing sequence.
+(eg. &lt;EM&gt; ... &lt;/EM&gt;)
+<li> <code>DisplayListItem</code>
+- elements are displayed in a vertically sequence.
+(eg. &lt;EM&gt; ... &lt;/EM&gt;)
+<li> <code>DisplayNone</code>
+- elements are not displayed at all.
+</ul>
+<h3 class="fn"><a name="ListStyle">QStyleSheetItem::ListStyle</a></h3>
+This enum type defines how the items in a list are prefixed when
+displayed.  The currently defined values are: <ul>
+<li> <code>ListDisc</code> - a filled circle
+<li> <code>ListCircle</code> - an unfilled circle
+<li> <code>ListSquare</code> - a filled circle
+<li> <code>ListDecimal</code> - an integer in base 10: <em>1, 2, 3,</em> ...
+<li> <code>ListLowerAlpha</code> - a lowercase letter: <em>a, b, c,</em> ...
+<li> <code>ListUpperAlpha</code> - an uppercase letter: <em>A, B, C,</em> ...
+</ul>
+<h3 class="fn"><a name="Margin">QStyleSheetItem::Margin</a></h3>
+<ul>
+<li> <code>MarginLeft</code> - left margin
+<li> <code>MarginRight</code> - right margin
+<li> <code>MarginTop</code> - top margin
+<li> <code>MarginBottom</code> - bottom margin
+<li> <code>MarginAll</code> - all margins (left, right, top and bottom )
+<li> <code>MarginVertical</code> - top and bottom margin
+<li> <code>MarginHorizontal</code> - left and right margin
+</ul>
+<h3 class="fn"><a name="WhiteSpaceMode">QStyleSheetItem::WhiteSpaceMode</a></h3>
+This enum defines the ways in which <a href="qstylesheet.html">QStyleSheet</a> can treat white
+space.  There are three values at present: <ul>
+<li> <code>WhiteSpaceNormal</code> - any sequence of white space is equivalent
+to a single space, and is a line-break position.
+<li> <code>WhiteSpacePre</code> - white space must be output exactly as given
+in the input.
+<li> <code>WhiteSpaceNoWrap</code> - multiple spaces are collapsed as with
+WhiteSpaceNormal, but no  automatic line breaks occur. To break lines
+manually, use the <code>&lt;br&gt;</code> tag.
+<p></ul>
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="b2f6e3"></a>QStyleSheetItem::QStyleSheetItem ( <a href="qstylesheet.html">QStyleSheet</a> * parent, const <a href="qstring.html">QString</a> &amp; name )</h3>
+<p>Constructs a new style named <em>name</em> for the stylesheet <em>parent.</em>
+<p>All properties in QStyleSheetItem are initially in the "do not change" state,
+except <a href="#DisplayMode">display mode</a>, which defaults
+to <code>DisplayInline.</code>
+<h3 class="fn"><a name="1319e0"></a>QStyleSheetItem::QStyleSheetItem ( const QStyleSheetItem &amp; other )</h3>
+<p>Copy constructor. Constructs a copy of <em>other</em> that is
+not bound to any stylesheet.
+<h3 class="fn"><a name="7f3d92"></a>QStyleSheetItem::~QStyleSheetItem ()</h3>
+<p>Destructs the style.  Note that QStyleSheetItem objects become owned
+by <a href="qstylesheet.html">QStyleSheet</a> when they are created.
+<h3 class="fn">int <a name="e7283d"></a>QStyleSheetItem::alignment () const</h3>
+<p>Returns the alignment of this style. Possible values are AlignLeft,
+AlignRight and AlignCenter.
+<p>See also  <a href="#3d22ad">setAlignment</a>() and <a href="qt.html#AlignmentFlags">Qt::AlignmentFlags</a>.
+<h3 class="fn">bool <a name="134d33"></a>QStyleSheetItem::allowedInContext ( const QStyleSheetItem * s ) const</h3>
+<p>Returns whether this style can be nested into an element
+of style <em>s</em> .
+<p>See also  contxts() and <a href="#bbd619">setContexts</a>().
+<h3 class="fn"><a href="qcolor.html">QColor</a> <a name="c04b3b"></a>QStyleSheetItem::color () const</h3>
+<p>Returns the text color of this style, or
+<a href="qcolor.html#d6d3dc">an invalid color</a>
+if no color has been set yet.
+<p>See also  <a href="#aad84f">setColor</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="d4fd6c"></a>QStyleSheetItem::contexts () const</h3>
+<p>Returns a space separated list of names of styles that may contain
+elements of this style. As default, contexs() returns an empty
+string, which indicates that this style can be nested everywhere.
+<p>See also  <a href="#bbd619">setContexts</a>().
+<h3 class="fn">bool <a name="15e2ac"></a>QStyleSheetItem::definesFontItalic () const</h3>
+<p>Returns whether the style defines a font shape.  A style
+does not define any shape until <a href="#c18bde">setFontItalic</a>() is called.
+<p>See also  <a href="#c18bde">setFontItalic</a>() and <a href="#44db5f">fontItalic</a>().
+<h3 class="fn">bool <a name="bc95d4"></a>QStyleSheetItem::definesFontUnderline () const</h3>
+<p>Returns whether the style defines a setting for the underline
+property of the font.  A style does not define this until
+<a href="#f7ac89">setFontUnderline</a>() is called.
+<p>See also  <a href="#f7ac89">setFontUnderline</a>() and <a href="#a0ae7b">fontUnderline</a>().
+<h3 class="fn">QStyleSheetItem::DisplayMode <a name="a52ddd"></a>QStyleSheetItem::displayMode() const</h3>
+<p>Returns the <a href="#DisplayMode">display mode</a> of the style.
+<p>See also  <a href="#01155c">setDisplayMode</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="5bbe79"></a>QStyleSheetItem::fontFamily () const</h3>
+<p>Returns the font family setting of the style. This is either a valid
+font family or QString::null if no family has been set.
+<p>See also  <a href="#21be86">setFontFamily</a>(), <a href="qfont.html#a9017e">QFont::family</a>() and <a href="qfont.html#0f8456">QFont::setFamily</a>().
+<h3 class="fn">bool <a name="44db5f"></a>QStyleSheetItem::fontItalic () const</h3>
+<p>Returns whether the styles sets an italic or upright font.
+<p>See also  <a href="#c18bde">setFontItalic</a>() and <a href="#15e2ac">definesFontItalic</a>().
+<h3 class="fn">int <a name="67c06c"></a>QStyleSheetItem::fontSize () const</h3>
+<p>Returns the font size setting of the style. This is either a valid
+pointsize or QStyleSheetItem::Undefined.
+<p>See also  <a href="#6c6e97">setFontSize</a>(), <a href="qfont.html#9bb6f8">QFont::pointSize</a>() and <a href="qfont.html#598c89">QFont::setPointSize</a>().
+<h3 class="fn">bool <a name="a0ae7b"></a>QStyleSheetItem::fontUnderline () const</h3>
+<p>Returns whether the styles sets an underlined font.
+<p>See also  <a href="#f7ac89">setFontUnderline</a>() and <a href="#bc95d4">definesFontUnderline</a>().
+<h3 class="fn">int <a name="85ef85"></a>QStyleSheetItem::fontWeight () const</h3>
+<p>Returns the font weight setting of the style. This is either a
+valid <a href="qfont.html#Weight">QFont::Weight</a> or the value QStyleSheetItem::Undefined.
+<p>See also  <a href="#8292b5">setFontWeight</a>() and <a href="qfont.html">QFont</a>.
+<h3 class="fn">bool <a name="fc0413"></a>QStyleSheetItem::isAnchor () const</h3>
+<p>Returns whether this style is an anchor.
+<p>See also  <a href="#c4ae7f">setAnchor</a>().
+<h3 class="fn">QStyleSheetItem::ListStyle <a name="bca680"></a>QStyleSheetItem::listStyle() const</h3>
+<p>Returns the list style of the style.
+<p>See also  <a href="#ab40c6">setListStyle</a>().
+<h3 class="fn">int <a name="9f8f30"></a>QStyleSheetItem::logicalFontSize () const</h3>
+<p>Returns the logical font size setting of the style. This is either a valid
+size between 1 and 7  or QStyleSheetItem::Undefined.
+<p>See also  <a href="#885160">setLogicalFontSize</a>(), <a href="#d41cb4">setLogicalFontSizeStep</a>(), <a href="qfont.html#9bb6f8">QFont::pointSize</a>() and <a href="qfont.html#598c89">QFont::setPointSize</a>().
+<h3 class="fn">int <a name="65a204"></a>QStyleSheetItem::logicalFontSizeStep () const</h3>
+<p>Returns the logical font size step of this style.
+<p>The default is 0. Tags like <code>big</code> define <code>+1, small</code> defines
+<code>-1</code>
+<p>See also  <a href="#d41cb4">setLogicalFontSizeStep</a>().
+<h3 class="fn">int <a name="d3adc4"></a>QStyleSheetItem::margin ( <a href="qstylesheetitem.html#Margin">Margin</a> m ) const</h3>
+<p>Returns the width of margin <em>m</em> in pixel.
+<p>The margin determinator <em>m</em> can be <code>MarginLeft, MarginRight, MarginTop, MarginBottom, MarginAll, MarginVertical</code> or <code>MarginHorizontal.</code>
+<p>See also  <a href="#c6870c">setMargin</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="2c86f5"></a>QStyleSheetItem::name () const</h3>
+<p>Returns the name of style.
+<h3 class="fn">int <a name="6bfc1c"></a>QStyleSheetItem::numberOfColumns () const</h3>
+<p><b>This function is obsolete.</b> It is provided to keep old source working, and will probably be removed in a future version of Qt.  We strongly advise against using it in new code.<p>
+Returns the number of columns for this style.
+<p>See also  <a href="#3cdc88">setNumberOfColumns</a>(), <a href="#a52ddd">displayMode</a>() and <a href="#01155c">setDisplayMode</a>().
+<h3 class="fn">bool <a name="a5c31a"></a>QStyleSheetItem::selfNesting () const</h3>
+<p>Returns whether this style has self nesting enabled.
+<p>See also  <a href="#6e8ef1">setSelfNesting</a>().
+<h3 class="fn">void <a name="3d22ad"></a>QStyleSheetItem::setAlignment ( int f )</h3>
+<p>Sets the alignment. This only makes sense for styles with
+<a href="#DisplayMode">display mode</a>
+DisplayBlock. Possible values are AlignLeft, AlignRight and
+AlignCenter.
+<p>See also  <a href="#e7283d">alignment</a>(), <a href="#a52ddd">displayMode</a>() and <a href="qt.html#AlignmentFlags">Qt::AlignmentFlags</a>.
+<h3 class="fn">void <a name="c4ae7f"></a>QStyleSheetItem::setAnchor ( bool anc )</h3>
+<p>Sets whether the style is an anchor (link).  Elements in this style
+have connections to other documents or anchors.
+<p>See also  <a href="#fc0413">isAnchor</a>().
+<h3 class="fn">void <a name="aad84f"></a>QStyleSheetItem::setColor ( const <a href="qcolor.html">QColor</a> &amp; c )</h3>
+<p>Sets the text color of this style.
+<p>See also  <a href="#c04b3b">color</a>().
+<h3 class="fn">void <a name="bbd619"></a>QStyleSheetItem::setContexts ( const <a href="qstring.html">QString</a> &amp; c )</h3>
+<p>Sets a space separated list of names of styles that may contain
+elements of this style. If <em>c</em> is empty, the style can be nested
+everywhere.
+<p>See also  <a href="#d4fd6c">contexts</a>().
+<h3 class="fn">void <a name="01155c"></a>QStyleSheetItem::setDisplayMode ( <a href="qstylesheetitem.html#DisplayMode">DisplayMode</a> m )</h3>
+<p>Sets the display mode of the style to <em>m.</em>
+<p>See also  <a href="#a52ddd">displayMode</a>().
+<h3 class="fn">void <a name="21be86"></a>QStyleSheetItem::setFontFamily ( const <a href="qstring.html">QString</a> &amp; fam )</h3>
+<p>Sets the font family setting of the style.
+<p>See also  <a href="#5bbe79">fontFamily</a>(), <a href="qfont.html#a9017e">QFont::family</a>() and <a href="qfont.html#0f8456">QFont::setFamily</a>().
+<h3 class="fn">void <a name="c18bde"></a>QStyleSheetItem::setFontItalic ( bool italic )</h3>
+<p>Sets italic or upright shape for the style.
+<p>See also  <a href="#44db5f">fontItalic</a>() and <a href="#15e2ac">definesFontItalic</a>().
+<h3 class="fn">void <a name="6c6e97"></a>QStyleSheetItem::setFontSize ( int s )</h3>
+<p>Sets the font size setting of the style, in point measures.
+<p>See also  <a href="#67c06c">fontSize</a>(), <a href="qfont.html#9bb6f8">QFont::pointSize</a>() and <a href="qfont.html#598c89">QFont::setPointSize</a>().
+<h3 class="fn">void <a name="f7ac89"></a>QStyleSheetItem::setFontUnderline ( bool underline )</h3>
+<p>Sets underline for the style.
+<p>See also  <a href="#a0ae7b">fontUnderline</a>() and <a href="#bc95d4">definesFontUnderline</a>().
+<h3 class="fn">void <a name="8292b5"></a>QStyleSheetItem::setFontWeight ( int w )</h3>
+<p>Sets the font weight setting of the style.  Valid values are
+those defined by <a href="qfont.html#Weight">QFont::Weight</a>.
+<p>See also  <a href="qfont.html">QFont</a> and <a href="#85ef85">fontWeight</a>().
+<h3 class="fn">void <a name="ab40c6"></a>QStyleSheetItem::setListStyle ( <a href="qstylesheetitem.html#ListStyle">ListStyle</a> s )</h3>
+<p>Sets the list style of the style.
+<p>This is used by nested elements which have a display mode of
+DisplayListItem.
+<p>See also  <a href="#bca680">listStyle</a>() and <a href="#DisplayMode">DisplayMode</a>.
+<h3 class="fn">void <a name="885160"></a>QStyleSheetItem::setLogicalFontSize ( int s )</h3>
+<p>Sets the logical font size setting of the style tp <em>s.</em>
+Valid logical sizes are 1 to 7.
+<p>See also  <a href="#9f8f30">logicalFontSize</a>(), <a href="qfont.html#9bb6f8">QFont::pointSize</a>() and <a href="qfont.html#598c89">QFont::setPointSize</a>().
+<h3 class="fn">void <a name="d41cb4"></a>QStyleSheetItem::setLogicalFontSizeStep ( int s )</h3>
+<p>Sets the logical font size step of this style to <em>s.</em>
+<p>See also  <a href="#65a204">logicalFontSizeStep</a>().
+<h3 class="fn">void <a name="c6870c"></a>QStyleSheetItem::setMargin ( <a href="qstylesheetitem.html#Margin">Margin</a> m, int v )</h3>
+<p>Sets the width of margin <em>m</em> to <em>v</em>  pixels.
+<p>The margin determinator <em>m</em> can be <code>MarginLeft, MarginRight, MarginTop, MarginBottom, MarginAll, MarginVertical</code> or <code>MarginHorizontal.</code>  The value <em>v</em> must be >= 0.
+<p>See also  <a href="#d3adc4">margin</a>().
+<h3 class="fn">void <a name="3cdc88"></a>QStyleSheetItem::setNumberOfColumns ( int ncols )</h3>
+<p><b>This function is obsolete.</b> It is provided to keep old source working, and will probably be removed in a future version of Qt.  We strongly advise against using it in new code.<p>
+Sets the number of columns for this style.  Elements in the style
+are divided into columns.
+<p>This only makes sense
+if the style uses a <a href="#DisplayMode">block display mode</a>.
+<p>See also  <a href="#6bfc1c">numberOfColumns</a>().
+<h3 class="fn">void <a name="6e8ef1"></a>QStyleSheetItem::setSelfNesting ( bool nesting )</h3>
+<p>Sets the self nesting property for this style to <em>nesting.</em>
+<p>In order to support "dirty" HTML, paragraphs &lt;p&gt and list items
+&lt;li&gt are not self nesting. This means that starting a new
+paragraph or list item automatically closes the previous one.
+<p>See also  <a href="#a5c31a">selfNesting</a>().
+<h3 class="fn">void <a name="5cf861"></a>QStyleSheetItem::setWhiteSpaceMode ( <a href="qstylesheetitem.html#WhiteSpaceMode">WhiteSpaceMode</a> m )</h3>
+<p>Sets the white space mode to <em>m.</em> Possible values are
+<ul>
+<li> <code>WhiteSpaceNormal</code>
+- white spaces in the document only serve as separators.
+Multiple spaces or indentation therefore is ignored.
+<li> <code>WhiteSpacePre</code>
+- white spaces are preserved. This is particularly useful to
+display programming code.
+<li> <code>WhiteSpaceNoWrap</code>
+- multiple spaces are collapsed as with WhiteSpaceNormal, but no
+automatic line breaks occur. To break lines manually, use the
+<code>&lt;br&gt;</code> tag.
+</ul>
+<h3 class="fn"><a href="qstylesheet.html">QStyleSheet</a>* <a name="c517ca"></a>QStyleSheetItem::styleSheet ()</h3>
+<p>Returns the stylesheet this item is in.
+<h3 class="fn">const <a href="qstylesheet.html">QStyleSheet</a>* <a name="e40950"></a>QStyleSheetItem::styleSheet () const</h3>
+<p>Returns the stylesheet this item is in.
+<h3 class="fn">QStyleSheetItem::WhiteSpaceMode <a name="c7eedd"></a>QStyleSheetItem::whiteSpaceMode() const</h3>
+<p>Returns  the white space mode.
+<p>See also  <a href="#5cf861">setWhiteSpaceMode</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

@@ -1,0 +1,1215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QPainter Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QPainter Class Reference</h1><br clear="all">
+<p>
+The QPainter class paints on paint devices.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qpainter-h.html">qpainter.h</a>&gt;</code>
+<p>
+Inherits <a href="qt.html">Qt</a>.
+<p><a href="qpainter-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#1fd12e"><b>QPainter</b></a> () </div>
+<li><div class="fn"><a href="#b91f46"><b>QPainter</b></a> ( const QPaintDevice * ) </div>
+<li><div class="fn"><a href="#05f283"><b>QPainter</b></a> ( const QPaintDevice *, const QWidget * ) </div>
+<li><div class="fn"><a href="#b2e6cf"><b>~QPainter</b></a> () </div>
+<li><div class="fn">bool <a href="#59f1bb"><b>begin</b></a> ( const QPaintDevice * ) </div>
+<li><div class="fn">bool <a href="#e63dd0"><b>begin</b></a> ( const QPaintDevice *, const QWidget * ) </div>
+<li><div class="fn">bool <a href="#c7f9ac"><b>end</b></a> () </div>
+<li><div class="fn">QPaintDevice* <a href="#84abcf"><b>device</b></a> () const</div>
+<li><div class="fn">bool <a href="#964105"><b>isActive</b></a> () const</div>
+<li><div class="fn">void <a href="#24f277"><b>flush</b></a> () </div>
+<li><div class="fn">void <a href="#629789"><b>save</b></a> () </div>
+<li><div class="fn">void <a href="#24cf68"><b>restore</b></a> () </div>
+<li><div class="fn">QFontMetrics <a href="#f572a5"><b>fontMetrics</b></a> () const</div>
+<li><div class="fn">QFontInfo <a href="#8c3c26"><b>fontInfo</b></a> () const</div>
+<li><div class="fn">const QFont&amp; <a href="#056ec9"><b>font</b></a> () const</div>
+<li><div class="fn">void <a href="#e4d6b7"><b>setFont</b></a> ( const QFont &amp; ) </div>
+<li><div class="fn">const QPen&amp; <a href="#759128"><b>pen</b></a> () const</div>
+<li><div class="fn">void <a href="#9e3f71"><b>setPen</b></a> ( const QPen &amp; ) </div>
+<li><div class="fn">void <a href="#0a6aff"><b>setPen</b></a> ( PenStyle ) </div>
+<li><div class="fn">void <a href="#506db2"><b>setPen</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn">const QBrush&amp; <a href="#e63901"><b>brush</b></a> () const</div>
+<li><div class="fn">void <a href="#38e68f"><b>setBrush</b></a> ( const QBrush &amp; ) </div>
+<li><div class="fn">void <a href="#e56a24"><b>setBrush</b></a> ( BrushStyle ) </div>
+<li><div class="fn">void <a href="#9d7f34"><b>setBrush</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn">QPoint <a href="#148022"><b>pos</b></a> () const</div>
+<li><div class="fn">const QColor&amp; <a href="#09f5ca"><b>backgroundColor</b></a> () const</div>
+<li><div class="fn">void <a href="#744dce"><b>setBackgroundColor</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn">BGMode <a href="#98d868"><b>backgroundMode</b></a> () const</div>
+<li><div class="fn">void <a href="#eab325"><b>setBackgroundMode</b></a> ( BGMode ) </div>
+<li><div class="fn">RasterOp <a href="#e71439"><b>rasterOp</b></a> () const</div>
+<li><div class="fn">void <a href="#56e473"><b>setRasterOp</b></a> ( RasterOp ) </div>
+<li><div class="fn">const QPoint&amp; <a href="#4e9a28"><b>brushOrigin</b></a> () const</div>
+<li><div class="fn">void <a href="#f3d83a"><b>setBrushOrigin</b></a> ( int x, int y ) </div>
+<li><div class="fn">void <a href="#0e516e"><b>setBrushOrigin</b></a> ( const QPoint &amp; ) </div>
+<li><div class="fn">bool <a href="#a6a6d0"><b>hasViewXForm</b></a> () const</div>
+<li><div class="fn">bool <a href="#784fab"><b>hasWorldXForm</b></a> () const</div>
+<li><div class="fn">void <a href="#758881"><b>setViewXForm</b></a> ( bool ) </div>
+<li><div class="fn">QRect <a href="#98a36a"><b>window</b></a> () const</div>
+<li><div class="fn">void <a href="#a10cc4"><b>setWindow</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#797026"><b>setWindow</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">QRect <a href="#1802a4"><b>viewport</b></a> () const</div>
+<li><div class="fn">void <a href="#d79e2c"><b>setViewport</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#e86cf5"><b>setViewport</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#e31cca"><b>setWorldXForm</b></a> ( bool ) </div>
+<li><div class="fn">const QWMatrix&amp; <a href="#f16980"><b>worldMatrix</b></a> () const</div>
+<li><div class="fn">void <a href="#f4a354"><b>setWorldMatrix</b></a> ( const QWMatrix &amp;, bool combine=FALSE ) </div>
+<li><div class="fn">void saveWorldMatrix () <em>(obsolete)</em></div>
+<li><div class="fn">void restoreWorldMatrix () <em>(obsolete)</em></div>
+<li><div class="fn">void <a href="#fc599c"><b>scale</b></a> ( double sx, double sy ) </div>
+<li><div class="fn">void <a href="#a3ef1f"><b>shear</b></a> ( double sh, double sv ) </div>
+<li><div class="fn">void <a href="#4bd0fb"><b>rotate</b></a> ( double a ) </div>
+<li><div class="fn">void <a href="#ba64b6"><b>translate</b></a> ( double dx, double dy ) </div>
+<li><div class="fn">void <a href="#b09ca4"><b>resetXForm</b></a> () </div>
+<li><div class="fn">QPoint <a href="#0dc06e"><b>xForm</b></a> ( const QPoint &amp; ) const</div>
+<li><div class="fn">QRect <a href="#c47da6"><b>xForm</b></a> ( const QRect &amp; ) const</div>
+<li><div class="fn">QPointArray <a href="#bbbdd1"><b>xForm</b></a> ( const QPointArray &amp; ) const</div>
+<li><div class="fn">QPointArray <a href="#30fbe4"><b>xForm</b></a> ( const QPointArray &amp;, int index, int npoints ) const</div>
+<li><div class="fn">QPoint <a href="#4bff42"><b>xFormDev</b></a> ( const QPoint &amp; ) const</div>
+<li><div class="fn">QRect <a href="#b8e8c3"><b>xFormDev</b></a> ( const QRect &amp; ) const</div>
+<li><div class="fn">QPointArray <a href="#484a0d"><b>xFormDev</b></a> ( const QPointArray &amp; ) const</div>
+<li><div class="fn">QPointArray <a href="#9e6391"><b>xFormDev</b></a> ( const QPointArray &amp;, int index, int npoints ) const</div>
+<li><div class="fn">void <a href="#fb38a9"><b>setClipping</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#891afc"><b>hasClipping</b></a> () const</div>
+<li><div class="fn">const QRegion&amp; <a href="#49378e"><b>clipRegion</b></a> () const</div>
+<li><div class="fn">void <a href="#2c14e9"><b>setClipRect</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#2ccac9"><b>setClipRect</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#6d2fff"><b>setClipRegion</b></a> ( const QRegion &amp; ) </div>
+<li><div class="fn">void <a href="#036310"><b>drawPoint</b></a> ( int x, int y ) </div>
+<li><div class="fn">void <a href="#124d1c"><b>drawPoint</b></a> ( const QPoint &amp; ) </div>
+<li><div class="fn">void <a href="#02c510"><b>drawPoints</b></a> ( const QPointArray &amp; a, int index=0, int npoints=-1 ) </div>
+<li><div class="fn">void <a href="#dd01de"><b>moveTo</b></a> ( int x, int y ) </div>
+<li><div class="fn">void <a href="#2c2f5c"><b>moveTo</b></a> ( const QPoint &amp; ) </div>
+<li><div class="fn">void <a href="#350b26"><b>lineTo</b></a> ( int x, int y ) </div>
+<li><div class="fn">void <a href="#6ef00f"><b>lineTo</b></a> ( const QPoint &amp; ) </div>
+<li><div class="fn">void <a href="#ffde14"><b>drawLine</b></a> ( int x1, int y1, int x2, int y2 ) </div>
+<li><div class="fn">void <a href="#37feef"><b>drawLine</b></a> ( const QPoint &amp;, const QPoint &amp; ) </div>
+<li><div class="fn">void <a href="#b29a16"><b>drawRect</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#b25e3c"><b>drawRect</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#7da3d8"><b>drawWinFocusRect</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#58b219"><b>drawWinFocusRect</b></a> ( int x, int y, int w, int h, const QColor &amp; bgColor ) </div>
+<li><div class="fn">void <a href="#40c64c"><b>drawWinFocusRect</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#47b99f"><b>drawWinFocusRect</b></a> ( const QRect &amp;, const QColor &amp; bgColor ) </div>
+<li><div class="fn">void <a href="#af3126"><b>drawRoundRect</b></a> ( int x, int y, int w, int h, int, int ) </div>
+<li><div class="fn">void <a href="#d772bf"><b>drawRoundRect</b></a> ( const QRect &amp;, int, int ) </div>
+<li><div class="fn">void <a href="#63b7c9"><b>drawRoundRect</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#2e160c"><b>drawRoundRect</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#06ff17"><b>drawEllipse</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#ec89e0"><b>drawEllipse</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#30d1bc"><b>drawArc</b></a> ( int x, int y, int w, int h, int a, int alen ) </div>
+<li><div class="fn">void <a href="#379ec0"><b>drawArc</b></a> ( const QRect &amp;, int a, int alen ) </div>
+<li><div class="fn">void <a href="#dc4acb"><b>drawPie</b></a> ( int x, int y, int w, int h, int a, int alen ) </div>
+<li><div class="fn">void <a href="#8d5b8a"><b>drawPie</b></a> ( const QRect &amp;, int a, int alen ) </div>
+<li><div class="fn">void <a href="#556bb9"><b>drawChord</b></a> ( int x, int y, int w, int h, int a, int alen ) </div>
+<li><div class="fn">void <a href="#f35560"><b>drawChord</b></a> ( const QRect &amp;, int a, int alen ) </div>
+<li><div class="fn">void <a href="#1793cd"><b>drawLineSegments</b></a> ( const QPointArray &amp;, int index=0, int nlines=-1 ) </div>
+<li><div class="fn">void <a href="#bd740e"><b>drawPolyline</b></a> ( const QPointArray &amp;, int index=0, int npoints=-1 ) </div>
+<li><div class="fn">void <a href="#4dd5bc"><b>drawPolygon</b></a> ( const QPointArray &amp;, bool winding=FALSE, int index=0, int npoints=-1 ) </div>
+<li><div class="fn">void <a href="#b820f8"><b>drawQuadBezier</b></a> ( const QPointArray &amp;, int index=0 ) </div>
+<li><div class="fn">void <a href="#f3fb4a"><b>drawPixmap</b></a> ( int x, int y, const QPixmap &amp;, int sx=0, int sy=0, int sw=-1, int sh=-1 ) </div>
+<li><div class="fn">void <a href="#7a8e8c"><b>drawPixmap</b></a> ( const QPoint &amp;, const QPixmap &amp;, const QRect &amp; sr ) </div>
+<li><div class="fn">void <a href="#736939"><b>drawPixmap</b></a> ( const QPoint &amp;, const QPixmap &amp; ) </div>
+<li><div class="fn">void <a href="#377cac"><b>drawImage</b></a> ( int x, int y, const QImage &amp;, int sx=0, int sy=0, int sw=-1, int sh=-1 ) </div>
+<li><div class="fn">void <a href="#1329f3"><b>drawImage</b></a> ( const QPoint &amp;, const QImage &amp;, const QRect &amp; sr ) </div>
+<li><div class="fn">void <a href="#426f4c"><b>drawImage</b></a> ( const QPoint &amp;, const QImage &amp; ) </div>
+<li><div class="fn">void <a href="#aeed06"><b>drawImage</b></a> ( int x, int y, const QImage &amp;, int sx, int sy, int sw, int sh, int conversion_flags ) </div>
+<li><div class="fn">void <a href="#e298fd"><b>drawImage</b></a> ( const QPoint &amp;, const QImage &amp;, const QRect &amp; sr, int conversion_flags ) </div>
+<li><div class="fn">void <a href="#ebae66"><b>drawImage</b></a> ( const QPoint &amp;, const QImage &amp;, int conversion_flags ) </div>
+<li><div class="fn">void <a href="#e784ea"><b>drawTiledPixmap</b></a> ( int x, int y, int w, int h, const QPixmap &amp;, int sx=0, int sy=0 ) </div>
+<li><div class="fn">void <a href="#9b0f8f"><b>drawTiledPixmap</b></a> ( const QRect &amp;, const QPixmap &amp;, const QPoint &amp; ) </div>
+<li><div class="fn">void <a href="#0de014"><b>drawTiledPixmap</b></a> ( const QRect &amp;, const QPixmap &amp; ) </div>
+<li><div class="fn">void <a href="#516091"><b>drawPicture</b></a> ( const QPicture &amp; ) </div>
+<li><div class="fn">void <a href="#0f4c23"><b>fillRect</b></a> ( int x, int y, int w, int h, const QBrush &amp; ) </div>
+<li><div class="fn">void <a href="#cc9b31"><b>fillRect</b></a> ( const QRect &amp;, const QBrush &amp; ) </div>
+<li><div class="fn">void <a href="#aa2595"><b>eraseRect</b></a> ( int x, int y, int w, int h ) </div>
+<li><div class="fn">void <a href="#65ad69"><b>eraseRect</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn">void <a href="#bcb232"><b>drawText</b></a> ( int x, int y, const QString &amp;, int len = -1 ) </div>
+<li><div class="fn">void <a href="#63bacc"><b>drawText</b></a> ( const QPoint &amp;, const QString &amp;, int len = -1 ) </div>
+<li><div class="fn">void <a href="#8a59ed"><b>drawText</b></a> ( int x, int y, int w, int h, int flags, const QString &amp;, int len = -1, QRect * br=0, char ** internal=0 ) </div>
+<li><div class="fn">void <a href="#d494ee"><b>drawText</b></a> ( const QRect &amp;, int flags, const QString &amp;, int len = -1, QRect * br=0, char ** internal=0 ) </div>
+<li><div class="fn">QRect <a href="#03ed21"><b>boundingRect</b></a> ( int x, int y, int w, int h, int flags, const QString &amp;, int len = -1, char ** intern=0 ) </div>
+<li><div class="fn">QRect <a href="#57f5ab"><b>boundingRect</b></a> ( const QRect &amp;, int flags, const QString &amp;, int len = -1, char ** intern=0 ) </div>
+<li><div class="fn">int <a href="#d0b8c4"><b>tabStops</b></a> () const</div>
+<li><div class="fn">void <a href="#075543"><b>setTabStops</b></a> ( int ) </div>
+<li><div class="fn">int* <a href="#4498a4"><b>tabArray</b></a> () const</div>
+<li><div class="fn">void <a href="#69c754"><b>setTabArray</b></a> ( int * ) </div>
+</ul>
+<h2>Static Public Members</h2>
+<ul>
+<li><div class="fn">void <a href="#fc6836"><b>redirect</b></a> ( QPaintDevice * pdev, QPaintDevice * replacement ) </div>
+<li><div class="fn">void <a href="#cfae81"><b>initialize</b></a> () </div>
+<li><div class="fn">void <a href="#fa3611"><b>cleanup</b></a> () </div>
+</ul>
+<h2>Related Functions</h2>
+(Note that these are not member functions.)
+<ul>
+<li>void <a href="qpainter.html#07370a"><b>qDrawPlainRect</b></a> (QPainter * p, int x, int y, int w, int h, const QColor &amp; c, int lineWidth, const QBrush * fill)
+<li>void <a href="qpainter.html#17185c"><b>qDrawShadeLine</b></a> (QPainter * p, int x1, int y1, int x2, int y2, const QColorGroup &amp; g, bool sunken, int lineWidth, int midLineWidth)
+<li>void <a href="qpainter.html#724ffe"><b>qDrawWinButton</b></a> (QPainter * p, int x, int y, int w, int h, const QColorGroup &amp; g, bool sunken, const QBrush * fill)
+<li>void <a href="qpainter.html#8de467"><b>qDrawWinPanel</b></a> (QPainter * p, int x, int y, int w, int h, const QColorGroup &amp; g, bool sunken, const QBrush * fill)
+<li>void <a href="qpainter.html#e55bfb"><b>qDrawShadePanel</b></a> (QPainter * p, int x, int y, int w, int h, const QColorGroup &amp; g, bool sunken, int lineWidth, const QBrush * fill)
+<li>void <a href="qpainter.html#fe5f92"><b>qDrawShadeRect</b></a> (QPainter * p, int x, int y, int w, int h, const QColorGroup &amp; g, bool sunken, int lineWidth, int midLineWidth, const QBrush * fill)
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QPainter class paints on paint devices.
+<p>
+The painter provides efficient graphics rendering on any
+<a href="qpaintdevice.html">QPaintDevice</a> object. QPainter can draw everything from simple lines
+to complex shapes like pies and chords. It can also draw aligned
+text and pixmaps.  Normally, it draws in a "natural" coordinate
+system, but it can also do view and world transformation.
+<p>The typical use of a painter is:
+<p><ol>
+<li> Construct a painter.
+<li> Set a pen, a brush etc.
+<li> Draw.
+<li> Destroy the painter.
+</ol>
+<p>Mostly, all this is done inside a paint event.  (In fact, 99% of all
+QPainter use is in a reimplementation of <a href="qwidget.html#ef2069">QWidget::paintEvent</a>()).
+Here's one very simple example:
+<p><pre>    void SimpleExampleWidget::paintEvent()
+    {
+        <a href="qpainter.html">QPainter</a> paint( this );
+        paint.<a href="#0a6aff">setPen</a>( Qt::blue );
+        paint.<a href="#8a59ed">drawText</a>( rect(), AlignCenter, "The Text" );
+    }
+</pre>
+<p>Simple. However, there are many settings you may use: <ul>
+<li> <a href="#056ec9">font</a>() is the currently set font.  If you set a font that isn't
+available, Qt finds a close match.  In that case font() returns what
+you set using <a href="#e4d6b7">setFont</a>() and <a href="#8c3c26">fontInfo</a>() returns the font actually
+being used.
+<li> <a href="#e63901">brush</a>() is the currently set brush; the color or pattern
+that's used for filling e.g. circles.
+<li> <a href="#759128">pen</a>() is the currently set pen; the color or stipple that's
+used for drawing lines or boundaries.
+<li> <a href="#98d868">backgroundMode</a>() is <code>Opaque</code> or <code>Transparent,</code> ie. whether
+<a href="#09f5ca">backgroundColor</a>() is used or not.
+<li> backgroundColor() only applies when backgroundMode() is Opaque
+and pen() is a stipple.  In that case, it describes the color of the
+background pixels in the stipple.
+<li> <a href="#e71439">rasterOp</a>() is how pixels drawn interact with the data already
+there.
+<li> <a href="#4e9a28">brushOrigin</a>() is the origin of the tiled brushes, normally the
+origin of the window.
+<li> <a href="#1802a4">viewport</a>(), <a href="#98a36a">window</a>(), <a href="#f16980">worldMatrix</a>() and many more make up the
+painter's coordinate transformation system.  See <a href="coordsys.html">The Coordinate System</a> for an explanation of this, or a
+paragraph below for a quick overview of the functions.
+<li> clipping() is whether the painter clips at all. (The paint
+device clips, too.)  If the painter clips, it clips to <a href="#49378e">clipRegion</a>().
+<li> <a href="#148022">pos</a>() is the current position, set by <a href="#dd01de">moveTo</a>() and used by
+<a href="#350b26">lineTo</a>().
+<p></ul>
+<p>Note that some of these settings mirror settings in some paint
+devices, e.g. <a href="qwidget.html#3a7237">QWidget::font</a>(). <a href="#59f1bb">QPainter::begin</a>() (or the QPainter
+constructor) copies these attributes from the paint device, changing
+calling e.g. <a href="qwidget.html#26de4b">QWidget::setFont</a>() doesn't take effect until the next
+time a painter begins painting on it.
+<p><a href="#629789">save</a>() saves all of these settings on an internal stack, <a href="#24cf68">restore</a>()
+pops them back.
+<p>The core functionality of QPainter is drawing, and there are
+functions to draw most primitives: <a href="#036310">drawPoint</a>(), <a href="#02c510">drawPoints</a>(),
+<a href="#ffde14">drawLine</a>(), <a href="#b29a16">drawRect</a>(), <a href="#58b219">drawWinFocusRect</a>(), <a href="#af3126">drawRoundRect</a>(),
+<a href="#06ff17">drawEllipse</a>(), <a href="#30d1bc">drawArc</a>(), <a href="#dc4acb">drawPie</a>(), <a href="#556bb9">drawChord</a>(),
+<a href="#1793cd">drawLineSegments</a>(), <a href="#bd740e">drawPolyline</a>(), <a href="#4dd5bc">drawPolygon</a>(), and
+<a href="#b820f8">drawQuadBezier</a>().
+<p>There are functions to draw pixmaps/images, namely <a href="#f3fb4a">drawPixmap</a>(),
+<a href="#aeed06">drawImage</a>() and <a href="#e784ea">drawTiledPixmap</a>().  drawPixmap() and drawImage()
+produce the same result, except that drawPixmap() is faster
+on-screen and drawImage() faster and sometimes better on <a href="qprinter.html">QPrinter</a>
+and <a href="qpicture.html">QPicture</a>.
+<p>Text drawing is done using <a href="#8a59ed">drawText</a>(), and when you need
+fine-grained positioning, <a href="#03ed21">boundingRect</a>() tells you where a given
+drawText() command would draw.
+<p>There is a <a href="#516091">drawPicture</a>() that draws the contents of an entire
+QPicture using this painter.  drawPicture() is the only function
+that disregards all the painter's settings: The QPicture has its own
+settings.
+<p>Normally, the QPainter operates on the device's own coordinate
+system (usually pixels), but QPainter has good support for
+coordinate transformation.  See <a href="coordsys.html">The Coordinate
+System</a> for a more general overview and a walkthrough of a
+simple example.
+<p>The most common functions used are <a href="#fc599c">scale</a>(), <a href="#4bd0fb">rotate</a>(), <a href="#ba64b6">translate</a>()
+and <a href="#a3ef1f">shear</a>(), all of which operate on the worldMatrix().
+<a href="#f4a354">setWorldMatrix</a>() can replace or add to the currently set matrix().
+<p><a href="#e86cf5">setViewport</a>() sets the rectangle on which QPainter operates.  The
+default is the entire device, which is usually fine, except on
+printers.  <a href="#797026">setWindow</a>() sets the coordinate system, that is, the
+rectangle that maps to viewport().  What's draws inside the window()
+ends up being inside the viewport().  The window's default is the
+same as the viewport, and if you don't use the transformations, they
+are optimized away, gaining a little speed.
+<p>After all the coordinate transformation is done, QPainter can clip
+the drawing to and arbitrary rectangle or region.  <a href="#891afc">hasClipping</a>() is
+TRUE if QPainter clips, and clipRegion() returns the clip region.
+You can set it using either <a href="#6d2fff">setClipRegion</a>() or <a href="#2ccac9">setClipRect</a>().  Note
+that the clipping can be slow.  It's all system-dependent, but as a
+rule of thumb, you can assume that drawing speed is inversely
+proportional to the number of rectangles in the clip region.
+<p>After QPainter's clipping, the paint device too will clip a bit.
+For example, most widgets clip away the pixels used by child
+widgets, and most printers clip away an area near the edges of the
+paper.  This additional clipping is <em>not</em> reflected by the return
+value of clipRegion() or hasClipping().
+<p>Finally, QPainter includes some little-used functions that are very
+handy the few times you need them.
+<p><a href="#964105">isActive</a>() indicates whether the painter is active.  <a href="#59f1bb">begin</a>() (and
+the most usual constructor) makes it active.  <a href="#c7f9ac">end</a>() (and the
+destructor) deactivates it.  If the painter is active, <a href="#84abcf">device</a>()
+returns the paint device on which the painter paints.
+<p>Sometimes it is desirable to make someone else paint on an unusual
+QPaintDevice.  QPainter supports a static function to do this,
+<a href="#fc6836">redirect</a>().  We recommend not using it, but for some hacks it's
+perfect.
+<p><a href="#075543">setTabStops</a>() and <a href="#69c754">setTabArray</a>() can change where the
+tab stops are, but these are very seldomly used.<p><b>Warning:</b> Note that QPainter does not attempt to work around
+coordinate limitations in the underlying window system.  Some
+platforms may behave incorrectly with coordinates as small as +/-
+4000.
+<p>See also  <a href="qpaintdevice.html">QPaintDevice</a>, <a href="qwidget.html">QWidget</a>, <a href="qpixmap.html">QPixmap</a>, <a href="qprinter.html">QPrinter</a>, <a href="qpicture.html">QPicture</a>, <a href="simple-application.html">Application Walkthrough</a> and <a href="coordsys.html">Coordinate System Overview</a>
+<p>Examples:
+ <a href="qtimage-qtimage-cpp.html#QPainter">qtimage/qtimage.cpp</a>
+ <a href="grapher-grapher-cpp.html#QPainter">grapher/grapher.cpp</a>
+ <a href="drawlines-connect-cpp.html#QPainter">drawlines/connect.cpp</a>
+ <a href="xform-xform-cpp.html#QPainter">xform/xform.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#QPainter">drawdemo/drawdemo.cpp</a>
+ <a href="menu-menu-cpp.html#QPainter">menu/menu.cpp</a>
+ <a href="progress-progress-cpp.html#QPainter">progress/progress.cpp</a>
+ <a href="qmag-qmag-cpp.html#QPainter">qmag/qmag.cpp</a>
+ <a href="splitter-splitter-cpp.html#QPainter">splitter/splitter.cpp</a>
+ <a href="forever-forever-cpp.html#QPainter">forever/forever.cpp</a>
+ <a href="desktop-desktop-cpp.html#QPainter">desktop/desktop.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#QPainter">scrollview/scrollview.cpp</a>
+ <a href="trivial-trivial-cpp.html#QPainter">trivial/trivial.cpp</a>
+ <a href="movies-main-cpp.html#QPainter">movies/main.cpp</a>
+ <a href="picture-picture-cpp.html#QPainter">picture/picture.cpp</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="1fd12e"></a>QPainter::QPainter ()</h3>
+<p>Constructs a painter.
+<p>Notice that all painter settings (setPen,setBrush etc.) are reset to
+default values when <a href="#59f1bb">begin</a>() is called.
+<p>See also  <a href="#59f1bb">begin</a>() and <a href="#c7f9ac">end</a>().
+<h3 class="fn"><a name="b91f46"></a>QPainter::QPainter ( const <a href="qpaintdevice.html">QPaintDevice</a> * pd )</h3>
+<p>Constructs a painter that begins painting the paint device <em>pd</em>
+immediately.
+<p>This constructor is convenient for short-lived painters, e.g. in
+a <a href="qwidget.html#ef2069">paint event</a> and should be
+used only once. The constructor calls <a href="#59f1bb">begin</a>() for you and the QPainter
+destructor automatically calls <a href="#c7f9ac">end</a>().
+<p>Here's an example using begin() and end():
+<pre>    void MyWidget::paintEvent( <a href="qpaintevent.html">QPaintEvent</a> * )
+    {
+        <a href="qpainter.html">QPainter</a> p;
+        p.<a href="#59f1bb">begin</a>( this );
+        p.<a href="#ffde14">drawLine</a>( ... );      // drawing code
+        p.<a href="#c7f9ac">end</a>();
+    }
+</pre>
+<p>The same example using this constructor:
+<pre>    void MyWidget::paintEvent( <a href="qpaintevent.html">QPaintEvent</a> * )
+    {
+        <a href="qpainter.html">QPainter</a> p( this );
+        p.<a href="#ffde14">drawLine</a>( ... );      // drawing code
+    }
+</pre>
+<p>See also  <a href="#59f1bb">begin</a>() and <a href="#c7f9ac">end</a>().
+<h3 class="fn"><a name="05f283"></a>QPainter::QPainter ( const <a href="qpaintdevice.html">QPaintDevice</a> * pd, const <a href="qwidget.html">QWidget</a> * copyAttributes )</h3>
+<p>Constructs a painter that begins painting the paint device <em>pd</em>
+immediately, with the default arguments taken from <em>copyAttributes.</em>
+<p>See also  <a href="#59f1bb">begin</a>().
+<h3 class="fn"><a name="b2e6cf"></a>QPainter::~QPainter ()</h3>
+<p>Destructs the painter.
+<h3 class="fn">const <a href="qcolor.html">QColor</a> &amp; <a name="09f5ca"></a>QPainter::backgroundColor () const</h3>
+<p>Returns the current background color.
+<p>See also  <a href="#744dce">setBackgroundColor</a>() and <a href="qcolor.html">QColor</a>.
+<h3 class="fn">BGMode <a name="98d868"></a>QPainter::backgroundMode () const</h3>
+<p>Returns the current background mode.
+<p>See also  <a href="#eab325">setBackgroundMode</a>() and BGMode.
+<h3 class="fn">bool <a name="59f1bb"></a>QPainter::begin ( const <a href="qpaintdevice.html">QPaintDevice</a> * pd )</h3>
+<p>Begins painting the paint device <em>pd</em> and returns TRUE if successful,
+or FALSE if an error occurs.
+<p>The errors that can occur are serious problems, such as these:
+<p><pre>    p-&gt;begin( 0 ); // impossible - paint device cannot be 0
+
+    <a href="qpixmap.html">QPixmap</a> pm( 0, 0 );
+    p-&gt;begin( pm ); // impossible - pm.<a href="qpixmap.html#29cbd3">isNull</a>();
+
+    p-&gt;begin( myWidget );
+    p2-&gt;begin( myWidget ); // impossible - only one painter at a time
+</pre>
+<p>Note that most of the time, you can use one of the constructors
+instead of begin(), and that <a href="#c7f9ac">end</a>() is automatically done at
+destruction.<p><b>Warning:</b> A paint device can only be painted by one painter at a time.
+<p>See also  <a href="#c7f9ac">end</a>() and <a href="#24f277">flush</a>().
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#begin">drawdemo/drawdemo.cpp</a>
+ <a href="desktop-desktop-cpp.html#begin">desktop/desktop.cpp</a>
+ <a href="picture-picture-cpp.html#begin">picture/picture.cpp</a>
+<h3 class="fn">bool <a name="e63dd0"></a>QPainter::begin ( const <a href="qpaintdevice.html">QPaintDevice</a> * pd, const <a href="qwidget.html">QWidget</a> * copyAttributes )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>This version opens the painter on a paint device <em>pd</em> and sets the initial
+pen, background color and font from <em>copyAttributes.</em>  This is equivalent
+with:
+<pre>    <a href="qpainter.html">QPainter</a> p;
+    p.<a href="#59f1bb">begin</a>( pd );
+    p.<a href="#0a6aff">setPen</a>( copyAttributes-&gt;foregroundColor() );
+    p.<a href="#744dce">setBackgroundColor</a>( copyAttributes-&gt;backgroundColor() );
+    p.<a href="#e4d6b7">setFont</a>( copyAttributes-&gt;font() );
+</pre>
+<p>This begin function is convenient for double buffering.  When you
+draw in a pixmap instead of directly in a widget (to later bitBlt
+the pixmap into the widget) you will need to set the widgets's
+font etc.  This function does exactly that.
+<p>Example:
+<pre>    void MyWidget::paintEvent( <a href="qpaintevent.html">QPaintEvent</a> * )
+    {
+        <a href="qpixmap.html">QPixmap</a> pm(size());
+        <a href="qpainter.html">QPainter</a> p;
+        p.<a href="#59f1bb">begin</a>(&amp;pm, this);
+        // ... potential flickering paint operation ...
+        p.<a href="#c7f9ac">end</a>();
+        <a href="qpaintdevice.html#058006">bitBlt</a>(this, 0, 0, &amp;pm);
+    }
+</pre>
+<p>See also  <a href="#c7f9ac">end</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="03ed21"></a>QPainter::boundingRect ( int x, int y, int w, int h, int tf, const <a href="qstring.html">QString</a> &amp; str, int len = -1, char ** internal=0 )</h3>
+<p>Returns the bounding rectangle of the aligned text that would be
+printed with the corresponding <a href="#8a59ed">drawText</a>() function (the first <em>len</em>
+characters from <em>str).</em>  The drawing, and hence the bounding
+rectangle, is constrained to the rectangle <em>(x,y,w,h).</em>
+<p>If <em>len</em> is negative (default value), the whole string is used.
+<p>The <em>tf</em> argument is
+the bitwise OR of the following flags:  <ul>
+<li> <code>AlignLeft</code> aligns to the left border.
+<li> <code>AlignRight</code> aligns to the right border.
+<li> <code>AlignHCenter</code> aligns horizontally centered.
+<li> <code>AlignTop</code> aligns to the top border.
+<li> <code>AlignBottom</code> aligns to the bottom border.
+<li> <code>AlignVCenter</code> aligns vertically centered
+<li> <code>AlignCenter</code> (= <code>AlignHCenter</code> | AlignVCenter)
+<li> <code>SingleLine</code> ignores newline characters in the text.
+<li> <code>ExpandTabs</code> expands tabulators.
+<li> <code>ShowPrefix</code> interprets "&x" as "x" underlined.
+<li> <code>WordBreak</code> breaks the text to fit the rectangle.
+</ul>
+<p>Horizontal alignment defaults to AlignLeft and vertical alignment
+defaults to AlignTop.
+<p>If several of the horizontal or several of the vertical alignment flags
+are set, the resulting alignment is undefined.
+<p>These flags are defined in <a href="qnamespace-h.html">qnamespace.h</a>.
+<p>See also  <a href="#8a59ed">drawText</a>(), <a href="#f572a5">fontMetrics</a>(), <a href="qfontmetrics.html#0f95c3">QFontMetrics::boundingRect</a>() and <a href="qt.html#AlignmentFlags">Qt::AlignmentFlags</a>.
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="57f5ab"></a>QPainter::boundingRect ( const <a href="qrect.html">QRect</a> &amp; r, int tf, const <a href="qstring.html">QString</a> &amp;, int len = -1, char ** i=0 )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">const <a href="qbrush.html">QBrush</a> &amp; <a name="e63901"></a>QPainter::brush () const</h3>
+<p>Returns the current painter brush.
+<p>See also  <a href="#38e68f">QPainter::setBrush</a>().
+<h3 class="fn">const <a href="qpoint.html">QPoint</a> &amp; <a name="4e9a28"></a>QPainter::brushOrigin () const</h3>
+<p>Returns the brush origin currently set.
+<p>See also  <a href="#f3d83a">setBrushOrigin</a>().
+<h3 class="fn">void <a name="fa3611"></a>QPainter::cleanup () <code>[static]</code></h3>
+<p>Internal function that cleans up the painter.
+<h3 class="fn">const <a href="qregion.html">QRegion</a> &amp; <a name="49378e"></a>QPainter::clipRegion () const</h3>
+<p>Returns the currently set clip region.  Note that the clip region is
+given in physical device coordinates and <em>not</em> subject to any
+<a href="coordsys.html">coordinate transformation.</a>
+<p>See also  <a href="#6d2fff">setClipRegion</a>(), <a href="#2ccac9">setClipRect</a>() and <a href="#fb38a9">setClipping</a>().
+<h3 class="fn"><a href="qpaintdevice.html">QPaintDevice</a> * <a name="84abcf"></a>QPainter::device () const</h3>
+<p>Returns the paint device on which this painter is currently
+painting, or null if the painter is not active.
+<p>See also  <a href="qpaintdevice.html#e39ac3">QPaintDevice::paintingActive</a>().
+<h3 class="fn">void <a name="30d1bc"></a>QPainter::drawArc ( int x, int y, int w, int h, int a, int alen )</h3>
+<p>Draws an arc defined by the rectangle <em>(x,y,w,h),</em> the start
+angle <em>a</em> and the arc length <em>alen.</em>
+<p>The angles <em>a</em> and <em>alen</em> are 1/16th of a degree, i.e. a full
+circle equals 5760 (16*360). Positive values of <em>a</em> and <em>alen</em> mean
+counter-clockwise while negative values mean clockwise direction.
+Zero degrees is at the 3'o clock position.
+<p>Example:
+<pre>    <a href="qpainter.html">QPainter</a> p( myWidget );
+    p.<a href="#30d1bc">drawArc</a>( 10,10, 70,100, 100*16, 160*16 ); // draws a "(" arc
+</pre>
+<p>See also  <a href="#dc4acb">drawPie</a>() and <a href="#556bb9">drawChord</a>().
+<h3 class="fn">void <a name="379ec0"></a>QPainter::drawArc ( const <a href="qrect.html">QRect</a> &amp; r, int a, int alen )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="556bb9"></a>QPainter::drawChord ( int x, int y, int w, int h, int a, int alen )</h3>
+<p>Draws a chord defined by the rectangle <em>(x,y,w,h),</em> the start
+angle <em>a</em> and the arc length <em>alen.</em>
+<p>The chord is filled with the current <a href="#e63901">brush</a>().
+<p>The angles <em>a</em> and <em>alen</em> are 1/16th of a degree, i.e. a full
+circle equals 5760 (16*360). Positive values of <em>a</em> and <em>alen</em> mean
+counter-clockwise while negative values mean clockwise direction.
+Zero degrees is at the 3'o clock position.
+<p>See also  <a href="#30d1bc">drawArc</a>() and <a href="#dc4acb">drawPie</a>().
+<h3 class="fn">void <a name="f35560"></a>QPainter::drawChord ( const <a href="qrect.html">QRect</a> &amp; r, int a, int alen )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="06ff17"></a>QPainter::drawEllipse ( int x, int y, int w, int h )</h3>
+<p>Draws an ellipse with center at <em>(x+w/2,y+h/2)</em> and size <em>(w,h).</em>
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#drawEllipse">drawdemo/drawdemo.cpp</a>
+ <a href="picture-picture-cpp.html#drawEllipse">picture/picture.cpp</a>
+<h3 class="fn">void <a name="ec89e0"></a>QPainter::drawEllipse ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="aeed06"></a>QPainter::drawImage ( int x, int y, const <a href="qimage.html">QImage</a> &amp; image, int sx, int sy, int sw, int sh, int conversion_flags )</h3>
+<p>Draws at (<em>x, y)</em> the <em>sw</em> by <em>sh</em> area of pixels
+from (<em>sx, sy)</em> in <em>image,</em> using <em>conversion_flags</em> if
+the image needs to be converted to a pixmap.
+<p>This function may convert <em>image</em> to a pixmap and then draw it, if
+<a href="#84abcf">device</a>() is a <a href="qpixmap.html">QPixmap</a> or a <a href="qwidget.html">QWidget</a>, or else draw it directly, if
+device() is a <a href="qprinter.html">QPrinter</a> or <a href="qpicture.html">QPicture</a>.
+<p>See also  <a href="#f3fb4a">drawPixmap</a>() and <a href="qpixmap.html#f34554">QPixmap::convertFromImage</a>().
+<h3 class="fn">void <a name="426f4c"></a>QPainter::drawImage ( const <a href="qpoint.html">QPoint</a> &amp;, const <a href="qimage.html">QImage</a> &amp; )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="1329f3"></a>QPainter::drawImage ( const <a href="qpoint.html">QPoint</a> &amp;, const <a href="qimage.html">QImage</a> &amp;, const <a href="qrect.html">QRect</a> &amp; sr )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="e298fd"></a>QPainter::drawImage ( const <a href="qpoint.html">QPoint</a> &amp;, const <a href="qimage.html">QImage</a> &amp;, const <a href="qrect.html">QRect</a> &amp; sr, int conversion_flags )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="ebae66"></a>QPainter::drawImage ( const <a href="qpoint.html">QPoint</a> &amp;, const <a href="qimage.html">QImage</a> &amp;, int conversion_flags )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="377cac"></a>QPainter::drawImage ( int x, int y, const <a href="qimage.html">QImage</a> &amp; image, int sx=0, int sy=0, int sw=-1, int sh=-1 )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="ffde14"></a>QPainter::drawLine ( int x1, int y1, int x2, int y2 )</h3>
+<p>Draws a line from <em>(x1,y2)</em> to <em>(x2,y2)</em> and sets <em>(x2,y2)</em> to be
+the new current pen position.
+<p>See also  <a href="qpen.html">QPen</a>.
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#drawLine">grapher/grapher.cpp</a>
+ <a href="drawlines-connect-cpp.html#drawLine">drawlines/connect.cpp</a>
+ <a href="progress-progress-cpp.html#drawLine">progress/progress.cpp</a>
+ <a href="splitter-splitter-cpp.html#drawLine">splitter/splitter.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#drawLine">scrollview/scrollview.cpp</a>
+<h3 class="fn">void <a name="37feef"></a>QPainter::drawLine ( const <a href="qpoint.html">QPoint</a> &amp; p1, const <a href="qpoint.html">QPoint</a> &amp; p2 )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="1793cd"></a>QPainter::drawLineSegments ( const <a href="qpointarray.html">QPointArray</a> &amp; a, int index=0, int nlines=-1 )</h3>
+<p>Draws <em>nlines</em> separate lines from points defined in <em>a,</em> starting
+at a[<em>index]</em> (<em>index</em> defaults to 0). If <em>nlines</em> is -1 (the
+defauls) all points until the end of the array are used
+(i.e. (a.size()-index)/2 lines are drawn).
+<p>Draws the 1st line from <em>a[index]</em> to <em>a[index+1].</em>
+Draws the 2nd line from <em>a[index+2]</em> to <em>a[index+3]</em> etc.
+<p>See also  <a href="#bd740e">drawPolyline</a>(), <a href="#4dd5bc">drawPolygon</a>() and <a href="qpen.html">QPen</a>.
+<h3 class="fn">void <a name="516091"></a>QPainter::drawPicture ( const <a href="qpicture.html">QPicture</a> &amp; pic )</h3>
+<p>Replays the picture <em>pic.</em>
+<p>This function does exactly the same as <a href="qpicture.html#4db447">QPicture::play</a>().
+<p>Examples:
+ <a href="picture-picture-cpp.html#drawPicture">picture/picture.cpp</a>
+<h3 class="fn">void <a name="dc4acb"></a>QPainter::drawPie ( int x, int y, int w, int h, int a, int alen )</h3>
+<p>Draws a pie defined by the rectangle <em>(x,y,w,h),</em> the start
+angle <em>a</em> and the arc length <em>alen.</em>
+<p>The pie is filled with the current <a href="#e63901">brush</a>().
+<p>The angles <em>a</em> and <em>alen</em> are 1/16th of a degree, i.e. a full
+circle equals 5760 (16*360). Positive values of <em>a</em> and <em>alen</em> mean
+counter-clockwise while negative values mean clockwise direction.
+Zero degrees is at the 3'o clock position.
+<p>See also  <a href="#30d1bc">drawArc</a>() and <a href="#556bb9">drawChord</a>().
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#drawPie">grapher/grapher.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#drawPie">drawdemo/drawdemo.cpp</a>
+<h3 class="fn">void <a name="8d5b8a"></a>QPainter::drawPie ( const <a href="qrect.html">QRect</a> &amp; r, int a, int alen )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="f3fb4a"></a>QPainter::drawPixmap ( int x, int y, const <a href="qpixmap.html">QPixmap</a> &amp; pixmap, int sx=0, int sy=0, int sw=-1, int sh=-1 )</h3>
+<p>Draws a pixmap at <em>(x,y)</em> by copying a part of <em>pixmap</em> into the
+paint device.
+<p><em>(x,y)</em> specify the top-left point in the paint device that is to
+be drawn onto.  <em>(sx,sy)</em> specify the top-left point in <em>pixmap</em>
+that is to be drawn (the default is (0,0).  <em>(sw,sh)</em> specify the
+size of the pixmap that is to be drawn (the default, (-1,-1), means
+all the way to the right/bottom of the pixmap).
+<p>See also  <a href="qpaintdevice.html#058006">bitBlt</a>() and <a href="qpixmap.html#ffddf9">QPixmap::setMask</a>().
+<p>Examples:
+ <a href="qtimage-qtimage-cpp.html#drawPixmap">qtimage/qtimage.cpp</a>
+ <a href="grapher-grapher-cpp.html#drawPixmap">grapher/grapher.cpp</a>
+ <a href="qmag-qmag-cpp.html#drawPixmap">qmag/qmag.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#drawPixmap">scrollview/scrollview.cpp</a>
+ <a href="movies-main-cpp.html#drawPixmap">movies/main.cpp</a>
+ <a href="picture-picture-cpp.html#drawPixmap">picture/picture.cpp</a>
+<h3 class="fn">void <a name="736939"></a>QPainter::drawPixmap ( const <a href="qpoint.html">QPoint</a> &amp; p, const <a href="qpixmap.html">QPixmap</a> &amp; pm )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>This version of the call draws the entire pixmap.
+<h3 class="fn">void <a name="7a8e8c"></a>QPainter::drawPixmap ( const <a href="qpoint.html">QPoint</a> &amp; p, const <a href="qpixmap.html">QPixmap</a> &amp; pm, const <a href="qrect.html">QRect</a> &amp; sr )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="036310"></a>QPainter::drawPoint ( int x, int y )</h3>
+<p>Draws/plots a single point at <em>(x,y)</em> using the current pen.
+<p>See also  <a href="qpen.html">QPen</a>.
+<p>Examples:
+ <a href="drawlines-connect-cpp.html#drawPoint">drawlines/connect.cpp</a>
+ <a href="desktop-desktop-cpp.html#drawPoint">desktop/desktop.cpp</a>
+<h3 class="fn">void <a name="124d1c"></a>QPainter::drawPoint ( const <a href="qpoint.html">QPoint</a> &amp; p )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="02c510"></a>QPainter::drawPoints ( const <a href="qpointarray.html">QPointArray</a> &amp; a, int index=0, int npoints=-1 )</h3>
+<p>Draws/plots an array of points using the current pen.
+<p>If <em>index</em> is non-zero (the default is zero) only points from <em>index</em> are drawn.  If <em>npoints</em> is negative (the default) the rest
+of the points from <em>index</em> are drawn.  If is is zero or greater, <em>npoints</em> points are drawn.
+<h3 class="fn">void <a name="4dd5bc"></a>QPainter::drawPolygon ( const <a href="qpointarray.html">QPointArray</a> &amp; a, bool winding=FALSE, int index=0, int npoints=-1 )</h3>
+<p>Draws the polygon defined by the <em>npoints</em> points in <em>a</em> starting at
+<em>a[index].</em>  (<em>index</em> defaults to 0.)
+<p>If <em>npoints</em> is -1 (the default) all points until the end of the
+array are used (i.e. a.size()-index line segments define the
+polygon).
+<p>The first point is always connected to the last point.
+<p>The polygon is filled with the current <a href="#e63901">brush</a>().
+If <em>winding</em> is TRUE, the polygon is filled using the winding
+fill algorithm. If <em>winding</em> is FALSE, the polygon is filled using the
+even-odd (alternative) fill algorithm.
+<p>See also  <a href="#1793cd">drawLineSegments</a>(), <a href="#bd740e">drawPolyline</a>() and <a href="qpen.html">QPen</a>.
+<p>Examples:
+ <a href="desktop-desktop-cpp.html#drawPolygon">desktop/desktop.cpp</a>
+ <a href="picture-picture-cpp.html#drawPolygon">picture/picture.cpp</a>
+<h3 class="fn">void <a name="bd740e"></a>QPainter::drawPolyline ( const <a href="qpointarray.html">QPointArray</a> &amp; a, int index=0, int npoints=-1 )</h3>
+<p>Draws the polyline defined by the <em>npoints</em> points in <em>a</em> starting
+at <em>a[index].</em>  (<em>index</em> defaults to 0.)
+<p>If <em>npoints</em> is -1 (the default) all points until the end of the
+array are used (i.e. a.size()-index-1 line segments are drawn).
+<p>See also  <a href="#1793cd">drawLineSegments</a>(), <a href="#4dd5bc">drawPolygon</a>() and <a href="qpen.html">QPen</a>.
+<h3 class="fn">void <a name="b820f8"></a>QPainter::drawQuadBezier ( const <a href="qpointarray.html">QPointArray</a> &amp; a, int index=0 )</h3>
+<p>Draws a cubic Bezier curve defined by the control points in <em>a,</em>
+starting at <em>a[index].</em>  (<em>index</em> defaults to 0.)
+<p>Control points after <em>a[index+3]</em> are ignored.  Nothing happens if
+there aren't enough control points.
+<h3 class="fn">void <a name="b29a16"></a>QPainter::drawRect ( int x, int y, int w, int h )</h3>
+<p>Draws a rectangle with upper left corner at <em>(x,y)</em> and with
+width <em>w</em> and height <em>h.</em>
+<p>See also  <a href="qpen.html">QPen</a> and <a href="#af3126">drawRoundRect</a>().
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#drawRect">grapher/grapher.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#drawRect">drawdemo/drawdemo.cpp</a>
+ <a href="forever-forever-cpp.html#drawRect">forever/forever.cpp</a>
+ <a href="trivial-trivial-cpp.html#drawRect">trivial/trivial.cpp</a>
+ <a href="picture-picture-cpp.html#drawRect">picture/picture.cpp</a>
+<h3 class="fn">void <a name="b25e3c"></a>QPainter::drawRect ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="af3126"></a>QPainter::drawRoundRect ( int x, int y, int w, int h, int xRnd, int yRnd )</h3>
+<p>Draws a rectangle with round corners at <em>(x,y),</em> with width <em>w</em>
+and height <em>h.</em>
+<p>The <em>xRnd</em> and <em>yRnd</em> arguments specify how rounded the corners
+should be.  0 is angled corners, 99 is maximum roundedness.
+<p>The width and height include all of the drawn lines.
+<p>See also  <a href="#b29a16">drawRect</a>() and <a href="qpen.html">QPen</a>.
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#drawRoundRect">drawdemo/drawdemo.cpp</a>
+<h3 class="fn">void <a name="d772bf"></a>QPainter::drawRoundRect ( const <a href="qrect.html">QRect</a> &amp; r, int xRnd, int yRnd )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="2e160c"></a>QPainter::drawRoundRect ( const <a href="qrect.html">QRect</a> &amp; )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>As the main version of the function, but with the roundness
+arguments fixed at 25.
+<h3 class="fn">void <a name="63b7c9"></a>QPainter::drawRoundRect ( int x, int y, int w, int h )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>As the main version of the function, but with the roundness
+arguments fixed at 25.
+<h3 class="fn">void <a name="bcb232"></a>QPainter::drawText ( int x, int y, const <a href="qstring.html">QString</a> &amp; str, int len = -1 )</h3>
+<p>Draws at most <em>len</em> characters from <em>str</em> at position <em>(x,y).</em>
+<p><em>(x,y)</em> is the base line position.  Note that the meaning of <em>y</em>
+is not the same for the two <a href="#8a59ed">drawText</a>() varieties.
+<h3 class="fn">void <a name="8a59ed"></a>QPainter::drawText ( int x, int y, int w, int h, int tf, const <a href="qstring.html">QString</a> &amp; str, int len = -1, <a href="qrect.html">QRect</a> * brect=0, char ** internal=0 )</h3>
+<p>Draws at most <em>len</em> characters from <em>str</em> in the rectangle <em>(x,y,w,h).</em>
+<p>Note that the meaning of <em>y</em> is not the same for the two drawText()
+varieties.
+<p>This function draws formatted text.  The <em>tf</em> text formatting is
+really of type <a href="qt.html#AlignmentFlags">Qt::AlignmentFlags</a>.
+<p>Horizontal alignment defaults to AlignLeft and vertical alignment
+defaults to AlignTop.
+<p><em>brect</em> (if non-null) is set to the actual bounding rectangle of
+the output.  <em>internal</em> is, yes, internal.
+<p>See also  <a href="#03ed21">boundingRect</a>().
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#drawText">grapher/grapher.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#drawText">drawdemo/drawdemo.cpp</a>
+ <a href="menu-menu-cpp.html#drawText">menu/menu.cpp</a>
+ <a href="progress-progress-cpp.html#drawText">progress/progress.cpp</a>
+ <a href="desktop-desktop-cpp.html#drawText">desktop/desktop.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#drawText">scrollview/scrollview.cpp</a>
+ <a href="trivial-trivial-cpp.html#drawText">trivial/trivial.cpp</a>
+ <a href="movies-main-cpp.html#drawText">movies/main.cpp</a>
+ <a href="picture-picture-cpp.html#drawText">picture/picture.cpp</a>
+<h3 class="fn">void <a name="63bacc"></a>QPainter::drawText ( const <a href="qpoint.html">QPoint</a> &amp; p, const <a href="qstring.html">QString</a> &amp;, int len = -1 )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="d494ee"></a>QPainter::drawText ( const <a href="qrect.html">QRect</a> &amp; r, int tf, const <a href="qstring.html">QString</a> &amp;, int len = -1, <a href="qrect.html">QRect</a> * br=0, char ** i=0 )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="e784ea"></a>QPainter::drawTiledPixmap ( int x, int y, int w, int h, const <a href="qpixmap.html">QPixmap</a> &amp; pixmap, int sx=0, int sy=0 )</h3>
+<p>Draws a tiled <em>pixmap</em> in the specified rectangle.
+<p><em>(x,y)</em> specify the top-left point in the paint device that is to
+be drawn onto.  <em>(sx,sy)</em> specify the top-left point in <em>pixmap</em>
+that is to be drawn (the default is (0,0).
+<p>Calling drawTiledPixmap() is similar to calling <a href="#f3fb4a">drawPixmap</a>() several
+times to fill (tile) an area with a pixmap, but is potentially
+much more efficient depending on the underlying window system.
+<p>See also  <a href="#f3fb4a">drawPixmap</a>().
+<h3 class="fn">void <a name="0de014"></a>QPainter::drawTiledPixmap ( const <a href="qrect.html">QRect</a> &amp; r, const <a href="qpixmap.html">QPixmap</a> &amp; pm )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="9b0f8f"></a>QPainter::drawTiledPixmap ( const <a href="qrect.html">QRect</a> &amp; r, const <a href="qpixmap.html">QPixmap</a> &amp; pm, const <a href="qpoint.html">QPoint</a> &amp; sp )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="7da3d8"></a>QPainter::drawWinFocusRect ( int x, int y, int w, int h )</h3>
+<p>Draws a Windows focus rectangle with upper left corner at <em>(x,y)</em> and with
+width <em>w</em> and height <em>h.</em>
+<p>This function draws a stippled XOR rectangle that is used to indicate
+keyboard focus (when <a href="qapplication.html#349f2d">QApplication::style</a>() is <code>WindowStyle).<p><b>Warning:</b></code> This function draws nothing if the coordinate system has been
+<a href="#4bd0fb">rotated</a> or <a href="#a3ef1f">sheared</a>.
+<p>See also  <a href="#b29a16">drawRect</a>() and <a href="qapplication.html#349f2d">QApplication::style</a>().
+<h3 class="fn">void <a name="58b219"></a>QPainter::drawWinFocusRect ( int x, int y, int w, int h, const <a href="qcolor.html">QColor</a> &amp; bgColor )</h3>
+<p>Draws a Windows focus rectangle with upper left corner at <em>(x,y)</em> and with
+width <em>w</em> and height <em>h</em> using a pen color that contrasts with <em>bgColor.</em>
+<p>This function draws a stippled rectangle (XOR is not used) that is
+used to indicate keyboard focus (when the <a href="qapplication.html#349f2d">QApplication::style</a>() is
+<code>WindowStyle).</code>
+<p>The pen color used to draw the rectangle is either white or black
+depending on the color of <em>bgColor</em> (see QColor::gray()).<p><b>Warning:</b> This function draws nothing if the coordinate system has been
+<a href="#4bd0fb">rotated</a> or <a href="#a3ef1f">sheared</a>.
+<p>See also  <a href="#b29a16">drawRect</a>() and <a href="qapplication.html#349f2d">QApplication::style</a>().
+<h3 class="fn">void <a name="40c64c"></a>QPainter::drawWinFocusRect ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="47b99f"></a>QPainter::drawWinFocusRect ( const <a href="qrect.html">QRect</a> &amp; r, const <a href="qcolor.html">QColor</a> &amp; bgColor )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">bool <a name="c7f9ac"></a>QPainter::end ()</h3>
+<p>Ends painting.  Any resources used while painting are released.
+<p>Note that while you mostly don't need to call end(), the destructor
+will do it, there is at least one common case, namely double
+buffering.
+<p><pre>    <a href="qpainter.html">QPainter</a> p( myPixmap, this )
+    // ...
+    p.<a href="#c7f9ac">end</a>(); // stops drawing on myPixmap
+    p.<a href="#59f1bb">begin</a>( this );
+    p.<a href="#f3fb4a">drawPixmap</a>( myPixmap );
+</pre>
+<p>Since you can't draw a <a href="qpixmap.html">QPixmap</a> while it is being painted, it is
+necessary to close the active painter.
+<p>See also  <a href="#59f1bb">begin</a>() and <a href="#964105">isActive</a>().
+<p>Examples:
+ <a href="desktop-desktop-cpp.html#end">desktop/desktop.cpp</a>
+ <a href="picture-picture-cpp.html#end">picture/picture.cpp</a>
+<h3 class="fn">void <a name="aa2595"></a>QPainter::eraseRect ( int x, int y, int w, int h )</h3>
+<p>Erases the area inside <em>(x,y,w,h).</em>
+Equivalent to <code><a href="#0f4c23">fillRect</a>( x, y, w, h, <a href="#09f5ca">backgroundColor</a>() )</code>
+<h3 class="fn">void <a name="65ad69"></a>QPainter::eraseRect ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="0f4c23"></a>QPainter::fillRect ( int x, int y, int w, int h, const <a href="qbrush.html">QBrush</a> &amp; brush )</h3>
+<p>Fills the rectangle <em>(x,y,w,h)</em> with the <em>brush.</em>
+<p>You can specify a <a href="qcolor.html">QColor</a> as <em>brush,</em> since there is a <a href="qbrush.html">QBrush</a> constructor
+that takes a QColor argument and creates a solid pattern brush.
+<p>See also  <a href="#b29a16">drawRect</a>().
+<p>Examples:
+ <a href="progress-progress-cpp.html#fillRect">progress/progress.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#fillRect">scrollview/scrollview.cpp</a>
+<h3 class="fn">void <a name="cc9b31"></a>QPainter::fillRect ( const <a href="qrect.html">QRect</a> &amp; r, const <a href="qbrush.html">QBrush</a> &amp; brush )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="24f277"></a>QPainter::flush ()</h3>
+<p>Flushes any buffered drawing operations.
+<h3 class="fn">const <a href="qfont.html">QFont</a> &amp; <a name="056ec9"></a>QPainter::font () const</h3>
+<p>Returns the currently set painter font.
+<p>See also  <a href="#e4d6b7">setFont</a>() and <a href="qfont.html">QFont</a>.
+<h3 class="fn"><a href="qfontinfo.html">QFontInfo</a> <a name="8c3c26"></a>QPainter::fontInfo () const</h3>
+<p>Returns the font info for the painter, if the painter is active.  It
+is not possible to obtain font information for an inactive painter,
+so the return value is undefined if the painter is not active.
+<p>See also  <a href="#f572a5">fontMetrics</a>() and <a href="#964105">isActive</a>().
+<h3 class="fn"><a href="qfontmetrics.html">QFontMetrics</a> <a name="f572a5"></a>QPainter::fontMetrics () const</h3>
+<p>Returns the font metrics for the painter, if the painter is active.
+It is not possible to obtain metrics for an inactive painter, so the
+return value is undefined if the painter is not active.
+<p>See also  <a href="#8c3c26">fontInfo</a>() and <a href="#964105">isActive</a>().
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#fontMetrics">drawdemo/drawdemo.cpp</a>
+ <a href="desktop-desktop-cpp.html#fontMetrics">desktop/desktop.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#fontMetrics">scrollview/scrollview.cpp</a>
+ <a href="movies-main-cpp.html#fontMetrics">movies/main.cpp</a>
+<h3 class="fn">bool <a name="891afc"></a>QPainter::hasClipping () const</h3>
+<p>Returns TRUE if clipping has been set, otherwise FALSE.
+<p>See also  <a href="#fb38a9">setClipping</a>().
+<h3 class="fn">bool <a name="a6a6d0"></a>QPainter::hasViewXForm () const</h3>
+<p>Returns TRUE if view transformation is enabled, otherwise FALSE.
+<p>See also  <a href="#758881">setViewXForm</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">bool <a name="784fab"></a>QPainter::hasWorldXForm () const</h3>
+<p>Returns TRUE if world transformation is enabled, otherwise FALSE.
+<p>See also  <a href="#e31cca">setWorldXForm</a>().
+<h3 class="fn">void <a name="cfae81"></a>QPainter::initialize () <code>[static]</code></h3>
+<p>Internal function that initializes the painter.
+<h3 class="fn">bool <a name="964105"></a>QPainter::isActive () const</h3>
+<p>Returns TRUE if the painter is active painting, i.e. <a href="#59f1bb">begin</a>() has
+been called and <a href="#c7f9ac">end</a>() has not yet been called.
+<p>See also  <a href="qpaintdevice.html#e39ac3">QPaintDevice::paintingActive</a>().
+<p>Examples:
+ <a href="desktop-desktop-cpp.html#isActive">desktop/desktop.cpp</a>
+<h3 class="fn">void <a name="350b26"></a>QPainter::lineTo ( int x, int y )</h3>
+<p>Draws a line from the current pen position to <em>(x,y)</em> and sets <em>(x,y)</em> to be the new current pen position.
+<p>See also  <a href="qpen.html">QPen</a>, <a href="#dd01de">moveTo</a>(), <a href="#ffde14">drawLine</a>() and <a href="#148022">pos</a>().
+<h3 class="fn">void <a name="6ef00f"></a>QPainter::lineTo ( const <a href="qpoint.html">QPoint</a> &amp; p )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="dd01de"></a>QPainter::moveTo ( int x, int y )</h3>
+<p>Sets the current pen position to <em>(x,y)</em>
+<p>See also  <a href="#350b26">lineTo</a>() and <a href="#148022">pos</a>().
+<h3 class="fn">void <a name="2c2f5c"></a>QPainter::moveTo ( const <a href="qpoint.html">QPoint</a> &amp; p )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">const <a href="qpen.html">QPen</a> &amp; <a name="759128"></a>QPainter::pen () const</h3>
+<p>Returns the current pen for the painter.
+<p>See also  <a href="#0a6aff">setPen</a>().
+<p>Examples:
+ <a href="progress-progress-cpp.html#pen">progress/progress.cpp</a>
+<h3 class="fn"><a href="qpoint.html">QPoint</a> <a name="148022"></a>QPainter::pos () const</h3>
+<p>Returns the current position of the  pen.
+<p>See also  <a href="#dd01de">moveTo</a>().
+<h3 class="fn"><a href="qt.html#RasterOp">RasterOp</a> <a name="e71439"></a>QPainter::rasterOp () const</h3>
+<p>Returns the current raster operation.
+<p>See also  <a href="#56e473">setRasterOp</a>() and <a href="qt.html#RasterOp">RasterOp</a>.
+<h3 class="fn">void <a name="fc6836"></a>QPainter::redirect ( <a href="qpaintdevice.html">QPaintDevice</a> * pdev, <a href="qpaintdevice.html">QPaintDevice</a> * replacement ) <code>[static]</code></h3>
+<p>Redirects all paint command for a paint device <em>pdev</em> to another
+paint device <em>replacement,</em> unless <em>replacement</em> is 0.  If <em>replacement</em> is 0, the redirection for <em>pdev</em> is removed.
+<p>Mostly, you can get better results with less work by calling
+<a href="qpixmap.html#f9166c">QPixmap::grabWidget</a>() or QPixmap::grapWindow().
+<h3 class="fn">void <a name="b09ca4"></a>QPainter::resetXForm ()</h3>
+<p>Resets any transformations that were made using <a href="#ba64b6">translate</a>(), <a href="#fc599c">scale</a>(),
+<a href="#a3ef1f">shear</a>(), <a href="#4bd0fb">rotate</a>(), <a href="#f4a354">setWorldMatrix</a>(), <a href="#e86cf5">setViewport</a>() and <a href="#797026">setWindow</a>()
+<p>See also  <a href="#f16980">worldMatrix</a>(), <a href="#1802a4">viewport</a>() and <a href="#98a36a">window</a>().
+<h3 class="fn">void <a name="24cf68"></a>QPainter::restore ()</h3>
+<p>Restores the current painter state (pops a saved state off the stack).
+<p>See also  <a href="#629789">save</a>().
+<h3 class="fn">void <a name="a7fd3c"></a>QPainter::restoreWorldMatrix ()</h3>
+<p><b>This function is obsolete.</b> It is provided to keep old source working, and will probably be removed in a future version of Qt.  We strongly advise against using it in new code.<p>
+We recommend using <a href="#629789">save</a>() instead.
+<h3 class="fn">void <a name="4bd0fb"></a>QPainter::rotate ( double a )</h3>
+<p>Rotates the coordinate system <em>a</em> degrees.
+<p>See also  <a href="#ba64b6">translate</a>(), <a href="#fc599c">scale</a>(), <a href="#a3ef1f">shear</a>(), <a href="#b09ca4">resetXForm</a>(), <a href="#f4a354">setWorldMatrix</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">void <a name="629789"></a>QPainter::save ()</h3>
+<p>Saves the current painter state (pushes the state onto a stack).  A
+save() must be followed by a corresponding <a href="#24cf68">restore</a>().  <a href="#c7f9ac">end</a>() unwinds
+the stack().
+<p>See also  <a href="#24cf68">restore</a>().
+<h3 class="fn">void <a name="fdf12e"></a>QPainter::saveWorldMatrix ()</h3>
+<p><b>This function is obsolete.</b> It is provided to keep old source working, and will probably be removed in a future version of Qt.  We strongly advise against using it in new code.<p>
+<p>We recommend using <a href="#629789">save</a>() instead.
+<h3 class="fn">void <a name="fc599c"></a>QPainter::scale ( double sx, double sy )</h3>
+<p>Scales the coordinate system by <em>(sx,sy).</em>
+<p>See also  <a href="#ba64b6">translate</a>(), <a href="#a3ef1f">shear</a>(), <a href="#4bd0fb">rotate</a>(), <a href="#b09ca4">resetXForm</a>(), <a href="#f4a354">setWorldMatrix</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">void <a name="744dce"></a>QPainter::setBackgroundColor ( const <a href="qcolor.html">QColor</a> &amp; c )</h3>
+<p>Sets the background color of the painter to <em>c.</em>
+<p>The background color is the color that is filled in when drawing
+opaque text, stippled lines and bitmaps.  The background color has
+no effect in transparent background mode (which is the default).
+<p>See also  <a href="#09f5ca">backgroundColor</a>(), <a href="#eab325">setBackgroundMode</a>() and BackgroundMode.
+<h3 class="fn">void <a name="eab325"></a>QPainter::setBackgroundMode ( BGMode m )</h3>
+<p>Sets the background mode of the painter to <em>m,</em> which must be one
+of <code>TransparentMode</code> (the default) and <code>OpaqueMode.</code>
+<p>Transparent mode draws stippled lines and text without setting the
+background pixels. Opaque mode fills these space with the current
+background color.
+<p>Note that in order to draw a bitmap or pixmap transparently, you must use
+<a href="qpixmap.html#ffddf9">QPixmap::setMask</a>().
+<p>See also  <a href="#98d868">backgroundMode</a>() and <a href="#744dce">setBackgroundColor</a>().
+<p>Examples:
+ <a href="picture-picture-cpp.html#setBackgroundMode">picture/picture.cpp</a>
+<h3 class="fn">void <a name="e56a24"></a>QPainter::setBrush ( BrushStyle style )</h3>
+<p>Sets a new painter brush with black color and the specified <em>style.</em>
+<p>See also  <a href="#e63901">brush</a>() and <a href="qbrush.html">QBrush</a>.
+<h3 class="fn">void <a name="38e68f"></a>QPainter::setBrush ( const <a href="qbrush.html">QBrush</a> &amp; brush )</h3>
+<p>Sets a new painter brush.
+<p>The brush defines how to fill shapes.
+<p>See also  <a href="#e63901">brush</a>().
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#setBrush">grapher/grapher.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#setBrush">drawdemo/drawdemo.cpp</a>
+ <a href="forever-forever-cpp.html#setBrush">forever/forever.cpp</a>
+ <a href="desktop-desktop-cpp.html#setBrush">desktop/desktop.cpp</a>
+ <a href="picture-picture-cpp.html#setBrush">picture/picture.cpp</a>
+<h3 class="fn">void <a name="9d7f34"></a>QPainter::setBrush ( const <a href="qcolor.html">QColor</a> &amp; color )</h3>
+<p>Sets a new painter brush with the style <code>SolidPattern</code> and the specified
+<em>color.</em>
+<p>See also  <a href="#e63901">brush</a>() and <a href="qbrush.html">QBrush</a>.
+<h3 class="fn">void <a name="f3d83a"></a>QPainter::setBrushOrigin ( int x, int y )</h3>
+<p>Sets the brush origin to <em>(x,y).</em>
+<p>The brush origin specifies the (0,0) coordinate of the painter's
+brush.  This setting only applies to pattern brushes and pixmap
+brushes.
+<p>See also  <a href="#4e9a28">brushOrigin</a>().
+<h3 class="fn">void <a name="0e516e"></a>QPainter::setBrushOrigin ( const <a href="qpoint.html">QPoint</a> &amp; p )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="2ccac9"></a>QPainter::setClipRect ( int x, int y, int w, int h )</h3>
+<p>Sets the clip region to the the rectangle <em>(x,y,w,h)</em> and enables clipping.
+<p>Note that the clip region is given in physical device coordinates and
+<em>not</em> subject to any <a href="coordsys.html">coordinate
+transformation.</a>
+<p>See also  <a href="#6d2fff">setClipRegion</a>(), <a href="#49378e">clipRegion</a>() and <a href="#fb38a9">setClipping</a>().
+<p>Examples:
+ <a href="qtimage-qtimage-cpp.html#setClipRect">qtimage/qtimage.cpp</a>
+ <a href="grapher-grapher-cpp.html#setClipRect">grapher/grapher.cpp</a>
+ <a href="progress-progress-cpp.html#setClipRect">progress/progress.cpp</a>
+ <a href="splitter-splitter-cpp.html#setClipRect">splitter/splitter.cpp</a>
+ <a href="trivial-trivial-cpp.html#setClipRect">trivial/trivial.cpp</a>
+<h3 class="fn">void <a name="2c14e9"></a>QPainter::setClipRect ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>If the rectangle is invalid, the rectangle will be normalized() before the clipping region is set. This semantics will change in Qt-3
+and an invalid rectangle will clip the painter to an empty rectangle.
+<p>See also  <a href="qrect.html#4cc055">QRect::isValid</a>() and <a href="qrect.html#75e42c">QRect::normalize</a>().
+<h3 class="fn">void <a name="6d2fff"></a>QPainter::setClipRegion ( const <a href="qregion.html">QRegion</a> &amp; rgn )</h3>
+<p>Sets the clip region to <em>rgn</em> and enables clipping.
+<p>Note that the clip region is given in physical device coordinates and
+<em>not</em> subject to any <a href="coordsys.html">coordinate
+transformation.</a>
+<p>See also  <a href="#2ccac9">setClipRect</a>(), <a href="#49378e">clipRegion</a>() and <a href="#fb38a9">setClipping</a>().
+<h3 class="fn">void <a name="fb38a9"></a>QPainter::setClipping ( bool enable )</h3>
+<p>Enables clipping if <em>enable</em> is TRUE, or disables clipping if <em>enable</em>
+is FALSE.
+<p>See also  <a href="#891afc">hasClipping</a>(), <a href="#2ccac9">setClipRect</a>() and <a href="#6d2fff">setClipRegion</a>().
+<h3 class="fn">void <a name="e4d6b7"></a>QPainter::setFont ( const <a href="qfont.html">QFont</a> &amp; font )</h3>
+<p>Sets a new painter font.
+<p>This font is used by subsequent <a href="#8a59ed">drawText</a>() functions.  The text
+color is the same as the pen color.
+<p>See also  <a href="#056ec9">font</a>() and <a href="#8a59ed">drawText</a>().
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#setFont">grapher/grapher.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#setFont">drawdemo/drawdemo.cpp</a>
+ <a href="menu-menu-cpp.html#setFont">menu/menu.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#setFont">scrollview/scrollview.cpp</a>
+ <a href="movies-main-cpp.html#setFont">movies/main.cpp</a>
+ <a href="picture-picture-cpp.html#setFont">picture/picture.cpp</a>
+<h3 class="fn">void <a name="0a6aff"></a>QPainter::setPen ( <a href="qt.html#PenStyle">PenStyle</a> style )</h3>
+<p>Sets a new painter pen with style <code>style,</code> width 0 and black color.
+<p>See also  <a href="#759128">pen</a>() and <a href="qpen.html">QPen</a>.
+<p>Examples:
+ <a href="grapher-grapher-cpp.html#setPen">grapher/grapher.cpp</a>
+ <a href="drawlines-connect-cpp.html#setPen">drawlines/connect.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#setPen">drawdemo/drawdemo.cpp</a>
+ <a href="progress-progress-cpp.html#setPen">progress/progress.cpp</a>
+ <a href="forever-forever-cpp.html#setPen">forever/forever.cpp</a>
+ <a href="desktop-desktop-cpp.html#setPen">desktop/desktop.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#setPen">scrollview/scrollview.cpp</a>
+ <a href="movies-main-cpp.html#setPen">movies/main.cpp</a>
+<h3 class="fn">void <a name="506db2"></a>QPainter::setPen ( const <a href="qcolor.html">QColor</a> &amp; color )</h3>
+<p>Sets a new painter pen with style <code>SolidLine,</code> width 0 and the specified
+<em>color.</em>
+<p>See also  <a href="#759128">pen</a>() and <a href="qpen.html">QPen</a>.
+<h3 class="fn">void <a name="9e3f71"></a>QPainter::setPen ( const <a href="qpen.html">QPen</a> &amp; pen )</h3>
+<p>Sets a new painter pen.
+<p>The pen defines how to draw lines and outlines, and it also defines
+the text color.
+<p>See also  <a href="#759128">pen</a>().
+<h3 class="fn">void <a name="56e473"></a>QPainter::setRasterOp ( <a href="qt.html#RasterOp">RasterOp</a> r )</h3>
+<p>Sets the raster operation to <em>r.</em>  The default is <code>CopyROP.</code>
+<p>See also  <a href="#e71439">rasterOp</a>().
+<h3 class="fn">void <a name="69c754"></a>QPainter::setTabArray ( int * ta )</h3>
+<p>Sets the tab stop array to <em>ta.</em>  This puts tab stops at <em>ta[0],</em>
+ta[1] and so on.  The array is null-terminated.
+<p>If both a tab array and a tab top size is set, the tab array wins.
+<p>See also  <a href="#4498a4">tabArray</a>(), <a href="#075543">setTabStops</a>(), <a href="#8a59ed">drawText</a>() and <a href="#f572a5">fontMetrics</a>().
+<h3 class="fn">void <a name="075543"></a>QPainter::setTabStops ( int ts )</h3>
+<p>Set the tab stop width to <em>ts,</em> ie. locates tab stops at ts, 2*ts,
+3*ts and so on.
+<p>Tab stops are used when drawing formatted text with <code>ExpandTabs</code>
+set.  This fixed tab stop value is used only if no tab array is set
+(which is the default case).
+<p>See also  <a href="#d0b8c4">tabStops</a>(), <a href="#69c754">setTabArray</a>(), <a href="#8a59ed">drawText</a>() and <a href="#f572a5">fontMetrics</a>().
+<h3 class="fn">void <a name="758881"></a>QPainter::setViewXForm ( bool enable )</h3>
+<p>Enables view transformations if <em>enable</em> is TRUE, or disables
+view transformations if <em>enable</em> is FALSE.
+<p>See also  <a href="#a6a6d0">hasViewXForm</a>(), <a href="#797026">setWindow</a>(), <a href="#e86cf5">setViewport</a>(), <a href="#f4a354">setWorldMatrix</a>(), <a href="#e31cca">setWorldXForm</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">void <a name="e86cf5"></a>QPainter::setViewport ( int x, int y, int w, int h )</h3>
+<p>Sets the viewport rectangle view transformation for the painter and
+enables view transformation.
+<p>The viewport rectangle is part of the view transformation.  The
+viewport specifies the device coordinate system.  Its sister, the
+<a href="#98a36a">window</a>(), specifies the logical coordinate system.
+<p>The default viewport rectangle is the same as the device's rectangle.
+See the <a href="coordsys.html">Coordinate System Overview</a> for
+an overview of coordinate transformation.
+<p>See also  <a href="#1802a4">viewport</a>(), <a href="#797026">setWindow</a>(), <a href="#758881">setViewXForm</a>(), <a href="#f4a354">setWorldMatrix</a>(), <a href="#e31cca">setWorldXForm</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">void <a name="d79e2c"></a>QPainter::setViewport ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="797026"></a>QPainter::setWindow ( int x, int y, int w, int h )</h3>
+<p>Sets the window rectangle view transformation for the painter and
+enables view transformation.
+<p>The window rectangle is part of the view transformation.  The window
+specifies the logical coordinate system.  Its sister, the
+<a href="#1802a4">viewport</a>(), specifies the device coordinate system.
+<p>The default window rectangle is the same as the device's rectangle.
+See the <a href="coordsys.html">Coordinate System Overview</a> for
+an overview of coordinate transformation.
+<p>See also  <a href="#98a36a">window</a>(), <a href="#e86cf5">setViewport</a>(), <a href="#758881">setViewXForm</a>(), <a href="#f4a354">setWorldMatrix</a>() and <a href="#e31cca">setWorldXForm</a>().
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#setWindow">drawdemo/drawdemo.cpp</a>
+<h3 class="fn">void <a name="a10cc4"></a>QPainter::setWindow ( const <a href="qrect.html">QRect</a> &amp; r )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">void <a name="f4a354"></a>QPainter::setWorldMatrix ( const <a href="qwmatrix.html">QWMatrix</a> &amp; m, bool combine=FALSE )</h3>
+<p>Sets the world transformation matrix to <em>m</em> and enables world
+transformation.
+<p>If <em>combine</em> is TRUE, then <em>m</em> is combined with the current
+transformation matrix, otherwise <em>m</em> replaces the current
+transformation matrix.
+<p>If <em>m</em> the identity matrix and <em>combine</em> is FALSE, this function calls
+<a href="#e31cca">setWorldXForm</a>(FALSE).  (The identity matrix is the matrix where
+<a href="qwmatrix.html#4d9dbb">QWMatrix::m11</a>() and <a href="qwmatrix.html#0171e3">QWMatrix::m22</a>() are 1.0 and the rest are 0.0.)
+<p>World transformations are applied after the view transformations
+(i.e. <a href="#797026">window</a> and <a href="#e86cf5">viewport</a>).
+<p>The following functions can transform the coordinate system without using
+a QWMatrix:
+<ul>
+<li><a href="#ba64b6">translate</a>()
+<li><a href="#fc599c">scale</a>()
+<li><a href="#a3ef1f">shear</a>()
+<li><a href="#4bd0fb">rotate</a>()
+</ul>
+<p>They operate on the painter's <a href="#f16980">worldMatrix</a>() and are implemented like this:
+<p><pre>    void QPainter::rotate( double a )
+    {
+        <a href="qwmatrix.html">QWMatrix</a> m;
+        m.<a href="qwmatrix.html#84df75">rotate</a>( a );
+        setWorldMatrix( m, TRUE );
+    }
+</pre>
+<p>Note that you should always use <em>combine</em> when you are drawing into
+a <a href="qpicture.html">QPicture</a>. Otherwise it may not be possible to replay the picture
+with additional transformations.  Using translate(), scale(),
+etc. is safe.
+<p>For a brief overview of coordinate transformation, see the <a href="coordsys.html">Coordinate System Overview.</a>
+<p>See also  <a href="#f16980">worldMatrix</a>(), <a href="#e31cca">setWorldXForm</a>(), <a href="#797026">setWindow</a>(), <a href="#e86cf5">setViewport</a>(), <a href="#758881">setViewXForm</a>(), <a href="#0dc06e">xForm</a>() and <a href="qwmatrix.html">QWMatrix</a>.
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#setWorldMatrix">drawdemo/drawdemo.cpp</a>
+<h3 class="fn">void <a name="e31cca"></a>QPainter::setWorldXForm ( bool enable )</h3>
+<p>Enables world transformations if <em>enable</em> is TRUE, or disables
+world transformations if <em>enable</em> is FALSE. The world
+transformation matrix is not changed.
+<p>See also  <a href="#f4a354">setWorldMatrix</a>(), <a href="#797026">setWindow</a>(), <a href="#e86cf5">setViewport</a>(), <a href="#758881">setViewXForm</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">void <a name="a3ef1f"></a>QPainter::shear ( double sh, double sv )</h3>
+<p>Shears the coordinate system <em>(sh,sv).</em>
+<p>See also  <a href="#ba64b6">translate</a>(), <a href="#fc599c">scale</a>(), <a href="#4bd0fb">rotate</a>(), <a href="#b09ca4">resetXForm</a>(), <a href="#f4a354">setWorldMatrix</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn">int * <a name="4498a4"></a>QPainter::tabArray () const</h3>
+<p>Returns the currently set tab stop array.
+<p>See also  <a href="#69c754">setTabArray</a>().
+<h3 class="fn">int <a name="d0b8c4"></a>QPainter::tabStops () const</h3>
+<p>Returns the tab stop setting.
+<p>See also  <a href="#075543">setTabStops</a>().
+<h3 class="fn">void <a name="ba64b6"></a>QPainter::translate ( double dx, double dy )</h3>
+<p>Translates the coordinate system by <em>(dx,dy).</em>
+<p>For example, the following code draws a single vertical line 20 pixels high.
+<pre>    void MyWidget::paintEvent()
+    {
+        <a href="qpainter.html">QPainter</a> paint( this );
+        paint.<a href="#ffde14">drawLine</a>(10,0,10,20);
+        paint.<a href="#ba64b6">translate</a>(100.0,100.0);
+        paint.<a href="#ffde14">drawLine</a>(-90,-80,-90,-70);
+    }
+</pre>
+<p>See also  <a href="#fc599c">scale</a>(), <a href="#a3ef1f">shear</a>(), <a href="#4bd0fb">rotate</a>(), <a href="#b09ca4">resetXForm</a>(), <a href="#f4a354">setWorldMatrix</a>() and <a href="#0dc06e">xForm</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="1802a4"></a>QPainter::viewport () const</h3>
+<p>Returns the viewport rectangle.
+<p>See also  <a href="#e86cf5">setViewport</a>() and <a href="#758881">setViewXForm</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="98a36a"></a>QPainter::window () const</h3>
+<p>Returns the window rectangle.
+<p>See also  <a href="#797026">setWindow</a>() and <a href="#758881">setViewXForm</a>().
+<h3 class="fn">const <a href="qwmatrix.html">QWMatrix</a> &amp; <a name="f16980"></a>QPainter::worldMatrix () const</h3>
+<p>Returns the world transformation matrix.
+<p>See also  <a href="#f4a354">setWorldMatrix</a>().
+<h3 class="fn"><a href="qpoint.html">QPoint</a> <a name="0dc06e"></a>QPainter::xForm ( const <a href="qpoint.html">QPoint</a> &amp; pv ) const</h3>
+<p>Returns the point <em>pv</em> transformed from model coordinates to device
+coordinates.
+<p>See also  <a href="#484a0d">xFormDev</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a> <a name="bbbdd1"></a>QPainter::xForm ( const <a href="qpointarray.html">QPointArray</a> &amp; av ) const</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Returns the point array <em>av</em> transformed from model coordinates to device
+coordinates.
+<p>See also  <a href="#484a0d">xFormDev</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a> <a name="30fbe4"></a>QPainter::xForm ( const <a href="qpointarray.html">QPointArray</a> &amp; av, int index, int npoints ) const</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Returns the point array <em>av</em> transformed from model coordinates to device
+coordinates.  The <em>index</em> is the first point in the array and <em>npoints</em>
+denotes the number of points to be transformed.  If <em>npoints</em> is negative,
+all points from <em>av[index]</em> until the last point in the array are
+transformed.
+<p>The returned point array consists of the number of points that were
+transformed.
+<p>Example:
+<pre>    <a href="qpointarray.html">QPointArray</a> a(10);
+    <a href="qpointarray.html">QPointArray</a> b;
+    b = painter.xForm(a,2,4);   // b.<a href="qarray.html#169918">size</a>() == 4
+    b = painter.xForm(a,2,-1);  // b.<a href="qarray.html#169918">size</a>() == 8
+</pre>
+<p>See also  <a href="#484a0d">xFormDev</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="c47da6"></a>QPainter::xForm ( const <a href="qrect.html">QRect</a> &amp; rv ) const</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Returns the rectangle <em>rv</em> transformed from model coordinates to device
+coordinates.
+<p>If world transformation is enabled and rotation or shearing has been
+specified, then the bounding rectangle is returned.
+<p>See also  <a href="#484a0d">xFormDev</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qpoint.html">QPoint</a> <a name="4bff42"></a>QPainter::xFormDev ( const <a href="qpoint.html">QPoint</a> &amp; pd ) const</h3>
+<p>Returns the point <em>pv</em> transformed from device coordinates to model
+coordinates.
+<p>See also  <a href="#0dc06e">xForm</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a> <a name="484a0d"></a>QPainter::xFormDev ( const <a href="qpointarray.html">QPointArray</a> &amp; ad ) const</h3>
+<p>Returns the point array <em>av</em> transformed from device coordinates
+to model coordinates.
+<p>See also  <a href="#0dc06e">xForm</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="b8e8c3"></a>QPainter::xFormDev ( const <a href="qrect.html">QRect</a> &amp; rd ) const</h3>
+<p>Returns the rectangle <em>rv</em> transformed from device coordinates to model
+coordinates.
+<p>If world transformation is enabled and rotation or shearing is used,
+then the bounding rectangle is returned.
+<p>See also  <a href="#0dc06e">xForm</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a> <a name="9e6391"></a>QPainter::xFormDev ( const <a href="qpointarray.html">QPointArray</a> &amp; ad, int index, int npoints ) const</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Returns the point array <em>ad</em> transformed from device coordinates to model
+coordinates.  The <em>index</em> is the first point in the array and <em>npoints</em>
+denotes the number of points to be transformed.  If <em>npoints</em> is negative,
+all points from <em>av[index]</em> until the last point in the array are
+transformed.
+<p>The returned point array consists of the number of points that were
+transformed.
+<p>Example:
+<pre>    <a href="qpointarray.html">QPointArray</a> a(10);
+    <a href="qpointarray.html">QPointArray</a> b;
+    b = painter.xFormDev(a,1,3);        // b.<a href="qarray.html#169918">size</a>() == 3
+    b = painter.xFormDev(a,1,-1);       // b.<a href="qarray.html#169918">size</a>() == 9
+</pre>
+<p>See also  <a href="#0dc06e">xForm</a>() and <a href="qwmatrix.html#38577f">QWMatrix::map</a>().
+<hr><h2>Related Functions</h2>
+<h3>void <a name="07370a"></a>qDrawPlainRect (QPainter * p, int x, int y, int w, int h, const <a href="qcolor.html">QColor</a> &amp; c, int lineWidth, const <a href="qbrush.html">QBrush</a> * fill)</h3>
+<p><code>#include &lt;<a href="qdrawutil-h.html">qdrawutil.h</a>&gt;</code>
+<p>Draws a plain rectangle given by (<em>x, y, w, h)</em>
+using the painter <em>p.</em>
+<p>The color argument <em>c</em> specifies the line color.
+<p>The <em>lineWidth</em> argument specifies the line width.
+<p>The rectangle interior is filled with the <em>fill</em> brush unless <em>fill</em>
+is null.
+<p>If you want to use a <a href="qframe.html">QFrame</a> widget instead, you can make it display a
+plain rectangle, for example
+<code><a href="qframe.html#c0d758">QFrame::setFrameStyle</a>( QFrame::Box | QFrame::Plain )</code>.<p><b>Warning:</b> This function does not look at <a href="qwidget.html#ea8b00">QWidget::style</a>()
+or <a href="qapplication.html#349f2d">QApplication::style</a>(). Use the drawing functions in <a href="qstyle.html">QStyle</a> to make
+widgets that follow the current GUI style.
+<p>See also  <a href="qpainter.html#fe5f92">qDrawShadeRect</a>() and <a href="qstyle.html#57a289">QStyle::drawRect</a>().
+
+<h3>void <a name="17185c"></a>qDrawShadeLine (QPainter * p, int x1, int y1, int x2, int y2, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken, int lineWidth, int midLineWidth)</h3>
+<p><code>#include &lt;<a href="qdrawutil-h.html">qdrawutil.h</a>&gt;</code>
+<p>Draws a horizontal (<em>y1</em> == <em>y2)</em> or vertical (<em>x1</em> == <em>x2)</em> shaded
+line using the painter <em>p.</em>
+<p>Nothing is drawn if <em>y1</em> != <em>y2</em> and <em>x1</em> != <em>x2</em> (i.e. the line
+is neither horizontal nor vertical).
+<p>The color group argument <em>g</em> specifies the shading colors
+(<a href="qcolorgroup.html#ad91f6">light</a>,
+<a href="qcolorgroup.html#0298e9">dark</a> and
+<a href="qcolorgroup.html#8ae3e0">middle</a> colors).
+<p>The line appears sunken if <em>sunken</em> is TRUE, or raised if <em>sunken</em> is
+FALSE.
+<p>The <em>lineWidth</em> argument specifies the line width for each of the
+lines. It is not the total line width.
+<p>The <em>midLineWidth</em> argument specifies the width of a middle line drawn
+in the <a href="qcolorgroup.html#8ae3e0">QColorGroup::mid</a>() color.
+<p>If you want to use a <a href="qframe.html">QFrame</a> widget instead, you can make it display a
+shaded line, for example
+<code><a href="qframe.html#c0d758">QFrame::setFrameStyle</a>( QFrame::HLine | QFrame::Sunken )</code>.<p><b>Warning:</b> This function does not look at <a href="qwidget.html#ea8b00">QWidget::style</a>()
+or <a href="qapplication.html#349f2d">QApplication::style</a>(). Use the drawing functions in <a href="qstyle.html">QStyle</a> to make
+widgets that follow the current GUI style.
+<p>See also  <a href="qpainter.html#fe5f92">qDrawShadeRect</a>(), <a href="qpainter.html#e55bfb">qDrawShadePanel</a>() and <a href="qstyle.html#8ad22d">QStyle::drawSeparator</a>().
+
+<h3>void <a name="724ffe"></a>qDrawWinButton (QPainter * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken, const <a href="qbrush.html">QBrush</a> * fill)</h3>
+<p><code>#include &lt;<a href="qdrawutil-h.html">qdrawutil.h</a>&gt;</code>
+<p>Draws a Windows-style button given by (<em>x, y, w, h)</em>
+using the painter <em>p.</em>
+<p>The color group argument <em>g</em> specifies the shading colors
+(<a href="qcolorgroup.html#ad91f6">light</a>,
+<a href="qcolorgroup.html#0298e9">dark</a> and
+<a href="qcolorgroup.html#8ae3e0">middle</a> colors).
+<p>The button appears sunken if <em>sunken</em> is TRUE, or raised if <em>sunken</em>
+is FALSE.
+<p>The line width is 2 pixels.
+<p>The button interior is filled with the <em>*fill</em> brush unless <em>fill</em> is
+null.<p><b>Warning:</b> This function does not look at <a href="qwidget.html#ea8b00">QWidget::style</a>()
+or <a href="qapplication.html#349f2d">QApplication::style</a>(). Use the drawing functions in <a href="qstyle.html">QStyle</a> to make
+widgets that follow the current GUI style.
+<p>See also  <a href="qpainter.html#8de467">qDrawWinPanel</a>() and <a href="qstyle.html#864576">QStyle::drawButton</a>().
+
+<h3>void <a name="8de467"></a>qDrawWinPanel (QPainter * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken, const <a href="qbrush.html">QBrush</a> * fill)</h3>
+<p><code>#include &lt;<a href="qdrawutil-h.html">qdrawutil.h</a>&gt;</code>
+<p>Draws a Windows-style panel given by (<em>x, y, w, h)</em>
+using the painter <em>p.</em>
+<p>The color group argument <em>g</em> specifies the shading colors.
+<p>The panel appears sunken if <em>sunken</em> is TRUE, or raised if <em>sunken</em> is
+FALSE.
+<p>The line width is 2 pixels.
+<p>The button interior is filled with the <em>fill</em> brush unless <em>fill</em> is
+null.
+<p>If you want to use a <a href="qframe.html">QFrame</a> widget instead, you can make it display a
+shaded panel, for example
+<code><a href="qframe.html#c0d758">QFrame::setFrameStyle</a>( QFrame::WinPanel | QFrame::Raised )</code>.<p><b>Warning:</b> This function does not look at <a href="qwidget.html#ea8b00">QWidget::style</a>()
+or <a href="qapplication.html#349f2d">QApplication::style</a>(). Use the drawing functions in <a href="qstyle.html">QStyle</a> to make
+widgets that follow the current GUI style.
+<p>See also  <a href="qpainter.html#e55bfb">qDrawShadePanel</a>(), <a href="qpainter.html#724ffe">qDrawWinButton</a>() and <a href="qstyle.html#46bc88">QStyle::drawPanel</a>().
+
+<h3>void <a name="e55bfb"></a>qDrawShadePanel (QPainter * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken, int lineWidth, const <a href="qbrush.html">QBrush</a> * fill)</h3>
+<p><code>#include &lt;<a href="qdrawutil-h.html">qdrawutil.h</a>&gt;</code>
+<p>Draws a shaded panel given by (<em>x, y, w, h)</em>
+using the painter <em>p.</em>
+<p>The color group argument <em>g</em> specifies the shading colors
+(<a href="qcolorgroup.html#ad91f6">light</a>,
+<a href="qcolorgroup.html#0298e9">dark</a> and
+<a href="qcolorgroup.html#8ae3e0">middle</a> colors).
+<p>The panel appears sunken if <em>sunken</em> is TRUE, or raised if <em>sunken</em> is
+FALSE.
+<p>The <em>lineWidth</em> argument specifies the line width.
+<p>The panel interior is filled with the <em>fill</em> brush unless <em>fill</em> is
+null.
+<p>If you want to use a <a href="qframe.html">QFrame</a> widget instead, you can make it display a
+shaded panel, for example
+<code><a href="qframe.html#c0d758">QFrame::setFrameStyle</a>( QFrame::Panel | QFrame::Sunken )</code>.<p><b>Warning:</b> This function does not look at <a href="qwidget.html#ea8b00">QWidget::style</a>()
+or <a href="qapplication.html#349f2d">QApplication::style</a>(). Use the drawing functions in <a href="qstyle.html">QStyle</a> to make
+widgets that follow the current GUI style.
+<p>See also  <a href="qpainter.html#8de467">qDrawWinPanel</a>(), <a href="qpainter.html#17185c">qDrawShadeLine</a>(), <a href="qpainter.html#fe5f92">qDrawShadeRect</a>() and <a href="qstyle.html#46bc88">QStyle::drawPanel</a>().
+
+<h3>void <a name="fe5f92"></a>qDrawShadeRect (QPainter * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken, int lineWidth, int midLineWidth, const <a href="qbrush.html">QBrush</a> * fill)</h3>
+<p><code>#include &lt;<a href="qdrawutil-h.html">qdrawutil.h</a>&gt;</code>
+<p>Draws a shaded rectangle/box given by (<em>x, y, w, h)</em>
+using the painter <em>p.</em>
+<p>The color group argument <em>g</em> specifies the shading colors
+(<a href="qcolorgroup.html#ad91f6">light</a>,
+<a href="qcolorgroup.html#0298e9">dark</a> and
+<a href="qcolorgroup.html#8ae3e0">middle</a> colors).
+<p>The rectangle appears sunken if <em>sunken</em> is TRUE, or raised if <em>sunken</em> is FALSE.
+<p>The <em>lineWidth</em> argument specifies the line width for each of the
+lines. It is not the total line width.
+<p>The <em>midLineWidth</em> argument specifies the width of a middle line drawn
+in the <a href="qcolorgroup.html#8ae3e0">QColorGroup::mid</a>() color.
+<p>The rectangle interior is filled with the <em>fill</em> brush unless <em>fill</em>
+is null.
+<p>If you want to use a <a href="qframe.html">QFrame</a> widget instead, you can make it display a
+shaded rectangle, for example
+<code><a href="qframe.html#c0d758">QFrame::setFrameStyle</a>( QFrame::Box | QFrame::Raised )</code>.<p><b>Warning:</b> This function does not look at <a href="qwidget.html#ea8b00">QWidget::style</a>()
+or <a href="qapplication.html#349f2d">QApplication::style</a>(). Use the drawing functions in <a href="qstyle.html">QStyle</a> to make
+widgets that follow the current GUI style.
+<p>See also  <a href="qpainter.html#17185c">qDrawShadeLine</a>(), <a href="qpainter.html#e55bfb">qDrawShadePanel</a>(), <a href="qpainter.html#07370a">qDrawPlainRect</a>(), <a href="qstyle.html#57a289">QStyle::drawRect</a>() and <a href="qstyle.html#cfdc48">QStyle::drawRectStrong</a>().
+
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QCanvasItem Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QCanvasItem Class Reference<br><small>[ <a href="canvas.html">canvas module</a> ]</small></h1><br clear="all">
+<p>
+The QCanvasItem is an abstract graphic object on a <a href="qcanvas.html">QCanvas</a>.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qcanvas-h.html">qcanvas.h</a>&gt;</code>
+<p>
+Inherits <a href="qt.html">Qt</a>.
+<p>Inherited by <a href="qcanvaspolygonalitem.html">QCanvasPolygonalItem</a>, <a href="qcanvassprite.html">QCanvasSprite</a> and <a href="qcanvastext.html">QCanvasText</a>.
+<p><a href="qcanvasitem-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#1c805c"><b>QCanvasItem</b></a> ( QCanvas * canvas ) </div>
+<li><div class="fn">virtual <a href="#d64997"><b>~QCanvasItem</b></a> () </div>
+<li><div class="fn">double <a href="#5286ee"><b>x</b></a> () const</div>
+<li><div class="fn">double <a href="#bf3ff3"><b>y</b></a> () const</div>
+<li><div class="fn">double <a href="#304ea2"><b>z</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#95cd3e"><b>moveBy</b></a> ( double dx, double dy ) </div>
+<li><div class="fn">void <a href="#7236f1"><b>move</b></a> ( double x, double y ) </div>
+<li><div class="fn">void <a href="#4e7bcc"><b>setX</b></a> ( double a ) </div>
+<li><div class="fn">void <a href="#c5829a"><b>setY</b></a> ( double a ) </div>
+<li><div class="fn">void <a href="#a0e28b"><b>setZ</b></a> ( double a ) </div>
+<li><div class="fn">bool <a href="#d411d6"><b>animated</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#1c3b12"><b>setAnimated</b></a> ( bool y ) </div>
+<li><div class="fn">virtual void <a href="#86a6b9"><b>setVelocity</b></a> ( double vx, double vy ) </div>
+<li><div class="fn">void <a href="#148c23"><b>setXVelocity</b></a> ( double vx ) </div>
+<li><div class="fn">void <a href="#eb2e96"><b>setYVelocity</b></a> ( double vy ) </div>
+<li><div class="fn">double <a href="#ff27a3"><b>xVelocity</b></a> () const</div>
+<li><div class="fn">double <a href="#df5072"><b>yVelocity</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#5921ae"><b>advance</b></a> ( int stage ) </div>
+<li><div class="fn">virtual bool <a href="#e006e1"><b>collidesWith</b></a> ( const QCanvasItem * ) const</div>
+<li><div class="fn">QCanvasItemList <a href="#b647ce"><b>collisions</b></a> ( bool exact ) const</div>
+<li><div class="fn">virtual void <a href="#8ec35e"><b>setCanvas</b></a> ( QCanvas * ) </div>
+<li><div class="fn">virtual void <a href="#a3b9d2"><b>draw</b></a> ( QPainter &amp; ) </div>
+<li><div class="fn">void <a href="#d89255"><b>show</b></a> () </div>
+<li><div class="fn">void <a href="#c2e7f6"><b>hide</b></a> () </div>
+<li><div class="fn">virtual void <a href="#3ba0bd"><b>setVisible</b></a> ( bool yes ) </div>
+<li><div class="fn">bool <a href="#042d46"><b>visible</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#843235"><b>setSelected</b></a> ( bool yes ) </div>
+<li><div class="fn">bool <a href="#5aec4a"><b>selected</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#5b53fb"><b>setEnabled</b></a> ( bool yes ) </div>
+<li><div class="fn">bool <a href="#9b0dad"><b>enabled</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#7d8c3e"><b>setActive</b></a> ( bool yes ) </div>
+<li><div class="fn">bool <a href="#116d5f"><b>active</b></a> () const</div>
+<li><div class="fn">virtual int <a href="#f6cf38"><b>rtti</b></a> () const</div>
+<li><div class="fn">virtual QRect <a href="#328657"><b>boundingRect</b></a> () const</div>
+<li><div class="fn">virtual QRect <a href="#102d71"><b>boundingRectAdvanced</b></a> () const</div>
+<li><div class="fn">QCanvas* <a href="#f5afca"><b>canvas</b></a> () const</div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QCanvasItem is an abstract graphic object on a <a href="qcanvas.html">QCanvas</a>.
+<p>
+A QCanvasItem object can be moved in the <a href="#5286ee">x</a>(), <a href="#bf3ff3">y</a>() and <a href="#304ea2">z</a>() dimensions
+using functions such as <a href="#7236f1">move</a>(), <a href="#95cd3e">moveBy</a>(), <a href="#c5829a">setY</a>() and many others. It
+has a size given by <a href="#328657">boundingRect</a>().  The item can move or change
+appearance automatically, using <a href="#1c3b12">setAnimated</a>() and <a href="#86a6b9">setVelocity</a>(), and
+you can get information about whether it collides using <a href="#39becb">collidesWith</a>()
+and <a href="#b647ce">collisions</a>().
+<p>Finally, the <a href="#f6cf38">rtti</a>() function is used for identifying subclasses of
+QCanvasItem, and the <a href="#f5afca">canvas</a>() returns a pointer to the canvas on which
+the item lives.
+<p>An item, by default, has no speed, no size, is not animated and has no
+velocity.
+<p>Note that you cannot easily subclass QCanvasItem yourself - the API is
+too low-level.  Instead, you should subclass <a href="qcanvaspolygonalitem.html">QCanvasPolygonalItem</a>, or
+perhaps <a href="qcanvasrectangle.html">QCanvasRectangle</a> or <a href="qcanvassprite.html">QCanvasSprite</a>.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="1c805c"></a>QCanvasItem::QCanvasItem ( <a href="qcanvas.html">QCanvas</a> * canvas )</h3>
+<p>Constructs a QCanvasItem on <em>canvas.</em>
+<p>See also  <a href="#8ec35e">setCanvas</a>().
+<h3 class="fn"><a name="d64997"></a>QCanvasItem::~QCanvasItem () <code>[virtual]</code></h3>
+<p>Destructs the QCanvasItem.  It is removed from its canvas.
+<h3 class="fn">bool <a name="116d5f"></a>QCanvasItem::active () const</h3>
+<p>Returns TRUE if the QCanvasItem is active.
+<h3 class="fn">void <a name="5921ae"></a>QCanvasItem::advance ( int phase ) <code>[virtual]</code></h3>
+<p>Advances the animation of the item.  The default implementation
+moves the item by the preset velocity if <em>stage</em> is 1, and does
+nothing if <em>stage</em> is 0.
+<p>Note that if you reimplement this funciton, you may not change the
+canvas in any way, add other items, or remove items.
+<p>See also  <a href="qcanvas.html#02acd4">QCanvas::advance</a>().
+<h3 class="fn">bool <a name="d411d6"></a>QCanvasItem::animated () const</h3>
+<p>Returns TRUE is the item is animated.
+<p>See also  <a href="#86a6b9">setVelocity</a>() and <a href="#1c3b12">setAnimated</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="328657"></a>QCanvasItem::boundingRect () const <code>[virtual]</code></h3>
+<p>Returns the bounding rectangle of pixels that the item covers.
+<p>See also  <a href="#102d71">boundingRectAdvanced</a>().
+<p>Reimplemented in <a href="qcanvastext.html#f6dcba">QCanvasText</a>, <a href="qcanvassprite.html#f63517">QCanvasSprite</a> and <a href="qcanvaspolygonalitem.html#3c5dfa">QCanvasPolygonalItem</a>.
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="102d71"></a>QCanvasItem::boundingRectAdvanced () const <code>[virtual]</code></h3>
+<p>Returns the bounding rectangle of pixels that the item <em>will</em> cover
+after <a href="#5921ae">advance</a>(1) is called.
+<p>See also  <a href="#328657">boundingRect</a>().
+<h3 class="fn"><a href="qcanvas.html">QCanvas</a>* <a name="f5afca"></a>QCanvasItem::canvas () const</h3>
+<p>Returns the canvas containing the item.
+<h3 class="fn">bool <a name="e006e1"></a>QCanvasItem::collidesWith ( const QCanvasItem * other ) const <code>[virtual]</code></h3>
+<p>Returns TRUE if the item will collide with the <em>other</em> item <em>after</em> they
+have moved by their current velocities.
+<p>See also  <a href="#b647ce">collisions</a>().
+<p>Reimplemented in <a href="qcanvaspolygonalitem.html#2e3ab9">QCanvasPolygonalItem</a>, <a href="qcanvastext.html#f7c838">QCanvasText</a>, <a href="qcanvasellipse.html#796576">QCanvasEllipse</a>, <a href="qcanvassprite.html#fea2ac">QCanvasSprite</a> and <a href="qcanvasrectangle.html#3db077">QCanvasRectangle</a>.
+<h3 class="fn">QCanvasItemList <a name="b647ce"></a>QCanvasItem::collisions ( bool exact ) const</h3>
+<p>Returns the list of items that this item collides with.
+<p>A collision is generally defined as pixels of one item drawing on the
+pixels of another item, but not all subclasses are so precise. Also,
+since pixelwise collision detection can be slow, this function
+works in either exact or inexact mode, according to the <em>exact</em>
+parameter.
+<p>In exact mode, items returned have been accurately tested to collide
+with the item.
+<p>In inexact mode, the items returned are only <em>near</em> the item and
+should be tested using <a href="#39becb">collidesWith</a>() if they are interesting collision
+candidates. By using this, you can ignore some items for which collisions
+are not interesting.
+<p>The returned list is just a list of QCanvasItems, but often you will need
+to cast the items to more useful types. The safe way to do that is to
+use <a href="#f6cf38">rtti</a>() before casting. This provides some of the functionality of
+standard C++ dynamic cast operation even on compilers where that is not
+available.
+<p>Note that while a QCanvasItem may be `on' a <a href="qcanvas.html">QCanvas</a> even if it's
+coordinates place it far off the edge of the area of the QCanvas,
+collision detection only works for parts of an item
+that are within the area of the canvas.
+<h3 class="fn">void <a name="a3b9d2"></a>QCanvasItem::draw ( <a href="qpainter.html">QPainter</a> &amp; painter ) <code>[virtual]</code></h3>
+<p>This abstract virtual function draws the item using <em>painter.</em>
+<p>Reimplemented in <a href="qcanvaspolygonalitem.html#9b98ed">QCanvasPolygonalItem</a> and <a href="qcanvassprite.html#e93f4d">QCanvasSprite</a>.
+<h3 class="fn">bool <a name="9b0dad"></a>QCanvasItem::enabled () const</h3>
+<p>Returns TRUE if the QCanvasItem is enabled.
+<h3 class="fn">void <a name="c2e7f6"></a>QCanvasItem::hide ()</h3>
+<p>Shorthand for <a href="#3ba0bd">setVisible</a>(FALSE).
+<h3 class="fn">void <a name="7236f1"></a>QCanvasItem::move ( double x, double y )</h3>
+<p>Moves the item to (<em>x, y)</em> by calling the <a href="#95cd3e">moveBy</a>()
+virtual function.
+<h3 class="fn">void <a name="95cd3e"></a>QCanvasItem::moveBy ( double dx, double dy ) <code>[virtual]</code></h3>
+<p>Moves the item from its current position by the given amounts.
+<p>Reimplemented in <a href="qcanvaspolygon.html#0697e7">QCanvasPolygon</a> and <a href="qcanvastext.html#03c5bd">QCanvasText</a>.
+<h3 class="fn">int <a name="f6cf38"></a>QCanvasItem::rtti () const <code>[virtual]</code></h3>
+<p>Returns 0.
+<p>Although often frowned upon by purists, Run Time
+Type Identification is very useful in this case, as it allows
+a <a href="qcanvas.html">QCanvas</a> to be an efficient indexed storage mechanism.
+<p>Make your derived classes return their own values for rtti(), and you
+can distinguish between objects returned by QCanvas::at().  You should
+use values greater than 1000 preferably a large random number,
+to allow for extensions to this class.
+<p>However, it is important not to overuse this facility, as
+it damages extensibility.  For example, once you have identified
+a base class of a QCanvasItem found by QCanvas::at(), cast it
+to that type and call meaningful methods rather than acting
+upon the object based on its rtti value.
+<p>For example:
+<p><pre>    <a href="qcanvasitem.html">QCanvasItem</a>* item;
+    // Find an item, eg. with QCanvasItem::collisions().
+    ...
+    if (item-&gt;<a href="#f6cf38">rtti</a>() == MySprite::rtti()) {
+        MySprite* s = (MySprite*)item;
+        if (s-&gt;isDamagable()) s-&gt;loseHitPoints(1000);
+        if (s-&gt;isHot()) myself-&gt;loseHitPoints(1000);
+        ...
+    }
+</pre>
+<p>Reimplemented in <a href="qcanvaspolygonalitem.html#ee97f9">QCanvasPolygonalItem</a>, <a href="qcanvasellipse.html#e2c14f">QCanvasEllipse</a>, <a href="qcanvaspolygon.html#f9687b">QCanvasPolygon</a>, <a href="qcanvasline.html#287efc">QCanvasLine</a> and <a href="qcanvasrectangle.html#5fd7bc">QCanvasRectangle</a>.
+<h3 class="fn">bool <a name="5aec4a"></a>QCanvasItem::selected () const</h3>
+<p>Returns TRUE if the QCanvasItem is selected.
+<h3 class="fn">void <a name="7d8c3e"></a>QCanvasItem::setActive ( bool yes ) <code>[virtual]</code></h3>
+<p>Sets the active flag of the item to <em>yes</em> and causes it to be
+redrawn when <a href="qcanvas.html#7dcfc2">QCanvas::update</a>() is next called.
+<p>The behavior of <a href="qcanvas.html">QCanvas</a>, QCanvasItem or the built-in QCanvasItem
+subclasses is not affected by this value.  setActive() is supplied
+because many applications need it, but it is up to the application
+to define its exact meaning.
+<h3 class="fn">void <a name="1c3b12"></a>QCanvasItem::setAnimated ( bool y ) <code>[virtual]</code></h3>
+<p>Sets the item to be animated if <em>y</em> is TRUE, or not if <em>y</em> is
+FALSE.
+<p>See also  <a href="#5921ae">advance</a>() and <a href="qcanvas.html#02acd4">QCanvas::advance</a>().
+<h3 class="fn">void <a name="8ec35e"></a>QCanvasItem::setCanvas ( <a href="qcanvas.html">QCanvas</a> * c ) <code>[virtual]</code></h3>
+<p>Sets the <a href="qcanvas.html">QCanvas</a> upon which the QCanvasItem is to be drawn to <em>c.</em>
+<p>See also  <a href="#f5afca">canvas</a>().
+<h3 class="fn">void <a name="5b53fb"></a>QCanvasItem::setEnabled ( bool yes ) <code>[virtual]</code></h3>
+<p>Sets the enabled flag of the item to <em>yes</em> and causes it to be
+redrawn when <a href="qcanvas.html#7dcfc2">QCanvas::update</a>() is next called.
+<p>The behavior of <a href="qcanvas.html">QCanvas</a>, QCanvasItem or the built-in QCanvasItem
+subclasses is not affected by this value.  setEnabled() is supplied
+because many applications need it, but it is up to the application
+to define its exact meaning.
+<h3 class="fn">void <a name="843235"></a>QCanvasItem::setSelected ( bool yes ) <code>[virtual]</code></h3>
+<p>Sets the selected flag of the item to <em>yes</em> and causes it to be
+redrawn when <a href="qcanvas.html#7dcfc2">QCanvas::update</a>() is next called.
+<p>The behavior of <a href="qcanvas.html">QCanvas</a>, QCanvasItem or the built-in QCanvasItem
+subclasses is not affected by this value.  setSelected() is supplied
+because many applications need it, but it is up to the application
+to define its exact meaning.
+<h3 class="fn">void <a name="86a6b9"></a>QCanvasItem::setVelocity ( double vx, double vy ) <code>[virtual]</code></h3>
+<p>Sets the item to be animated and moving by <em>dx</em> and <em>dy</em> pixels
+in the horizontal and vertical directions respectively.
+<p>See also  <a href="#5921ae">advance</a>().
+<h3 class="fn">void <a name="3ba0bd"></a>QCanvasItem::setVisible ( bool yes ) <code>[virtual]</code></h3>
+<p>Makes the items visible if <em>yes</em> is TRUE, or invisible if <em>yes</em>
+is FALSE.  The change takes effect when <a href="qcanvas.html#7dcfc2">QCanvas::update</a>() is next
+called.
+<h3 class="fn">void <a name="4e7bcc"></a>QCanvasItem::setX ( double x )</h3>
+<p>Moves the item so that its X-position is <em>x.</em>
+<p>See also  <a href="#5286ee">x</a>() and <a href="#7236f1">move</a>().
+<h3 class="fn">void <a name="148c23"></a>QCanvasItem::setXVelocity ( double vx )</h3>
+<p>Sets the horizontal component of the item's velocity to <em>vx.</em>
+<h3 class="fn">void <a name="c5829a"></a>QCanvasItem::setY ( double y )</h3>
+<p>Moves the item so that its Y-position is <em>y.</em>
+<p>See also  <a href="#bf3ff3">y</a>() and <a href="#7236f1">move</a>().
+<h3 class="fn">void <a name="eb2e96"></a>QCanvasItem::setYVelocity ( double vy )</h3>
+<p>Sets the vertical component of the item's velocity to <em>vy.</em>
+<h3 class="fn">void <a name="a0e28b"></a>QCanvasItem::setZ ( double z )</h3>
+<p>Sets the height of the item to <em>z.</em>  Higher-z items obscure lower-z
+ones.
+<p>See also  <a href="#304ea2">z</a>() and <a href="#7236f1">move</a>().
+<h3 class="fn">void <a name="d89255"></a>QCanvasItem::show ()</h3>
+<p>Shorthand for <a href="#3ba0bd">setVisible</a>(TRUE).
+<h3 class="fn">bool <a name="042d46"></a>QCanvasItem::visible () const</h3>
+<p>Returns TRUE if the QCanvasItem is visible.  This does <em>not</em> mean
+the QCanvasItem is currently in a view, merely that if a view is
+showing the area where the QCanvasItem is, and the item is not
+obscured by items at a higher z, and the view is not obscured by
+overlying windows, it would be visible.
+<p>See also  <a href="#3ba0bd">setVisible</a>() and <a href="#304ea2">z</a>().
+<h3 class="fn">double <a name="5286ee"></a>QCanvasItem::x () const</h3>
+<p>Returns the horizontal position of the item.  Note that subclasses
+often have an origin other than the top-left corner.
+<h3 class="fn">double <a name="ff27a3"></a>QCanvasItem::xVelocity () const</h3>
+<p>Returns the horizontal component of the velocity of the item.
+<h3 class="fn">double <a name="bf3ff3"></a>QCanvasItem::y () const</h3>
+<p>Returns the vertical position of the item.  Note that subclasses
+often have an origin other than the top-left corner.
+<h3 class="fn">double <a name="df5072"></a>QCanvasItem::yVelocity () const</h3>
+<p>Returns the vertical component of the velocity of the item.
+<h3 class="fn">double <a name="304ea2"></a>QCanvasItem::z () const</h3>
+<p>Returns the z height of the item, which is used for visual order:
+higher-z items obscure lower-z ones.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

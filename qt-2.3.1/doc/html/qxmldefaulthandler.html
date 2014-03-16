@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QXmlDefaultHandler Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QXmlDefaultHandler Class Reference<br><small>[ <a href="xml.html">XML module</a> ]</small></h1><br clear="all">
+<p>
+The QXmlDefaultHandler class provides a default implementation of all XML handler classes.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qxml-h.html">qxml.h</a>&gt;</code>
+<p>
+Inherits <a href="qxmlcontenthandler.html">QXmlContentHandler</a>, <a href="qxmldtdhandler.html">QXmlDTDHandler</a>, <a href="qxmldeclhandler.html">QXmlDeclHandler</a>, <a href="qxmlentityresolver.html">QXmlEntityResolver</a>, <a href="qxmlerrorhandler.html">QXmlErrorHandler</a> and <a href="qxmllexicalhandler.html">QXmlLexicalHandler</a>.
+<p><a href="qxmldefaulthandler-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#8df65b"><b>QXmlDefaultHandler</b></a> () </div>
+<li><div class="fn">virtual <a href="#dd6d28"><b>~QXmlDefaultHandler</b></a> () </div>
+<li><div class="fn">virtual void <a href="#a52848"><b>setDocumentLocator</b></a> ( QXmlLocator * locator ) </div>
+<li><div class="fn">virtual bool <a href="#ce9622"><b>startDocument</b></a> () </div>
+<li><div class="fn">virtual bool <a href="#0a189e"><b>endDocument</b></a> () </div>
+<li><div class="fn">virtual bool <a href="#2c6a8e"><b>startPrefixMapping</b></a> ( const QString &amp; prefix, const QString &amp; uri ) </div>
+<li><div class="fn">virtual bool <a href="#deac3c"><b>endPrefixMapping</b></a> ( const QString &amp; prefix ) </div>
+<li><div class="fn">virtual bool <a href="#f2b0db"><b>startElement</b></a> ( const QString &amp; namespaceURI, const QString &amp; localName, const QString &amp; qName, const QXmlAttributes &amp; atts ) </div>
+<li><div class="fn">virtual bool <a href="#6b1c30"><b>endElement</b></a> ( const QString &amp; namespaceURI, const QString &amp; localName, const QString &amp; qName ) </div>
+<li><div class="fn">virtual bool <a href="#f57018"><b>characters</b></a> ( const QString &amp; ch ) </div>
+<li><div class="fn">virtual bool <a href="#30b231"><b>ignorableWhitespace</b></a> ( const QString &amp; ch ) </div>
+<li><div class="fn">virtual bool <a href="#541580"><b>processingInstruction</b></a> ( const QString &amp; target, const QString &amp; data ) </div>
+<li><div class="fn">virtual bool <a href="#e05c8e"><b>skippedEntity</b></a> ( const QString &amp; name ) </div>
+<li><div class="fn">virtual bool <a href="#d54799"><b>warning</b></a> ( const QXmlParseException &amp; exception ) </div>
+<li><div class="fn">virtual bool <a href="#97ecf3"><b>error</b></a> ( const QXmlParseException &amp; exception ) </div>
+<li><div class="fn">virtual bool <a href="#11c5ac"><b>fatalError</b></a> ( const QXmlParseException &amp; exception ) </div>
+<li><div class="fn">virtual bool <a href="#3d067e"><b>notationDecl</b></a> ( const QString &amp; name, const QString &amp; publicId, const QString &amp; systemId ) </div>
+<li><div class="fn">virtual bool <a href="#9a6ebc"><b>unparsedEntityDecl</b></a> ( const QString &amp; name, const QString &amp; publicId, const QString &amp; systemId, const QString &amp; notationName ) </div>
+<li><div class="fn">virtual bool <a href="#2c68bb"><b>resolveEntity</b></a> ( const QString &amp; publicId, const QString &amp; systemId, QXmlInputSource * ret ) </div>
+<li><div class="fn">virtual bool <a href="#b5520b"><b>startDTD</b></a> ( const QString &amp; name, const QString &amp; publicId, const QString &amp; systemId ) </div>
+<li><div class="fn">virtual bool <a href="#b7f820"><b>endDTD</b></a> () </div>
+<li><div class="fn">virtual bool <a href="#7b96e2"><b>startCDATA</b></a> () </div>
+<li><div class="fn">virtual bool <a href="#a37c6c"><b>endCDATA</b></a> () </div>
+<li><div class="fn">virtual bool <a href="#77f678"><b>comment</b></a> ( const QString &amp; ch ) </div>
+<li><div class="fn">virtual bool <a href="#9c2278"><b>attributeDecl</b></a> ( const QString &amp; eName, const QString &amp; aName, const QString &amp; type, const QString &amp; valueDefault, const QString &amp; value ) </div>
+<li><div class="fn">virtual bool <a href="#7f6227"><b>internalEntityDecl</b></a> ( const QString &amp; name, const QString &amp; value ) </div>
+<li><div class="fn">virtual bool <a href="#21cd4c"><b>externalEntityDecl</b></a> ( const QString &amp; name, const QString &amp; publicId, const QString &amp; systemId ) </div>
+<li><div class="fn">virtual QString <a href="#1d9629"><b>errorString</b></a> () </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QXmlDefaultHandler class provides a default implementation of all XML handler classes.
+<p>
+Very often you are only interested in parts of the things that that the
+reader reports to you. This class simply implements a default behaviour of
+the handler classes (most of the time: do nothing). Normally this is the
+class you subclass for implementing your customized handler.
+<p>See also the <a href="xml.html#introSAX2">Introduction to SAX2</a>.
+<p>See also  <a href="qxmldtdhandler.html">QXmlDTDHandler</a>, <a href="qxmldeclhandler.html">QXmlDeclHandler</a>, <a href="qxmlcontenthandler.html">QXmlContentHandler</a>, <a href="qxmlentityresolver.html">QXmlEntityResolver</a>, <a href="qxmlerrorhandler.html">QXmlErrorHandler</a> and <a href="qxmllexicalhandler.html">QXmlLexicalHandler</a>.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="8df65b"></a>QXmlDefaultHandler::QXmlDefaultHandler ()</h3>
+<p>Constructor.
+<h3 class="fn"><a name="dd6d28"></a>QXmlDefaultHandler::~QXmlDefaultHandler () <code>[virtual]</code></h3>
+<p>Destructor.
+<h3 class="fn">bool <a name="9c2278"></a>QXmlDefaultHandler::attributeDecl ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmldeclhandler.html#efea69">QXmlDeclHandler.</a>
+<h3 class="fn">bool <a name="f57018"></a>QXmlDefaultHandler::characters ( const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#d96698">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="77f678"></a>QXmlDefaultHandler::comment ( const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmllexicalhandler.html#6c8a01">QXmlLexicalHandler.</a>
+<h3 class="fn">bool <a name="a37c6c"></a>QXmlDefaultHandler::endCDATA () <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmllexicalhandler.html#c054be">QXmlLexicalHandler.</a>
+<h3 class="fn">bool <a name="b7f820"></a>QXmlDefaultHandler::endDTD () <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmllexicalhandler.html#5553c4">QXmlLexicalHandler.</a>
+<h3 class="fn">bool <a name="0a189e"></a>QXmlDefaultHandler::endDocument () <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#79c84a">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="6b1c30"></a>QXmlDefaultHandler::endElement ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#b4dcb5">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="deac3c"></a>QXmlDefaultHandler::endPrefixMapping ( const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#052368">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="97ecf3"></a>QXmlDefaultHandler::error ( const <a href="qxmlparseexception.html">QXmlParseException</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlerrorhandler.html#c064d6">QXmlErrorHandler.</a>
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="1d9629"></a>QXmlDefaultHandler::errorString () <code>[virtual]</code></h3>
+<p>Returns the default error string.
+<p>Reimplemented from <a href="qxmldtdhandler.html#1dac01">QXmlDTDHandler.</a>
+<h3 class="fn">bool <a name="21cd4c"></a>QXmlDefaultHandler::externalEntityDecl ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmldeclhandler.html#523332">QXmlDeclHandler.</a>
+<h3 class="fn">bool <a name="11c5ac"></a>QXmlDefaultHandler::fatalError ( const <a href="qxmlparseexception.html">QXmlParseException</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlerrorhandler.html#220851">QXmlErrorHandler.</a>
+<h3 class="fn">bool <a name="30b231"></a>QXmlDefaultHandler::ignorableWhitespace ( const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#5bdce1">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="7f6227"></a>QXmlDefaultHandler::internalEntityDecl ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmldeclhandler.html#ea49f3">QXmlDeclHandler.</a>
+<h3 class="fn">bool <a name="3d067e"></a>QXmlDefaultHandler::notationDecl ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmldtdhandler.html#aba1a3">QXmlDTDHandler.</a>
+<h3 class="fn">bool <a name="541580"></a>QXmlDefaultHandler::processingInstruction ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#94eee6">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="2c68bb"></a>QXmlDefaultHandler::resolveEntity ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, <a href="qxmlinputsource.html">QXmlInputSource</a> * ret ) <code>[virtual]</code></h3>
+<p>Always sets <em>ret</em> to 0, so that the reader will use the system identifier
+provided in the XML document.
+<p>Reimplemented from <a href="qxmlentityresolver.html#904701">QXmlEntityResolver.</a>
+<h3 class="fn">void <a name="a52848"></a>QXmlDefaultHandler::setDocumentLocator ( <a href="qxmllocator.html">QXmlLocator</a> * ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#dd7476">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="e05c8e"></a>QXmlDefaultHandler::skippedEntity ( const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#606338">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="7b96e2"></a>QXmlDefaultHandler::startCDATA () <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmllexicalhandler.html#eae48d">QXmlLexicalHandler.</a>
+<h3 class="fn">bool <a name="b5520b"></a>QXmlDefaultHandler::startDTD ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmllexicalhandler.html#6ad19a">QXmlLexicalHandler.</a>
+<h3 class="fn">bool <a name="ce9622"></a>QXmlDefaultHandler::startDocument () <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#4df2b7">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="f2b0db"></a>QXmlDefaultHandler::startElement ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qxmlattributes.html">QXmlAttributes</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#0647fb">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="2c6a8e"></a>QXmlDefaultHandler::startPrefixMapping ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlcontenthandler.html#b5fddc">QXmlContentHandler.</a>
+<h3 class="fn">bool <a name="9a6ebc"></a>QXmlDefaultHandler::unparsedEntityDecl ( const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp;, const <a href="qstring.html">QString</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmldtdhandler.html#d54ac8">QXmlDTDHandler.</a>
+<h3 class="fn">bool <a name="d54799"></a>QXmlDefaultHandler::warning ( const <a href="qxmlparseexception.html">QXmlParseException</a> &amp; ) <code>[virtual]</code></h3>
+<p>Does nothing.
+<p>Reimplemented from <a href="qxmlerrorhandler.html#701cba">QXmlErrorHandler.</a>
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

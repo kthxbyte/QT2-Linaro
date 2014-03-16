@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QFontInfo Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QFontInfo Class Reference</h1><br clear="all">
+<p>
+The QFontInfo class provides general information about fonts.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qfontinfo-h.html">qfontinfo.h</a>&gt;</code>
+<p><a href="qfontinfo-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#1b3fd8"><b>QFontInfo</b></a> ( const QFont &amp; ) </div>
+<li><div class="fn"><a href="#7a8122"><b>QFontInfo</b></a> ( const QFontInfo &amp; ) </div>
+<li><div class="fn"><a href="#13f72c"><b>~QFontInfo</b></a> () </div>
+<li><div class="fn">QFontInfo&amp; <a href="#b7d0ee"><b>operator=</b></a> ( const QFontInfo &amp; ) </div>
+<li><div class="fn">QString <a href="#682b83"><b>family</b></a> () const</div>
+<li><div class="fn">int <a href="#b4f86c"><b>pointSize</b></a> () const</div>
+<li><div class="fn">bool <a href="#a97c1a"><b>italic</b></a> () const</div>
+<li><div class="fn">int <a href="#e24588"><b>weight</b></a> () const</div>
+<li><div class="fn">bool <a href="#d5de2f"><b>bold</b></a> () const</div>
+<li><div class="fn">bool <a href="#aefbe6"><b>underline</b></a> () const</div>
+<li><div class="fn">bool <a href="#824934"><b>strikeOut</b></a> () const</div>
+<li><div class="fn">bool <a href="#fb43e1"><b>fixedPitch</b></a> () const</div>
+<li><div class="fn">QFont::StyleHint <a href="#87cfb0"><b>styleHint</b></a> () const</div>
+<li><div class="fn">QFont::CharSet <a href="#ce1af8"><b>charSet</b></a> () const</div>
+<li><div class="fn">bool <a href="#b1d8b3"><b>rawMode</b></a> () const</div>
+<li><div class="fn">bool <a href="#e98ed7"><b>exactMatch</b></a> () const</div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QFontInfo class provides general information about fonts.
+<p>
+The QFontInfo class mirrors <a href="qfont.html">QFont</a> exactly, but where QFont access
+functions return set values, QFontInfo returns the values that
+apply to the font in use.
+<p>For example, when the program asks for a 25pt Courier font on a
+machine that has a 24pt Courier font but not a scalable one, QFont
+will (normally) use the 24pt Courier for rendering.  In this case,
+<a href="qfont.html#9bb6f8">QFont::pointSize</a>() returns 25 and <a href="#b4f86c">QFontInfo::pointSize</a>() 24.
+<p>The access functions in QFontInfo mirror QFont exactly, except for
+this difference.
+<p>There are three ways to create a QFontInfo object.
+<p>The QFontInfo constructor with a QFont creates a font info object
+for a screen-compatible font, i.e. the font can not be a printer
+font.
+<p><a href="qwidget.html#a6423a">QWidget::fontInfo</a>() returns the font info for a widget's font.  This
+is equivalent to QFontInfo(widget->font()).  Setting a new font for
+the widget later does not affect the font info object.
+<p><a href="qpainter.html#8c3c26">QPainter::fontInfo</a>() returns the font info for a painter's current
+font. The font info object is automatically updated if somebody sets
+a new painter font, unlike the two above cases, which take a
+"snapshot" of a font.
+<p>See also  <a href="qfont.html">QFont</a> and <a href="qfontmetrics.html">QFontMetrics</a>.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="1b3fd8"></a>QFontInfo::QFontInfo ( const <a href="qfont.html">QFont</a> &amp; font )</h3>
+<p>Constructs a font info object for <em>font.</em>
+<p>The font must be screen-compatible, i.e. a font you use when drawing
+text in <a href="qwidget.html">widgets</a> or <a href="qpixmap.html">pixmaps</a>.
+If <em>font</em> is a printer font, you'll probably get wrong results.
+<p>Use the <a href="qpainter.html#8c3c26">QPainter::fontInfo</a>() to get the font info when painting.
+This is a little slower than using this constructor, but it always
+gives correct results.
+<h3 class="fn"><a name="7a8122"></a>QFontInfo::QFontInfo ( const QFontInfo &amp; fi )</h3>
+<p>Constructs a copy of <em>fi.</em>
+<h3 class="fn"><a name="13f72c"></a>QFontInfo::~QFontInfo ()</h3>
+<p>Destructs the font info object.
+<h3 class="fn">bool <a name="d5de2f"></a>QFontInfo::bold () const</h3>
+<p>Returns TRUE if <a href="#e24588">weight</a>() would return a greater than
+<code>QFont::Normal,</code> and FALSE otherwise.
+<p>See also  <a href="#e24588">weight</a>() and <a href="qfont.html#f2c973">QFont::bold</a>().
+<h3 class="fn">QFont::CharSet <a name="ce1af8"></a>QFontInfo::charSet() const</h3>
+<p>Returns the character set of the matched window system font.
+<p>See also  <a href="qfont.html#d94bbd">QFont::charSet</a>().
+<h3 class="fn">bool <a name="e98ed7"></a>QFontInfo::exactMatch () const</h3>
+<p>Returns TRUE if the matched window system font is exactly the one specified
+by the font.
+<p>See also  <a href="qfont.html#0ce732">QFont::exactMatch</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="682b83"></a>QFontInfo::family () const</h3>
+<p>Returns the family name of the matched window system font.
+<p>See also  <a href="qfont.html#a9017e">QFont::family</a>().
+<h3 class="fn">bool <a name="fb43e1"></a>QFontInfo::fixedPitch () const</h3>
+<p>Returns the fixed pitch value of the matched window system font.
+A fixed pitch font is a font that has constant character pixel width.
+<p>See also  <a href="qfont.html#7f2a40">QFont::fixedPitch</a>().
+<h3 class="fn">bool <a name="a97c1a"></a>QFontInfo::italic () const</h3>
+<p>Returns the italic value of the matched window system font.
+<p>See also  <a href="qfont.html#3eb9a0">QFont::italic</a>().
+<h3 class="fn">QFontInfo &amp; <a name="b7d0ee"></a>QFontInfo::operator= ( const QFontInfo &amp; fi )</h3>
+<p>Font info assignment.
+<h3 class="fn">int <a name="b4f86c"></a>QFontInfo::pointSize () const</h3>
+<p>Returns the point size of the matched window system font.
+<p>See also  <a href="qfont.html#9bb6f8">QFont::pointSize</a>().
+<h3 class="fn">bool <a name="b1d8b3"></a>QFontInfo::rawMode () const</h3>
+<p>Returns TRUE if the font is a raw mode font.
+<p>If it is a raw mode font, all other functions in QFontInfo will return the
+same values set in the <a href="qfont.html">QFont</a>, regardless of the font actually used.
+<p>See also  <a href="qfont.html#0f89b1">QFont::rawMode</a>().
+<h3 class="fn">bool <a name="824934"></a>QFontInfo::strikeOut () const</h3>
+<p>Returns the strike out value of the matched window system font.
+<p>See also  <a href="qfont.html#ae6b96">QFont::strikeOut</a>().
+<h3 class="fn">QFont::StyleHint <a name="87cfb0"></a>QFontInfo::styleHint() const</h3>
+<p>Returns the style of the matched window system font.
+<p>Currently only returns the hint set in <a href="qfont.html">QFont</a>.
+<p>See also  <a href="qfont.html#e5bc49">QFont::styleHint</a>().
+<h3 class="fn">bool <a name="aefbe6"></a>QFontInfo::underline () const</h3>
+<p>Returns the underline value of the matched window system font.
+<p>See also  <a href="qfont.html#e4b2a7">QFont::underline</a>().
+<h3 class="fn">int <a name="e24588"></a>QFontInfo::weight () const</h3>
+<p>Returns the weight of the matched window system font.
+<p>See also  <a href="qfont.html#f73128">QFont::weight</a>() and <a href="#d5de2f">bold</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

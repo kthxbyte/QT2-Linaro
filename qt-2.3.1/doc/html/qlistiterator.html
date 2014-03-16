@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QListIterator Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QListIterator Class Reference</h1><br clear="all">
+<p>
+The QListIterator class provides an iterator for <a href="qlist.html">QList</a> collections.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qlist-h.html">qlist.h</a>&gt;</code>
+<p>
+Inherits <a href="qglistiterator.html">QGListIterator</a>.
+<p>Inherited by <a href="qstrlistiterator.html">QStrListIterator</a>.
+<p><a href="qlistiterator-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#48d816"><b>QListIterator</b></a> ( const QList&lt;type&gt; &amp; list ) </div>
+<li><div class="fn"><a href="#a80e29"><b>~QListIterator</b></a> () </div>
+<li><div class="fn">uint <a href="#e60f78"><b>count</b></a> () const</div>
+<li><div class="fn">bool <a href="#c1b443"><b>isEmpty</b></a> () const</div>
+<li><div class="fn">bool <a href="#358a31"><b>atFirst</b></a> () const</div>
+<li><div class="fn">bool <a href="#0b1669"><b>atLast</b></a> () const</div>
+<li><div class="fn">type* <a href="#3e08f4"><b>toFirst</b></a> () </div>
+<li><div class="fn">type* <a href="#a9f64f"><b>toLast</b></a> () </div>
+<li><div class="fn">operator <a href=qlistiterator.html#a5389c><b>type*</b></a> ()const</div>
+<li><div class="fn">type* <a href="#445d97"><b>operator*</b></a> () </div>
+<li><div class="fn">type* <a href="#e76f11"><b>current</b></a> () const</div>
+<li><div class="fn">type* <a href="#f60eca"><b>operator</b></a> () </div>
+<li><div class="fn">type* <a href="#59e0a2"><b>operator++</b></a> () </div>
+<li><div class="fn">type* <a href="#48ae61"><b>operator+=</b></a> ( uint jump ) </div>
+<li><div class="fn">type* <a href="#957739"><b>operator--</b></a> () </div>
+<li><div class="fn">type* <a href="#3479c8"><b>operator-=</b></a> ( uint jump ) </div>
+<li><div class="fn">QListIterator&lt;type&gt;&amp; <a href="#c36c25"><b>operator=</b></a> ( const QListIterator&lt;type&gt; &amp; it ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QListIterator class provides an iterator for <a href="qlist.html">QList</a> collections.
+<p>
+Define a template instance QListIterator&lt;X&gt; to create a list iterator
+that operates on QList&lt;X&gt; (list of X*).
+<p>Example:
+<pre>    #include &lt;qlist.h&gt;
+    #include &lt;qstring.h&gt;
+    #include &lt;stdio.h&gt;
+
+    class Employee
+    {
+    public:
+        Employee( const char *name, int salary ) { n=name; s=salary; }
+        const char *name()   const               { return n; }
+        int         salary() const               { return s; }
+    private:
+        <a href="qstring.html">QString</a>     n;
+        int         s;
+    };
+
+    void main()
+    {
+        <a href="qlist.html">QList</a>&lt;Employee&gt; list;             // list of pointers to Employee
+        list.<a href="qcollection.html#a3fc3c">setAutoDelete</a>( TRUE );       // delete items when they are removed
+
+        list.<a href="qlist.html#687e74">append</a>( new Employee("Bill", 50000) );
+        list.<a href="qlist.html#687e74">append</a>( new Employee("Steve",80000) );
+        list.<a href="qlist.html#687e74">append</a>( new Employee("Ron",  60000) );
+
+        <a href="qlistiterator.html">QListIterator</a>&lt;Employee&gt; it(list); // iterator for employee list
+        for ( ; it.<a href="#e76f11">current</a>(); ++it ) {
+            Employee *emp = it.<a href="#e76f11">current</a>();
+            printf( "%s earns %d\n", emp-&gt;name().latin1(), emp-&gt;salary() );
+        }
+    }
+</pre>
+<p>Program output:
+<pre>        Bill earns 50000
+        Steve earns 80000
+        Ron earns 60000
+</pre>
+<p>Although QList has member functions to traverse the doubly linked list
+structure, using a list iterator is a much more robust way of traversing
+the list, because multiple list iterators can operate on the same list,
+independent of each other and independent of the QList's current item.
+An iterator has its own current list item and can get the next and
+previous list items.  It can only traverse the list, never modify it.
+<p>A QList knows about all list iterators that are operating on the list.
+When an item is removed from the list, the list update all iterators
+that are pointing the removed item to point to the new current list item.
+<p>Example:
+<pre>    #include &lt;qlist.h&gt;
+    #include &lt;qstring.h&gt;
+    #include &lt;stdio.h&gt;
+
+    class Employee
+    {
+        ...     // same as above
+    };
+
+    void main()
+    {
+        <a href="qlist.html">QList</a>&lt;Employee&gt; list;             // list of pointers to Employee
+        list.<a href="qcollection.html#a3fc3c">setAutoDelete</a>( TRUE );       // delete items when they are removed
+
+        list.<a href="qlist.html#687e74">append</a>( new Employee("Bill", 50000) );
+        list.<a href="qlist.html#687e74">append</a>( new Employee("Steve",80000) );
+        list.<a href="qlist.html#687e74">append</a>( new Employee("Ron",  60000) );
+
+        <a href="qlistiterator.html">QListIterator</a>&lt;Employee&gt; it(list);
+
+        list.<a href="qlist.html#0812c4">at</a>( 1 );                     // current list item: "Steve"
+        it.<a href="#a9f64f">toLast</a>();                      // it: "Ron"
+        --it;                             // it: "Steve"
+
+          // Now, both the list and the iterator are referring the same item
+
+        list.<a href="qlist.html#2eb9eb">remove</a>();
+        printf( "%s\n", it.<a href="#e76f11">current</a>()-&gt;name().latin1() );
+    }
+</pre>
+<p>Program output:
+<pre>        Ron
+</pre>
+<p>See also  <a href="qlist.html">QList</a> and <a href="collection.html">collection classes</a>
+<p>Examples:
+ <a href="dirview-main-cpp.html#QListIterator">dirview/main.cpp</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="48d816"></a>QListIterator::QListIterator ( const <a href="qlist.html">QList</a>&lt;type&gt; &amp; list )</h3>
+<p>Constructs an iterator for <em>list.</em>  The current iterator item is
+set to point on the first item in the <em>list.</em>
+<h3 class="fn"><a name="a80e29"></a>QListIterator::~QListIterator ()</h3>
+<p>Destroys the iterator.
+<h3 class="fn"><a name="a5389c"></a>QListIterator::operator type * () const</h3>
+<p>Cast operator. Returns a pointer to the current iterator item.
+Same as <a href="#e76f11">current</a>().
+<h3 class="fn">bool <a name="358a31"></a>QListIterator::atFirst () const</h3>
+<p>Returns TRUE if the current iterator item is the first list item, otherwise
+FALSE.
+<p>See also  <a href="#3e08f4">toFirst</a>() and <a href="#0b1669">atLast</a>().
+<h3 class="fn">bool <a name="0b1669"></a>QListIterator::atLast () const</h3>
+<p>Returns TRUE if the current iterator item is the last list item, otherwise
+FALSE.
+<p>See also  <a href="#a9f64f">toLast</a>() and <a href="#358a31">atFirst</a>().
+<h3 class="fn">uint <a name="e60f78"></a>QListIterator::count () const</h3>
+<p>Returns the number of items in the list this iterator operates on.
+<p>See also  <a href="#c1b443">isEmpty</a>().
+<h3 class="fn">type * <a name="e76f11"></a>QListIterator::current () const</h3>
+<p>Returns a pointer to the current iterator item.
+<h3 class="fn">bool <a name="c1b443"></a>QListIterator::isEmpty () const</h3>
+<p>Returns TRUE if the list is empty, i.e. <a href="#e60f78">count</a>() == 0, otherwise FALSE.
+<p>See also  <a href="#e60f78">count</a>().
+<h3 class="fn">type * <a name="f60eca"></a>QListIterator::operator() ()</h3>
+<p>Makes the succeeding item current and returns the original current item.
+<p>If the current iterator item was the last item in the list or if it was
+null, null is returned.
+<h3 class="fn">type * <a name="445d97"></a>QListIterator::operator* ()</h3>
+<p>Asterix operator. Returns a pointer to the current iterator item.
+Same as <a href="#e76f11">current</a>().
+<h3 class="fn">type * <a name="59e0a2"></a>QListIterator::operator++ ()</h3>
+<p>Prefix ++ makes the succeeding item current and returns the new current
+item.
+<p>If the current iterator item was the last item in the list or if it was
+null, null is returned.
+<h3 class="fn">type * <a name="48ae61"></a>QListIterator::operator+= ( uint jump )</h3>
+<p>Sets the current item to the item <em>jump</em> positions after the current item,
+and returns a pointer to that item.
+<p>If that item is beyond the last item or if the dictionary is  empty,
+it sets the current item to null and  returns null.
+<h3 class="fn">type * <a name="957739"></a>QListIterator::operator-- ()</h3>
+<p>Prefix -- makes the preceding item current and returns the new current
+item.
+<p>If the current iterator item was the first item in the list or if it was
+null, null is returned.
+<h3 class="fn">type * <a name="3479c8"></a>QListIterator::operator-= ( uint jump )</h3>
+<p>Returns the item <em>jump</em> positions before the current item, or null if
+it is beyond the first item.  Makes this the current item.
+<h3 class="fn">QListIterator&lt;type&gt;&amp; <a name="c36c25"></a>QListIterator::operator= ( const QListIterator&lt;type&gt; &amp; it )</h3>
+<p>Assignment.  Makes a copy of the iterator <em>it</em> and returns a reference
+to this iterator.
+<h3 class="fn">type * <a name="3e08f4"></a>QListIterator::toFirst ()</h3>
+<p>Sets the current iterator item to point to the first list item and returns
+a pointer to the item.  Sets the current item to null and returns null
+if the list is empty.
+<p>See also  <a href="#a9f64f">toLast</a>() and <a href="#358a31">atFirst</a>().
+<h3 class="fn">type * <a name="a9f64f"></a>QListIterator::toLast ()</h3>
+<p>Sets the current iterator item to point to the last list item and returns
+a pointer to the item.  Sets the current item to null and returns null
+if the list is empty.
+<p>See also  <a href="#3e08f4">toFirst</a>() and <a href="#0b1669">atLast</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

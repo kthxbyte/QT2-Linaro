@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>
+Qt Toolkit - helpviewer/main.cpp example file
+</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>Simple HTML Browser</h1><br clear="all">
+
+  The QBrowser example implements a simple HTML browser using Qt's Richtext widget.
+
+  <hr>
+
+  Header file: <pre>/****************************************************************************
+** &#36;Id&#58; qt/examples/helpviewer/helpwindow.h   2.3.1   edited 2001-01-26 $
+**
+** Copyright (C) 1992-2000 Trolltech AS.  All rights reserved.
+**
+** This file is part of an example program for Qt.  This example
+** program may be used, distributed and modified without limitation.
+**
+*****************************************************************************/
+
+#ifndef HELPWINDOW_H
+#define HELPWINDOW_H
+
+#include &lt;<a href="qmainwindow-h.html">qmainwindow.h</a>&gt;
+#include &lt;<a href="qtextbrowser-h.html">qtextbrowser.h</a>&gt;
+#include &lt;<a href="qstringlist-h.html">qstringlist.h</a>&gt;
+#include &lt;<a href="qmap-h.html">qmap.h</a>&gt;
+#include &lt;<a href="qdir-h.html">qdir.h</a>&gt;
+
+class QComboBox;
+class QPopupMenu;
+
+class HelpWindow : public QMainWindow
+{
+    Q_OBJECT
+public:
+    HelpWindow( const QString&amp; home_,  const QString&amp; path, QWidget* parent = 0, const char *name=0 );
+    ~HelpWindow();
+
+private slots:
+    void setBackwardAvailable( bool );
+    void setForwardAvailable( bool );
+
+    void textChanged();
+    void about();
+    void aboutQt();
+    void openFile();
+    void newWindow();
+    void print();
+
+    void pathSelected( const QString &amp; );
+    void histChosen( int );
+    void bookmChosen( int );
+    void addBookmark();
+
+private:
+    void readHistory();
+    void readBookmarks();
+
+    <a href="qtextbrowser.html">QTextBrowser</a>* browser;
+    <a href="qcombobox.html">QComboBox</a> *pathCombo;
+    int backwardId, forwardId;
+    <a href="qstring.html">QString</a> selectedURL;
+    <a href="qstringlist.html">QStringList</a> history, bookmarks;
+    <a href="qmap.html">QMap</a>&lt;int, QString&gt; mHistory, mBookmarks;
+    <a href="qpopupmenu.html">QPopupMenu</a> *hist, *bookm;
+
+};
+
+#endif
+</pre>
+
+
+  <hr>
+
+  Implementation: <pre>/****************************************************************************
+** &#36;Id&#58; qt/examples/helpviewer/helpwindow.cpp   2.3.1   edited 2001-01-26 $
+**
+** Copyright (C) 1992-2000 Trolltech AS.  All rights reserved.
+**
+** This file is part of an example program for Qt.  This example
+** program may be used, distributed and modified without limitation.
+**
+*****************************************************************************/
+
+#include "helpwindow.h"
+#include &lt;<a href="qstatusbar-h.html">qstatusbar.h</a>&gt;
+#include &lt;<a href="qpixmap-h.html">qpixmap.h</a>&gt;
+#include &lt;<a href="qpopupmenu-h.html">qpopupmenu.h</a>&gt;
+#include &lt;<a href="qmenubar-h.html">qmenubar.h</a>&gt;
+#include &lt;<a href="qtoolbar-h.html">qtoolbar.h</a>&gt;
+#include &lt;<a href="qtoolbutton-h.html">qtoolbutton.h</a>&gt;
+#include &lt;<a href="qiconset-h.html">qiconset.h</a>&gt;
+#include &lt;<a href="qfile-h.html">qfile.h</a>&gt;
+#include &lt;<a href="qtextstream-h.html">qtextstream.h</a>&gt;
+#include &lt;<a href="qstylesheet-h.html">qstylesheet.h</a>&gt;
+#include &lt;<a href="qmessagebox-h.html">qmessagebox.h</a>&gt;
+#include &lt;<a href="qfiledialog-h.html">qfiledialog.h</a>&gt;
+#include &lt;<a href="qapplication-h.html">qapplication.h</a>&gt;
+#include &lt;<a href="qcombobox-h.html">qcombobox.h</a>&gt;
+#include &lt;<a href="qevent-h.html">qevent.h</a>&gt;
+#include &lt;<a href="qlineedit-h.html">qlineedit.h</a>&gt;
+#include &lt;qobjectlist.h&gt;
+#include &lt;<a href="qfileinfo-h.html">qfileinfo.h</a>&gt;
+#include &lt;<a href="qfile-h.html">qfile.h</a>&gt;
+#include &lt;<a href="qdatastream-h.html">qdatastream.h</a>&gt;
+#include &lt;<a href="qprinter-h.html">qprinter.h</a>&gt;
+#include &lt;<a href="qsimplerichtext-h.html">qsimplerichtext.h</a>&gt;
+#include &lt;<a href="qpaintdevicemetrics-h.html">qpaintdevicemetrics.h</a>&gt;
+
+#include &lt;ctype.h&gt;
+
+HelpWindow::HelpWindow( const QString&amp; home_, const QString&amp; _path,
+                        <a href="qwidget.html">QWidget</a>* parent, const char *name )
+    : <a href="qmainwindow.html">QMainWindow</a>( parent, name, WDestructiveClose ),
+      pathCombo( 0 ), selectedURL()
+{
+    readHistory();
+    readBookmarks();
+
+    browser = new <a href="qtextbrowser.html">QTextBrowser</a>( this );
+    browser-&gt;mimeSourceFactory()-&gt;setFilePath( _path );
+    browser-&gt;setFrameStyle( QFrame::Panel | QFrame::Sunken );
+    connect( browser, SIGNAL( textChanged() ),
+             this, SLOT( textChanged() ) );
+
+    setCentralWidget( browser );
+
+    if ( !home_.isEmpty() )
+        browser-&gt;setSource( home_ );
+
+    connect( browser, SIGNAL( highlighted( const QString&amp;) ),
+             statusBar(), SLOT( message( const QString&amp;)) );
+
+    resize( 640,700 );
+
+    <a href="qpopupmenu.html">QPopupMenu</a>* file = new <a href="qpopupmenu.html">QPopupMenu</a>( this );
+    file-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("&amp;New Window"), this, SLOT( newWindow() ), ALT | Key_N );
+    file-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("&amp;Open File"), this, SLOT( openFile() ), ALT | Key_O );
+    file-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("&amp;Print"), this, SLOT( print() ), ALT | Key_P );
+    file-&gt;<a href="qmenudata.html#5f2cea">insertSeparator</a>();
+    file-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("&amp;Close"), this, SLOT( close() ), ALT | Key_Q );
+    file-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("E&amp;xit"), qApp, SLOT( closeAllWindows() ), ALT | Key_X );
+
+    // The same three icons are used twice each.
+    <a href="qiconset.html">QIconSet</a> icon_back( <a href="qpixmap.html">QPixmap</a>("back.xpm") );
+    <a href="qiconset.html">QIconSet</a> icon_forward( <a href="qpixmap.html">QPixmap</a>("forward.xpm") );
+    <a href="qiconset.html">QIconSet</a> icon_home( <a href="qpixmap.html">QPixmap</a>("home.xpm") );
+
+    <a href="qpopupmenu.html">QPopupMenu</a>* go = new <a href="qpopupmenu.html">QPopupMenu</a>( this );
+    backwardId = go-&gt;<a href="qmenudata.html#43c652">insertItem</a>( icon_back,
+                                 tr("&amp;Backward"), browser, SLOT( backward() ),
+                                 ALT | Key_Left );
+    forwardId = go-&gt;<a href="qmenudata.html#43c652">insertItem</a>( icon_forward,
+                                tr("&amp;Forward"), browser, SLOT( forward() ),
+                                ALT | Key_Right );
+    go-&gt;<a href="qmenudata.html#43c652">insertItem</a>( icon_home, tr("&amp;Home"), browser, SLOT( home() ) );
+
+    <a href="qpopupmenu.html">QPopupMenu</a>* help = new <a href="qpopupmenu.html">QPopupMenu</a>( this );
+    help-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("&amp;About ..."), this, SLOT( about() ) );
+    help-&gt;<a href="qmenudata.html#43c652">insertItem</a>( tr("About &amp;<a href="qt.html">Qt</a> ..."), this, SLOT( aboutQt() ) );
+
+    hist = new <a href="qpopupmenu.html">QPopupMenu</a>( this );
+    QStringList::Iterator it = history.begin();
+    for ( ; it != history.end(); ++it )
+        mHistory[ hist-&gt;insertItem( *it ) ] = *it;
+    connect( hist, SIGNAL( activated( int ) ),
+             this, SLOT( histChosen( int ) ) );
+
+    bookm = new <a href="qpopupmenu.html">QPopupMenu</a>( this );
+    bookm-&gt;insertItem( tr( "Add Bookmark" ), this, SLOT( addBookmark() ) );
+    bookm-&gt;insertSeparator();
+
+    QStringList::Iterator it2 = bookmarks.begin();
+    for ( ; it2 != bookmarks.end(); ++it2 )
+        mBookmarks[ bookm-&gt;insertItem( *it2 ) ] = *it2;
+    connect( bookm, SIGNAL( activated( int ) ),
+             this, SLOT( bookmChosen( int ) ) );
+
+    menuBar()-&gt;insertItem( tr("&amp;File"), file );
+    menuBar()-&gt;insertItem( tr("&amp;Go"), go );
+    menuBar()-&gt;insertItem( tr( "History" ), hist );
+    menuBar()-&gt;insertItem( tr( "Bookmarks" ), bookm );
+    menuBar()-&gt;insertSeparator();
+    menuBar()-&gt;insertItem( tr("&amp;Help"), help );
+
+    menuBar()-&gt;setItemEnabled( forwardId, FALSE);
+    menuBar()-&gt;setItemEnabled( backwardId, FALSE);
+    connect( browser, SIGNAL( backwardAvailable( bool ) ),
+             this, SLOT( setBackwardAvailable( bool ) ) );
+    connect( browser, SIGNAL( forwardAvailable( bool ) ),
+             this, SLOT( setForwardAvailable( bool ) ) );
+
+    <a href="qtoolbar.html">QToolBar</a>* toolbar = new <a href="qtoolbar.html">QToolBar</a>( this );
+    addToolBar( toolbar, "Toolbar");
+    <a href="qtoolbutton.html">QToolButton</a>* button;
+
+    button = new <a href="qtoolbutton.html">QToolButton</a>( icon_back, tr("Backward"), "", browser, SLOT(backward()), toolbar );
+    connect( browser, SIGNAL( backwardAvailable(bool) ), button, SLOT( setEnabled(bool) ) );
+    button-&gt;<a href="qwidget.html#f996ef">setEnabled</a>( FALSE );
+    button = new <a href="qtoolbutton.html">QToolButton</a>( icon_forward, tr("Forward"), "", browser, SLOT(forward()), toolbar );
+    connect( browser, SIGNAL( forwardAvailable(bool) ), button, SLOT( setEnabled(bool) ) );
+    button-&gt;<a href="qwidget.html#f996ef">setEnabled</a>( FALSE );
+    button = new <a href="qtoolbutton.html">QToolButton</a>( icon_home, tr("Home"), "", browser, SLOT(home()), toolbar );
+
+    toolbar-&gt;<a href="qtoolbar.html#0c2bac">addSeparator</a>();
+
+    pathCombo = new <a href="qcombobox.html">QComboBox</a>( TRUE, toolbar );
+    connect( pathCombo, SIGNAL( activated( const QString &amp; ) ),
+             this, SLOT( pathSelected( const QString &amp; ) ) );
+    toolbar-&gt;<a href="qtoolbar.html#cf1b0e">setStretchableWidget</a>( pathCombo );
+    setRightJustification( TRUE );
+    setDockEnabled( Left, FALSE );
+    setDockEnabled( Right, FALSE );
+
+    pathCombo-&gt;insertItem( home_ );
+
+    browser-&gt;setFocus();
+}
+
+void <a name="168"></a>HelpWindow::setBackwardAvailable( bool b)
+{
+    <a href="qmainwindow.html#2fcbc3">menuBar</a>()-&gt;setItemEnabled( backwardId, b);
+}
+
+void <a name="169"></a>HelpWindow::setForwardAvailable( bool b)
+{
+    <a href="qmainwindow.html#2fcbc3">menuBar</a>()-&gt;setItemEnabled( forwardId, b);
+}
+
+void <a name="170"></a>HelpWindow::textChanged()
+{
+    if ( browser-&gt;documentTitle().isNull() )
+        <a href="qwidget.html#d4f007">setCaption</a>( browser-&gt;context() );
+    else
+        <a href="qwidget.html#d4f007">setCaption</a>( browser-&gt;documentTitle() ) ;
+
+    selectedURL = caption();
+    if ( !selectedURL.isEmpty() &amp;&amp; pathCombo ) {
+        bool exists = FALSE;
+        int i;
+        for ( i = 0; i &lt; pathCombo-&gt;count(); ++i ) {
+            if ( pathCombo-&gt;text( i ) == selectedURL ) {
+                exists = TRUE;
+                break;
+            }
+        }
+        if ( !exists ) {
+            pathCombo-&gt;insertItem( selectedURL, 0 );
+            pathCombo-&gt;setCurrentItem( 0 );
+            mHistory[ hist-&gt;insertItem( selectedURL ) ] = selectedURL;
+        } else
+            pathCombo-&gt;setCurrentItem( i );
+        selectedURL = QString::null;
+    }
+}
+
+HelpWindow::~HelpWindow()
+{
+    history.clear();
+    <a href="qmap.html">QMap</a>&lt;int, QString&gt;::Iterator it = mHistory.begin();
+    for ( ; it != mHistory.end(); ++it )
+        history.append( *it );
+
+    <a href="qfile.html">QFile</a> f( <a href="qdir.html#da1981">QDir::currentDirPath</a>() + "/.history" );
+    f.<a href="qfile.html#44ae9b">open</a>( IO_WriteOnly );
+    <a href="qdatastream.html">QDataStream</a> s( &amp;f );
+    s &lt;&lt; history;
+    f.<a href="qfile.html#e37a87">close</a>();
+
+    bookmarks.clear();
+    <a href="qmap.html">QMap</a>&lt;int, QString&gt;::Iterator it2 = mBookmarks.begin();
+    for ( ; it2 != mBookmarks.end(); ++it2 )
+        bookmarks.append( *it2 );
+
+    <a href="qfile.html">QFile</a> f2( <a href="qdir.html#da1981">QDir::currentDirPath</a>() + "/.bookmarks" );
+    f2.<a href="qfile.html#44ae9b">open</a>( IO_WriteOnly );
+    <a href="qdatastream.html">QDataStream</a> s2( &amp;f2 );
+    s2 &lt;&lt; bookmarks;
+    f2.<a href="qfile.html#e37a87">close</a>();
+}
+
+void <a name="171"></a>HelpWindow::about()
+{
+    <a href="qmessagebox.html#e67950">QMessageBox::about</a>( this, "HelpViewer Example",
+                        "&lt;p&gt;This example implements a simple HTML help viewer "
+                        "using Qt's rich text capabilities&lt;/p&gt;"
+                        "&lt;p&gt;It's just about 100 lines of C++ code, so don't expect too much :-)&lt;/p&gt;"
+                        );
+}
+
+void <a name="172"></a>HelpWindow::aboutQt()
+{
+    <a href="qmessagebox.html#976755">QMessageBox::aboutQt</a>( this, "QBrowser" );
+}
+
+void <a name="173"></a>HelpWindow::openFile()
+{
+#ifndef QT_NO_FILEDIALOG
+    <a href="qstring.html">QString</a> fn = QFileDialog::getOpenFileName( QString::null, QString::null, this );
+    if ( !fn.<a href="qstring.html#9a6d7e">isEmpty</a>() )
+        browser-&gt;setSource( fn );
+#endif
+}
+
+void <a name="174"></a>HelpWindow::newWindow()
+{
+    ( new HelpWindow(browser-&gt;source(), "qbrowser") )-&gt;show();
+}
+
+void <a name="175"></a>HelpWindow::print()
+{
+#ifndef QT_NO_PRINTER
+    <a href="qprinter.html">QPrinter</a> printer;
+    printer.<a href="qprinter.html#968d03">setFullPage</a>(TRUE);
+    if ( printer.<a href="qprinter.html#a36243">setup</a>() ) {
+        <a href="qpainter.html">QPainter</a> p( &amp;printer );
+        <a href="qpaintdevicemetrics.html">QPaintDeviceMetrics</a> metrics(p.<a href="qpainter.html#84abcf">device</a>());
+        int dpix = metrics.<a href="qpaintdevicemetrics.html#e189ef">logicalDpiX</a>();
+        int dpiy = metrics.<a href="qpaintdevicemetrics.html#a76f05">logicalDpiY</a>();
+        const int margin = 72; // pt
+        <a href="qrect.html">QRect</a> body(margin*dpix/72, margin*dpiy/72,
+                   metrics.<a href="qpaintdevicemetrics.html#a53b11">width</a>()-margin*dpix/72*2,
+                   metrics.<a href="qpaintdevicemetrics.html#3792df">height</a>()-margin*dpiy/72*2 );
+        <a href="qfont.html">QFont</a> font("times", 10);
+        <a href="qsimplerichtext.html">QSimpleRichText</a> richText( browser-&gt;text(), font, browser-&gt;context(), browser-&gt;styleSheet(),
+                                  browser-&gt;mimeSourceFactory(), body.<a href="qrect.html#5d9fd1">height</a>() );
+        richText.<a href="qsimplerichtext.html#255a30">setWidth</a>( &amp;p, body.<a href="qrect.html#44fb71">width</a>() );
+        <a href="qrect.html">QRect</a> view( body );
+        int page = 1;
+        do {
+            p.<a href="qpainter.html#2ccac9">setClipRect</a>( body );
+            richText.<a href="qsimplerichtext.html#876616">draw</a>( &amp;p, body.<a href="qrect.html#d0f453">left</a>(), body.<a href="qrect.html#a9c6db">top</a>(), view, <a href="qwidget.html#5bc085">colorGroup</a>() );
+            p.<a href="qpainter.html#fb38a9">setClipping</a>( FALSE );
+            view.<a href="qrect.html#35f691">moveBy</a>( 0, body.<a href="qrect.html#5d9fd1">height</a>() );
+            p.<a href="qpainter.html#ba64b6">translate</a>( 0 , -body.<a href="qrect.html#5d9fd1">height</a>() );
+            p.<a href="qpainter.html#e4d6b7">setFont</a>( font );
+            p.<a href="qpainter.html#8a59ed">drawText</a>( view.<a href="qrect.html#20e3ee">right</a>() - p.<a href="qpainter.html#f572a5">fontMetrics</a>().width( <a href="qstring.html#3f7178">QString::number</a>(page) ),
+                        view.<a href="qrect.html#322c3e">bottom</a>() + p.<a href="qpainter.html#f572a5">fontMetrics</a>().ascent() + 5, QString::number(page) );
+            if ( view.<a href="qrect.html#a9c6db">top</a>()  &gt;= richText.<a href="qsimplerichtext.html#844389">height</a>() )
+                break;
+            printer.<a href="qprinter.html#a7c692">newPage</a>();
+            page++;
+        } while (TRUE);
+    }
+#endif
+}
+
+void <a name="176"></a>HelpWindow::pathSelected( const QString &amp;_path )
+{
+    browser-&gt;setSource( _path );
+    <a href="qmap.html">QMap</a>&lt;int, QString&gt;::Iterator it = mHistory.begin();
+    bool exists = FALSE;
+    for ( ; it != mHistory.end(); ++it ) {
+        if ( *it == _path ) {
+            exists = TRUE;
+            break;
+        }
+    }
+    if ( !exists )
+        mHistory[ hist-&gt;insertItem( _path ) ] = _path;
+}
+
+void <a name="177"></a>HelpWindow::readHistory()
+{
+    if ( <a href="qfile.html#88f631">QFile::exists</a>( <a href="qdir.html#da1981">QDir::currentDirPath</a>() + "/.history" ) ) {
+        <a href="qfile.html">QFile</a> f( <a href="qdir.html#da1981">QDir::currentDirPath</a>() + "/.history" );
+        f.<a href="qfile.html#44ae9b">open</a>( IO_ReadOnly );
+        <a href="qdatastream.html">QDataStream</a> s( &amp;f );
+        s &gt;&gt; history;
+        f.<a href="qfile.html#e37a87">close</a>();
+        while ( history.count() &gt; 20 )
+            history.remove( history.begin() );
+    }
+}
+
+void <a name="178"></a>HelpWindow::readBookmarks()
+{
+    if ( <a href="qfile.html#88f631">QFile::exists</a>( <a href="qdir.html#da1981">QDir::currentDirPath</a>() + "/.bookmarks" ) ) {
+        <a href="qfile.html">QFile</a> f( <a href="qdir.html#da1981">QDir::currentDirPath</a>() + "/.bookmarks" );
+        f.<a href="qfile.html#44ae9b">open</a>( IO_ReadOnly );
+        <a href="qdatastream.html">QDataStream</a> s( &amp;f );
+        s &gt;&gt; bookmarks;
+        f.<a href="qfile.html#e37a87">close</a>();
+    }
+}
+
+void <a name="179"></a>HelpWindow::histChosen( int i )
+{
+    if ( mHistory.contains( i ) )
+        browser-&gt;setSource( mHistory[ i ] );
+}
+
+void <a name="180"></a>HelpWindow::bookmChosen( int i )
+{
+    if ( mBookmarks.contains( i ) )
+        browser-&gt;setSource( mBookmarks[ i ] );
+}
+
+void <a name="181"></a>HelpWindow::addBookmark()
+{
+    mBookmarks[ bookm-&gt;insertItem( <a href="qwidget.html#4ae7ff">caption</a>() ) ] = caption();
+}
+</pre>
+
+
+  <hr>
+
+/*! \example qdir/qdir.cpp
+
+  <h1 align=center>QDir</h1><br clear="all">
+
+  ???
+
+  <hr>
+
+  Main:
+<pre>/****************************************************************************
+** &#36;Id&#58; qt/examples/helpviewer/main.cpp   2.3.1   edited 2001-01-26 $
+**
+** Copyright (C) 1992-2000 Trolltech AS.  All rights reserved.
+**
+** This file is part of an example program for Qt.  This example
+** program may be used, distributed and modified without limitation.
+**
+*****************************************************************************/
+
+#include "helpwindow.h"
+#include &lt;<a name="qapplication.h"></a><a href="qapplication-h.html">qapplication.h</a>&gt;
+#include &lt;<a name="qwindowsstyle.h"></a><a href="qwindowsstyle-h.html">qwindowsstyle.h</a>&gt;
+#include &lt;<a name="qstylesheet.h"></a><a href="qstylesheet-h.html">qstylesheet.h</a>&gt;
+#include &lt;stdlib.h&gt;
+
+int main( int argc, char ** argv )
+{
+    <a name="QApplication::setColorSpec"></a><a href="qapplication.html#e2431b">QApplication::setColorSpec</a>( QApplication::ManyColor );
+    <a name="QApplication"></a><a href="qapplication.html">QApplication</a> a(argc, argv);
+
+    <a name="QString"></a><a href="qstring.html">QString</a> home;
+    if (argc &gt; 1)
+        home = argv[1];
+    else
+        home = QString(getenv("QTDIR")) + "/doc/html/index.html";
+
+    HelpWindow *help = new HelpWindow(home, ".", 0, "help viewer");
+
+    if ( <a name="QApplication::desktop"></a><a href="qapplication.html#031a89">QApplication::desktop</a>()-&gt;width() &gt; 400
+         &amp;&amp; <a href="qapplication.html#031a89">QApplication::desktop</a>()-&gt;height() &gt; 500 )
+        help-&gt;<a name="show"></a><a href="qmainwindow.html#e71bb3">show</a>();
+    else
+        help-&gt;<a name="showMaximized"></a><a href="qwidget.html#400e25">showMaximized</a>();
+
+    <a name="QObject::connect"></a><a href="qobject.html#c2d209">QObject::connect</a>( &amp;a, SIGNAL(lastWindowClosed()),
+                      &amp;a, SLOT(quit()) );
+
+    return a.<a name="exec"></a><a href="qapplication.html#7076af">exec</a>();
+}
+</pre>
+<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

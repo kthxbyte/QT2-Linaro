@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QTextView Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QTextView Class Reference</h1><br clear="all">
+<p>
+A sophisticated single-page rich text viewer.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qtextview-h.html">qtextview.h</a>&gt;</code>
+<p>
+Inherits <a href="qscrollview.html">QScrollView</a>.
+<p>Inherited by <a href="qtextbrowser.html">QTextBrowser</a>.
+<p><a href="qtextview-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#88b607"><b>QTextView</b></a> ( QWidget * parent=0, const char * name=0 ) </div>
+<li><div class="fn"><a href="#f7a1f0"><b>QTextView</b></a> ( const QString &amp; text, const QString &amp; context = QString::null, QWidget * parent=0, const char * name=0 ) </div>
+<li><div class="fn"><a href="#f42e96"><b>~QTextView</b></a> () </div>
+<li><div class="fn">virtual void <a href="#f8600f"><b>setText</b></a> ( const QString &amp; text, const QString &amp; context ) </div>
+<li><div class="fn">void <a href="#fe896b"><b>setText</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">virtual QString <a href="#9e3c4d"><b>text</b></a> () const</div>
+<li><div class="fn">virtual QString <a href="#1b633c"><b>context</b></a> () const</div>
+<li><div class="fn">TextFormat <a href="#c1521b"><b>textFormat</b></a> () const</div>
+<li><div class="fn">void <a href="#e47be4"><b>setTextFormat</b></a> ( TextFormat ) </div>
+<li><div class="fn">QStyleSheet* <a href="#bf11b2"><b>styleSheet</b></a> () const</div>
+<li><div class="fn">void <a href="#a0436a"><b>setStyleSheet</b></a> ( QStyleSheet * styleSheet ) </div>
+<li><div class="fn">void <a href="#2e1527"><b>setPaper</b></a> ( const QBrush &amp; pap ) </div>
+<li><div class="fn">const QBrush&amp; <a href="#47fbe2"><b>paper</b></a> () </div>
+<li><div class="fn">const QBrush&amp; <a href="#444eaa"><b>paper</b></a> () const</div>
+<li><div class="fn">void <a href="#8cca20"><b>setPaperColorGroup</b></a> ( const QColorGroup &amp; colgrp ) </div>
+<li><div class="fn">const QColorGroup&amp; <a href="#44310d"><b>paperColorGroup</b></a> () const</div>
+<li><div class="fn">void <a href="#07dec9"><b>setLinkColor</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn">const QColor&amp; <a href="#d78867"><b>linkColor</b></a> () const</div>
+<li><div class="fn">void <a href="#a5ce31"><b>setLinkUnderline</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#c70bf9"><b>linkUnderline</b></a> () const</div>
+<li><div class="fn">void <a href="#a61e9f"><b>setMimeSourceFactory</b></a> ( QMimeSourceFactory * factory ) </div>
+<li><div class="fn">QMimeSourceFactory* <a href="#8a2fee"><b>mimeSourceFactory</b></a> () const</div>
+<li><div class="fn">QString <a href="#d9026b"><b>documentTitle</b></a> () const</div>
+<li><div class="fn">virtual int <a href="#b76f08"><b>heightForWidth</b></a> ( int w ) const</div>
+<li><div class="fn">void <a href="#e92cd4"><b>append</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">bool <a href="#553abc"><b>hasSelectedText</b></a> () const</div>
+<li><div class="fn">QString <a href="#0a7dfe"><b>selectedText</b></a> () const</div>
+</ul>
+<h2>Public Slots</h2>
+<ul>
+<li><div class="fn">void <a href="#0ff8c1"><b>copy</b></a> () </div>
+<li><div class="fn">void <a href="#f20ed8"><b>selectAll</b></a> () </div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#1b006d"><b>keyPressEvent</b></a> ( QKeyEvent * ) </div>
+<li><div class="fn">QRichText&amp; <a href="#d9a45f"><b>richText</b></a> () const</div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>QString<td>text<td>text<td>setText<td>&nbsp;
+<tr><td>TextFormat<td>textFormat<td>textFormat<td>setTextFormat<td>&nbsp;
+<tr><td>QBrush<td>paper<td>paper<td>setPaper<td>&nbsp;
+<tr><td>QColorGroup<td>paperColorGroup<td>paperColorGroup<td>setPaperColorGroup<td>&nbsp;
+<tr><td>QColor<td>linkColor<td>linkColor<td>setLinkColor<td>&nbsp;
+<tr><td>bool<td>linkUnderline<td>linkUnderline<td>setLinkUnderline<td>&nbsp;
+<tr><td>QString<td>documentTitle<td>documentTitle<td>&nbsp;<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+A sophisticated single-page rich text viewer.
+<p>
+Unlike <a href="qsimplerichtext.html">QSimpleRichText</a>, which merely draws small pieces of rich
+text, a QTextView is a real widget, with scrollbars when necessary,
+for showing large text documents.
+<p>The rendering style and available tags are defined by a
+<a href="#bf11b2">styleSheet</a>(). Currently, a small XML/CSS1 subset including embedded
+images and tables is supported. See <a href="qstylesheet.html">QStyleSheet</a> for
+details. Possible images within the text document are resolved by
+using a <a href="qmimesourcefactory.html">QMimeSourceFactory</a>.  See <a href="#a61e9f">setMimeSourceFactory</a>() for details.
+<p>Using QTextView is quite similar to <a href="qlabel.html">QLabel</a>. It's mainly a call to
+<a href="#f8600f">setText</a>() to set the contents. Setting the background color is
+slightly different from other widgets, since a text view is a
+scrollable widget that naturally provides a scrolling background. You
+can specify the colorgroup of the displayed text with
+<a href="#8cca20">setPaperColorGroup</a>() or directly define the paper background with
+<a href="#2e1527">setPaper</a>(). QTextView supports both plain color and complex pixmap
+backgrounds.
+<p>Note that we do not intend to add a full-featured web browser widget
+to Qt (since that would easily double Qt's size and only few
+applications would benefit from it). In particular, the rich text
+support in Qt is supposed to provide a fast, portable and sufficient
+way to add reasonable online help facilities to applications. We
+will, however, extend it to some degree in future versions of Qt.
+<p>For even more, like hypertext capabilities, see <a href="qtextbrowser.html">QTextBrowser</a>.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="88b607"></a>QTextView::QTextView ( <a href="qwidget.html">QWidget</a> * parent=0, const char * name=0 )</h3>
+<p>Constructs an empty QTextView
+with the standard <em>parent</em> and <em>name</em> optional arguments.
+<h3 class="fn"><a name="f7a1f0"></a>QTextView::QTextView ( const <a href="qstring.html">QString</a> &amp; text, const <a href="qstring.html">QString</a> &amp; context = QString::null, <a href="qwidget.html">QWidget</a> * parent=0, const char * name=0 )</h3>
+<p>Constructs a QTextView displaying the contents <em>text</em> with context
+<em>context,</em> with the standard <em>parent</em> and <em>name</em> optional
+arguments.
+<h3 class="fn"><a name="f42e96"></a>QTextView::~QTextView ()</h3>
+<p>Destructs the view.
+<h3 class="fn">void <a name="e92cd4"></a>QTextView::append ( const <a href="qstring.html">QString</a> &amp; text )</h3>
+<p>Appends <em>text</em> to the current text.
+<p>Useful for log viewers.<p><b>Warning:</b> This function has known problems (incorrect painting and
+layouting). If this problem occures to you, use <a href="#f8600f">setText</a>( <a href="#9e3c4d">text</a>() +
+theNewText ) instead. The new richtext engine, which is part of Qt
+3.0, is able to handle append(), insert(), etc. properly.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="1b633c"></a>QTextView::context () const <code>[virtual]</code></h3>
+<p>Returns the context of the view.
+<p>See also  <a href="#9e3c4d">text</a>() and <a href="#f8600f">setText</a>().
+<h3 class="fn">void <a name="0ff8c1"></a>QTextView::copy () <code>[slot]</code></h3>
+<p>Copies the marked text to the clipboard.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="d9026b"></a>QTextView::documentTitle () const</h3>
+<p>Returns the document title parsed from the content.
+<h3 class="fn">void <a name="b94b72"></a>QTextView::drawContentsOffset ( <a href="qpainter.html">QPainter</a> * p, int ox, int oy, int cx, int cy, int cw, int ch ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#cafa5d">QScrollView.</a>
+<h3 class="fn">void <a name="2366c4"></a>QTextView::focusInEvent ( <a href="qfocusevent.html">QFocusEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#303f18">QWidget.</a>
+<h3 class="fn">void <a name="f97e5a"></a>QTextView::focusOutEvent ( <a href="qfocusevent.html">QFocusEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#bdc4a1">QWidget.</a>
+<h3 class="fn">bool <a name="553abc"></a>QTextView::hasSelectedText () const</h3>
+<p>Returns TRUE if there is any text selected, FALSE otherwise.
+<p>See also  <a href="#0a7dfe">selectedText</a>().
+<h3 class="fn">int <a name="b76f08"></a>QTextView::heightForWidth ( int w ) const <code>[virtual]</code></h3>
+<p>Returns the height of the view given a width of <em>w.</em>
+<p>Reimplemented from <a href="qwidget.html#2e8476">QWidget.</a>
+<h3 class="fn">void <a name="1b006d"></a>QTextView::keyPressEvent ( <a href="qkeyevent.html">QKeyEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Provides scrolling and paging.
+<p>Reimplemented from <a href="qwidget.html#cdb1c7">QWidget.</a>
+<h3 class="fn">const <a href="qcolor.html">QColor</a>&amp; <a name="d78867"></a>QTextView::linkColor () const</h3>
+<p>Returns the current link color.
+<p>The color may either have been set with <a href="#07dec9">setLinkColor</a>() or stem from
+the document's body tag.
+<p>See also  <a href="#07dec9">setLinkColor</a>().
+<h3 class="fn">bool <a name="c70bf9"></a>QTextView::linkUnderline () const</h3>
+<p>Returns whether or not links should be displayed underlined.
+<h3 class="fn"><a href="qmimesourcefactory.html">QMimeSourceFactory</a>* <a name="8a2fee"></a>QTextView::mimeSourceFactory () const</h3>
+<p>Returns the current mime source factory  for the view.
+<p>See also  <a href="#a61e9f">setMimeSourceFactory</a>().
+<h3 class="fn">void <a name="5ae5d7"></a>QTextView::paletteChange ( const <a href="qpalette.html">QPalette</a> &amp; p ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#da505c">QWidget.</a>
+<h3 class="fn">const <a href="qbrush.html">QBrush</a>&amp; <a name="47fbe2"></a>QTextView::paper ()</h3>
+<p>Returns the brush used to paint the background.
+<h3 class="fn">const <a href="qbrush.html">QBrush</a>&amp; <a name="444eaa"></a>QTextView::paper () const</h3>
+<p>Returns the brush used to paint the background.
+<h3 class="fn">const <a href="qcolorgroup.html">QColorGroup</a>&amp; <a name="44310d"></a>QTextView::paperColorGroup () const</h3>
+<p>Returns the colorgroup of the paper.
+<p>See also  <a href="#8cca20">setPaperColorGroup</a>() and <a href="#2e1527">setPaper</a>().
+<h3 class="fn">void <a name="df023b"></a>QTextView::resizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#28c156">QWidget.</a>
+<h3 class="fn">QRichText&amp; <a name="d9a45f"></a>QTextView::richText () const <code>[protected]</code></h3>
+<p>Returns the document defining the view as drawable and queryable rich
+text object.  This is not currently useful for applications.
+<h3 class="fn">void <a name="f20ed8"></a>QTextView::selectAll () <code>[slot]</code></h3>
+<p>Selects all text.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="0a7dfe"></a>QTextView::selectedText () const</h3>
+<p>Returns a copy of the selected text in plain text format.
+<p>See also  <a href="#553abc">hasSelectedText</a>().
+<h3 class="fn">void <a name="07dec9"></a>QTextView::setLinkColor ( const <a href="qcolor.html">QColor</a> &amp; col )</h3>
+<p>Sets the color used to display links in the document to <code>col.</code>
+<p>See also  <a href="#d78867">linkColor</a>().
+<h3 class="fn">void <a name="a5ce31"></a>QTextView::setLinkUnderline ( bool u )</h3>
+<p>Defines whether or not links should be displayed underlined.
+<h3 class="fn">void <a name="a61e9f"></a>QTextView::setMimeSourceFactory ( <a href="qmimesourcefactory.html">QMimeSourceFactory</a> * factory )</h3>
+<p>Sets the mime source factory for the view. The factory is used to
+resolve named references within rich text documents. If no factory
+has been specified, the text view uses the default factory
+<a href="qmimesourcefactory.html#28c4d9">QMimeSourceFactory::defaultFactory</a>().
+<p>Ownership of <em>factory</em> is <em>not</em> transferred to make it possible
+for several text view widgets to share the same mime source.
+<p>See also  <a href="#8a2fee">mimeSourceFactory</a>().
+<h3 class="fn">void <a name="2e1527"></a>QTextView::setPaper ( const <a href="qbrush.html">QBrush</a> &amp; pap )</h3>
+<p>Sets the brush to use as the background to <em>pap.</em>
+<p>This may be a nice parchment or marble pixmap or simply another
+plain color.
+<p>Technically, setPaper() is just a convenience function to set the
+base brush of the <a href="#44310d">paperColorGroup</a>().
+<p>See also  <a href="#444eaa">paper</a>().
+<h3 class="fn">void <a name="8cca20"></a>QTextView::setPaperColorGroup ( const <a href="qcolorgroup.html">QColorGroup</a> &amp; colgrp )</h3>
+<p>Sets the full colorgroup of the paper to <em>colgrp.</em> If not specified
+otherwise in the document itself, any text will use
+<a href="qcolorgroup.html#34dd3f">QColorGroup::text</a>(). The background will be painted with
+<a href="qcolorgroup.html#6996ff">QColorGroup::brush</a>(QColorGroup::Base).
+<p>See also  <a href="#44310d">paperColorGroup</a>() and <a href="#2e1527">setPaper</a>().
+<h3 class="fn">void <a name="a0436a"></a>QTextView::setStyleSheet ( <a href="qstylesheet.html">QStyleSheet</a> * styleSheet )</h3>
+<p>Sets the style sheet of the view.
+<p>See also  <a href="#bf11b2">styleSheet</a>().
+<h3 class="fn">void <a name="f8600f"></a>QTextView::setText ( const <a href="qstring.html">QString</a> &amp; text, const <a href="qstring.html">QString</a> &amp; context ) <code>[virtual]</code></h3>
+<p>Changes the contents of the view to the string <em>text</em> and the
+context to <em>context.</em>
+<p><em>text</em> may be interpreted either as plain text or as rich text,
+depending on the <a href="#c1521b">textFormat</a>(). The default setting is <code>AutoText,</code>
+i.e. the text view autodetects the format from <em>text.</em>
+<p>The optional <em>context</em> is used to resolve references within the
+text document, for example image sources. It is passed directly to
+the <a href="#8a2fee">mimeSourceFactory</a>() when quering data.
+<p>See also  <a href="#9e3c4d">text</a>() and <a href="#e47be4">setTextFormat</a>().
+<p>Reimplemented in <a href="qtextbrowser.html#8be30b">QTextBrowser</a>.
+<h3 class="fn">void <a name="fe896b"></a>QTextView::setText ( const <a href="qstring.html">QString</a> &amp; text )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Changes the contents of the view to the string <em>text.</em>
+<p><em>text</em> may be interpreted either as plain text or as rich text,
+depending on the <a href="#c1521b">textFormat</a>(). The default setting is <code>AutoText,</code>
+i.e. the text view autodetects the format from <em>text.</em>
+<p>This function calls <a href="#f8600f">setText</a>( text, QString::null ), i.e. it sets a
+text without any context.
+<p>See also  <a href="#9e3c4d">text</a>() and <a href="#e47be4">setTextFormat</a>().
+<h3 class="fn">void <a name="e47be4"></a>QTextView::setTextFormat ( <a href="qt.html#TextFormat">Qt::TextFormat</a> format )</h3>
+<p>Sets the text format to <em>format.</em> Possible choices are
+<ul>
+<li> <code>PlainText</code> - all characters are displayed verbatim,
+including all blanks and linebreaks.
+<li> <code>RichText</code> - rich text rendering. The available
+styles are defined in the default stylesheet
+<a href="qstylesheet.html#9d69e9">QStyleSheet::defaultSheet</a>().
+<li> <code>AutoText</code> - this is also the default. The label
+autodetects which rendering style suits best, <code>PlainText</code>
+or <code>RichText.</code> Technically, this is done by using the
+<a href="qstylesheet.html#8aa686">QStyleSheet::mightBeRichText</a>() heuristic.
+</ul>
+<h3 class="fn">void <a name="028296"></a>QTextView::showEvent ( <a href="qshowevent.html">QShowEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#add426">QWidget.</a>
+<h3 class="fn"><a href="qstylesheet.html">QStyleSheet</a>* <a name="bf11b2"></a>QTextView::styleSheet () const</h3>
+<p>Returns the current style sheet of the view.
+<p>See also  <a href="#a0436a">setStyleSheet</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="9e3c4d"></a>QTextView::text () const <code>[virtual]</code></h3>
+<p>Returns the contents of the view.
+<p>See also  <a href="#1b633c">context</a>() and <a href="#f8600f">setText</a>().
+<h3 class="fn">Qt::TextFormat <a name="c1521b"></a>QTextView::textFormat() const</h3>
+<p>Returns the current text format.
+<p>See also  <a href="#e47be4">setTextFormat</a>().
+<h3 class="fn">void <a name="e9e990"></a>QTextView::viewportMouseMoveEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#e364ff">QScrollView.</a>
+<h3 class="fn">void <a name="626c81"></a>QTextView::viewportMousePressEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#527711">QScrollView.</a>
+<h3 class="fn">void <a name="cab69c"></a>QTextView::viewportMouseReleaseEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#ec8fd5">QScrollView.</a>
+<h3 class="fn">void <a name="327a09"></a>QTextView::viewportResizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#5aaf73">QScrollView.</a>
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

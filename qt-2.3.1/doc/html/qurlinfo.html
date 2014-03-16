@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QUrlInfo Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QUrlInfo Class Reference</h1><br clear="all">
+<p>
+<code>#include &lt;<a href="qurlinfo-h.html">qurlinfo.h</a>&gt;</code>
+<p><a href="qurlinfo-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#c43c76"><b>QUrlInfo</b></a> () </div>
+<li><div class="fn"><a href="#16b49b"><b>QUrlInfo</b></a> ( const QUrlOperator &amp; path, const QString &amp; file ) </div>
+<li><div class="fn"><a href="#1f5a63"><b>QUrlInfo</b></a> ( const QUrlInfo &amp; ui ) </div>
+<li><div class="fn"><a href="#e32351"><b>QUrlInfo</b></a> ( const QString &amp; name, int permissions, const QString &amp; owner, const QString &amp; group, uint size, const QDateTime &amp; lastModified, const QDateTime &amp; lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable ) </div>
+<li><div class="fn"><a href="#f0e34d"><b>QUrlInfo</b></a> ( const QUrl &amp; url, int permissions, const QString &amp; owner, const QString &amp; group, uint size, const QDateTime &amp; lastModified, const QDateTime &amp; lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable ) </div>
+<li><div class="fn">QUrlInfo&amp; <a href="#9ad028"><b>operator=</b></a> ( const QUrlInfo &amp; ui ) </div>
+<li><div class="fn">virtual <a href="#757a21"><b>~QUrlInfo</b></a> () </div>
+<li><div class="fn">virtual void <a href="#ea3697"><b>setName</b></a> ( const QString &amp; name ) </div>
+<li><div class="fn">virtual void <a href="#ee274b"><b>setDir</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#a6249f"><b>setFile</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#adc3b7"><b>setSymLink</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#835557"><b>setOwner</b></a> ( const QString &amp; s ) </div>
+<li><div class="fn">virtual void <a href="#8d2b6a"><b>setGroup</b></a> ( const QString &amp; s ) </div>
+<li><div class="fn">virtual void <a href="#be9e5f"><b>setSize</b></a> ( uint s ) </div>
+<li><div class="fn">virtual void <a href="#6bb1cc"><b>setWritable</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#a8c476"><b>setReadable</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#2ce182"><b>setPermissions</b></a> ( int p ) </div>
+<li><div class="fn">virtual void <a href="#d6b79b"><b>setLastModified</b></a> ( const QDateTime &amp; dt ) </div>
+<li><div class="fn">QString <a href="#7c7614"><b>name</b></a> () const</div>
+<li><div class="fn">int <a href="#9e4f6a"><b>permissions</b></a> () const</div>
+<li><div class="fn">QString <a href="#f80eb6"><b>owner</b></a> () const</div>
+<li><div class="fn">QString <a href="#e1d2ed"><b>group</b></a> () const</div>
+<li><div class="fn">uint <a href="#292f31"><b>size</b></a> () const</div>
+<li><div class="fn">QDateTime <a href="#54aef5"><b>lastModified</b></a> () const</div>
+<li><div class="fn">QDateTime <a href="#07094b"><b>lastRead</b></a> () const</div>
+<li><div class="fn">bool <a href="#dddba5"><b>isDir</b></a> () const</div>
+<li><div class="fn">bool <a href="#75e375"><b>isFile</b></a> () const</div>
+<li><div class="fn">bool <a href="#8b43fc"><b>isSymLink</b></a> () const</div>
+<li><div class="fn">bool <a href="#3424f9"><b>isWritable</b></a> () const</div>
+<li><div class="fn">bool <a href="#eff978"><b>isReadable</b></a> () const</div>
+<li><div class="fn">bool <a href="#eca7ee"><b>isExecutable</b></a> () const</div>
+<li><div class="fn">bool <a href="#d8daed"><b>operator==</b></a> ( const QUrlInfo &amp; i ) const</div>
+</ul>
+<h2>Static Public Members</h2>
+<ul>
+<li><div class="fn">bool <a href="#a1180e"><b>greaterThan</b></a> ( const QUrlInfo &amp; i1, const QUrlInfo &amp; i2, int sortBy ) </div>
+<li><div class="fn">bool <a href="#730b84"><b>lessThan</b></a> ( const QUrlInfo &amp; i1, const QUrlInfo &amp; i2, int sortBy ) </div>
+<li><div class="fn">bool <a href="#a9862c"><b>equal</b></a> ( const QUrlInfo &amp; i1, const QUrlInfo &amp; i2, int sortBy ) </div>
+</ul>
+<hr><h2>Detailed Description</h2>
+This class is just a container for storing information about a
+URLs. That's why all informations have to be passed in the
+constructor.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="c43c76"></a>QUrlInfo::QUrlInfo ()</h3>
+<p>Constructs an empty QUrlInfo object with default values.
+<h3 class="fn"><a name="e32351"></a>QUrlInfo::QUrlInfo ( const <a href="qstring.html">QString</a> &amp; name, int permissions, const <a href="qstring.html">QString</a> &amp; owner, const <a href="qstring.html">QString</a> &amp; group, uint size, const <a href="qdatetime.html">QDateTime</a> &amp; lastModified, const <a href="qdatetime.html">QDateTime</a> &amp; lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )</h3>
+<p>Constructs a QUrlInfo object by specifying all information of the URL.
+<h3 class="fn"><a name="f0e34d"></a>QUrlInfo::QUrlInfo ( const <a href="qurl.html">QUrl</a> &amp; url, int permissions, const <a href="qstring.html">QString</a> &amp; owner, const <a href="qstring.html">QString</a> &amp; group, uint size, const <a href="qdatetime.html">QDateTime</a> &amp; lastModified, const <a href="qdatetime.html">QDateTime</a> &amp; lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )</h3>
+<p>Constructs a QUrlInfo object by specifying all information of the URL.
+<h3 class="fn"><a name="16b49b"></a>QUrlInfo::QUrlInfo ( const <a href="qurloperator.html">QUrlOperator</a> &amp; path, const <a href="qstring.html">QString</a> &amp; file )</h3>
+<p>Constructs a QUrlInfo object with information about the file <em>file</em>
+in the <em>path.</em> This constructor tries to find the infos about
+<em>file,</em> which should be stored in the <a href="qurloperator.html">QUrlOperator</a> <em>path.</em>
+If this is not the case, an empty QUrlInfo object is created.
+<h3 class="fn"><a name="1f5a63"></a>QUrlInfo::QUrlInfo ( const QUrlInfo &amp; ui )</h3>
+<p>Copy constructor.
+<h3 class="fn"><a name="757a21"></a>QUrlInfo::~QUrlInfo () <code>[virtual]</code></h3>
+<p>Destructor.
+<h3 class="fn">bool <a name="a9862c"></a>QUrlInfo::equal ( const QUrlInfo &amp; i1, const QUrlInfo &amp; i2, int sortBy ) <code>[static]</code></h3>
+<p>Returns TRUE if <em>u1</em> is equal <em>u2,</em> else FALSE. The objects
+are compared by the value, which is specified by <em>sortBy.</em> This has
+to be one of QDir::Name, QDir::Time and QDir::Size.
+<h3 class="fn">bool <a name="a1180e"></a>QUrlInfo::greaterThan ( const QUrlInfo &amp; i1, const QUrlInfo &amp; i2, int sortBy ) <code>[static]</code></h3>
+<p>Returns TRUE if <em>u1</em> is greater than <em>u2,</em> else FALSE. The objects
+are compared by the value, which is specified by <em>sortBy.</em> This has
+to be one of QDir::Name, QDir::Time and QDir::Size.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="e1d2ed"></a>QUrlInfo::group () const</h3>
+<p>Returns the group of the URL.
+<h3 class="fn">bool <a name="dddba5"></a>QUrlInfo::isDir () const</h3>
+<p>Returns TRUE, if the URL is a directory, else FALSE.
+<h3 class="fn">bool <a name="eca7ee"></a>QUrlInfo::isExecutable () const</h3>
+<p>Returns TRUE, if the URL is executable, else FALSE.
+<h3 class="fn">bool <a name="75e375"></a>QUrlInfo::isFile () const</h3>
+<p>Returns TRUE, if the URL is a file, else FALSE.
+<h3 class="fn">bool <a name="eff978"></a>QUrlInfo::isReadable () const</h3>
+<p>Returns TRUE, if the URL is readable , else FALSE.
+<h3 class="fn">bool <a name="8b43fc"></a>QUrlInfo::isSymLink () const</h3>
+<p>Returns TRUE, if the URL is a symbolic link, else FALSE.
+<h3 class="fn">bool <a name="3424f9"></a>QUrlInfo::isWritable () const</h3>
+<p>Returns TRUE, if the URL is writable, else FALSE.
+<h3 class="fn"><a href="qdatetime.html">QDateTime</a> <a name="54aef5"></a>QUrlInfo::lastModified () const</h3>
+<p>Returns the last modification date of the URL.
+<h3 class="fn"><a href="qdatetime.html">QDateTime</a> <a name="07094b"></a>QUrlInfo::lastRead () const</h3>
+<p>Returns the date at which the URL was read the last time.
+<h3 class="fn">bool <a name="730b84"></a>QUrlInfo::lessThan ( const QUrlInfo &amp; i1, const QUrlInfo &amp; i2, int sortBy ) <code>[static]</code></h3>
+<p>Returns TRUE if <em>u1</em> is less than <em>u2,</em> else FALSE. The objects
+are compared by the value, which is specified by <em>sortBy.</em> This has
+to be one of QDir::Name, QDir::Time and QDir::Size.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="7c7614"></a>QUrlInfo::name () const</h3>
+<p>Returns the filename of the URL.
+<h3 class="fn">QUrlInfo &amp; <a name="9ad028"></a>QUrlInfo::operator= ( const QUrlInfo &amp; ui )</h3>
+<p>Assings the values of <em>ui</em> to this QUrlInfo object.
+<h3 class="fn">bool <a name="d8daed"></a>QUrlInfo::operator== ( const QUrlInfo &amp; i ) const</h3>
+<p>Compares this QUrlInfo with <em>i</em> and returns TRUE if they
+are equal, else FALSE.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="f80eb6"></a>QUrlInfo::owner () const</h3>
+<p>Returns the owner of the URL.
+<h3 class="fn">int <a name="9e4f6a"></a>QUrlInfo::permissions () const</h3>
+<p>Returns the permissions of the URL.
+<h3 class="fn">void <a name="ee274b"></a>QUrlInfo::setDir ( bool b ) <code>[virtual]</code></h3>
+<p>Specifies if the URL is a directory.
+<h3 class="fn">void <a name="a6249f"></a>QUrlInfo::setFile ( bool b ) <code>[virtual]</code></h3>
+<p>Specifies if the URL is a file.
+<h3 class="fn">void <a name="8d2b6a"></a>QUrlInfo::setGroup ( const <a href="qstring.html">QString</a> &amp; s ) <code>[virtual]</code></h3>
+<p>Sets the group if the URL to <em>s.</em>
+<h3 class="fn">void <a name="d6b79b"></a>QUrlInfo::setLastModified ( const <a href="qdatetime.html">QDateTime</a> &amp; dt ) <code>[virtual]</code></h3>
+<p>Sets the last modification date of the URL to <em>dt.</em>
+<h3 class="fn">void <a name="ea3697"></a>QUrlInfo::setName ( const <a href="qstring.html">QString</a> &amp; name ) <code>[virtual]</code></h3>
+<p>Sets the filename or the URL.
+<h3 class="fn">void <a name="835557"></a>QUrlInfo::setOwner ( const <a href="qstring.html">QString</a> &amp; s ) <code>[virtual]</code></h3>
+<p>Sets the owner of the URL to <em>s.</em>
+<h3 class="fn">void <a name="2ce182"></a>QUrlInfo::setPermissions ( int p ) <code>[virtual]</code></h3>
+<p>Sets the permissions of the URL to <em>p.</em>
+<h3 class="fn">void <a name="a8c476"></a>QUrlInfo::setReadable ( bool b ) <code>[virtual]</code></h3>
+<p>Specifies if the URL is readable.
+<h3 class="fn">void <a name="be9e5f"></a>QUrlInfo::setSize ( uint s ) <code>[virtual]</code></h3>
+<p>Sets the size of the URL to <em>s.</em>
+<h3 class="fn">void <a name="adc3b7"></a>QUrlInfo::setSymLink ( bool b ) <code>[virtual]</code></h3>
+<p>Specifies if the URL is a symbolic link.
+<h3 class="fn">void <a name="6bb1cc"></a>QUrlInfo::setWritable ( bool b ) <code>[virtual]</code></h3>
+<p>Specifies if the URL is writable.
+<h3 class="fn">uint <a name="292f31"></a>QUrlInfo::size () const</h3>
+<p>Returns the size of the URL.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

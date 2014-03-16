@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QListBoxItem Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QListBoxItem Class Reference</h1><br clear="all">
+<p>
+This is the base class of all list box items.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qlistbox-h.html">qlistbox.h</a>&gt;</code>
+<p>Inherited by <a href="qlistboxpixmap.html">QListBoxPixmap</a> and <a href="qlistboxtext.html">QListBoxText</a>.
+<p><a href="qlistboxitem-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#9fef51"><b>QListBoxItem</b></a> ( QListBox * listbox = 0 ) </div>
+<li><div class="fn"><a href="#3781b0"><b>QListBoxItem</b></a> ( QListBox * listbox, QListBoxItem * after ) </div>
+<li><div class="fn">virtual <a href="#05e5a5"><b>~QListBoxItem</b></a> () </div>
+<li><div class="fn">virtual QString <a href="#56f62d"><b>text</b></a> () const</div>
+<li><div class="fn">virtual const QPixmap* <a href="#ece6c3"><b>pixmap</b></a> () const</div>
+<li><div class="fn">virtual int <a href="#bf15d8"><b>height</b></a> ( const QListBox * ) const</div>
+<li><div class="fn">virtual int <a href="#8ff2cf"><b>width</b></a> ( const QListBox * ) const</div>
+<li><div class="fn">bool <a href="#648c07"><b>selected</b></a> () const</div>
+<li><div class="fn">bool <a href="#7c8a43"><b>current</b></a> () const</div>
+<li><div class="fn">QListBox* <a href="#476e10"><b>listBox</b></a> () const</div>
+<li><div class="fn">void <a href="#e6834b"><b>setSelectable</b></a> ( bool b ) </div>
+<li><div class="fn">bool <a href="#38584d"><b>isSelectable</b></a> () const</div>
+<li><div class="fn">QListBoxItem* <a href="#0cc66b"><b>next</b></a> () const</div>
+<li><div class="fn">QListBoxItem* <a href="#a7ccb9"><b>prev</b></a> () const</div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#8ba5a6"><b>paint</b></a> ( QPainter * ) </div>
+<li><div class="fn">virtual void <a href="#417252"><b>setText</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">void <a href="#5a41bd"><b>setCustomHighlighting</b></a> ( bool ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+This is the base class of all list box items.
+<p>
+This class is the abstract base class of all list box items. If you
+need to insert customized items into a <a href="qlistbox.html">QListBox</a>, you must inherit
+this class and reimplement <a href="#8ba5a6">paint</a>(), <a href="#bf15d8">height</a>() and <a href="#8ff2cf">width</a>().
+<p>See also  <a href="qlistbox.html">QListBox</a>.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="9fef51"></a>QListBoxItem::QListBoxItem ( <a href="qlistbox.html">QListBox</a> * listbox = 0 )</h3>
+<p>Constructs an empty list box item in the listbox <em>listbox</em>
+<h3 class="fn"><a name="3781b0"></a>QListBoxItem::QListBoxItem ( <a href="qlistbox.html">QListBox</a> * listbox, QListBoxItem * after )</h3>
+<p>Constructs an empty list box item in the listbox <em>listbox</em> and
+inserts it after the item <em>after.</em>
+<h3 class="fn"><a name="05e5a5"></a>QListBoxItem::~QListBoxItem () <code>[virtual]</code></h3>
+<p>Destroys the list box item.
+<h3 class="fn">bool <a name="7c8a43"></a>QListBoxItem::current () const</h3>
+<p>Returns TRUE if the item is the current item, else FALSE.
+<p>See also  <a href="qlistbox.html#5636a4">QListBox::currentItem</a>(), <a href="qlistbox.html#276c9e">QListBox::item</a>() and <a href="#648c07">selected</a>().
+<h3 class="fn">int <a name="bf15d8"></a>QListBoxItem::height ( const <a href="qlistbox.html">QListBox</a> * lb ) const <code>[virtual]</code></h3>
+<p>Implement this function to return the height of your item.
+The <em>lb</em> parameter is the same as <a href="#476e10">listBox</a>() and is provided
+for convenience and compatibility.
+<p>See also  <a href="#8ba5a6">paint</a>() and <a href="#8ff2cf">width</a>().
+<p>Reimplemented in <a href="qlistboxtext.html#6b7b5c">QListBoxText</a> and <a href="qlistboxpixmap.html#532109">QListBoxPixmap</a>.
+<h3 class="fn">bool <a name="38584d"></a>QListBoxItem::isSelectable () const</h3>
+<p>Returns if this item is selectable or not.
+<p>See also  <a href="#e6834b">setSelectable</a>().
+<h3 class="fn"><a href="qlistbox.html">QListBox</a> * <a name="476e10"></a>QListBoxItem::listBox () const</h3>
+<p>Returns a pointer to the listbox containing this item.
+<h3 class="fn">QListBoxItem * <a name="0cc66b"></a>QListBoxItem::next () const</h3>
+<p>Returns the item which comes after this in the
+listbox. If this is the last item, 0 is returned.
+<h3 class="fn">void <a name="8ba5a6"></a>QListBoxItem::paint ( <a href="qpainter.html">QPainter</a> * p ) <code>[virtual protected]</code></h3>
+<p>Implement this function to draw your item.
+<p>See also  <a href="#bf15d8">height</a>() and <a href="#8ff2cf">width</a>().
+<p>Reimplemented in <a href="qlistboxpixmap.html#51e52f">QListBoxPixmap</a> and <a href="qlistboxtext.html#585b41">QListBoxText</a>.
+<h3 class="fn">const <a href="qpixmap.html">QPixmap</a> * <a name="ece6c3"></a>QListBoxItem::pixmap () const <code>[virtual]</code></h3>
+<p>Returns the pixmap connected with the item, if any.
+<p>The default implementation of this function returns a null pointer.
+<p>Reimplemented in <a href="qlistboxpixmap.html#eec0cd">QListBoxPixmap</a>.
+<h3 class="fn">QListBoxItem * <a name="a7ccb9"></a>QListBoxItem::prev () const</h3>
+<p>Returns the item which comes before this in the
+listbox. If this is the first item, 0 is returned.
+<h3 class="fn">bool <a name="648c07"></a>QListBoxItem::selected () const</h3>
+<p>Returns TRUE if the item is selected, else FALSE.
+<p>See also  <a href="qlistbox.html#71d56c">QListBox::isSelected</a>() and <a href="#7c8a43">current</a>().
+<h3 class="fn">void <a name="5a41bd"></a>QListBoxItem::setCustomHighlighting ( bool b ) <code>[protected]</code></h3>
+<p>Defines whether the list box items is responsible to draw itself
+in a highlighted state when being selected.
+<p>If <em>b</em> is FALSE (the default), then the listbox will draw some
+default highlight indicator before calling <a href="#8ba5a6">paint</a>().
+<p>See also  <a href="#648c07">selected</a>() and <a href="#8ba5a6">paint</a>().
+<h3 class="fn">void <a name="e6834b"></a>QListBoxItem::setSelectable ( bool b )</h3>
+<p>Specifies if this item may be selected by the user or not.
+<p>See also  <a href="#38584d">isSelectable</a>().
+<h3 class="fn">void <a name="417252"></a>QListBoxItem::setText ( const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual protected]</code></h3>
+<p>Sets the text of the widget, which is used for sorting too.
+The text is not shown unless explicitly drawn in <a href="#8ba5a6">paint</a>().
+<p>See also  <a href="#56f62d">text</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="56f62d"></a>QListBoxItem::text () const <code>[virtual]</code></h3>
+<p>Returns the text of the item, which is used for sorting too.
+<p>See also  <a href="#417252">setText</a>().
+<h3 class="fn">int <a name="8ff2cf"></a>QListBoxItem::width ( const <a href="qlistbox.html">QListBox</a> * lb ) const <code>[virtual]</code></h3>
+<p>Implement this function to return the width of your item.
+The <em>lb</em> parameter is the same as <a href="#476e10">listBox</a>() and is provided
+for convenience and compatibility.
+<p>See also  <a href="#8ba5a6">paint</a>() and <a href="#bf15d8">height</a>().
+<p>Reimplemented in <a href="qlistboxtext.html#c05f08">QListBoxText</a> and <a href="qlistboxpixmap.html#406ab1">QListBoxPixmap</a>.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QStrListIterator Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QStrListIterator Class Reference</h1><br clear="all">
+<p>
+The QStrListIterator class is an iterator for the <a href="qstrlist.html">QStrList</a> and <a href="qstrilist.html">QStrIList</a> classes.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qstrlist-h.html">qstrlist.h</a>&gt;</code>
+<p>
+Inherits <a href="qlistiterator.html">QListIterator</a>.
+<p><a href="qstrlistiterator-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#b7e2d9"><b>QStrListIterator</b></a> ( const QList&lt;type&gt; &amp; l ) </div>
+<li><div class="fn"><a href="#9d8e99"><b>~QStrListIterator</b></a> () </div>
+<li><div class="fn">uint <a href="#da62d1"><b>count</b></a> () const</div>
+<li><div class="fn">bool <a href="#fbc45f"><b>isEmpty</b></a> () const</div>
+<li><div class="fn">bool <a href="#a74ae5"><b>atFirst</b></a> () const</div>
+<li><div class="fn">bool <a href="#2e6ae8"><b>atLast</b></a> () const</div>
+<li><div class="fn">type* <a href="#5492b1"><b>toFirst</b></a> () </div>
+<li><div class="fn">type* <a href="#c14fd6"><b>toLast</b></a> () </div>
+<li><div class="fn">operator <a href=qstrlistiterator.html#0f8747><b>type*</b></a> ()const</div>
+<li><div class="fn">type* <a href="#4066cc"><b>operator*</b></a> () </div>
+<li><div class="fn">type* <a href="#ef941a"><b>current</b></a> () const</div>
+<li><div class="fn">type* <b>operator</b> ()() </div>
+<li><div class="fn">type* <a href="#0db3eb"><b>operator++</b></a> () </div>
+<li><div class="fn">type* <a href="#3180ab"><b>operator+=</b></a> ( uint j ) </div>
+<li><div class="fn">type* <a href="#2e6315"><b>operator--</b></a> () </div>
+<li><div class="fn">type* <a href="#e31b04"><b>operator-=</b></a> ( uint j ) </div>
+<li><div class="fn">QListIterator&lt;type&gt;&amp; <a href="#4798f5"><b>operator=</b></a> ( const QListIterator&lt;type&gt; &amp; it ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QStrListIterator class is an iterator for the <a href="qstrlist.html">QStrList</a> and <a href="qstrilist.html">QStrIList</a> classes.
+<p>
+This class is a <a href="qlistiterator.html">QListIterator</a>&lt;char&gt; instance.
+It can traverse the strings in the QStrList and QStrIList classes.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="b7e2d9"></a>QStrListIterator::QStrListIterator ( const <a href="qlist.html">QList</a>&lt;type&gt; &amp; list )</h3>
+<p>Constructs an iterator for <em>list.</em>  The current iterator item is
+set to point on the first item in the <em>list.</em>
+<h3 class="fn"><a name="9d8e99"></a>QStrListIterator::~QStrListIterator ()</h3>
+<p>Destroys the iterator.
+<h3 class="fn"><a name="0f8747"></a>QStrListIterator::operator type * () const</h3>
+<p>Cast operator. Returns a pointer to the current iterator item.
+Same as <a href="#ef941a">current</a>().
+<h3 class="fn">bool <a name="a74ae5"></a>QStrListIterator::atFirst () const</h3>
+<p>Returns TRUE if the current iterator item is the first list item, otherwise
+FALSE.
+<p>See also  <a href="#5492b1">toFirst</a>() and <a href="#2e6ae8">atLast</a>().
+<h3 class="fn">bool <a name="2e6ae8"></a>QStrListIterator::atLast () const</h3>
+<p>Returns TRUE if the current iterator item is the last list item, otherwise
+FALSE.
+<p>See also  <a href="#c14fd6">toLast</a>() and <a href="#a74ae5">atFirst</a>().
+<h3 class="fn">uint <a name="da62d1"></a>QStrListIterator::count () const</h3>
+<p>Returns the number of items in the list this iterator operates on.
+<p>See also  <a href="#fbc45f">isEmpty</a>().
+<h3 class="fn">type * <a name="ef941a"></a>QStrListIterator::current () const</h3>
+<p>Returns a pointer to the current iterator item.
+<h3 class="fn">bool <a name="fbc45f"></a>QStrListIterator::isEmpty () const</h3>
+<p>Returns TRUE if the list is empty, i.e. <a href="#da62d1">count</a>() == 0, otherwise FALSE.
+<p>See also  <a href="#da62d1">count</a>().
+<h3 class="fn">type * <a name="4066cc"></a>QStrListIterator::operator* ()</h3>
+<p>Asterix operator. Returns a pointer to the current iterator item.
+Same as <a href="#ef941a">current</a>().
+<h3 class="fn">type * <a name="0db3eb"></a>QStrListIterator::operator++ ()</h3>
+<p>Prefix ++ makes the succeeding item current and returns the new current
+item.
+<p>If the current iterator item was the last item in the list or if it was
+null, null is returned.
+<h3 class="fn">type * <a name="3180ab"></a>QStrListIterator::operator+= ( uint jump )</h3>
+<p>Sets the current item to the item <em>jump</em> positions after the current item,
+and returns a pointer to that item.
+<p>If that item is beyond the last item or if the dictionary is  empty,
+it sets the current item to null and  returns null.
+<h3 class="fn">type * <a name="2e6315"></a>QStrListIterator::operator-- ()</h3>
+<p>Prefix -- makes the preceding item current and returns the new current
+item.
+<p>If the current iterator item was the first item in the list or if it was
+null, null is returned.
+<h3 class="fn">type * <a name="e31b04"></a>QStrListIterator::operator-= ( uint jump )</h3>
+<p>Returns the item <em>jump</em> positions before the current item, or null if
+it is beyond the first item.  Makes this the current item.
+<h3 class="fn">QStrListIterator&lt;type&gt;&amp; <a name="4798f5"></a>QStrListIterator::operator= ( const QStrListIterator&lt;type&gt; &amp; it )</h3>
+<p>Assignment.  Makes a copy of the iterator <em>it</em> and returns a reference
+to this iterator.
+<h3 class="fn">type * <a name="5492b1"></a>QStrListIterator::toFirst ()</h3>
+<p>Sets the current iterator item to point to the first list item and returns
+a pointer to the item.  Sets the current item to null and returns null
+if the list is empty.
+<p>See also  <a href="#c14fd6">toLast</a>() and <a href="#a74ae5">atFirst</a>().
+<h3 class="fn">type * <a name="c14fd6"></a>QStrListIterator::toLast ()</h3>
+<p>Sets the current iterator item to point to the last list item and returns
+a pointer to the item.  Sets the current item to null and returns null
+if the list is empty.
+<p>See also  <a href="#5492b1">toFirst</a>() and <a href="#2e6ae8">atLast</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

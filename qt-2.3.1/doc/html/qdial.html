@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QDial Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QDial Class Reference</h1><br clear="all">
+<p>
+The QDial class provides a rounded rangecontrol (like a speedometer or potentiometer).
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qdial-h.html">qdial.h</a>&gt;</code>
+<p>
+Inherits <a href="qrangecontrol.html">QRangeControl</a> and <a href="qwidget.html">QWidget</a>.
+<p><a href="qdial-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#edfebe"><b>QDial</b></a> ( QWidget * parent=0, const char * name=0 ) </div>
+<li><div class="fn"><a href="#4a798b"><b>QDial</b></a> ( int minValue, int maxValue, int pageStep, int value, QWidget * parent=0, const char * name=0 ) </div>
+<li><div class="fn"><a href="#c20581"><b>~QDial</b></a> () </div>
+<li><div class="fn">bool <a href="#986a17"><b>tracking</b></a> () const</div>
+<li><div class="fn">bool <a href="#de09b3"><b>wrapping</b></a> () const</div>
+<li><div class="fn">int <a href="#898903"><b>notchSize</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#d592af"><b>setNotchTarget</b></a> ( double ) </div>
+<li><div class="fn">double <a href="#4b833e"><b>notchTarget</b></a> () const</div>
+<li><div class="fn">bool <a href="#1f9c7e"><b>notchesVisible</b></a> () const</div>
+<li><div class="fn">void <a href="#2a1d19"><b>setMinValue</b></a> ( int ) </div>
+<li><div class="fn">void <a href="#2bc496"><b>setMaxValue</b></a> ( int ) </div>
+<li><div class="fn">void <a href="#7ee289"><b>setLineStep</b></a> ( int ) </div>
+<li><div class="fn">void <a href="#ea8a93"><b>setPageStep</b></a> ( int ) </div>
+</ul>
+<h2>Public Slots</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#994604"><b>setValue</b></a> ( int ) </div>
+<li><div class="fn">void <a href="#274b9b"><b>addLine</b></a> () </div>
+<li><div class="fn">void <a href="#f87907"><b>subtractLine</b></a> () </div>
+<li><div class="fn">void <a href="#4a9aeb"><b>addPage</b></a> () </div>
+<li><div class="fn">void <a href="#38cf2a"><b>subtractPage</b></a> () </div>
+<li><div class="fn">virtual void <a href="#9653e2"><b>setNotchesVisible</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#3f060c"><b>setWrapping</b></a> ( bool on ) </div>
+<li><div class="fn">virtual void <a href="#bb2315"><b>setTracking</b></a> ( bool enable ) </div>
+</ul>
+<h2>Signals</h2>
+<ul>
+<li><div class="fn">void <a href="#73d06b"><b>valueChanged</b></a> ( int value ) </div>
+<li><div class="fn">void <a href="#85e0fa"><b>dialPressed</b></a> () </div>
+<li><div class="fn">void <a href="#9a558d"><b>dialMoved</b></a> ( int value ) </div>
+<li><div class="fn">void <a href="#9f97a1"><b>dialReleased</b></a> () </div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#82e79a"><b>valueChange</b></a> () </div>
+<li><div class="fn">virtual void <a href="#5af4ed"><b>rangeChange</b></a> () </div>
+<li><div class="fn">virtual void <a href="#2996e0"><b>repaintScreen</b></a> ( const QRect * cr = 0 ) </div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>bool<td>tracking<td>tracking<td>setTracking<td>&nbsp;
+<tr><td>bool<td>wrapping<td>wrapping<td>setWrapping<td>&nbsp;
+<tr><td>int<td>notchSize<td>notchSize<td>&nbsp;<td>&nbsp;
+<tr><td>double<td>notchTarget<td>notchTarget<td>setNotchTarget<td>&nbsp;
+<tr><td>bool<td>notchesVisible<td>notchesVisible<td>setNotchesVisible<td>&nbsp;
+<tr><td>int<td>minValue<td>minValue<td>setMinValue<td>&nbsp;
+<tr><td>int<td>maxValue<td>maxValue<td>setMaxValue<td>&nbsp;
+<tr><td>int<td>lineStep<td>lineStep<td>setLineStep<td>&nbsp;
+<tr><td>int<td>pageStep<td>pageStep<td>setPageStep<td>&nbsp;
+<tr><td>int<td>value<td>value<td>setValue<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QDial class provides a rounded rangecontrol (like a speedometer or potentiometer).
+<p>
+Q dial is used when the user needs to control a value within a
+program-definable range, and the range either wraps around
+(typically, 0-359 degrees) or the dialog layout needs a square widget.
+<p>Both API- and UI-wise, the dial is very like a <a href="qslider.html">slider.</a> Indeed, when <a href="#de09b3">wrapping</a>() is FALSE (the default)
+there is no hard difference between a slider and a dial.  They have
+the same signals, slots and member functions, all of which do the
+same things.  Which one to use depends only on your taste and
+on the application.
+<p>The dial initially emits <a href="#73d06b">valueChanged</a>() signals continuously while
+the slider is being moved; you can make it emit the signal less
+often by calling <a href="#bb2315">setTracking</a>( FALSE ).  <a href="#9a558d">dialMoved</a>() is emitted
+continuously even when <a href="#986a17">tracking</a>() is FALSE.
+<p>The slider also emits <a href="#85e0fa">dialPressed</a>() and <a href="#9f97a1">dialReleased</a>() signals when
+the mouse button is pressed and released.  But note that the dial's
+value can change without these signals being emitted; the keyboard
+and wheel can be used to change the value.
+<p>Unlike the slider, QDial attempts to draw a "nice" number of notches
+rather than one per <a href="#8b218c">lineStep</a>().  If possible, that number <em>is</em>
+lineStep(), but if there aren't enough pixels to draw every, QDial
+will draw every second, third or something.  <a href="#898903">notchSize</a>() returns the
+number of units per notch, hopefully a multiple of lineStep();
+<a href="#d592af">setNotchTarget</a>() sets the target distance between neighbouring
+notches in pixels.  The default is 3.75 pixels.
+<p>Like the slider, the dial makes the <a href="qrangecontrol.html">QRangeControl</a> functions
+<a href="#994604">setValue</a>(), <a href="#274b9b">addLine</a>(), substractLine(), <a href="#4a9aeb">addPage</a>() and <a href="#38cf2a">subtractPage</a>()
+available as slots.
+<p>The dial's keyboard interface is fairly simple: The left/up and right/down
+arrow keys move by lineStep(), page up and page down by <a href="#e69511">pageStep</a>()
+and Home and End to <a href="#569539">minValue</a>() and <a href="#4a17c9">maxValue</a>().
+<p><img src=qdial-m.png> <img src=qdial-w.png>
+<p>See also  <a href="qscrollbar.html">QScrollBar</a>, <a href="qspinbox.html">QSpinBox</a> and <a href="guibooks.html#fowler">GUI Design Handbook: Slider</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="edfebe"></a>QDial::QDial ( <a href="qwidget.html">QWidget</a> * parent=0, const char * name=0 )</h3>
+<p>Constructs a dial with the default range of <a href="qrangecontrol.html">QRangeControl</a>.
+<h3 class="fn"><a name="4a798b"></a>QDial::QDial ( int minValue, int maxValue, int pageStep, int value, <a href="qwidget.html">QWidget</a> * parent=0, const char * name=0 )</h3>
+<p>Constructs a dial whose value can never be smaller than <em>minValue</em> or greater than <em>maxValue,</em> whose line step size is <em>lineStep</em> and page step size is <em>pageStep,</em> and whose value is
+initially <em>value.</em>
+<p><em>value</em> is forced to be within the legal range.
+<h3 class="fn"><a name="c20581"></a>QDial::~QDial ()</h3>
+<p>Destructs the dial.
+<h3 class="fn">void <a name="274b9b"></a>QDial::addLine () <code>[slot]</code></h3>
+<p>Moves the dial one <a href="#8b218c">lineStep</a>() upwards.
+<h3 class="fn">void <a name="4a9aeb"></a>QDial::addPage () <code>[slot]</code></h3>
+<p>Moves the dial one <a href="#e69511">pageStep</a>() upwards.
+<h3 class="fn">void <a name="9a558d"></a>QDial::dialMoved ( int value ) <code>[signal]</code></h3>
+<p>This signal is emitted whenever the dial value changes.  The frequency
+of this signal is <em>not</em> influenced by <a href="#bb2315">setTracking</a>().
+<p>See also  <a href="#73d06b">valueChanged</a>(int).
+<h3 class="fn">void <a name="85e0fa"></a>QDial::dialPressed () <code>[signal]</code></h3>
+<p>This signal is emitted when the use begins mouse interaction with
+the dial.
+<p>See also  <a href="#9f97a1">dialReleased</a>().
+<h3 class="fn">void <a name="9f97a1"></a>QDial::dialReleased () <code>[signal]</code></h3>
+<p>This signal is emitted when the use ends mouse interaction with
+the dial.
+<p>See also  <a href="#85e0fa">dialPressed</a>().
+<h3 class="fn">void <a name="56adab"></a>QDial::focusInEvent ( <a href="qfocusevent.html">QFocusEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#303f18">QWidget.</a>
+<h3 class="fn">void <a name="8d3a3d"></a>QDial::focusOutEvent ( <a href="qfocusevent.html">QFocusEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#bdc4a1">QWidget.</a>
+<h3 class="fn">void <a name="7dd8c1"></a>QDial::keyPressEvent ( <a href="qkeyevent.html">QKeyEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#cdb1c7">QWidget.</a>
+<h3 class="fn">int <a name="8b218c"></a>QDial::lineStep () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">int <a name="4a17c9"></a>QDial::maxValue () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">int <a name="569539"></a>QDial::minValue () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="a5c464"></a>QDial::minimumSizeHint () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#3f0fc2">QWidget.</a>
+<h3 class="fn">void <a name="b07570"></a>QDial::mouseMoveEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#8b6935">QWidget.</a>
+<h3 class="fn">void <a name="110fc6"></a>QDial::mousePressEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#fb611b">QWidget.</a>
+<h3 class="fn">void <a name="7263a7"></a>QDial::mouseReleaseEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#773a0f">QWidget.</a>
+<h3 class="fn">int <a name="898903"></a>QDial::notchSize () const</h3>
+<p>Returns the current notch size.  This is in range control units,
+not pixels, and if possible it is a multiple of <a href="#8b218c">lineStep</a>() that
+results in an on-screen notch size near <a href="#4b833e">notchTarget</a>().
+<p>See also  <a href="#4b833e">notchTarget</a>() and <a href="#8b218c">lineStep</a>().
+<h3 class="fn">double <a name="4b833e"></a>QDial::notchTarget () const</h3>
+<p>Returns the target size of the notch; this is the number of
+pixels QDial attempts to put between each little line.
+<p>The actual size differs a bit from the target.
+<h3 class="fn">bool <a name="1f9c7e"></a>QDial::notchesVisible () const</h3>
+<p>Retuns TRUE if notches are shown, else FALSE.
+<p>See also  <a href="#9653e2">setNotchesVisible</a>().
+<h3 class="fn">int <a name="e69511"></a>QDial::pageStep () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="ccc0a5"></a>QDial::paintEvent ( <a href="qpaintevent.html">QPaintEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#ef2069">QWidget.</a>
+<h3 class="fn">void <a name="5af4ed"></a>QDial::rangeChange () <code>[virtual protected]</code></h3>
+<p>Reimplemented to ensure tick-marks are consistent with the new range.
+<p>Reimplemented from <a href="qrangecontrol.html#759b5a">QRangeControl.</a>
+<h3 class="fn">void <a name="2996e0"></a>QDial::repaintScreen ( const <a href="qrect.html">QRect</a> * cr = 0 ) <code>[virtual protected]</code></h3>
+<p>Paints the dial.
+<h3 class="fn">void <a name="675ef3"></a>QDial::resizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#28c156">QWidget.</a>
+<h3 class="fn">void <a name="7ee289"></a>QDial::setLineStep ( int i )</h3>
+<p>Sets the line step to <em>i.</em>
+<p>Calls the virtual <a href="qrangecontrol.html#33b3a2">stepChange</a>() function if the new line step is
+different from the previous setting.
+<p>See also  <a href="#8b218c">lineStep</a>(), <a href="qrangecontrol.html#60ce91">QRangeControl::setSteps</a>(), <a href="#ea8a93">setPageStep</a>() and <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="2bc496"></a>QDial::setMaxValue ( int i )</h3>
+<p>A convenience function which just calls
+<a href="qrangecontrol.html#0337f8">setRange</a>( <a href="#569539">minValue</a>(), i )
+<p>See also  <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="2a1d19"></a>QDial::setMinValue ( int i )</h3>
+<p>A convenience function which just calls
+<a href="qrangecontrol.html#0337f8">setRange</a>( i, <a href="#4a17c9">maxValue</a>() )
+<p>See also  <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="d592af"></a>QDial::setNotchTarget ( double target ) <code>[virtual]</code></h3>
+<p>Sets the dial to use a notch size as close to <em>target</em> pixels as
+possible.  QDial will find a suitable number close to this, based on
+the dial's on-screen size, range and <a href="#8b218c">lineStep</a>().
+<p>See also  <a href="#4b833e">notchTarget</a>() and <a href="#898903">notchSize</a>().
+<h3 class="fn">void <a name="9653e2"></a>QDial::setNotchesVisible ( bool b ) <code>[virtual slot]</code></h3>
+<p>Enables or disables showing of notches. If <em>b</em> is TRUE, the notches
+are shown, else not.
+<h3 class="fn">void <a name="ea8a93"></a>QDial::setPageStep ( int i )</h3>
+<p>Sets the page step to <em>i.</em>
+<p>Calls the virtual <a href="qrangecontrol.html#33b3a2">stepChange</a>() function if the new page step is
+different from the previous setting.
+<p>See also  <a href="#e69511">pageStep</a>(), <a href="qrangecontrol.html#60ce91">QRangeControl::setSteps</a>(), <a href="#7ee289">setLineStep</a>() and <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="bb2315"></a>QDial::setTracking ( bool enable ) <code>[virtual slot]</code></h3>
+<p>If <em>enable</em> is TRUE, tracking is enabled. This means that
+the arrow can be moved using the mouse. Else this is not
+possible.
+<h3 class="fn">void <a name="994604"></a>QDial::setValue ( int newValue ) <code>[virtual slot]</code></h3>
+<p>Makes <a href="qrangecontrol.html#29bfef">QRangeControl::setValue</a>() available as a slot.
+<h3 class="fn">void <a name="3f060c"></a>QDial::setWrapping ( bool enable ) <code>[virtual slot]</code></h3>
+<p>If <em>enable</em> is TRUE, wrapping is enabled. This means
+that the arrow can be turned around 360°. Else there is
+some space at the bottom which is skipped by the arrow.
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="eb926b"></a>QDial::sizeHint () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#290bcd">QWidget.</a>
+<h3 class="fn">void <a name="f87907"></a>QDial::subtractLine () <code>[slot]</code></h3>
+<p>Moves the dial one <a href="#8b218c">lineStep</a>() downwards.
+<h3 class="fn">void <a name="38cf2a"></a>QDial::subtractPage () <code>[slot]</code></h3>
+<p>Moves the dial one <a href="#e69511">pageStep</a>() downwards.
+<h3 class="fn">bool <a name="986a17"></a>QDial::tracking () const</h3>
+<p>Returns TRUE if tracking is enabled, or FALSE if tracking is disabled.
+<p>Tracking is initially enabled.
+<p>See also  <a href="#bb2315">setTracking</a>().
+<h3 class="fn">int <a name="0820d9"></a>QDial::value () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="82e79a"></a>QDial::valueChange () <code>[virtual protected]</code></h3>
+<p>Reimplemented to ensure the display is correct and to emit
+the <a href="#73d06b">valueChanged</a>(int) signal when appropriate.
+<p>Reimplemented from <a href="qrangecontrol.html#11487e">QRangeControl.</a>
+<h3 class="fn">void <a name="73d06b"></a>QDial::valueChanged ( int value ) <code>[signal]</code></h3>
+<p>This signal is emitted whenever the dial value changes.  The frequency
+of this signal is influenced by <a href="#bb2315">setTracking</a>().
+<h3 class="fn">void <a name="4ff513"></a>QDial::wheelEvent ( <a href="qwheelevent.html">QWheelEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#cd6485">QWidget.</a>
+<h3 class="fn">bool <a name="de09b3"></a>QDial::wrapping () const</h3>
+<p>Returns TRUE if wrapping is enabled, else FALSE.
+<p>See also  <a href="#3f060c">QDial::setWrapping</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

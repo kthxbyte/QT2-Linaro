@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>
+Qt Toolkit - drawdemo/drawdemo.cpp example file
+</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>Draw Demo</h1><br clear="all">
+
+  This example demonstrates several drawing functions and printer output.
+  You can easily add you own drawing functions.  See "ourDrawFunctions".
+
+  <hr>
+
+  Implementation:
+<pre>/****************************************************************************
+** &#36;Id&#58; qt/examples/drawdemo/drawdemo.cpp   2.3.1   edited 2001-04-26 $
+**
+** Copyright (C) 1992-2000 Trolltech AS.  All rights reserved.
+**
+** This file is part of an example program for Qt.  This example
+** program may be used, distributed and modified without limitation.
+**
+*****************************************************************************/
+
+#include &lt;<a name="qwidget.h"></a><a href="qwidget-h.html">qwidget.h</a>&gt;
+#include &lt;<a name="qpainter.h"></a><a href="qpainter-h.html">qpainter.h</a>&gt;
+#include &lt;<a name="qprinter.h"></a><a href="qprinter-h.html">qprinter.h</a>&gt;
+#include &lt;<a name="qpushbutton.h"></a><a href="qpushbutton-h.html">qpushbutton.h</a>&gt;
+#include &lt;<a name="qradiobutton.h"></a><a href="qradiobutton-h.html">qradiobutton.h</a>&gt;
+#include &lt;<a name="qbuttongroup.h"></a><a href="qbuttongroup-h.html">qbuttongroup.h</a>&gt;
+#include &lt;<a name="qapplication.h"></a><a href="qapplication-h.html">qapplication.h</a>&gt;
+#include &lt;math.h&gt;
+
+//
+// This function draws a color wheel.
+// The coordinate system x=(0..500), y=(0..500) spans the paint device.
+//
+
+void drawColorWheel( <a name="QPainter"></a><a href="qpainter.html">QPainter</a> *p )
+{
+    <a name="QFont"></a><a href="qfont.html">QFont</a> f( "times", 18, QFont::Bold );
+    p-&gt;<a name="setFont"></a><a href="qpainter.html#e4d6b7">setFont</a>( f );
+    p-&gt;<a name="setPen"></a><a href="qpainter.html#0a6aff">setPen</a>( Qt::black );
+    p-&gt;<a name="setWindow"></a><a href="qpainter.html#797026">setWindow</a>( 0, 0, 500, 500 );             // defines coordinate system
+
+    for ( int i=0; i&lt;36; i++ ) {                // draws 36 rotated rectangles
+
+        <a name="QWMatrix"></a><a href="qwmatrix.html">QWMatrix</a> matrix;
+        matrix.<a name="translate"></a><a href="qwmatrix.html#226fc6">translate</a>( 250.0F, 250.0F );     // move to center
+        matrix.<a name="shear"></a><a href="qwmatrix.html#8eb34f">shear</a>( 0.0F, 0.3F );             // twist it
+        matrix.<a name="rotate"></a><a href="qwmatrix.html#84df75">rotate</a>( (float)i*10 );           // rotate 0,10,20,.. degrees
+        p-&gt;<a name="setWorldMatrix"></a><a href="qpainter.html#f4a354">setWorldMatrix</a>( matrix );            // use this world matrix
+
+        <a name="QColor"></a><a href="qcolor.html">QColor</a> c;
+        c.<a name="setHsv"></a><a href="qcolor.html#ad075d">setHsv</a>( i*10, 255, 255 );             // rainbow effect
+        p-&gt;<a name="setBrush"></a><a href="qpainter.html#38e68f">setBrush</a>( c );                       // solid fill with color c
+        p-&gt;<a name="drawRect"></a><a href="qpainter.html#b29a16">drawRect</a>( 70, -10, 80, 10 );         // draw the rectangle
+
+        <a name="QString"></a><a href="qstring.html">QString</a> n;
+        n.<a name="sprintf"></a><a href="qstring.html#2eb9bc">sprintf</a>( "H=%d", i*10 );
+        p-&gt;<a name="drawText"></a><a href="qpainter.html#8a59ed">drawText</a>( 80+70+5, 0, n );           // draw the hue number
+    }
+}
+
+//
+// This function draws a few lines of text using different fonts.
+//
+
+void drawFonts( <a href="qpainter.html">QPainter</a> *p )
+{
+    static const char *fonts[] = { "Helvetica", "Courier", "Times", 0 };
+    static int   sizes[] = { 10, 12, 18, 24, 36, 0 };
+    int f = 0;
+    int y = 0;
+    while ( fonts[f] ) {
+        int s = 0;
+        while ( sizes[s] ) {
+            <a href="qfont.html">QFont</a> font( fonts[f], sizes[s] );
+            p-&gt;<a href="qpainter.html#e4d6b7">setFont</a>( font );
+            <a name="QFontMetrics"></a><a href="qfontmetrics.html">QFontMetrics</a> fm = p-&gt;<a name="fontMetrics"></a><a href="qpainter.html#f572a5">fontMetrics</a>();
+            y += fm.<a name="ascent"></a><a href="qfontmetrics.html#401f81">ascent</a>();
+            p-&gt;<a href="qpainter.html#8a59ed">drawText</a>( 10, y, "Quartz Glyph Job Vex'd Cwm Finks" );
+            y += fm.<a name="descent"></a><a href="qfontmetrics.html#a71895">descent</a>();
+            s++;
+        }
+        f++;
+    }
+}
+
+//
+// This function draws some shapes
+//
+
+void drawShapes( <a href="qpainter.html">QPainter</a> *p )
+{
+    <a name="QBrush"></a><a href="qbrush.html">QBrush</a> b1( Qt::blue );
+    <a href="qbrush.html">QBrush</a> b2( Qt::green, Qt::Dense6Pattern );          // green 12% fill
+    <a href="qbrush.html">QBrush</a> b3( Qt::NoBrush );                           // void brush
+    <a href="qbrush.html">QBrush</a> b4( Qt::CrossPattern );                      // black cross pattern
+
+    p-&gt;<a href="qpainter.html#0a6aff">setPen</a>( Qt::red );
+    p-&gt;<a href="qpainter.html#38e68f">setBrush</a>( b1 );
+    p-&gt;<a href="qpainter.html#b29a16">drawRect</a>( 10, 10, 200, 100 );
+    p-&gt;<a href="qpainter.html#38e68f">setBrush</a>( b2 );
+    p-&gt;<a name="drawRoundRect"></a><a href="qpainter.html#af3126">drawRoundRect</a>( 10, 150, 200, 100, 20, 20 );
+    p-&gt;<a href="qpainter.html#38e68f">setBrush</a>( b3 );
+    p-&gt;<a name="drawEllipse"></a><a href="qpainter.html#06ff17">drawEllipse</a>( 250, 10, 200, 100 );
+    p-&gt;<a href="qpainter.html#38e68f">setBrush</a>( b4 );
+    p-&gt;<a name="drawPie"></a><a href="qpainter.html#dc4acb">drawPie</a>( 250, 150, 200, 100, 45*16, 90*16 );
+}
+
+typedef void (*draw_func)(<a href="qpainter.html">QPainter</a>*);
+
+struct DrawThing {
+    draw_func    f;
+    const char  *name;
+};
+
+//
+// You can add your draw function here.
+// Leave the zeros at the end of the array!
+//
+
+DrawThing ourDrawFunctions[] = {
+    { drawColorWheel,   "Draw color wheel" },
+    { drawFonts,        "Draw fonts" },
+    { drawShapes,       "Draw shapes" },
+    { 0,                0 } };
+
+//
+// DrawView has installable draw routines, just add a function pointer
+// and a text in the table above.
+//
+
+class DrawView : public QWidget
+{
+    Q_OBJECT
+public:
+    DrawView();
+    ~DrawView();
+public slots:
+    void   updateIt( int );
+    void   printIt();
+protected:
+    void   drawIt( <a href="qpainter.html">QPainter</a> * );
+    void   paintEvent( <a name="QPaintEvent"></a><a href="qpaintevent.html">QPaintEvent</a> * );
+    void   resizeEvent( <a name="QResizeEvent"></a><a href="qresizeevent.html">QResizeEvent</a> * );
+private:
+    <a name="QPrinter"></a><a href="qprinter.html">QPrinter</a>     *printer;
+    <a name="QButtonGroup"></a><a href="qbuttongroup.html">QButtonGroup</a> *bgroup;
+    <a name="QPushButton"></a><a href="qpushbutton.html">QPushButton</a>  *print;
+    int           drawindex;
+    int           maxindex;
+};
+
+//
+// Construct the DrawView with buttons.
+//
+
+DrawView::DrawView()
+{
+    <a name="setCaption"></a><a href="qwidget.html#d4f007">setCaption</a>( "Qt Draw Demo Application" );
+    <a name="setBackgroundColor"></a><a href="qwidget.html#721b7d">setBackgroundColor</a>( white );
+
+    // Create a button group to contain all buttons
+    bgroup = new <a href="qbuttongroup.html">QButtonGroup</a>( this );
+    bgroup-&gt;<a name="resize"></a><a href="qwidget.html#9ff9d8">resize</a>( 200, 200 );
+    <a name="connect"></a><a href="qobject.html#c2d209">connect</a>( bgroup, SIGNAL(clicked(int)), SLOT(<a name="updateIt"></a><a href="#193">updateIt</a>(int)) );
+
+    // Calculate the size for the radio buttons
+    int maxwidth = 80;
+    int i;
+    const char *n;
+    <a href="qfontmetrics.html">QFontMetrics</a> fm = bgroup-&gt;<a name="fontMetrics"></a><a href="qwidget.html#d0d02b">fontMetrics</a>();
+    for ( i=0; (n=ourDrawFunctions[i].name) != 0; i++ ) {
+        int w = fm.<a name="width"></a><a href="qfontmetrics.html#321192">width</a>( n );
+        maxwidth = QMAX(w,maxwidth);
+    }
+    maxwidth = maxwidth + 20;                   // add 20 pixels
+
+    for ( i=0; (n=ourDrawFunctions[i].name) != 0; i++ ) {
+        <a name="QRadioButton"></a><a href="qradiobutton.html">QRadioButton</a> *rb = new <a href="qradiobutton.html">QRadioButton</a>( n, bgroup );
+        rb-&gt;<a name="setGeometry"></a><a href="qwidget.html#0fac5c">setGeometry</a>( 10, i*30+10, maxwidth, 30 );
+        if ( i == 0 )
+            rb-&gt;<a name="setChecked"></a><a href="qradiobutton.html#11e2e3">setChecked</a>( TRUE );
+    }
+
+    drawindex = 0;                              // draw first thing
+    maxindex  = i;
+
+    maxwidth += 40;                             // now size of bgroup
+
+    printer = new <a href="qprinter.html">QPrinter</a>;
+
+    // Create and setup the print button
+    print = new <a href="qpushbutton.html">QPushButton</a>( "Print...", bgroup );
+    print-&gt;<a name="resize"></a><a href="qpushbutton.html#5f0add">resize</a>( 80, 30 );
+    print-&gt;<a name="move"></a><a href="qpushbutton.html#0d7ae4">move</a>( maxwidth/2 - print-&gt;<a name="width"></a><a href="qwidget.html#576663">width</a>()/2, maxindex*30+20 );
+    <a href="qobject.html#c2d209">connect</a>( print, SIGNAL(clicked()), SLOT(<a name="printIt"></a><a href="#195">printIt</a>()) );
+
+    bgroup-&gt;<a href="qwidget.html#9ff9d8">resize</a>( maxwidth, print-&gt;<a name="y"></a><a href="qwidget.html#043386">y</a>()+print-&gt;<a name="height"></a><a href="qwidget.html#180786">height</a>()+10 );
+
+    <a name="resize"></a><a href="qwidget.html#9775bb">resize</a>( 640,300 );
+}
+
+//
+// Clean up
+//
+DrawView::~DrawView()
+{
+#ifndef QT_NO_PRINTER
+    delete printer;
+#endif
+}
+
+//
+// Called when a radio button is clicked.
+//
+
+void <a name="193"></a>DrawView::updateIt( int index )
+{
+    if ( index &lt; maxindex ) {
+        drawindex = index;
+        <a name="update"></a><a href="qwidget.html#4a97ef">update</a>();
+    }
+}
+
+//
+// Calls the drawing function as specified by the radio buttons.
+//
+
+void <a name="194"></a>DrawView::drawIt( <a href="qpainter.html">QPainter</a> *p )
+{
+    (*ourDrawFunctions[drawindex].f)(p);
+}
+
+//
+// Called when the print button is clicked.
+//
+
+void <a name="195"></a>DrawView::printIt()
+{
+#ifndef QT_NO_PRINTER
+    if ( printer-&gt;<a name="setup"></a><a href="qprinter.html#a36243">setup</a>( this ) ) {
+        <a href="qpainter.html">QPainter</a> paint;
+        if ( !paint.<a name="begin"></a><a href="qpainter.html#59f1bb">begin</a>( printer ) )
+            return;
+        <a name="drawIt"></a><a href="#194">drawIt</a>( &amp;paint );
+    }
+#endif
+}
+
+//
+// Called when the widget needs to be updated.
+//
+
+void <a name="196"></a>DrawView::paintEvent( <a href="qpaintevent.html">QPaintEvent</a> * )
+{
+    <a href="qpainter.html">QPainter</a> paint( this );
+    <a href=#194>drawIt</a>( &amp;paint );
+}
+
+//
+// Called when the widget has been resized.
+// Moves the button group to the upper right corner
+// of the widget.
+
+void <a name="197"></a>DrawView::resizeEvent( <a href="qresizeevent.html">QResizeEvent</a> * )
+{
+    bgroup-&gt;<a name="move"></a><a href="qwidget.html#958bbe">move</a>( <a href="qwidget.html#576663">width</a>()-bgroup-&gt;<a href="qwidget.html#576663">width</a>(), 0 );
+}
+
+//
+// Create and display our widget.
+//
+
+#include "drawdemo.moc"
+
+int main( int argc, char **argv )
+{
+    <a name="QApplication"></a><a href="qapplication.html">QApplication</a> app( argc, argv );
+    DrawView   draw;
+    app.<a name="setMainWidget"></a><a href="qapplication.html#11c921">setMainWidget</a>( &amp;draw );
+    draw.<a name="show"></a><a href="qwidget.html#ccc8f7">show</a>();
+    return app.<a name="exec"></a><a href="qapplication.html#7076af">exec</a>();
+}
+</pre>
+<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

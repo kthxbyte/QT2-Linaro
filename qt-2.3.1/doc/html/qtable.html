@@ -1,0 +1,634 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QTable Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QTable Class Reference<br><small>[ <a href="table.html">table module</a> ]</small></h1><br clear="all">
+<p>
+A flexible and editable table widget.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qtable-h.html">qtable.h</a>&gt;</code>
+<p>
+Inherits <a href="qscrollview.html">QScrollView</a>.
+<p><a href="qtable-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#d128b0"><b>QTable</b></a> ( QWidget * parent = 0, const char * name = 0 ) </div>
+<li><div class="fn"><a href="#eee3cb"><b>QTable</b></a> ( int numRows, int numCols, QWidget * parent = 0, const char * name = 0 ) </div>
+<li><div class="fn"><a href="#9d1770"><b>~QTable</b></a> () </div>
+<li><div class="fn">QHeader* <a href="#beea6c"><b>horizontalHeader</b></a> () const</div>
+<li><div class="fn">QHeader* <a href="#014f16"><b>verticalHeader</b></a> () const</div>
+<li><div class="fn">enum <a href="#SelectionMode"><b>SelectionMode</b></a> { Single, Multi, NoSelection }</div>
+<li><div class="fn">virtual void <a href="#c89605"><b>setSelectionMode</b></a> ( SelectionMode mode ) </div>
+<li><div class="fn">SelectionMode <a href="#5b0379"><b>selectionMode</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#ffc3d9"><b>setItem</b></a> ( int row, int col, QTableItem * item ) </div>
+<li><div class="fn">virtual void <a href="#1c13c3"><b>setText</b></a> ( int row, int col, const QString &amp; text ) </div>
+<li><div class="fn">virtual void <a href="#b231f8"><b>setPixmap</b></a> ( int row, int col, const QPixmap &amp; pix ) </div>
+<li><div class="fn">virtual QTableItem* <a href="#54972d"><b>item</b></a> ( int row, int col ) const</div>
+<li><div class="fn">virtual QString <a href="#33454c"><b>text</b></a> ( int row, int col ) const</div>
+<li><div class="fn">virtual QPixmap <a href="#5fe724"><b>pixmap</b></a> ( int row, int col ) const</div>
+<li><div class="fn">virtual void <a href="#1f2af2"><b>clearCell</b></a> ( int row, int col ) </div>
+<li><div class="fn">virtual QRect <a href="#854995"><b>cellGeometry</b></a> ( int row, int col ) const</div>
+<li><div class="fn">virtual int <a href="#0ada12"><b>columnWidth</b></a> ( int col ) const</div>
+<li><div class="fn">virtual int <a href="#9dbd98"><b>rowHeight</b></a> ( int row ) const</div>
+<li><div class="fn">virtual int <a href="#937676"><b>columnPos</b></a> ( int col ) const</div>
+<li><div class="fn">virtual int <a href="#147089"><b>rowPos</b></a> ( int row ) const</div>
+<li><div class="fn">virtual int <a href="#b4ea4b"><b>columnAt</b></a> ( int pos ) const</div>
+<li><div class="fn">virtual int <a href="#3ac50a"><b>rowAt</b></a> ( int pos ) const</div>
+<li><div class="fn">int <a href="#c3d93a"><b>numRows</b></a> () const</div>
+<li><div class="fn">int <a href="#85715c"><b>numCols</b></a> () const</div>
+<li><div class="fn">void <a href="#6c6968"><b>updateCell</b></a> ( int row, int col ) </div>
+<li><div class="fn">int <a href="#25069f"><b>currentRow</b></a> () const</div>
+<li><div class="fn">int <a href="#a347d4"><b>currentColumn</b></a> () const</div>
+<li><div class="fn">void <a href="#c7a259"><b>ensureCellVisible</b></a> ( int row, int col ) </div>
+<li><div class="fn">bool <a href="#fec726"><b>isSelected</b></a> ( int row, int col ) const</div>
+<li><div class="fn">bool <a href="#085d6a"><b>isRowSelected</b></a> ( int row, bool full = FALSE ) const</div>
+<li><div class="fn">bool <a href="#e0e9b9"><b>isColumnSelected</b></a> ( int col, bool full = FALSE ) const</div>
+<li><div class="fn">int <a href="#b9abf7"><b>numSelections</b></a> () const</div>
+<li><div class="fn">QTableSelection <a href="#ff6a0d"><b>selection</b></a> ( int num ) const</div>
+<li><div class="fn">virtual int <a href="#f74170"><b>addSelection</b></a> ( const QTableSelection &amp; s ) </div>
+<li><div class="fn">virtual void <a href="#7c7311"><b>removeSelection</b></a> ( const QTableSelection &amp; s ) </div>
+<li><div class="fn">virtual void <a href="#0a5545"><b>removeSelection</b></a> ( int num ) </div>
+<li><div class="fn">virtual int <a href="#06c46f"><b>currentSelection</b></a> () const</div>
+<li><div class="fn">bool <a href="#baf455"><b>showGrid</b></a> () const</div>
+<li><div class="fn">bool <a href="#4384d3"><b>columnMovingEnabled</b></a> () const</div>
+<li><div class="fn">bool <a href="#61d09c"><b>rowMovingEnabled</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#b01d4c"><b>sortColumn</b></a> ( int col, bool ascending = TRUE, bool wholeRows = FALSE ) </div>
+<li><div class="fn">bool <a href="#55b494"><b>sorting</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#61abb3"><b>takeItem</b></a> ( QTableItem * i ) </div>
+<li><div class="fn">virtual void <a href="#0a6358"><b>setCellWidget</b></a> ( int row, int col, QWidget * e ) </div>
+<li><div class="fn">virtual QWidget* <a href="#e44bcf"><b>cellWidget</b></a> ( int row, int col ) const</div>
+<li><div class="fn">virtual void <a href="#e3aaa3"><b>clearCellWidget</b></a> ( int row, int col ) </div>
+<li><div class="fn">virtual void <a href="#a488b8"><b>paintCell</b></a> ( QPainter * p, int row, int col, const QRect &amp; cr, bool selected ) </div>
+<li><div class="fn">virtual void <a href="#9fcc2d"><b>paintFocus</b></a> ( QPainter * p, const QRect &amp; r ) </div>
+</ul>
+<h2>Public Slots</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#aac1bc"><b>setNumRows</b></a> ( int r ) </div>
+<li><div class="fn">virtual void <a href="#fb1997"><b>setNumCols</b></a> ( int r ) </div>
+<li><div class="fn">virtual void <a href="#a6895d"><b>setShowGrid</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#8ecf10"><b>hideRow</b></a> ( int row ) </div>
+<li><div class="fn">virtual void <a href="#f35b84"><b>hideColumn</b></a> ( int col ) </div>
+<li><div class="fn">virtual void <a href="#9e7059"><b>showRow</b></a> ( int row ) </div>
+<li><div class="fn">virtual void <a href="#dc5724"><b>showColumn</b></a> ( int col ) </div>
+<li><div class="fn">virtual void <a href="#5c3bff"><b>setColumnWidth</b></a> ( int col, int w ) </div>
+<li><div class="fn">virtual void <a href="#fac933"><b>setRowHeight</b></a> ( int row, int h ) </div>
+<li><div class="fn">virtual void <a href="#a0c09a"><b>adjustColumn</b></a> ( int col ) </div>
+<li><div class="fn">virtual void <a href="#0de90d"><b>adjustRow</b></a> ( int row ) </div>
+<li><div class="fn">virtual void <a href="#2b181a"><b>setColumnStretchable</b></a> ( int col, bool stretch ) </div>
+<li><div class="fn">virtual void <a href="#61d64d"><b>setRowStretchable</b></a> ( int row, bool stretch ) </div>
+<li><div class="fn">bool <a href="#b82406"><b>isColumnStretchable</b></a> ( int col ) const</div>
+<li><div class="fn">bool <a href="#c4b703"><b>isRowStretchable</b></a> ( int row ) const</div>
+<li><div class="fn">virtual void <a href="#8586ae"><b>setSorting</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#a05058"><b>swapRows</b></a> ( int row1, int row2 ) </div>
+<li><div class="fn">virtual void <a href="#b9aca9"><b>swapColumns</b></a> ( int col1, int col2 ) </div>
+<li><div class="fn">virtual void <a href="#530906"><b>swapCells</b></a> ( int row1, int col1, int row2, int col2 ) </div>
+<li><div class="fn">virtual void <a href="#64e1cf"><b>setLeftMargin</b></a> ( int m ) </div>
+<li><div class="fn">virtual void <a href="#6944a0"><b>setTopMargin</b></a> ( int m ) </div>
+<li><div class="fn">virtual void <a href="#3d697e"><b>setCurrentCell</b></a> ( int row, int col ) </div>
+<li><div class="fn">void <a href="#0d91fb"><b>clearSelection</b></a> ( bool repaint = TRUE ) </div>
+<li><div class="fn">virtual void <a href="#150e92"><b>setColumnMovingEnabled</b></a> ( bool b ) </div>
+<li><div class="fn">virtual void <a href="#2eb943"><b>setRowMovingEnabled</b></a> ( bool b ) </div>
+</ul>
+<h2>Signals</h2>
+<ul>
+<li><div class="fn">void <a href="#e2441f"><b>currentChanged</b></a> ( int row, int col ) </div>
+<li><div class="fn">void <a href="#ddc99d"><b>clicked</b></a> ( int row, int col, int button, const QPoint &amp; mousePos ) </div>
+<li><div class="fn">void <a href="#d6c351"><b>doubleClicked</b></a> ( int row, int col, int button, const QPoint &amp; mousePos ) </div>
+<li><div class="fn">void <a href="#9d5cc8"><b>pressed</b></a> ( int row, int col, int button, const QPoint &amp; mousePos ) </div>
+<li><div class="fn">void <a href="#b525a8"><b>selectionChanged</b></a> () </div>
+<li><div class="fn">void <a href="#519eef"><b>valueChanged</b></a> ( int row, int col ) </div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#9a72a1"><b>drawContents</b></a> ( QPainter * p, int cx, int cy, int cw, int ch ) </div>
+<li><div class="fn">virtual void <a href="#87f015"><b>paintEmptyArea</b></a> ( QPainter * p, int cx, int cy, int cw, int ch ) </div>
+<li><div class="fn">virtual void <a href="#c6979d"><b>activateNextCell</b></a> () </div>
+<li><div class="fn">virtual QWidget* <a href="#ad6caa"><b>createEditor</b></a> ( int row, int col, bool initFromCell ) const</div>
+<li><div class="fn">virtual void <a href="#a6beda"><b>setCellContentFromEditor</b></a> ( int row, int col ) </div>
+<li><div class="fn">virtual QWidget* <a href="#caf929"><b>beginEdit</b></a> ( int row, int col, bool replace ) </div>
+<li><div class="fn">virtual void <a href="#48c8dc"><b>endEdit</b></a> ( int row, int col, bool accept, bool replace ) </div>
+<li><div class="fn">virtual void <a href="#4e808c"><b>resizeData</b></a> ( int len ) </div>
+<li><div class="fn">virtual void <a href="#ab1b47"><b>insertWidget</b></a> ( int row, int col, QWidget * w ) </div>
+<li><div class="fn">int <a href="#065135"><b>indexOf</b></a> ( int row, int col ) const</div>
+</ul>
+<h2>Protected Slots</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#76a2e7"><b>columnWidthChanged</b></a> ( int col ) </div>
+<li><div class="fn">virtual void <a href="#5d3b76"><b>rowHeightChanged</b></a> ( int row ) </div>
+<li><div class="fn">virtual void <a href="#48dc9b"><b>columnIndexChanged</b></a> ( int s, int oi, int ni ) </div>
+<li><div class="fn">virtual void <a href="#e541b1"><b>rowIndexChanged</b></a> ( int s, int oi, int ni ) </div>
+<li><div class="fn">virtual void <a href="#d326b3"><b>columnClicked</b></a> ( int col ) </div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>int<td>numRows<td>numRows<td>setNumRows<td>&nbsp;
+<tr><td>int<td>numCols<td>numCols<td>setNumCols<td>&nbsp;
+<tr><td>bool<td>showGrid<td>showGrid<td>setShowGrid<td>&nbsp;
+<tr><td>bool<td>rowMovingEnabled<td>rowMovingEnabled<td>setRowMovingEnabled<td>&nbsp;
+<tr><td>bool<td>columnMovingEnabled<td>columnMovingEnabled<td>setColumnMovingEnabled<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+A flexible and editable table widget.
+<p>
+QTable has been designed to use no more memory than strictly
+needed. Thus, for an empty cell, no memory at all is allocated.  In
+order to add data, create a <a href="qtableitem.html">QTableItem</a> and fill it using
+<a href="#ffc3d9">setItem</a>(). With <a href="qtableitem.html#f2f4e8">QTableItem::setText</a>() and <a href="qtableitem.html#8341df">QTableItem::setPixmap</a>(),
+convenient functions for setting table text and pixmaps are
+provided.  To clear a cell use <a href="#1f2af2">clearCell</a>().
+<p>QTable supports various methods for selecting cells, both with
+keyboard and mouse, thus for example range selection or column and
+row selection via appropriate header cells. You can add and remove
+selections using <a href="#f74170">addSelection</a>() and <a href="#0a5545">removeSelection</a>(), resp., and
+gather information about current selections by means of
+<a href="#b9abf7">numSelections</a>(), <a href="#ff6a0d">selection</a>(), and <a href="#e2441f">currentChanged</a>().
+<p>QTable also offers an API for sorting columns. See <a href="#8586ae">setSorting</a>(),
+<a href="#b01d4c">sortColumn</a>() and <a href="qtableitem.html#4f5239">QTableItem::key</a>() for details.
+<p>Cell editing can be done in two different ways: Either you offer an
+edit widget the user can use to enter data that should replace the
+current content, or you provide him or her with an editor to change
+the data stored in the cell. If you won't allow the content of a
+cell to be replaced, however make it possible to edit the current
+data, simply set <a href="qtableitem.html#9e7f7a">QTableItem::isReplaceable</a>() to FALSE.
+<p>When a user starts typing text in-place editing (replacing) for the
+current cell is invoked. Additionally, in-place editing (editing)
+starts as soon as he or she double-clicks a cell.  Sometimes,
+however, it is required that a cell always shows an editor, that the
+editor shows off as soon as the relevant cell receives the focus, or
+that the item shouldn't be edited at all. This edit type has to be
+specified in the constructor of a QTableItem.
+<p>In-place editing is invoked by <a href="#caf929">beginEdit</a>(). This function creates
+the editor widget for the required cell (see <a href="#ad6caa">createEditor</a>() for
+detailed information) and shows it at the appropriate location.
+<p>As soon as the user finishes editing <a href="#48c8dc">endEdit</a>() is called. Have a
+look at the endEdit() documentation for further information e.g. on
+how content is transferred from the editor to the item or how the
+editor is destroyed.
+<p>In-place editing is implemented in an abstract way to make sure
+custom edit widgets for certain cells or cell types can be written
+easily. To obtain this it is possible to place widgets in cells. See
+<a href="#0a6358">setCellWidget</a>(), <a href="#e3aaa3">clearCellWidget</a>() and <a href="#e44bcf">cellWidget</a>() for further
+details.
+<p>In order to prevent a cell not containing a QTableItem from being
+edited, you have to reimplement createEditor(). This function should
+return 0 for cells that must be not edited at all.
+<p>It is possible to use QTable without QTableItems. However, as the
+default implementation of QTable's in-place editing uses
+QTableItems, you will have to reimplement createEditor() and
+<a href="#a6beda">setCellContentFromEditor</a>() to get in-place editing without
+QTableItems. The documentation of these two functions explains the
+details you need to know for that matter.
+<p>In order to draw custom content in a cell you have to implement your
+own subclass of QTableItem and reimplement the <a href="qtableitem.html#769073">QTableItem::paint</a>()
+method.
+<p>If your application stores its data already in a way that allocating
+a QTableItem for each data containing cell seems inappropriate, you
+can reimplement <a href="#a488b8">QTable::paintCell</a>() and draw the contents directly.
+You should also reimplement QTable::paintCell() if you wish to change
+the alignment of your items in the QTable.
+<p>Unless you reimplement them this approach will however prevent you
+from using functions like <a href="#1c13c3">setText</a>() etc.  Remember that in this
+case, repainting the cells using <a href="#6c6968">updateCell</a>() after each change made
+is necessary. To make sure you don't waste memory, read the
+documentation of <a href="#4e808c">resizeData</a>().
+
+<hr><h2>Member Type Documentation</h2>
+<h3 class="fn"><a name="SelectionMode">QTable::SelectionMode</a></h3>
+<ul>
+<li><code>NoSelection</code> - No cell can be selected by the user.
+<li><code>Single</code> - The user may select one range of cells only.
+<li><code>Multi</code> - Multi-range selections are possible.
+</ul>
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="d128b0"></a>QTable::QTable ( <a href="qwidget.html">QWidget</a> * parent = 0, const char * name = 0 )</h3>
+<p>Constructs a table of 10 * 10 cells.
+<p>Performance is boosted by modifying the widget flags so that only part
+of the <a href="qtableitem.html">QTableItem</a> children is redrawn.  This may be unsuitable for custom
+QTableItem classes, in which case <code>WNorthWestGravity</code> and <code>WRepaintNoErase</code>
+should be cleared.
+<p>See also  <a href="qwidget.html#60c810">QWidget::clearWFlags</a>() and <a href="qt.html#WidgetFlags">Qt::WidgetFlags</a>.
+<h3 class="fn"><a name="eee3cb"></a>QTable::QTable ( int numRows, int numCols, <a href="qwidget.html">QWidget</a> * parent = 0, const char * name = 0 )</h3>
+<p>Constructs a table with a range of <em>numRows</em> * <em>numCols</em> cells.
+<p>Performance is boosted by modifying the widget flags so that only part of
+the <a href="qtableitem.html">QTableItem</a> children is redrawn.  This may be unsuitable for custom
+QTableItem classes, in which case the widget flags should be reset using
+<a href="qwidget.html#9da836">QWidget::setWFlags</a>().
+<h3 class="fn"><a name="9d1770"></a>QTable::~QTable ()</h3>
+<p>Destructor.
+<h3 class="fn">void <a name="c6979d"></a>QTable::activateNextCell () <code>[virtual protected]</code></h3>
+<p>This is called to activate the next cell if in-place editing was
+finished by pressing the Return key.
+<p>If you want a different behaviour then going from top to bottom,
+reimplement this function.
+<h3 class="fn">int <a name="f74170"></a>QTable::addSelection ( const <a href="qtableselection.html">QTableSelection</a> &amp; s ) <code>[virtual]</code></h3>
+<p>Adds a selection described by <em>s</em> to the table and returns its
+number or -1 if the selection is invalid. Don't forget
+to call <a href="qtableselection.html#55f61c">QTableSelection::init</a>() and
+<a href="qtableselection.html#7ecad3">QTableSelection::expandTo</a>() to make it valid (see also
+<a href="qtableselection.html#8c6745">QTableSelection::isActive</a>()).
+<h3 class="fn">void <a name="a0c09a"></a>QTable::adjustColumn ( int col ) <code>[virtual slot]</code></h3>
+<p>Resizes the column <em>col</em> to be exactly wide enough so that the
+whole contents is visible.
+<h3 class="fn">void <a name="0de90d"></a>QTable::adjustRow ( int row ) <code>[virtual slot]</code></h3>
+<p>Resizes the row <em>row</em> to be exactly high enough so that the
+whole contents is visible.
+<h3 class="fn"><a href="qwidget.html">QWidget</a> * <a name="caf929"></a>QTable::beginEdit ( int row, int col, bool replace ) <code>[virtual protected]</code></h3>
+<p>This function is called to start in-place editing of the cell <em>row, col.</em> If <em>replace</em> is TRUE the content of this cell will be
+replaced by the content of the editor later, else the current
+content of that cell (if existing) will be edited by the editor.
+<p>This function calls <a href="#ad6caa">createEditor</a>() to get the editor which should be
+used for editing the cell and after that <a href="#0a6358">setCellWidget</a>() to set this
+editor as the widget of that cell.
+<p>See also  <a href="#ad6caa">createEditor</a>(), <a href="#0a6358">setCellWidget</a>() and <a href="#48c8dc">endEdit</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="854995"></a>QTable::cellGeometry ( int row, int col ) const <code>[virtual]</code></h3>
+<p>Returns the bounding rect of the cell <em>row, col</em> in contents
+coordinates.
+<h3 class="fn"><a href="qwidget.html">QWidget</a> * <a name="e44bcf"></a>QTable::cellWidget ( int row, int col ) const <code>[virtual]</code></h3>
+<p>Returns the widget which has been set to the cell <em>row, col</em>
+of 0 if there is no widget.
+<h3 class="fn">void <a name="1f2af2"></a>QTable::clearCell ( int row, int col ) <code>[virtual]</code></h3>
+<p>Removes the <a href="qtableitem.html">QTableItem</a> in position <em>row, col.</em>
+<h3 class="fn">void <a name="e3aaa3"></a>QTable::clearCellWidget ( int row, int col ) <code>[virtual]</code></h3>
+<p>Removes the widget (if there is any) which is set for the cell <em>row, col.</em>
+<h3 class="fn">void <a name="0d91fb"></a>QTable::clearSelection ( bool repaint = TRUE ) <code>[slot]</code></h3>
+<p>Clears all selections.
+<h3 class="fn">void <a name="ddc99d"></a>QTable::clicked ( int row, int col, int button, const <a href="qpoint.html">QPoint</a> &amp; mousePos ) <code>[signal]</code></h3>
+<p>This signal is emitted as soon as a user clicks on <em>row</em> and <em>col</em> using mousebutton <em>button.</em>
+The actual mouse position is passed as <em>mousePos.</em>
+<h3 class="fn">int <a name="b4ea4b"></a>QTable::columnAt ( int pos ) const <code>[virtual]</code></h3>
+<p>Returns the column which is at <em>pos. pos</em> has to be given in
+contents coordinates.
+<h3 class="fn">void <a name="d326b3"></a>QTable::columnClicked ( int col ) <code>[virtual protected slot]</code></h3>
+<p>This function is called when the column <code>col</code> has been
+clicked. The default implementation sorts this column if
+<a href="#55b494">sorting</a>() is TRUE.
+<h3 class="fn">void <a name="48dc9b"></a>QTable::columnIndexChanged ( int, int, int ) <code>[virtual protected slot]</code></h3>
+<p>This function is called if the order of the columns has been
+changed. If you want to change the order programmatically, call
+<a href="#a05058">swapRows</a>() or <a href="#b9aca9">swapColumns</a>().
+<h3 class="fn">bool <a name="4384d3"></a>QTable::columnMovingEnabled () const</h3>
+<p>Returns whether columns can be moved by the user.
+<h3 class="fn">int <a name="937676"></a>QTable::columnPos ( int col ) const <code>[virtual]</code></h3>
+<p>Returns the x-position of the column <em>col</em> in contents
+coordinates.
+<h3 class="fn">int <a name="0ada12"></a>QTable::columnWidth ( int col ) const <code>[virtual]</code></h3>
+<p>Returns the width of the column <em>col.</em>
+<h3 class="fn">void <a name="76a2e7"></a>QTable::columnWidthChanged ( int col ) <code>[virtual protected slot]</code></h3>
+<p>This function should be called whenever the column width of <em>col</em>
+has been changed. It will then rearrange the content appropriately.
+<h3 class="fn">void <a name="e486e7"></a>QTable::contentsMouseDoubleClickEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#63b198">QScrollView.</a>
+<h3 class="fn">void <a name="037469"></a>QTable::contentsMouseMoveEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#1179d3">QScrollView.</a>
+<h3 class="fn">void <a name="960bb2"></a>QTable::contentsMousePressEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#d8d421">QScrollView.</a>
+<h3 class="fn">void <a name="f15096"></a>QTable::contentsMouseReleaseEvent ( <a href="qmouseevent.html">QMouseEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qscrollview.html#0a15fd">QScrollView.</a>
+<h3 class="fn"><a href="qwidget.html">QWidget</a> * <a name="ad6caa"></a>QTable::createEditor ( int row, int col, bool initFromCell ) const <code>[virtual protected]</code></h3>
+<p>This function returns a widget which should be used as editor for
+the cell <em>row, col.</em> If <em>initFromCell</em> is TRUE, the editor is
+used to edit the current content of the cell (so the editor widget
+should be initialized with that content). Otherwise the content of
+this cell will be replaced by a new content which the user will
+enter into the widget which this function should create.
+<p>The default implementation looks if there exists a <a href="qtableitem.html">QTableItem</a> for
+the cell. If this is the case and <em>initFromCell</em> is TRUE or
+<a href="qtableitem.html#9e7f7a">QTableItem::isReplaceable</a>() of the item is FALSE, the item of
+that cell is asked to create the editor (using <a href="qtableitem.html#d82e15">QTableItem::createEditor</a>)).
+<p>If this is not the case, a <a href="qlineedit.html">QLineEdit</a> is created as editor.
+<p>So if you want to create your own editor for certain cells,
+implement your own QTableItem and reimplement
+QTableItem::createEditor(). If you want to use a different editor
+than a QLineEdit as default editor, reimplement this function and
+use a code like
+<p><pre>    <a href="qtableitem.html">QTableItem</a> *i = item( row, col );
+    if ( initFromCell || i &amp;&amp; !i-&gt;<a href="qtableitem.html#9e7f7a">isReplaceable</a>() )
+        return QTable::createEditor( row, col, initFromCell );
+    else
+        return ...(create your editor)
+</pre>
+<p>So normally you do not need to reimplement this function. But if
+you want e.g. work without QTableItems, you will reimplement this
+function to create the correct editor for the cells.
+<p>The ownership of the editor widget is transferred to the caller.
+<p>Returning 0 here means that the cell is not editable.
+<p>See also  <a href="qtableitem.html#d82e15">QTableItem::createEditor</a>().
+<h3 class="fn">void <a name="e2441f"></a>QTable::currentChanged ( int row, int col ) <code>[signal]</code></h3>
+<p>This signal is emitted if the current cell has been changed to <em>row, col.</em>
+<h3 class="fn">int <a name="a347d4"></a>QTable::currentColumn () const</h3>
+<p>Returns the current column.
+<h3 class="fn">int <a name="25069f"></a>QTable::currentRow () const</h3>
+<p>Returns the current row.
+<h3 class="fn">int <a name="06c46f"></a>QTable::currentSelection () const <code>[virtual]</code></h3>
+<p>Returns the number of the current selection or -1 if there is
+none.
+<h3 class="fn">void <a name="d6c351"></a>QTable::doubleClicked ( int row, int col, int button, const <a href="qpoint.html">QPoint</a> &amp; mousePos ) <code>[signal]</code></h3>
+<p>A double-click with <em>button</em> emits this signal, where <em>row</em> and <em>col</em> denote the position of the cell.
+The actual mouse position is passed as <em>mousePos.</em>
+<h3 class="fn">void <a name="9a72a1"></a>QTable::drawContents ( <a href="qpainter.html">QPainter</a> * p, int cx, int cy, int cw, int ch ) <code>[virtual protected]</code></h3>
+<p>Draws the table contents on the painter <em>p.</em> The function is
+optimized to exclusively draw the cells inside the relevant clipping
+rectangle <em>cx, cy, cw, ch.</em>
+<p>Additionally, drawContents() highlights the current cell.
+<p>Reimplemented from <a href="qscrollview.html#310baa">QScrollView.</a>
+<h3 class="fn">void <a name="48c8dc"></a>QTable::endEdit ( int row, int col, bool accept, bool replace ) <code>[virtual protected]</code></h3>
+<p>This function is called if in-place editing of the cell <em>row, col</em> has to be ended. If <em>accept</em> is TRUE the content of the
+editor of this cell has to be transferred to the cell. If <em>replace</em>
+is TRUE the current content of that cell should be replaced by the
+content of the editor (this means removing the current <a href="qtableitem.html">QTableItem</a> of
+the cell and creating a new one for the cell), else (if possible)
+the content of the editor should just be set to the existing
+QTableItem of this cell.
+<p>So, if the cell contents should be replaced or if no QTableItem
+exists for the cell yet, <a href="#a6beda">setCellContentFromEditor</a>() is called, else
+<a href="qtableitem.html#37076b">QTableItem::setContentFromEditor</a>() is called on the QTableItem
+of the cell.
+<p>After that <a href="#e3aaa3">clearCellWidget</a>() is called to get rid of the editor
+widget.
+<p>See also  <a href="#a6beda">setCellContentFromEditor</a>() and <a href="#caf929">beginEdit</a>().
+<h3 class="fn">void <a name="c7a259"></a>QTable::ensureCellVisible ( int row, int col )</h3>
+<p>Scrolls the table until the cell <em>row, col</em> becomes
+visible.
+<h3 class="fn">bool <a name="73c113"></a>QTable::eventFilter ( <a href="qobject.html">QObject</a> * o, <a href="qevent.html">QEvent</a> * e ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qobject.html#bb8547">QObject.</a>
+<h3 class="fn">void <a name="19d1c1"></a>QTable::focusInEvent ( <a href="qfocusevent.html">QFocusEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#303f18">QWidget.</a>
+<h3 class="fn">void <a name="709369"></a>QTable::focusOutEvent ( <a href="qfocusevent.html">QFocusEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#bdc4a1">QWidget.</a>
+<h3 class="fn">void <a name="f35b84"></a>QTable::hideColumn ( int col ) <code>[virtual slot]</code></h3>
+<p>Hides the column <em>col.</em>
+<p>See also  showCol().
+<h3 class="fn">void <a name="8ecf10"></a>QTable::hideRow ( int row ) <code>[virtual slot]</code></h3>
+<p>Hides the row <em>row.</em>
+<p>See also  <a href="#9e7059">showRow</a>().
+<h3 class="fn"><a href="qheader.html">QHeader</a> * <a name="beea6c"></a>QTable::horizontalHeader () const</h3>
+<p>Returns the top <a href="qheader.html">QHeader</a> of the table.
+<h3 class="fn">int <a name="065135"></a>QTable::indexOf ( int row, int col ) const <code>[protected]</code></h3>
+<p>Maps 2D table to 1D array index.
+<h3 class="fn">void <a name="ab1b47"></a>QTable::insertWidget ( int row, int col, <a href="qwidget.html">QWidget</a> * w ) <code>[virtual protected]</code></h3>
+<p>Inserts the widget <em>w</em> into the internal datastructure. See the
+documentation of <a href="#0a6358">setCellWidget</a>() for further details.
+<h3 class="fn">bool <a name="e0e9b9"></a>QTable::isColumnSelected ( int col, bool full = FALSE ) const</h3>
+<p>Returns TRUE if column <em>col</em> is selected, and FALSE otherwise.
+<p>If <em>full</em> is TRUE, the entire column must be selected for this
+function to return TRUE.  If <em>full</em> is FALSE, at least one cell in
+<em>col</em> must be selected.
+<h3 class="fn">bool <a name="b82406"></a>QTable::isColumnStretchable ( int col ) const <code>[slot]</code></h3>
+<p>Returns wheather the column <em>col</em> is stretchable or not.
+<p>See also  <a href="#2b181a">setColumnStretchable</a>().
+<h3 class="fn">bool <a name="085d6a"></a>QTable::isRowSelected ( int row, bool full = FALSE ) const</h3>
+<p>Returns TRUE if <em>row</em> is selected, and FALSE otherwise.
+<p>If <em>full</em> is TRUE, the entire row must be selected for this
+function to return TRUE.  If <em>full</em> is FALSE, at least one cell in
+<em>row</em> must be selected.
+<h3 class="fn">bool <a name="c4b703"></a>QTable::isRowStretchable ( int row ) const <code>[slot]</code></h3>
+<p>Returns wheather the row <em>row</em> is stretchable or not.
+<p>See also  <a href="#61d64d">setRowStretchable</a>().
+<h3 class="fn">bool <a name="fec726"></a>QTable::isSelected ( int row, int col ) const</h3>
+<p>Checks whether the cell at position <em>row, col</em> is selected.
+<h3 class="fn"><a href="qtableitem.html">QTableItem</a> * <a name="54972d"></a>QTable::item ( int row, int col ) const <code>[virtual]</code></h3>
+<p>Returns the <a href="qtableitem.html">QTableItem</a> representing the contents of the cell <em>row, col.</em> If <em>row</em> or <em>col</em> are out of range or no content has
+been set for this cell so far, item() returns 0.
+<h3 class="fn">void <a name="c84027"></a>QTable::keyPressEvent ( <a href="qkeyevent.html">QKeyEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#cdb1c7">QWidget.</a>
+<h3 class="fn">int <a name="85715c"></a>QTable::numCols () const</h3>
+<p>Returns the number of columns of the table.
+<h3 class="fn">int <a name="c3d93a"></a>QTable::numRows () const</h3>
+<p>Returns the number of rows of the table.
+<h3 class="fn">int <a name="b9abf7"></a>QTable::numSelections () const</h3>
+<p>Returns the number of selections.
+<h3 class="fn">void <a name="a488b8"></a>QTable::paintCell ( <a href="qpainter.html">QPainter</a> * p, int row, int col, const <a href="qrect.html">QRect</a> &amp; cr, bool selected ) <code>[virtual]</code></h3>
+<p>Paints the cell at the position <em>row, col</em> on the painter <em>p.</em> The painter has already been translated to the cell's origin. <em>cr</em> describes the cell coordinates in the content coordinate system..
+<p>If you want to draw custom cell content you have to reimplement
+paintCell() to do the custom drawing, or else subclass <a href="qtableitem.html">QTableItem</a>
+and reimplement <a href="qtableitem.html#769073">QTableItem::paint</a>().
+<p>If you want to change the alignment of your items then you will need to
+reimplement paintCell().
+<p>Reimplementing this function is probably better e.g. for data you
+retrieve from a database and draw at once, while using
+QTableItem::paint() is probably better e.g.  if you wish these data
+to be stored in a data structure in the table.
+<h3 class="fn">void <a name="87f015"></a>QTable::paintEmptyArea ( <a href="qpainter.html">QPainter</a> * p, int cx, int cy, int cw, int ch ) <code>[virtual protected]</code></h3>
+<p>This function fills the rectangular <em>cx, cy, cw, ch</em> with the
+background color. paintEmptyArea() is invoked by <a href="#9a72a1">drawContents</a>() to erase
+or fill unused areas.
+<h3 class="fn">void <a name="9fcc2d"></a>QTable::paintFocus ( <a href="qpainter.html">QPainter</a> * p, const <a href="qrect.html">QRect</a> &amp; cr ) <code>[virtual]</code></h3>
+<p>Draws the focus rectangle of the current cell (see <a href="#25069f">currentRow</a>(),
+<a href="#a347d4">currentColumn</a>()). The painter <em>p</em> is already translated to the
+cell's origin, while <em>cr</em> specifies the cell's geometry in contents
+coordinates.
+<h3 class="fn"><a href="qpixmap.html">QPixmap</a> <a name="5fe724"></a>QTable::pixmap ( int row, int col ) const <code>[virtual]</code></h3>
+<p>Returns the pixmap set for the cell <em>row, col,</em> or a
+null-pixmap if the cell contains no pixmap.
+<h3 class="fn">void <a name="9d5cc8"></a>QTable::pressed ( int row, int col, int button, const <a href="qpoint.html">QPoint</a> &amp; mousePos ) <code>[signal]</code></h3>
+<p>This signal is emitted whenever the mousebutton <em>button</em> is pressed above
+the cell located in  <em>row</em> and <em>col.</em>
+The actual mouse position is passed as <em>mousePos.</em>
+<h3 class="fn">void <a name="7c7311"></a>QTable::removeSelection ( const <a href="qtableselection.html">QTableSelection</a> &amp; s ) <code>[virtual]</code></h3>
+<p>Removes the selection matching the values of <em>s</em> from the
+table.
+<h3 class="fn">void <a name="0a5545"></a>QTable::removeSelection ( int num ) <code>[virtual]</code></h3>
+<p>Removes selection number <em>num.</em>
+<h3 class="fn">void <a name="4e808c"></a>QTable::resizeData ( int len ) <code>[virtual protected]</code></h3>
+<p>This is called when QTable's internal array needs to be resized.
+<p>If you don't use QTableItems you should reimplement this as an empty
+method, thus no memory is wasted. In addition, you will have to
+reimplement <a href="#54972d">item</a>(), <a href="#ffc3d9">setItem</a>(), and <a href="#1f2af2">clearCell</a>() as empty functions in
+a different way.
+<p>As soon as you enable sorting or allow the user to change rows or
+columns (see <a href="#2eb943">setRowMovingEnabled</a>(), <a href="#150e92">setColumnMovingEnabled</a>()), you
+are strongly advised to reimplement <a href="#b9aca9">swapColumns</a>(), <a href="#a05058">swapRows</a>(), and
+<a href="#530906">swapCells</a>() to work with your data.
+<h3 class="fn">void <a name="3b6ebc"></a>QTable::resizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#28c156">QWidget.</a>
+<h3 class="fn">int <a name="3ac50a"></a>QTable::rowAt ( int pos ) const <code>[virtual]</code></h3>
+<p>Returns the row which is at <em>pos. pos</em> has to be given in
+contents coordinates.
+<h3 class="fn">int <a name="9dbd98"></a>QTable::rowHeight ( int row ) const <code>[virtual]</code></h3>
+<p>Returns the height of the row <em>row.</em>
+<h3 class="fn">void <a name="5d3b76"></a>QTable::rowHeightChanged ( int row ) <code>[virtual protected slot]</code></h3>
+<p>Call this function whenever the height of row <em>row</em> has
+changed in order to rearrange its contents.
+<h3 class="fn">void <a name="e541b1"></a>QTable::rowIndexChanged ( int, int, int ) <code>[virtual protected slot]</code></h3>
+<p>This function is called if the order of the rows has been
+changed. If you want to change the order programmatically, call
+<a href="#a05058">swapRows</a>() or <a href="#b9aca9">swapColumns</a>().
+<h3 class="fn">bool <a name="61d09c"></a>QTable::rowMovingEnabled () const</h3>
+<p>Returns whether rows can be moved by the user.
+<h3 class="fn">int <a name="147089"></a>QTable::rowPos ( int row ) const <code>[virtual]</code></h3>
+<p>Returns the y-position of the row <em>row</em> in contents coordinates.
+<h3 class="fn"><a href="qtableselection.html">QTableSelection</a> <a name="ff6a0d"></a>QTable::selection ( int num ) const</h3>
+<p>Returns selection number <em>num,</em> or an empty <a href="qtableselection.html">QTableSelection</a>
+if <em>num</em> is out of range (see QTableSelection::isNull()).
+<h3 class="fn">void <a name="b525a8"></a>QTable::selectionChanged () <code>[signal]</code></h3>
+<p>Whenever a selection changes, this signal is emitted.
+<h3 class="fn">QTable::SelectionMode <a name="5b0379"></a>QTable::selectionMode() const</h3>
+<p>Reveals the current selection mode.
+<h3 class="fn">void <a name="a6beda"></a>QTable::setCellContentFromEditor ( int row, int col ) <code>[virtual protected]</code></h3>
+<p>This function is called to set the contents of the cell <em>row, col</em> from the editor of this cell to this cell. If there existed
+already a <a href="qtableitem.html">QTableItem</a> for this cell, this is removed first (see
+<a href="#1f2af2">clearCell</a>()).
+<p>If you want to create e.g different QTableItems depending on the
+contents of the editor, you might reimplement this function. Also if
+you want to work without QTableItems, you will reimplement this
+function to set the data which the user entered to your
+datastructure.
+<p>See also  <a href="qtableitem.html#37076b">QTableItem::setContentFromEditor</a>().
+<h3 class="fn">void <a name="0a6358"></a>QTable::setCellWidget ( int row, int col, <a href="qwidget.html">QWidget</a> * e ) <code>[virtual]</code></h3>
+<p>Sets the widget <em>e</em> to the cell <em>row, col</em> and does all the
+placement and further stuff and takes care about correctly placing
+are resizing it when the cell geometry changes.
+<p>By default widgets are inserted into a vector with <a href="#c3d93a">numRows</a>() *
+<a href="#85715c">numCols</a>() elements. In very big tables you probably want to store the
+widgets in a datastructure which needs less memory (like a
+hash-table). To make this possible this functions calls
+<a href="#ab1b47">insertWidget</a>() to add the widget to the internal datastructure. So if
+you want to use your own datastructure, reimplement insertWidget(),
+<a href="#e44bcf">cellWidget</a>() and <a href="#e3aaa3">clearCellWidget</a>().
+<h3 class="fn">void <a name="150e92"></a>QTable::setColumnMovingEnabled ( bool b ) <code>[virtual slot]</code></h3>
+<p>If <em>b</em> is set to TRUE, columns can be moved by the user.
+<h3 class="fn">void <a name="2b181a"></a>QTable::setColumnStretchable ( int col, bool stretch ) <code>[virtual slot]</code></h3>
+<p>Sets the column <em>col</em> to stretchable if <em>stretch</em> is TRUE, else
+to non-stretchable. So, if the table widgets gets wider than its
+contents, stretchable columns are stretched so that the contents
+fits exactly into to widget.
+<h3 class="fn">void <a name="5c3bff"></a>QTable::setColumnWidth ( int col, int w ) <code>[virtual slot]</code></h3>
+<p>Resizes the column to <em>w</em> pixel wide.
+<h3 class="fn">void <a name="3d697e"></a>QTable::setCurrentCell ( int row, int col ) <code>[virtual slot]</code></h3>
+<p>Moves the focus to the cell at position <em>row, col.</em>
+<p>See also  <a href="#25069f">currentRow</a>() and <a href="#a347d4">currentColumn</a>().
+<h3 class="fn">void <a name="ffc3d9"></a>QTable::setItem ( int row, int col, <a href="qtableitem.html">QTableItem</a> * item ) <code>[virtual]</code></h3>
+<p>Sets the content for the cell <em>row, col.</em> If cell item
+already exists in that position, the old one is deleted.
+<p>setItem() also repaints the cell.
+<h3 class="fn">void <a name="64e1cf"></a>QTable::setLeftMargin ( int m ) <code>[virtual slot]</code></h3>
+<p>Sets the left margin to <em>m</em> pixels.
+<p>To get rid of the left header entirely, use the following code:
+<p><pre>  setLeftMargin( 0 );
+  verticalHeader()-&gt;hide();
+</pre>
+<h3 class="fn">void <a name="fb1997"></a>QTable::setNumCols ( int c ) <code>[virtual slot]</code></h3>
+<p>Sets the number of columns to <em>c.</em>
+<h3 class="fn">void <a name="aac1bc"></a>QTable::setNumRows ( int r ) <code>[virtual slot]</code></h3>
+<p>Sets the number of rows to <em>r.</em>
+<h3 class="fn">void <a name="b231f8"></a>QTable::setPixmap ( int row, int col, const <a href="qpixmap.html">QPixmap</a> &amp; pix ) <code>[virtual]</code></h3>
+<p>Sets the pixmap in cell <em>row, col</em> to <em>pix.</em> If no
+<a href="qtableitem.html">QTableItem</a> belongs to the cell yet, an item is created.
+<h3 class="fn">void <a name="fac933"></a>QTable::setRowHeight ( int row, int h ) <code>[virtual slot]</code></h3>
+<p>Resizes the row to be <em>h</em> pixel height.
+<h3 class="fn">void <a name="2eb943"></a>QTable::setRowMovingEnabled ( bool b ) <code>[virtual slot]</code></h3>
+<p>If <em>b</em> is set to TRUE, rows can be moved by the user.
+<h3 class="fn">void <a name="61d64d"></a>QTable::setRowStretchable ( int row, bool stretch ) <code>[virtual slot]</code></h3>
+<p>Sets the row <em>row</em> to stretchable if <em>stretch</em> is TRUE, else to
+non-stretchable. So, if the table widgets gets higher than its
+contents, stretchable rows are stretched so that the contents fits
+exactly into to widget.
+<h3 class="fn">void <a name="c89605"></a>QTable::setSelectionMode ( <a href="qtable.html#SelectionMode">SelectionMode</a> mode )</h3>
+<p>Sets the table's selection mode to <em>mode.</em> By default multi-range
+selections (<code>Multi)</code> are allowed.
+<h3 class="fn">void <a name="a6895d"></a>QTable::setShowGrid ( bool b ) <code>[virtual slot]</code></h3>
+<p>If <em>b</em> is TRUE, the table grid is shown, otherwise not.  The
+default is TRUE.
+<h3 class="fn">void <a name="8586ae"></a>QTable::setSorting ( bool b ) <code>[virtual slot]</code></h3>
+<p>If <em>b</em> is set to TRUE, clicking on the header of a column sorts
+this column.
+<p>See also  <a href="#b01d4c">sortColumn</a>().
+<h3 class="fn">void <a name="1c13c3"></a>QTable::setText ( int row, int col, const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual]</code></h3>
+<p>Sets the text in cell <em>row, col</em> to <em>text.</em> If no
+<a href="qtableitem.html">QTableItem</a> belongs to the cell yet, an item is created.
+<h3 class="fn">void <a name="6944a0"></a>QTable::setTopMargin ( int m ) <code>[virtual slot]</code></h3>
+<p>Sets the top margin to <em>m</em> pixels.
+<p>To get rid of the top header entirely, use the following code:
+<p><pre>  setTopMargin( 0 );
+  topHeader()-&gt;hide();
+</pre>
+<h3 class="fn">void <a name="dc5724"></a>QTable::showColumn ( int col ) <code>[virtual slot]</code></h3>
+<p>Shows the column <em>col.</em>
+<p>See also  <a href="#f35b84">hideColumn</a>().
+<h3 class="fn">void <a name="997ad2"></a>QTable::showEvent ( <a href="qshowevent.html">QShowEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#add426">QWidget.</a>
+<h3 class="fn">bool <a name="baf455"></a>QTable::showGrid () const</h3>
+<p>Returns whether the table grid shows up or not.
+<h3 class="fn">void <a name="9e7059"></a>QTable::showRow ( int row ) <code>[virtual slot]</code></h3>
+<p>Shows the row <em>row.</em>
+<p>See also  <a href="#8ecf10">hideRow</a>().
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="021ba5"></a>QTable::sizeHint () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#290bcd">QWidget.</a>
+<h3 class="fn">void <a name="b01d4c"></a>QTable::sortColumn ( int col, bool ascending = TRUE, bool wholeRows = FALSE ) <code>[virtual]</code></h3>
+<p>Sorts the column <em>col</em> in ascending order if <em>ascending</em> is
+TRUE, else in descending order. If <em>wholeRows</em> is TRUE, for
+changing data of the cells <a href="#a05058">swapRows</a>() is called, else <a href="#530906">swapCells</a>() is
+called.
+<p>See also  <a href="#a05058">swapRows</a>().
+<h3 class="fn">bool <a name="55b494"></a>QTable::sorting () const</h3>
+<p>Returns wheather clicking on a column header sorts the column.
+<p>See also  <a href="#8586ae">setSorting</a>().
+<h3 class="fn">void <a name="530906"></a>QTable::swapCells ( int row1, int col1, int row2, int col2 ) <code>[virtual slot]</code></h3>
+<p>Swaps the content of the cells <em>row1, col1</em> and <em>row2, col2.</em> This function is used for sorting cells.
+<h3 class="fn">void <a name="b9aca9"></a>QTable::swapColumns ( int col1, int col2 ) <code>[virtual slot]</code></h3>
+<p>Exchanges <em>col1</em> with <em>col2</em> and vice versa. This is useful for
+sorting, and it allows the user to rearrange the columns in a
+different order. If you don't use QTableItems you will probably
+reimplement this function.
+<h3 class="fn">void <a name="a05058"></a>QTable::swapRows ( int row1, int row2 ) <code>[virtual slot]</code></h3>
+<p>Swaps data of <em>row1</em> and <em>row2.</em> This is used by sorting
+mechanisms or when the user changes the order of the rows. If you
+don't use QTableItems you might wish to reimplement this function.
+<h3 class="fn">void <a name="61abb3"></a>QTable::takeItem ( <a href="qtableitem.html">QTableItem</a> * i ) <code>[virtual]</code></h3>
+<p>Takes the item <em>i</em> out of the table. This functions doesn't
+delete it.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="33454c"></a>QTable::text ( int row, int col ) const <code>[virtual]</code></h3>
+<p>Returns the text in cell <em>row, col,</em> or an empty string if
+the relevant item does not exist or includes no text.
+<h3 class="fn">void <a name="6c6968"></a>QTable::updateCell ( int row, int col )</h3>
+<p>Repaints the cell at position <em>row, col.</em>
+<h3 class="fn">void <a name="519eef"></a>QTable::valueChanged ( int row, int col ) <code>[signal]</code></h3>
+<p>This signal is emitted if the user edited the cell row, <em>col.</em>
+<h3 class="fn"><a href="qheader.html">QHeader</a> * <a name="014f16"></a>QTable::verticalHeader () const</h3>
+<p>Returns the outer left <a href="qheader.html">QHeader</a>.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

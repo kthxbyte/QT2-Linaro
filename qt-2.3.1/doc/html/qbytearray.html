@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QByteArray Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QByteArray Class Reference</h1><br clear="all">
+<p>
+The QByteArray class provides an array of bytes.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qcstring-h.html">qcstring.h</a>&gt;</code>
+<p>
+Inherits <a href="qarray.html">QArray</a>.
+<p>Inherited by <a href="qbitarray.html">QBitArray</a> and <a href="qcstring.html">QCString</a>.
+<p><a href="qbytearray-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#9dbb8d"><b>QByteArray</b></a> () </div>
+<li><div class="fn"><a href="#cf8248"><b>QByteArray</b></a> ( int size ) </div>
+<li><div class="fn"><a href="#ef5d78"><b>QByteArray</b></a> ( const QByteArray &amp; a ) </div>
+<li><div class="fn"><a href="#2c4eb4"><b>~QByteArray</b></a> () </div>
+<li><div class="fn">QByteArray&amp; <a href="#5b94d0"><b>operator=</b></a> ( const QByteArray &amp; a ) </div>
+<li><div class="fn">char* <a href="#895709"><b>data</b></a> () const</div>
+<li><div class="fn">uint <a href="#d3dde0"><b>nrefs</b></a> () const</div>
+<li><div class="fn">uint <a href="#86ae87"><b>size</b></a> () const</div>
+<li><div class="fn">uint <a href="#049681"><b>count</b></a> () const</div>
+<li><div class="fn">bool <a href="#ce6f51"><b>isEmpty</b></a> () const</div>
+<li><div class="fn">bool <a href="#16d4a8"><b>isNull</b></a> () const</div>
+<li><div class="fn">bool <a href="#ba23bf"><b>resize</b></a> ( uint size ) </div>
+<li><div class="fn">bool <a href="#e46260"><b>truncate</b></a> ( uint pos ) </div>
+<li><div class="fn">bool <a href="#5d40c0"><b>fill</b></a> ( const char &amp; d, int size = -1 ) </div>
+<li><div class="fn">virtual void <a href="#a81e98"><b>detach</b></a> () </div>
+<li><div class="fn">QByteArray <a href="#7512db"><b>copy</b></a> () const</div>
+<li><div class="fn">QByteArray&amp; <a href="#0fdb28"><b>assign</b></a> ( const QByteArray &amp; a ) </div>
+<li><div class="fn">QByteArray&amp; <a href="#019433"><b>assign</b></a> ( const char * a, uint n ) </div>
+<li><div class="fn">QByteArray&amp; <a href="#ab0ce1"><b>duplicate</b></a> ( const QByteArray &amp; a ) </div>
+<li><div class="fn">QByteArray&amp; <a href="#f0b0b0"><b>duplicate</b></a> ( const char * a, uint n ) </div>
+<li><div class="fn">QByteArray&amp; <a href="#886dfd"><b>setRawData</b></a> ( const char * a, uint n ) </div>
+<li><div class="fn">void <a href="#6a0f7e"><b>resetRawData</b></a> ( const char * a, uint n ) </div>
+<li><div class="fn">int <a href="#aa7cd1"><b>find</b></a> ( const char &amp; d, uint i=0 ) const</div>
+<li><div class="fn">int <a href="#d2badc"><b>contains</b></a> ( const char &amp; d ) const</div>
+<li><div class="fn">void <a href="#4bf53d"><b>sort</b></a> () </div>
+<li><div class="fn">int <a href="#833707"><b>bsearch</b></a> ( const char &amp; d ) const</div>
+<li><div class="fn">char&amp; <a href="#4ceab7"><b>operator[]</b></a> ( int i ) const</div>
+<li><div class="fn">char&amp; <a href="#fc6297"><b>at</b></a> ( uint i ) const</div>
+<li><div class="fn">operator <a href=qbytearray.html#1254c7><b>const char*</b></a> ()const</div>
+<li><div class="fn">bool <a href="#79671c"><b>operator==</b></a> ( const QByteArray &amp; a ) const</div>
+<li><div class="fn">bool <a href="#f64984"><b>operator!=</b></a> ( const QByteArray &amp; a ) const</div>
+<li><div class="fn">Iterator <a href="#b7d815"><b>begin</b></a> () </div>
+<li><div class="fn">Iterator <a href="#7739f7"><b>end</b></a> () </div>
+<li><div class="fn">ConstIterator <a href="#e20e05"><b>begin</b></a> () const</div>
+<li><div class="fn">ConstIterator <a href="#5ebaef"><b>end</b></a> () const</div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn"><a href="#086b2b"><b>QByteArray</b></a> ( int, int ) </div>
+</ul>
+<h2>Related Functions</h2>
+(Note that these are not member functions.)
+<ul>
+<li>Q_UINT16 <a href="qbytearray.html#af3e89"><b>qChecksum</b></a> (const char * data, uint len)
+<li>QDataStream &amp; <a href="qbytearray.html#da5474"><b>operator&lt;&lt;</b></a> (QDataStream &amp; s, const QByteArray &amp; a)
+<li>QDataStream &amp; <a href="qbytearray.html#fecc0a"><b>operator&gt;&gt;</b></a> (QDataStream &amp; s, QByteArray &amp; a)
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QByteArray class provides an array of bytes.
+<p>
+The QByteArray class provides an explicitly shared array of
+bytes. It is useful for manipulating memory areas with custom
+data. QByteArray is implemented as <a href="qarray.html">QArray</a><char>. See the QArray
+documentation for further information.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="9dbb8d"></a>QByteArray::QByteArray ()</h3>
+<p>Constructs a null array.
+<p>See also  <a href="#16d4a8">isNull</a>().
+<h3 class="fn"><a name="ef5d78"></a>QByteArray::QByteArray ( const QByteArray &amp; a )</h3>
+<p>Constructs a shallow copy of <em>a.</em>
+<p>See also  <a href="#019433">assign</a>().
+<h3 class="fn"><a name="cf8248"></a>QByteArray::QByteArray ( int size )</h3>
+<p>Constructs an array with room for <em>size</em> elements.
+Makes a null array if <em>size</em> == 0.
+<p>Note that the elements are not initialized.
+<p>See also  <a href="#ba23bf">resize</a>() and <a href="#16d4a8">isNull</a>().
+<h3 class="fn"><a name="086b2b"></a>QByteArray::QByteArray ( int, int ) <code>[protected]</code></h3>
+<p>Constructs an array <em>without allocating</em> array space.
+The arguments should be (0, 0). Use at own risk.
+<h3 class="fn"><a name="2c4eb4"></a>QByteArray::~QByteArray ()</h3>
+<p>Dereferences the array data and deletes it if this was the last
+reference.
+<h3 class="fn"><a name="1254c7"></a>QByteArray::operator const char * () const</h3>
+<p>Cast operator.  Returns a pointer to the array.
+<p>See also  <a href="#895709">data</a>().
+<h3 class="fn">QByteArray &amp; <a name="0fdb28"></a>QByteArray::assign ( const QByteArray &amp; a )</h3>
+<p>Shallow copy. Dereferences the current array and references the data
+contained in <em>a</em> instead. Returns a reference to this array.
+<p>See also  <a href="#5b94d0">operator=</a>().
+<h3 class="fn">QByteArray &amp; <a name="019433"></a>QByteArray::assign ( const char * data, uint size )</h3>
+<p>Shallow copy. Dereferences the current array and references the
+array data <em>data,</em> which contains <em>size</em> elements.
+Returns a reference to this array.
+<p>Do not delete <em>data</em> later, <a href="qarray.html">QArray</a> takes care of that.
+<h3 class="fn">char &amp; <a name="fc6297"></a>QByteArray::at ( uint index ) const</h3>
+<p>Returns a reference to the element at position <em>index</em> in the array.
+<p>This can be used to both read and set an element.
+<p>See also  <a href="#4ceab7">operator[]</a>().
+<h3 class="fn">ConstIterator <a name="e20e05"></a>QByteArray::begin () const</h3>
+<p>Returns a const iterator pointing at the beginning of this array.
+This iterator can be used as the iterators of <a href="qvaluelist.html">QValueList</a> and <a href="qmap.html">QMap</a>
+for example. In fact it does not only behave like a usual pointer:
+It is a pointer.
+<h3 class="fn">Iterator <a name="b7d815"></a>QByteArray::begin ()</h3>
+<p>Returns an iterator pointing at the beginning of this array.
+This iterator can be used as the iterators of <a href="qvaluelist.html">QValueList</a> and <a href="qmap.html">QMap</a>
+for example. In fact it does not only behave like a usual pointer:
+It is a pointer.
+<h3 class="fn">int <a name="833707"></a>QByteArray::bsearch ( const char &amp; v ) const</h3>
+<p>In a sorted array, finds the first occurrence of <em>v</em> using binary
+search. For a sorted array, this is generally much faster than
+<a href="#aa7cd1">find</a>(), which does a linear search.
+<p>Returns the position of <em>v,</em> or -1 if <em>v</em> could not be found.
+<p>See also  <a href="#4bf53d">sort</a>() and <a href="#aa7cd1">find</a>().
+<h3 class="fn">int <a name="d2badc"></a>QByteArray::contains ( const char &amp; v ) const</h3>
+<p>Returns the number of times <em>v</em> occurs in the array.
+<p>See also  <a href="#aa7cd1">find</a>().
+<h3 class="fn">QByteArray <a name="7512db"></a>QByteArray::copy () const</h3>
+<p>Returns a deep copy of this array.
+<p>See also  <a href="#a81e98">detach</a>() and <a href="#ab0ce1">duplicate</a>().
+<h3 class="fn">uint <a name="049681"></a>QByteArray::count () const</h3>
+<p>Returns the same as <a href="#86ae87">size</a>().
+<p>See also  <a href="#86ae87">size</a>().
+<h3 class="fn">char * <a name="895709"></a>QByteArray::data () const</h3>
+<p>Returns a pointer to the actual array data.
+<p>The array is a null array if data() == 0 (null pointer).
+<p>See also  <a href="#16d4a8">isNull</a>().
+<h3 class="fn">void <a name="a81e98"></a>QByteArray::detach () <code>[virtual]</code></h3>
+<p>Detaches this array from shared array data, i.e. makes a private, deep
+copy of the data.
+<p>Copying will only be performed if the
+<a href="#d3dde0">reference count</a> is greater than one.
+<p>See also  <a href="#7512db">copy</a>().
+<p>Reimplemented from <a href="qgarray.html#9b33f3">QGArray.</a>
+<h3 class="fn">QByteArray &amp; <a name="ab0ce1"></a>QByteArray::duplicate ( const QByteArray &amp; a )</h3>
+<p>Deep copy. Dereferences the current array and obtains a copy of the data
+contained in <em>a</em> instead. Returns a reference to this array.
+<p>See also  <a href="#7512db">copy</a>().
+<h3 class="fn">QByteArray &amp; <a name="f0b0b0"></a>QByteArray::duplicate ( const char * data, uint size )</h3>
+<p>Deep copy. Dereferences the current array and obtains a copy of the
+array data <em>data</em> instead.  Returns a reference to this array.
+<p>See also  <a href="#7512db">copy</a>().
+<h3 class="fn">ConstIterator <a name="5ebaef"></a>QByteArray::end () const</h3>
+<p>Returns a const iterator pointing behind the last element of this array.
+This iterator can be used as the iterators of <a href="qvaluelist.html">QValueList</a> and <a href="qmap.html">QMap</a>
+for example. In fact it does not only behave like a usual pointer:
+It is a pointer.
+<h3 class="fn">Iterator <a name="7739f7"></a>QByteArray::end ()</h3>
+<p>Returns an iterator pointing behind the last element of this array.
+This iterator can be used as the iterators of <a href="qvaluelist.html">QValueList</a> and <a href="qmap.html">QMap</a>
+for example. In fact it does not only behave like a usual pointer:
+It is a pointer.
+<h3 class="fn">bool <a name="5d40c0"></a>QByteArray::fill ( const char &amp; v, int size = -1 )</h3>
+<p>Fills the array with the value <em>v.</em> If <em>size</em> is specified as different
+from -1, then the array will be resized before filled.
+<p>Returns TRUE if successful, or FALSE if the memory cannot be allocated
+(only when <em>size</em> != -1).
+<p>See also  <a href="#ba23bf">resize</a>().
+<h3 class="fn">int <a name="aa7cd1"></a>QByteArray::find ( const char &amp; v, uint index=0 ) const</h3>
+<p>Finds the first occurrence of <em>v,</em> starting at position <em>index.</em>
+<p>Returns the position of <em>v,</em> or -1 if <em>v</em> could not be found.
+<p>See also  <a href="#d2badc">contains</a>().
+<h3 class="fn">bool <a name="ce6f51"></a>QByteArray::isEmpty () const</h3>
+<p>Returns TRUE if the array is empty, i.e. <a href="#86ae87">size</a>() == 0, otherwise FALSE.
+<p>isEmpty() is equivalent with <a href="#16d4a8">isNull</a>() for <a href="qarray.html">QArray</a>.  Note that this is not
+the case for <a href="qcstring.html#180a48">QCString::isEmpty</a>().
+<h3 class="fn">bool <a name="16d4a8"></a>QByteArray::isNull () const</h3>
+<p>Returns TRUE if the array is null, otherwise FALSE.
+<p>A null array has <a href="#86ae87">size</a>() == 0 and <a href="#895709">data</a>() == 0.
+<h3 class="fn">uint <a name="d3dde0"></a>QByteArray::nrefs () const</h3>
+<p>Returns the reference count for the shared array data. This reference count
+is always greater than zero.
+<h3 class="fn">bool <a name="f64984"></a>QByteArray::operator!= ( const QByteArray &amp; a ) const</h3>
+<p>Returns TRUE if this array is different from <em>a,</em> otherwise FALSE.
+<p>The two arrays are bitwise compared.
+<p>See also  <a href="#79671c">operator==</a>().
+<h3 class="fn">QByteArray &amp; <a name="5b94d0"></a>QByteArray::operator= ( const QByteArray &amp; a )</h3>
+<p>Assigns a shallow copy of <em>a</em> to this array and returns a reference
+to this array.
+<p>Equivalent to <a href="#019433">assign</a>( a ).
+<h3 class="fn">bool <a name="79671c"></a>QByteArray::operator== ( const QByteArray &amp; a ) const</h3>
+<p>Returns TRUE if this array is equal to <em>a,</em> otherwise FALSE.
+<p>The two arrays are bitwise compared.
+<p>See also  <a href="#f64984">operator!=</a>().
+<h3 class="fn">char &amp; <a name="4ceab7"></a>QByteArray::operator[] ( int index ) const</h3>
+<p>Returns a reference to the element at position <em>index</em> in the array.
+<p>This can be used to both read and set an element.  Equivalent to <a href="#fc6297">at</a>().
+<p>See also  <a href="#fc6297">at</a>().
+<h3 class="fn">void <a name="6a0f7e"></a>QByteArray::resetRawData ( const char * data, uint size )</h3>
+<p>Resets raw data that was set using <a href="#886dfd">setRawData</a>().
+<p>The arguments must be the data and length that were passed to
+setRawData().  This is for consistency checking.
+<p>See also  <a href="#886dfd">setRawData</a>().
+<h3 class="fn">bool <a name="ba23bf"></a>QByteArray::resize ( uint size )</h3>
+<p>Resizes (expands or shrinks) the array to <em>size</em> elements. The array
+becomes a null array if <em>size</em> == 0.
+<p>Returns TRUE if successful, or FALSE if the memory cannot be allocated.
+<p>New elements will not be initialized.
+<p>See also  <a href="#86ae87">size</a>().
+<h3 class="fn">QByteArray &amp; <a name="886dfd"></a>QByteArray::setRawData ( const char * data, uint size )</h3>
+<p>Sets raw data and returns a reference to the array.
+<p>Dereferences the current array and sets the new array data to <em>data</em> and
+the new array size to <em>size.</em>  Do not attempt to resize or re-assign the
+array data when raw data has been set.
+Call <a href="#6a0f7e">resetRawData</a>(d,len) to reset the array.
+<p>Setting raw data is useful because it sets <a href="qarray.html">QArray</a> data without allocating
+memory or copying data.
+<p>Example I (intended use):
+<pre>    static char bindata[] = { 231, 1, 44, ... };
+    <a href="qbytearray.html">QByteArray</a>  a;
+    a.<a href="#886dfd">setRawData</a>( bindata, sizeof(bindata) );   // a points to bindata
+    <a href="qdatastream.html">QDataStream</a> s( a, IO_ReadOnly );            // open on a's data
+    s &gt;&gt; &lt;something&gt;;                           // read raw bindata
+    a.<a href="#6a0f7e">resetRawData</a>( bindata, sizeof(bindata) ); // finished
+</pre>
+<p>Example II (you don't want to do this):
+<pre>    static char bindata[] = { 231, 1, 44, ... };
+    <a href="qbytearray.html">QByteArray</a>  a, b;
+    a.<a href="#886dfd">setRawData</a>( bindata, sizeof(bindata) );   // a points to bindata
+    a.<a href="#ba23bf">resize</a>( 8 );                              // will crash
+    b = a;                                      // will crash
+    a[2] = 123;                                 // might crash
+      // forget to resetRawData - will crash
+</pre>
+<p><b>Warning:</b> If you do not call resetRawData(), QArray will attempt to
+deallocate or reallocate the raw data, which might not be too good.
+Be careful.
+<p>See also  <a href="#6a0f7e">resetRawData</a>().
+<h3 class="fn">uint <a name="86ae87"></a>QByteArray::size () const</h3>
+<p>Returns the size of the array (max number of elements).
+<p>The array is a null array if size() == 0.
+<p>See also  <a href="#16d4a8">isNull</a>() and <a href="#ba23bf">resize</a>().
+<h3 class="fn">void <a name="4bf53d"></a>QByteArray::sort ()</h3>
+<p>Sorts the array elements in ascending order, using bitwise
+comparison (memcmp()).
+<p>See also  <a href="#833707">bsearch</a>().
+<h3 class="fn">bool <a name="e46260"></a>QByteArray::truncate ( uint pos )</h3>
+<p>Truncates the array at position <em>pos.</em>
+<p>Returns TRUE if successful, or FALSE if the memory cannot be allocated.
+<p>Equivalent to <a href="#ba23bf">resize</a>(<em>pos).</em>
+<p>See also  <a href="#ba23bf">resize</a>().
+<hr><h2>Related Functions</h2>
+<h3>Q_UINT16 <a name="af3e89"></a>qChecksum (const char * data, uint len)</h3>
+<p>Returns the CRC-16 checksum of <em>len</em> bytes starting at <em>data.</em>
+<p>The checksum is independent of the byte order (endianness).
+
+<h3><a href="qdatastream.html">QDataStream</a> &amp; <a name="da5474"></a>operator&lt;&lt; (<a href="qdatastream.html">QDataStream</a> &amp; s, const QByteArray &amp; a)</h3>
+<p>Writes a byte array to a stream and returns a reference to the stream.
+<p>See also  <a href="datastreamformat.html">Format of the QDataStream operators</a>
+
+<h3><a href="qdatastream.html">QDataStream</a> &amp; <a name="fecc0a"></a>operator&gt;&gt; (<a href="qdatastream.html">QDataStream</a> &amp; s, QByteArray &amp; a)</h3>
+<p>Reads a byte array from a stream and returns a reference to the stream.
+<p>See also  <a href="datastreamformat.html">Format of the QDataStream operators</a>
+
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

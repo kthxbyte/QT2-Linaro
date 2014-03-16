@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QWindowsStyle Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QWindowsStyle Class Reference</h1><br clear="all">
+<p>
+Windows Look and Feel
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qwindowsstyle-h.html">qwindowsstyle.h</a>&gt;</code>
+<p>
+Inherits <a href="qcommonstyle.html">QCommonStyle</a>.
+<p>Inherited by <a href="qplatinumstyle.html">QPlatinumStyle</a>.
+<p><a href="qwindowsstyle-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#e92e70"><b>QWindowsStyle</b></a> () </div>
+<li><div class="fn">virtual <a href="#b149bb"><b>~QWindowsStyle</b></a> () </div>
+<li><div class="fn">virtual void <a href="#eccec8"><b>drawButton</b></a> ( QPainter * p, int x, int y, int w, int h, const QColorGroup &amp; g, bool sunken = FALSE, const QBrush * fill = 0 ) </div>
+<li><div class="fn">virtual void <a href="#5eb244"><b>drawExclusiveIndicatorMask</b></a> ( QPainter * p, int x, int y, int w, int h, bool on ) </div>
+<li><div class="fn">virtual void <a href="#7a19a3"><b>drawSliderMask</b></a> ( QPainter * p, int x, int y, int w, int h, Orientation, bool tickAbove, bool tickBelow ) </div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">void <a href="#dd7cad"><b>drawWinShades</b></a> ( QPainter * p, int x, int y, int w, int h, const QColor &amp; c1, const QColor &amp; c2, const QColor &amp; c3, const QColor &amp; c4, const QBrush * fill ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+Windows Look and Feel
+<p>
+This class implements the look and feel known from the Windows
+platform. Naturally it is also Qt's default GUI style on Windows.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="e92e70"></a>QWindowsStyle::QWindowsStyle ()</h3>
+<p>Constructs a QWindowsStyle.
+<h3 class="fn"><a name="b149bb"></a>QWindowsStyle::~QWindowsStyle () <code>[virtual]</code></h3>
+<p>Destructs the style.
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="5ab529"></a>QWindowsStyle::comboButtonFocusRect ( int x, int y, int w, int h ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#9610e3">QStyle.</a>
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="343747"></a>QWindowsStyle::comboButtonRect ( int x, int y, int w, int h ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#126ddf">QStyle.</a>
+<h3 class="fn">void <a name="537af2"></a>QWindowsStyle::drawArrow ( <a href="qpainter.html">QPainter</a> * p, ArrowType type, bool down, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool enabled, const <a href="qbrush.html">QBrush</a> * fill = 0 )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="d8d18d"></a>QWindowsStyle::drawBevelButton ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken = FALSE, const <a href="qbrush.html">QBrush</a> * fill = 0 ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#49015f">QStyle.</a>
+<h3 class="fn">void <a name="eccec8"></a>QWindowsStyle::drawButton ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken = FALSE, const <a href="qbrush.html">QBrush</a> * fill = 0 ) <code>[virtual]</code></h3>
+<p>Draws a press-sensitive shape.
+<p>Reimplemented from <a href="qstyle.html#864576">QStyle.</a>
+<h3 class="fn">void <a name="839664"></a>QWindowsStyle::drawCheckMark ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool act, bool dis ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#2a41fa">QStyle.</a>
+<h3 class="fn">void <a name="5a9d21"></a>QWindowsStyle::drawComboButton ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken = FALSE, bool = FALSE, bool enabled = TRUE, const <a href="qbrush.html">QBrush</a> * fill = 0 ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#a34836">QStyle.</a>
+<h3 class="fn">void <a name="df8053"></a>QWindowsStyle::drawExclusiveIndicator ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool on, bool down = FALSE, bool enabled = TRUE ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#dc5fc7">QStyle.</a>
+<h3 class="fn">void <a name="5eb244"></a>QWindowsStyle::drawExclusiveIndicatorMask ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, bool ) <code>[virtual]</code></h3>
+<p>Draws the mask of a mark indicating the state of an exclusive choice.
+<p>Reimplemented from <a href="qstyle.html#c8a183">QStyle.</a>
+<h3 class="fn">void <a name="153389"></a>QWindowsStyle::drawFocusRect ( <a href="qpainter.html">QPainter</a> * p, const <a href="qrect.html">QRect</a> &amp; r, const <a href="qcolorgroup.html">QColorGroup</a> &amp;, const <a href="qcolor.html">QColor</a> * bg =0, bool = FALSE ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#efbcb0">QStyle.</a>
+<h3 class="fn">void <a name="16093e"></a>QWindowsStyle::drawIndicator ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, int s, bool down = FALSE, bool enabled = TRUE ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#26ad2f">QStyle.</a>
+<h3 class="fn">void <a name="2f3d48"></a>QWindowsStyle::drawPanel ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, bool sunken=FALSE, int lineWidth = 1, const <a href="qbrush.html">QBrush</a> * fill = 0 ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#46bc88">QStyle.</a>
+<h3 class="fn">void <a name="06e03d"></a>QWindowsStyle::drawPopupMenuItem ( <a href="qpainter.html">QPainter</a> * p, bool checkable, int maxpmw, int tab, QMenuItem * mi, const <a href="qpalette.html">QPalette</a> &amp; pal, bool act, bool enabled, int x, int y, int w, int h ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#705666">QStyle.</a>
+<h3 class="fn">void <a name="5e4f7b"></a>QWindowsStyle::drawPopupPanel ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, int = 2, const <a href="qbrush.html">QBrush</a> * fill = 0 ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#a815a3">QStyle.</a>
+<h3 class="fn">void <a name="1920eb"></a>QWindowsStyle::drawPushButton ( <a href="qpushbutton.html">QPushButton</a> * btn, <a href="qpainter.html">QPainter</a> * p ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#c1fef1">QStyle.</a>
+<h3 class="fn">void <a name="71a4ec"></a>QWindowsStyle::drawScrollBarControls ( <a href="qpainter.html">QPainter</a> * p, const <a href="qscrollbar.html">QScrollBar</a> * sb, int sliderStart, uint controls, uint activeControl ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#b563ef">QStyle.</a>
+<h3 class="fn">void <a name="b3136e"></a>QWindowsStyle::drawSlider ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, <a href="qt.html#Orientation">Orientation</a> orient, bool tickAbove, bool tickBelow ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#8b4465">QStyle.</a>
+<h3 class="fn">void <a name="7f87f9"></a>QWindowsStyle::drawSliderGroove ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, QCOORD c, <a href="qt.html#Orientation">Orientation</a> orient ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#9f003c">QStyle.</a>
+<h3 class="fn">void <a name="7a19a3"></a>QWindowsStyle::drawSliderMask ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, <a href="qt.html#Orientation">Orientation</a> orient, bool tickAbove, bool tickBelow ) <code>[virtual]</code></h3>
+<p>Draws the mask of a slider.
+<p>Reimplemented from <a href="qstyle.html#7bc927">QStyle.</a>
+<h3 class="fn">void <a name="220e9a"></a>QWindowsStyle::drawSplitter ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolorgroup.html">QColorGroup</a> &amp; g, <a href="qt.html#Orientation">Orientation</a> ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#ef0e90">QStyle.</a>
+<h3 class="fn">void <a name="c1bada"></a>QWindowsStyle::drawTab ( <a href="qpainter.html">QPainter</a> * p, const <a href="qtabbar.html">QTabBar</a> * tb, <a href="qtab.html">QTab</a> * t, bool selected )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="38671a"></a>QWindowsStyle::drawTabMask ( <a href="qpainter.html">QPainter</a> * p, const <a href="qtabbar.html">QTabBar</a> * tb, <a href="qtab.html">QTab</a> * t, bool selected )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="dd7cad"></a>QWindowsStyle::drawWinShades ( <a href="qpainter.html">QPainter</a> * p, int x, int y, int w, int h, const <a href="qcolor.html">QColor</a> &amp; c1, const <a href="qcolor.html">QColor</a> &amp; c2, const <a href="qcolor.html">QColor</a> &amp; c3, const <a href="qcolor.html">QColor</a> &amp; c4, const <a href="qbrush.html">QBrush</a> * fill ) <code>[protected]</code></h3>
+<p>This function draws a rectangle with two pixel line width.
+It is called from <a href="qpainter.html#724ffe">qDrawWinButton</a>() and <a href="qpainter.html#8de467">qDrawWinPanel</a>().
+<p>c1..c4 and fill are used:
+<p>1 1 1 1 1 2
+1 3 3 3 4 2
+1 3 F F 4 2
+1 3 F F 4 2
+1 4 4 4 4 2
+2 2 2 2 2 2.
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="29deca"></a>QWindowsStyle::exclusiveIndicatorSize () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#4a80ef">QStyle.</a>
+<h3 class="fn">int <a name="0af58a"></a>QWindowsStyle::extraPopupMenuItemWidth ( bool checkable, int maxpmw, QMenuItem * mi, const <a href="qfontmetrics.html">QFontMetrics</a> &amp; ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#e5ceb7">QStyle.</a>
+<h3 class="fn">void <a name="d9c952"></a>QWindowsStyle::getButtonShift ( int &amp; x, int &amp; y ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#8c0395">QStyle.</a>
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="085482"></a>QWindowsStyle::indicatorSize () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#9081f5">QStyle.</a>
+<h3 class="fn">int <a name="3255b7"></a>QWindowsStyle::maximumSliderDragDistance () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#c9b46f">QStyle.</a>
+<h3 class="fn">void <a name="a3c2b5"></a>QWindowsStyle::polishPopupMenu ( <a href="qpopupmenu.html">QPopupMenu</a> * p ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#200b84">QStyle.</a>
+<h3 class="fn">int <a name="7f733e"></a>QWindowsStyle::popupMenuItemHeight ( bool, QMenuItem * mi, const <a href="qfontmetrics.html">QFontMetrics</a> &amp; fm ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#6caf1f">QStyle.</a>
+<h3 class="fn">void <a name="3c54eb"></a>QWindowsStyle::scrollBarMetrics ( const <a href="qscrollbar.html">QScrollBar</a> * sb, int &amp; sliderMin, int &amp; sliderMax, int &amp; sliderLength, int &amp; buttonDim ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#0a6e65">QStyle.</a>
+<h3 class="fn">int <a name="54c4d6"></a>QWindowsStyle::sliderLength () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#be27f5">QStyle.</a>
+<h3 class="fn">int <a name="3cd6c9"></a>QWindowsStyle::splitterWidth () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qstyle.html#73c0f4">QStyle.</a>
+<h3 class="fn">void <a name="247390"></a>QWindowsStyle::tabbarMetrics ( const <a href="qtabbar.html">QTabBar</a> * t, int &amp; hframe, int &amp; vframe, int &amp; overlap )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

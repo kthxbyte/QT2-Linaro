@@ -1,0 +1,600 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QVariant Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QVariant Class Reference</h1><br clear="all">
+<p>
+Acts like a union for the most common Qt data types.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qvariant-h.html">qvariant.h</a>&gt;</code>
+<p><a href="qvariant-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn">enum <a href="#Type"><b>Type</b></a> { Invalid, Map, List, String, StringList, Font, Pixmap, Brush, Rect, Size, Color, Palette, ColorGroup, IconSet, Point, Image, Int, UInt, Bool, Double, CString, PointArray, Region, Bitmap, Cursor, SizePolicy }</div>
+<li><div class="fn"><a href="#0c2f9f"><b>QVariant</b></a> () </div>
+<li><div class="fn"><a href="#309b48"><b>~QVariant</b></a> () </div>
+<li><div class="fn"><a href="#a9dd87"><b>QVariant</b></a> ( const QVariant &amp; ) </div>
+<li><div class="fn"><a href="#945e57"><b>QVariant</b></a> ( QDataStream &amp; s ) </div>
+<li><div class="fn"><a href="#13e23e"><b>QVariant</b></a> ( const QString &amp; ) </div>
+<li><div class="fn"><a href="#caa2ac"><b>QVariant</b></a> ( const QCString &amp; ) </div>
+<li><div class="fn"><a href="#45e17b"><b>QVariant</b></a> ( const char * ) </div>
+<li><div class="fn"><a href="#d384ed"><b>QVariant</b></a> ( const QStringList &amp; ) </div>
+<li><div class="fn"><a href="#6ea459"><b>QVariant</b></a> ( const QFont &amp; ) </div>
+<li><div class="fn"><a href="#5e1bf3"><b>QVariant</b></a> ( const QPixmap &amp; ) </div>
+<li><div class="fn"><a href="#0811eb"><b>QVariant</b></a> ( const QImage &amp; ) </div>
+<li><div class="fn"><a href="#539895"><b>QVariant</b></a> ( const QBrush &amp; ) </div>
+<li><div class="fn"><a href="#d6f864"><b>QVariant</b></a> ( const QPoint &amp; ) </div>
+<li><div class="fn"><a href="#774b91"><b>QVariant</b></a> ( const QRect &amp; ) </div>
+<li><div class="fn"><a href="#765d72"><b>QVariant</b></a> ( const QSize &amp; ) </div>
+<li><div class="fn"><a href="#74976f"><b>QVariant</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn"><a href="#3da519"><b>QVariant</b></a> ( const QPalette &amp; ) </div>
+<li><div class="fn"><a href="#639ca4"><b>QVariant</b></a> ( const QColorGroup &amp; ) </div>
+<li><div class="fn"><a href="#6578a0"><b>QVariant</b></a> ( const QIconSet &amp; ) </div>
+<li><div class="fn"><a href="#7913d8"><b>QVariant</b></a> ( const QPointArray &amp; ) </div>
+<li><div class="fn"><a href="#4f7d55"><b>QVariant</b></a> ( const QRegion &amp; ) </div>
+<li><div class="fn"><a href="#1bfafc"><b>QVariant</b></a> ( const QBitmap &amp; ) </div>
+<li><div class="fn"><a href="#664a1b"><b>QVariant</b></a> ( const QCursor &amp; ) </div>
+<li><div class="fn"><a href="#c86c8f"><b>QVariant</b></a> ( const QValueList&lt;QVariant&gt; &amp; ) </div>
+<li><div class="fn"><a href="#df0a8b"><b>QVariant</b></a> ( const QMap&lt;QString, QVariant&gt; &amp; ) </div>
+<li><div class="fn"><a href="#368bab"><b>QVariant</b></a> ( int ) </div>
+<li><div class="fn"><a href="#3862d2"><b>QVariant</b></a> ( uint ) </div>
+<li><div class="fn"><a href="#49aa35"><b>QVariant</b></a> ( bool, int ) </div>
+<li><div class="fn"><a href="#d68143"><b>QVariant</b></a> ( double ) </div>
+<li><div class="fn"><a href="#b69b53"><b>QVariant</b></a> ( QSizePolicy ) </div>
+<li><div class="fn">QVariant&amp; <a href="#8aa5fa"><b>operator=</b></a> ( const QVariant &amp; ) </div>
+<li><div class="fn">bool <a href="#47f728"><b>operator==</b></a> ( const QVariant &amp; ) const</div>
+<li><div class="fn">bool <a href="#48b974"><b>operator!=</b></a> ( const QVariant &amp; ) const</div>
+<li><div class="fn">Type <a href="#8196d7"><b>type</b></a> () const</div>
+<li><div class="fn">const char* <a href="#9e1307"><b>typeName</b></a> () const</div>
+<li><div class="fn">bool <a href="#4ccf65"><b>canCast</b></a> ( Type ) const</div>
+<li><div class="fn">bool <a href="#83b746"><b>isValid</b></a> () const</div>
+<li><div class="fn">void <a href="#4659a3"><b>clear</b></a> () </div>
+<li><div class="fn">const QString <a href="#5426be"><b>toString</b></a> () const</div>
+<li><div class="fn">const QCString <a href="#084552"><b>toCString</b></a> () const</div>
+<li><div class="fn">const QStringList <a href="#30009b"><b>toStringList</b></a> () const</div>
+<li><div class="fn">const QFont <a href="#56d093"><b>toFont</b></a> () const</div>
+<li><div class="fn">const QPixmap <a href="#462574"><b>toPixmap</b></a> () const</div>
+<li><div class="fn">const QImage <a href="#ffa107"><b>toImage</b></a> () const</div>
+<li><div class="fn">const QBrush <a href="#e3aebe"><b>toBrush</b></a> () const</div>
+<li><div class="fn">const QPoint <a href="#edca08"><b>toPoint</b></a> () const</div>
+<li><div class="fn">const QRect <a href="#d01bf0"><b>toRect</b></a> () const</div>
+<li><div class="fn">const QSize <a href="#b0883e"><b>toSize</b></a> () const</div>
+<li><div class="fn">const QColor <a href="#f93262"><b>toColor</b></a> () const</div>
+<li><div class="fn">const QPalette <a href="#95c8fb"><b>toPalette</b></a> () const</div>
+<li><div class="fn">const QColorGroup <a href="#48889d"><b>toColorGroup</b></a> () const</div>
+<li><div class="fn">const QIconSet <a href="#bb2dbe"><b>toIconSet</b></a> () const</div>
+<li><div class="fn">const QPointArray <a href="#6f585a"><b>toPointArray</b></a> () const</div>
+<li><div class="fn">const QBitmap <a href="#476835"><b>toBitmap</b></a> () const</div>
+<li><div class="fn">const QRegion <a href="#79c750"><b>toRegion</b></a> () const</div>
+<li><div class="fn">const QCursor <a href="#866704"><b>toCursor</b></a> () const</div>
+<li><div class="fn">int <a href="#60b9a1"><b>toInt</b></a> () const</div>
+<li><div class="fn">uint <a href="#4f471c"><b>toUInt</b></a> () const</div>
+<li><div class="fn">bool <a href="#d5a870"><b>toBool</b></a> () const</div>
+<li><div class="fn">double <a href="#96e514"><b>toDouble</b></a> () const</div>
+<li><div class="fn">const QValueList&lt;QVariant&gt; <a href="#d15e4b"><b>toList</b></a> () const</div>
+<li><div class="fn">const QMap&lt;QString, QVariant&gt; <a href="#adc59d"><b>toMap</b></a> () const</div>
+<li><div class="fn">QSizePolicy <a href="#03166c"><b>toSizePolicy</b></a> () const</div>
+<li><div class="fn">QValueListConstIterator&lt;QVariant&gt; <a href="#6b77e5"><b>listBegin</b></a> () const</div>
+<li><div class="fn">QValueListConstIterator&lt;QVariant&gt; <a href="#132659"><b>listEnd</b></a> () const</div>
+<li><div class="fn">QValueListConstIterator&lt;QString&gt; <a href="#2a8e53"><b>stringListBegin</b></a> () const</div>
+<li><div class="fn">QValueListConstIterator&lt;QString&gt; <a href="#83e7d9"><b>stringListEnd</b></a> () const</div>
+<li><div class="fn">QMapConstIterator&lt;QString, QVariant&gt; <a href="#1d6d96"><b>mapBegin</b></a> () const</div>
+<li><div class="fn">QMapConstIterator&lt;QString, QVariant&gt; <a href="#8d3b3d"><b>mapEnd</b></a> () const</div>
+<li><div class="fn">QMapConstIterator&lt;QString, QVariant&gt; <a href="#7b5d04"><b>mapFind</b></a> ( const QString &amp; ) const</div>
+<li><div class="fn">QString&amp; <a href="#7e2926"><b>asString</b></a> () </div>
+<li><div class="fn">QCString&amp; <a href="#992d98"><b>asCString</b></a> () </div>
+<li><div class="fn">QStringList&amp; <a href="#5a07d2"><b>asStringList</b></a> () </div>
+<li><div class="fn">QFont&amp; <a href="#f2d6ac"><b>asFont</b></a> () </div>
+<li><div class="fn">QPixmap&amp; <a href="#07429d"><b>asPixmap</b></a> () </div>
+<li><div class="fn">QImage&amp; <a href="#34b17c"><b>asImage</b></a> () </div>
+<li><div class="fn">QBrush&amp; <a href="#322fc5"><b>asBrush</b></a> () </div>
+<li><div class="fn">QPoint&amp; <a href="#2e4245"><b>asPoint</b></a> () </div>
+<li><div class="fn">QRect&amp; <a href="#54717f"><b>asRect</b></a> () </div>
+<li><div class="fn">QSize&amp; <a href="#53f9de"><b>asSize</b></a> () </div>
+<li><div class="fn">QColor&amp; <a href="#d4c8c5"><b>asColor</b></a> () </div>
+<li><div class="fn">QPalette&amp; <a href="#81d9be"><b>asPalette</b></a> () </div>
+<li><div class="fn">QColorGroup&amp; <a href="#1581da"><b>asColorGroup</b></a> () </div>
+<li><div class="fn">QIconSet&amp; <a href="#8a44b8"><b>asIconSet</b></a> () </div>
+<li><div class="fn">QPointArray&amp; <a href="#95e164"><b>asPointArray</b></a> () </div>
+<li><div class="fn">QBitmap&amp; <a href="#6f2eab"><b>asBitmap</b></a> () </div>
+<li><div class="fn">QRegion&amp; <a href="#8e37ae"><b>asRegion</b></a> () </div>
+<li><div class="fn">QCursor&amp; <a href="#0b0158"><b>asCursor</b></a> () </div>
+<li><div class="fn">int&amp; <a href="#661337"><b>asInt</b></a> () </div>
+<li><div class="fn">uint&amp; <a href="#ae6a9a"><b>asUInt</b></a> () </div>
+<li><div class="fn">bool&amp; <a href="#4cc01a"><b>asBool</b></a> () </div>
+<li><div class="fn">double&amp; <a href="#5c41ed"><b>asDouble</b></a> () </div>
+<li><div class="fn">QValueList&lt;QVariant&gt;&amp; <a href="#e4b39f"><b>asList</b></a> () </div>
+<li><div class="fn">QMap&lt;QString, QVariant&gt;&amp; <a href="#c0c819"><b>asMap</b></a> () </div>
+<li><div class="fn">QSizePolicy&amp; <a href="#787f45"><b>asSizePolicy</b></a> () </div>
+<li><div class="fn">void <a href="#4fa057"><b>load</b></a> ( QDataStream &amp; ) </div>
+<li><div class="fn">void <a href="#a96bb4"><b>save</b></a> ( QDataStream &amp; ) const</div>
+</ul>
+<h2>Static Public Members</h2>
+<ul>
+<li><div class="fn">const char* <a href="#800071"><b>typeToName</b></a> ( Type typ ) </div>
+<li><div class="fn">Type <a href="#96fb68"><b>nameToType</b></a> ( const char * name ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+Acts like a union for the most common Qt data types.
+<p>
+Since C++ forbids unions from including types that have non-default
+constructors or destructors, most interesting Qt classes cannot be
+used in unions.  This is a problem when using <a href="qobject.html#d1c761">QObject::property</a>(),
+among other things.
+<p>This class provides union functionality for property() and most
+other needs that might be solved by a union including e.g. <a href="qwidget.html">QWidget</a>.
+<p>A QVariant object can hold any one <a href="#8196d7">type</a>() at a time, and you can
+find out what type it holds, convert it to a different type using
+e.g. <a href="#53f9de">asSize</a>(), get its value using e.g. <a href="#b0883e">toSize</a>(), and check whether
+the type can be converted to e.g. <a href="qsize.html">QSize</a> using <a href="#4ccf65">canCast</a>().
+<p>The methods named toT() (for any supported T, see the <a href="#Type">Type</a>
+documentation for a list) are const. If you ask for the stored type,
+they return a copy of the stored object.  If you ask for a type
+which can be generated from the stored type, toT() copies and
+converts, and leaves the object itself unchanged.  If you ask for a
+type that cannot be generated from the stored type, the result
+depends on the type, see the function documentation for details.
+<p>Note that three data types supported by QVariant are explicitly
+shared, namely <a href="qimage.html">QImage</a>, <a href="qpointarray.html">QPointArray</a>, and <a href="qcstring.html">QCString</a>, and in these cases
+the toT() methods return a shallow copy.  In almost all cases, you
+must make a deep copy of the returned values before modifying them.
+<p>The methods named asT() are not const. They do conversion like toT()
+methods, set the variant to hold the converted value, and return a
+reference to the new contents of the variant.
+<p>Here is some example code to demonstrate use of QVariant:
+<p><pre>    <a href="qdatastream.html">QDataStream</a> out(...);
+    <a href="qvariant.html">QVariant</a> v(123);          // The variant now contains an int
+    int x = v.<a href="#60b9a1">toInt</a>();        // x = 123
+    out &lt;&lt; v;                 // Writes a type tag and an int to out
+    v = QVariant("hello");    // The variant now contains a QCString
+    v = QVariant(tr("hello"));// The variant now contains a QString
+    int y = v.<a href="#60b9a1">toInt</a>();        // y = 0 since v cannot be converted to an int
+    <a href="qstring.html">QString</a> s = v.<a href="#5426be">toString</a>(); // s = tr("hello")  (see QObject::tr())
+    out &lt;&lt; v;                 // Writes a type tag and a QString to out
+    ...
+    <a href="qdatastream.html">QDataStream</a> in(...);      // (opening the previously written stream)
+    in &gt;&gt; v;                  // Reads an Int variant
+    int z = v.<a href="#60b9a1">toInt</a>();        // z = 123
+    <a href="qapplication.html#3db6b2">qDebug</a>("Type is %s",      // prints "Type is int"
+      v.<a href="#9e1307">typeName</a>());
+    v.<a href="#661337">asInt</a>() += 100;         // The variant now hold the value 223.
+    v = QVariant( <a href="qstringlist.html">QStringList</a>() );
+    v.<a href="#5a07d2">asStringList</a>().append( "Hallo" );
+</pre>
+<p>You can even have a <a href="qvaluelist.html">QValueList</a><QVariant> stored in the variant -
+giving arbitrarily complex data values with lists of variants, some
+of which are strings while others are integers and other still are
+lists of lists of lists of variants.  This is very powerful, and you
+can easily shoot yourself in the foot with all this power.  Caveat
+programmor.
+
+<hr><h2>Member Type Documentation</h2>
+<h3 class="fn"><a name="Type">QVariant::Type</a></h3>
+This enum type defines the types of variable that a QVariant can
+contain.  The supported enum values and the associated types are: <ul>
+<li> <code>Invalid</code> - no type
+<li> <code>List</code> - a <a href="qvaluelist.html">QValueList</a><QVariant>
+<li> <code>Map</code> - a <a href="qmap.html">QMap</a><QString,QVariant>
+<li> <code>String</code> - a <a href="qstring.html">QString</a>
+<li> <code>StringList</code> - a <a href="qstringlist.html">QStringList</a>
+<li> <code>Font</code> - a <a href="qfont.html">QFont</a>
+<li> <code>Pixmap</code> - a <a href="qpixmap.html">QPixmap</a>
+<li> <code>Brush</code> - a <a href="qbrush.html">QBrush</a>
+<li> <code>Rect</code> - a <a href="qrect.html">QRect</a>
+<li> <code>Size</code> - a <a href="qsize.html">QSize</a>
+<li> <code>Color</code> - a <a href="qcolor.html">QColor</a>
+<li> <code>Palette</code> - a <a href="qpalette.html">QPalette</a>
+<li> <code>ColorGroup</code> - a <a href="qcolorgroup.html">QColorGroup</a>
+<li> <code>IconSet</code> - a <a href="qiconset.html">QIconSet</a>
+<li> <code>Point</code> - a <a href="qpoint.html">QPoint</a>
+<li> <code>Image</code> - a <a href="qimage.html">QImage</a>
+<li> <code>Int</code> - an int
+<li> <code>UInt</code> - an unsigned int
+<li> <code>Bool</code> - a bool
+<li> <code>Double</code> - a doublea
+<li> <code>CString</code> - a <a href="qcstring.html">QCString</a>
+<li> <code>PointArray</code> - a <a href="qpointarray.html">QPointArray</a>
+<li> <code>Region</code> - a <a href="qregion.html">QRegion</a>
+<li> <code>Bitmap</code> - a <a href="qbitmap.html">QBitmap</a>
+<li> <code>Cursor</code> - a <a href="qcursor.html">QCursor</a>
+<li> <code>SizePolicy</code> - a <a href="qsizepolicy.html">QSizePolicy</a>
+<p></ul>
+<p>Note that Qt's definition of bool depends on the compiler.
+<a href="qglobal-h.html">qglobal.h</a> has the system-dependent definition of bool.
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="0c2f9f"></a>QVariant::QVariant ()</h3>
+<p>Constructs an invalid variant.
+<h3 class="fn"><a name="945e57"></a>QVariant::QVariant ( <a href="qdatastream.html">QDataStream</a> &amp; s )</h3>
+<p>Reads the variant from the data stream.
+<h3 class="fn"><a name="b69b53"></a>QVariant::QVariant ( <a href="qsizepolicy.html">QSizePolicy</a> val )</h3>
+<p>Constructs a new variant with a size policy value.
+<h3 class="fn"><a name="49aa35"></a>QVariant::QVariant ( bool val, int )</h3>
+<p>Constructs a new variant with a boolean value. The integer argument
+is a dummy, necessary for compatibility with certain compiler that
+even its mother cannot love.
+<h3 class="fn"><a name="1bfafc"></a>QVariant::QVariant ( const <a href="qbitmap.html">QBitmap</a> &amp; val )</h3>
+<p>Constructs a new variant with a bitmap value.
+<h3 class="fn"><a name="539895"></a>QVariant::QVariant ( const <a href="qbrush.html">QBrush</a> &amp; val )</h3>
+<p>Constructs a new variant with a brush value.
+<h3 class="fn"><a name="74976f"></a>QVariant::QVariant ( const <a href="qcolor.html">QColor</a> &amp; val )</h3>
+<p>Constructs a new variant with a color value.
+<h3 class="fn"><a name="639ca4"></a>QVariant::QVariant ( const <a href="qcolorgroup.html">QColorGroup</a> &amp; val )</h3>
+<p>Constructs a new variant with a color group value.
+<h3 class="fn"><a name="caa2ac"></a>QVariant::QVariant ( const <a href="qcstring.html">QCString</a> &amp; val )</h3>
+<p>Constructs a new variant with a c-string value.
+<p>If you want to modify the <a href="qcstring.html">QCString</a> you pass to this constructor
+after this call, we recommend passing a deep copy (see
+<a href="qcstring.html#60bcfc">QCString::copy</a>()).
+<h3 class="fn"><a name="664a1b"></a>QVariant::QVariant ( const <a href="qcursor.html">QCursor</a> &amp; val )</h3>
+<p>Constructs a new variant with a cursor value.
+<h3 class="fn"><a name="6ea459"></a>QVariant::QVariant ( const <a href="qfont.html">QFont</a> &amp; val )</h3>
+<p>Constructs a new variant with a font value.
+<h3 class="fn"><a name="6578a0"></a>QVariant::QVariant ( const <a href="qiconset.html">QIconSet</a> &amp; val )</h3>
+<p>Constructs a new variant with an icon set value.
+<h3 class="fn"><a name="0811eb"></a>QVariant::QVariant ( const <a href="qimage.html">QImage</a> &amp; val )</h3>
+<p>Constructs a new variant with an image value.
+<p>Since <a href="qimage.html">QImage</a> is explicitly shared you may need to pass a deep copy
+to the variant using <a href="qimage.html#1bb0d4">QImage::copy</a>().
+<h3 class="fn"><a name="df0a8b"></a>QVariant::QVariant ( const <a href="qmap.html">QMap</a>&lt;<a href="qstring.html">QString</a>,QVariant&gt; &amp; val )</h3>
+<p>Constructs a new variant with a map of QVariants.
+<h3 class="fn"><a name="3da519"></a>QVariant::QVariant ( const <a href="qpalette.html">QPalette</a> &amp; val )</h3>
+<p>Constructs a new variant with a color palette value.
+<h3 class="fn"><a name="5e1bf3"></a>QVariant::QVariant ( const <a href="qpixmap.html">QPixmap</a> &amp; val )</h3>
+<p>Constructs a new variant with a pixmap value.
+<h3 class="fn"><a name="d6f864"></a>QVariant::QVariant ( const <a href="qpoint.html">QPoint</a> &amp; val )</h3>
+<p>Constructs a new variant with a point value.
+<h3 class="fn"><a name="7913d8"></a>QVariant::QVariant ( const <a href="qpointarray.html">QPointArray</a> &amp; val )</h3>
+<p>Constructs a new variant with an point array value.
+<p>Since <a href="qpointarray.html">QPointArray</a> is explicitly shared you may need to pass a deep copy
+to the variant using <a href="qpointarray.html#1b87f6">QPointArray::copy</a>().
+<h3 class="fn"><a name="774b91"></a>QVariant::QVariant ( const <a href="qrect.html">QRect</a> &amp; val )</h3>
+<p>Constructs a new variant with a rect value.
+<h3 class="fn"><a name="4f7d55"></a>QVariant::QVariant ( const <a href="qregion.html">QRegion</a> &amp; val )</h3>
+<p>Constructs a new variant with a region.
+<h3 class="fn"><a name="765d72"></a>QVariant::QVariant ( const <a href="qsize.html">QSize</a> &amp; val )</h3>
+<p>Constructs a new variant with a size value.
+<h3 class="fn"><a name="13e23e"></a>QVariant::QVariant ( const <a href="qstring.html">QString</a> &amp; val )</h3>
+<p>Constructs a new variant with a string value.
+<h3 class="fn"><a name="d384ed"></a>QVariant::QVariant ( const <a href="qstringlist.html">QStringList</a> &amp; val )</h3>
+<p>Constructs a new variant with a string list value.
+<h3 class="fn"><a name="c86c8f"></a>QVariant::QVariant ( const <a href="qvaluelist.html">QValueList</a>&lt;QVariant&gt; &amp; val )</h3>
+<p>Constructs a new variant with a list value.
+<h3 class="fn"><a name="a9dd87"></a>QVariant::QVariant ( const QVariant &amp; p )</h3>
+<p>Constructs a copy of the variant passed as argument to this
+constructor. Usually this is a deep copy, but if the stored data
+type is explicit shared then a shallow copy is made.
+<h3 class="fn"><a name="45e17b"></a>QVariant::QVariant ( const char * val )</h3>
+<p>Constructs a new variant with a c-string value, if <em>val</em> is
+non-null.  The variant creates a deep copy of <em>val.</em>
+<p>If <em>val</em> is null, the resulting variant has type Invalid.
+<h3 class="fn"><a name="d68143"></a>QVariant::QVariant ( double val )</h3>
+<p>Constructs a new variant with a floating point value.
+<h3 class="fn"><a name="368bab"></a>QVariant::QVariant ( int val )</h3>
+<p>Constructs a new variant with an integer value.
+<h3 class="fn"><a name="3862d2"></a>QVariant::QVariant ( uint val )</h3>
+<p>Constructs a new variant with an unsigned integer value.
+<h3 class="fn"><a name="309b48"></a>QVariant::~QVariant ()</h3>
+<p>Destructs the QVariant and the contained object.
+<p>Note that subclasses that re-implement <a href="#4659a3">clear</a>() should reimplement
+the destructor to call clear().  This destructor calls clear(), but
+since it is the destructor, <a href="#4659a3">QVariant::clear</a>() is called rather than
+any subclass.
+<h3 class="fn"><a href="qbitmap.html">QBitmap</a>&amp; <a name="6f2eab"></a>QVariant::asBitmap ()</h3>
+<p>Tries to convert the variant to hold a bitmap value. If that
+is not possible then the variant is set to a null bitmap.
+<p>Returns a reference to the stored bitmap.
+<p>See also  <a href="#476835">toBitmap</a>().
+<h3 class="fn">bool&amp; <a name="4cc01a"></a>QVariant::asBool ()</h3>
+<p>Returns the variant's value as bool reference.
+<h3 class="fn"><a href="qbrush.html">QBrush</a>&amp; <a name="322fc5"></a>QVariant::asBrush ()</h3>
+<p>Tries to convert the variant to hold a brush value. If that
+is not possible then the variant is set to a default black brush.
+<p>Returns a reference to the stored brush.
+<p>See also  <a href="#e3aebe">toBrush</a>().
+<h3 class="fn"><a href="qcstring.html">QCString</a>&amp; <a name="992d98"></a>QVariant::asCString ()</h3>
+<p>Tries to convert the variant to hold a string value. If that
+is not possible then the variant is set to an empty string.
+<p>Returns a reference to the stored string.
+<p>See also  <a href="#084552">toCString</a>().
+<h3 class="fn"><a href="qcolor.html">QColor</a>&amp; <a name="d4c8c5"></a>QVariant::asColor ()</h3>
+<p>Tries to convert the variant to hold a <a href="qcolor.html">QColor</a> value. If that
+is not possible then the variant is set to an invalid color.
+<p>Returns a reference to the stored color.
+<p>See also  <a href="#f93262">toColor</a>() and <a href="qcolor.html#f7352b">QColor::isValid</a>().
+<h3 class="fn"><a href="qcolorgroup.html">QColorGroup</a>&amp; <a name="1581da"></a>QVariant::asColorGroup ()</h3>
+<p>Tries to convert the variant to hold a <a href="qcolorgroup.html">QColorGroup</a> value. If that
+is not possible then the variant is set to a color group with all colors
+set to black.
+<p>Returns a reference to the stored color group.
+<p>See also  <a href="#48889d">toColorGroup</a>().
+<h3 class="fn"><a href="qcursor.html">QCursor</a>&amp; <a name="0b0158"></a>QVariant::asCursor ()</h3>
+<p>Tries to convert the variant to hold a <a href="qcursor.html">QCursor</a> value. If that
+is not possible then the variant is set to a default arrow cursor.
+<p>Returns a reference to the stored cursor.
+<p>See also  <a href="#866704">toCursor</a>().
+<h3 class="fn">double&amp; <a name="5c41ed"></a>QVariant::asDouble ()</h3>
+<p>Returns the variant's value as double reference.
+<h3 class="fn"><a href="qfont.html">QFont</a>&amp; <a name="f2d6ac"></a>QVariant::asFont ()</h3>
+<p>Tries to convert the variant to hold a <a href="qfont.html">QFont</a>. If that
+is not possible then the variant is set to a default font.
+<p>Returns a reference to the stored font.
+<p>See also  <a href="#56d093">toFont</a>().
+<h3 class="fn"><a href="qiconset.html">QIconSet</a>&amp; <a name="8a44b8"></a>QVariant::asIconSet ()</h3>
+<p>Tries to convert the variant to hold a <a href="qiconset.html">QIconSet</a> value. If that
+is not possible then the variant is set to an empty iconset.
+<p>Returns a reference to the stored iconset.
+<p>See also  <a href="#bb2dbe">toIconSet</a>().
+<h3 class="fn"><a href="qimage.html">QImage</a>&amp; <a name="34b17c"></a>QVariant::asImage ()</h3>
+<p>Tries to convert the variant to hold an image value. If that
+is not possible then the variant is set to a null image.
+<p>Returns a reference to the stored image.
+<p>See also  <a href="#ffa107">toImage</a>().
+<h3 class="fn">int&amp; <a name="661337"></a>QVariant::asInt ()</h3>
+<p>Returns the variant's value as int reference.
+<h3 class="fn"><a href="qvaluelist.html">QValueList</a>&lt;QVariant&gt;&amp; <a name="e4b39f"></a>QVariant::asList ()</h3>
+<p>Returns the variant's value as variant list reference.
+<h3 class="fn"><a href="qmap.html">QMap</a>&lt;<a href="qstring.html">QString</a>, QVariant&gt;&amp; <a name="c0c819"></a>QVariant::asMap ()</h3>
+<p>Returns the variant's value as variant map reference.
+<h3 class="fn"><a href="qpalette.html">QPalette</a>&amp; <a name="81d9be"></a>QVariant::asPalette ()</h3>
+<p>Tries to convert the variant to hold a <a href="qpalette.html">QPalette</a> value. If that
+is not possible then the variant is set to a palette with black colors only.
+<p>Returns a reference to the stored palette.
+<p>See also  <a href="#5426be">toString</a>().
+<h3 class="fn"><a href="qpixmap.html">QPixmap</a>&amp; <a name="07429d"></a>QVariant::asPixmap ()</h3>
+<p>Tries to convert the variant to hold a pixmap value. If that
+is not possible then the variant is set to a null pixmap.
+<p>Returns a reference to the stored pixmap.
+<p>See also  <a href="#462574">toPixmap</a>().
+<h3 class="fn"><a href="qpoint.html">QPoint</a>&amp; <a name="2e4245"></a>QVariant::asPoint ()</h3>
+<p>Tries to convert the variant to hold a point value. If that
+is not possible then the variant is set to a null point.
+<p>Returns a reference to the stored point.
+<p>See also  <a href="#edca08">toPoint</a>().
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a>&amp; <a name="95e164"></a>QVariant::asPointArray ()</h3>
+<p>Tries to convert the variant to hold a <a href="qpointarray.html">QPointArray</a> value. If that
+is not possible then the variant is set to an empty point array.
+<p>Returns a reference to the stored point array.
+<p>See also  <a href="#6f585a">toPointArray</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a>&amp; <a name="54717f"></a>QVariant::asRect ()</h3>
+<p>Tries to convert the variant to hold a rectangle value. If that
+is not possible then the variant is set to an empty rectangle.
+<p>Returns a reference to the stored rectangle.
+<p>See also  <a href="#d01bf0">toRect</a>().
+<h3 class="fn"><a href="qregion.html">QRegion</a>&amp; <a name="8e37ae"></a>QVariant::asRegion ()</h3>
+<p>Tries to convert the variant to hold a <a href="qregion.html">QRegion</a> value. If that
+is not possible then the variant is set to a null region.
+<p>Returns a reference to the stored region.
+<p>See also  <a href="#79c750">toRegion</a>().
+<h3 class="fn"><a href="qsize.html">QSize</a>&amp; <a name="53f9de"></a>QVariant::asSize ()</h3>
+<p>Tries to convert the variant to hold a <a href="qsize.html">QSize</a> value. If that
+is not possible then the variant is set to an invalid size.
+<p>Returns a reference to the stored size.
+<p>See also  <a href="#b0883e">toSize</a>() and <a href="qsize.html#fb07e1">QSize::isValid</a>().
+<h3 class="fn"><a href="qsizepolicy.html">QSizePolicy</a>&amp; <a name="787f45"></a>QVariant::asSizePolicy ()</h3>
+<p>Tries to convert the variant to hold a <a href="qsizepolicy.html">QSizePolicy</a> value.  If that
+fails, the variant is set to an arbitrary size policy.
+<h3 class="fn"><a href="qstring.html">QString</a>&amp; <a name="7e2926"></a>QVariant::asString ()</h3>
+<p>Tries to convert the variant to hold a string value. If that
+is not possible then the variant is set to an empty string.
+<p>Returns a reference to the stored string.
+<p>See also  <a href="#5426be">toString</a>().
+<h3 class="fn"><a href="qstringlist.html">QStringList</a>&amp; <a name="5a07d2"></a>QVariant::asStringList ()</h3>
+<p>Tries to convert the variant to hold a <a href="qstringlist.html">QStringList</a> value. If that
+is not possible then the variant is set to an empty string list.
+<p>Returns a reference to the stored string list.
+<p>See also  <a href="#30009b">toStringList</a>().
+<h3 class="fn">uint&amp; <a name="ae6a9a"></a>QVariant::asUInt ()</h3>
+<p>Returns the variant's value as unsigned int reference.
+<h3 class="fn">bool <a name="4ccf65"></a>QVariant::canCast ( <a href="qvariant.html#Type">Type</a> t ) const</h3>
+<p>Returns TRUE if the current type of the variant can be cast to
+the requested type. Such casting is done automatically when calling
+the <a href="#60b9a1">toInt</a>(), <a href="#d5a870">toBool</a>(), ... or <a href="#661337">asInt</a>(), <a href="#4cc01a">asBool</a>(), ... methods.
+<p>The following casts are done automatically:
+<ul>
+<li> Bool -> Double, Int, UInt
+<li> Double -> Int, Bool, UInt
+<li> Int -> Double, Bool, UInt
+<li> UInt -> Double, Bool, Int
+<li> String -> CString
+<li> CString -> String
+<li> List -> StringList (if the list contains strings or something
+that can be cast to a string).
+<li> StringList -> List
+</ul>
+<h3 class="fn">void <a name="4659a3"></a>QVariant::clear ()</h3>
+<p>Convert this variant to type Invalid and free up any resources
+used.
+<h3 class="fn">bool <a name="83b746"></a>QVariant::isValid () const</h3>
+<p>Returns TRUE if the storage type of this variant is not QVariant::Invalid.
+<h3 class="fn"><a href="qvaluelistconstiterator.html">QValueListConstIterator</a>&lt;QVariant&gt; <a name="6b77e5"></a>QVariant::listBegin () const</h3>
+<p>Returns an iterator to the first item in the list, if the
+variant's type is appropriate, or else a null iterator.
+<h3 class="fn"><a href="qvaluelistconstiterator.html">QValueListConstIterator</a>&lt;QVariant&gt; <a name="132659"></a>QVariant::listEnd () const</h3>
+<p>Returns the end iterator for the list, if the variant's type is
+appropriate, or else a null iterator.
+<h3 class="fn">void <a name="4fa057"></a>QVariant::load ( <a href="qdatastream.html">QDataStream</a> &amp; s )</h3>
+<p>Internal function for loading a variant. Use the stream operators
+instead.
+<h3 class="fn"><a href="qmapconstiterator.html">QMapConstIterator</a>&lt;<a href="qstring.html">QString</a>, QVariant&gt; <a name="1d6d96"></a>QVariant::mapBegin () const</h3>
+<p>Returns an iterator to the first item in the map, if the
+variant's type is appropriate, or else a null iterator.
+<h3 class="fn"><a href="qmapconstiterator.html">QMapConstIterator</a>&lt;<a href="qstring.html">QString</a>, QVariant&gt; <a name="8d3b3d"></a>QVariant::mapEnd () const</h3>
+<p>Returns the end iterator for the map, if the variant's type is
+appropriate, or else a null iterator.
+<h3 class="fn"><a href="qmapconstiterator.html">QMapConstIterator</a>&lt;<a href="qstring.html">QString</a>, QVariant&gt; <a name="7b5d04"></a>QVariant::mapFind ( const <a href="qstring.html">QString</a> &amp; key ) const</h3>
+<p>Returns an iterator to the item in the map with <em>key</em> as key, if the
+variant's type is appropriate and <em>key</em> is a valid key, or else a
+null iterator.
+<h3 class="fn">QVariant::Type <a name="96fb68"></a>QVariant::nameToType( const char * name ) <code>[static]</code></h3>
+<p>Converts the string representation of the storage type to
+its enum representation.
+<p>If the string representation cannot be converted to any enum
+representation, the variant is set to <code>Invalid.</code>
+<h3 class="fn">bool <a name="48b974"></a>QVariant::operator!= ( const QVariant &amp; v ) const</h3>
+<p>Compares this QVariant with <em>v</em> and returns TRUE if they are
+not equal, FALSE otherwise.
+<h3 class="fn">QVariant&amp; <a name="8aa5fa"></a>QVariant::operator= ( const QVariant &amp; variant )</h3>
+<p>Assigns the value of some <em>other</em> variant to this variant.
+<p>This is a deep copy of the variant, but note that if the variant
+holds an explicitly shared type such as <a href="qimage.html">QImage</a>, it is a shallow copy
+of the (e.g.) QImage.
+<h3 class="fn">bool <a name="47f728"></a>QVariant::operator== ( const QVariant &amp; v ) const</h3>
+<p>Compares this QVariant with <em>v</em> and returns TRUE if they are
+equal, FALSE otherwise.
+<h3 class="fn">void <a name="a96bb4"></a>QVariant::save ( <a href="qdatastream.html">QDataStream</a> &amp; s ) const</h3>
+<p>Internal function for saving a variant. Use the stream operators
+instead.
+<h3 class="fn"><a href="qvaluelistconstiterator.html">QValueListConstIterator</a>&lt;<a href="qstring.html">QString</a>&gt; <a name="2a8e53"></a>QVariant::stringListBegin () const</h3>
+<p>Returns an iterator to the first string in the list, if the
+variant's type is StringList, or else a null iterator.
+<h3 class="fn"><a href="qvaluelistconstiterator.html">QValueListConstIterator</a>&lt;<a href="qstring.html">QString</a>&gt; <a name="83e7d9"></a>QVariant::stringListEnd () const</h3>
+<p>Returns the end iterator for the list, if the variant's type is
+StringList, or else a null iterator.
+<h3 class="fn">const <a href="qbitmap.html">QBitmap</a> <a name="476835"></a>QVariant::toBitmap () const</h3>
+<p>Returns the variant as a <a href="qbitmap.html">QBitmap</a> if the variant has <a href="#8196d7">type</a>()
+Bitmap, or a null QBitmap otherwise.
+<p>See also  <a href="#6f2eab">asBitmap</a>().
+<h3 class="fn">bool <a name="d5a870"></a>QVariant::toBool () const</h3>
+<p>Returns the variant as a bool if the variant has <a href="#8196d7">type</a>()
+Bool, or FALSE otherwise. The only exceptions to this rule are
+the types Int, UInt, Double. In this case TRUE is returned if the numerical
+value is not zero or FALSE otherwise.
+<p>See also  <a href="#4cc01a">asBool</a>().
+<h3 class="fn">const <a href="qbrush.html">QBrush</a> <a name="e3aebe"></a>QVariant::toBrush () const</h3>
+<p>Returns the variant as a <a href="qbrush.html">QBrush</a> if the variant has <a href="#8196d7">type</a>()
+Brush, or a default brush (with all black colors) otherwise.
+<p>See also  <a href="#322fc5">asBrush</a>().
+<h3 class="fn">const <a href="qcstring.html">QCString</a> <a name="084552"></a>QVariant::toCString () const</h3>
+<p>Returns the variant as a <a href="qcstring.html">QCString</a> if the variant has <a href="#8196d7">type</a>()
+CString, or a 0 otherwise.
+<p>See also  <a href="#992d98">asCString</a>().
+<h3 class="fn">const <a href="qcolor.html">QColor</a> <a name="f93262"></a>QVariant::toColor () const</h3>
+<p>Returns the variant as a <a href="qcolor.html">QColor</a> if the variant has <a href="#8196d7">type</a>()
+Color, or an invalid color otherwise.
+<p>See also  <a href="#d4c8c5">asColor</a>().
+<h3 class="fn">const <a href="qcolorgroup.html">QColorGroup</a> <a name="48889d"></a>QVariant::toColorGroup () const</h3>
+<p>Returns the variant as a <a href="qcolorgroup.html">QColorGroup</a> if the variant has <a href="#8196d7">type</a>()
+ColorGroup, or a completely black color group otherwise.
+<p>See also  <a href="#1581da">asColorGroup</a>().
+<h3 class="fn">const <a href="qcursor.html">QCursor</a> <a name="866704"></a>QVariant::toCursor () const</h3>
+<p>Returns the variant as a <a href="qcursor.html">QCursor</a> if the variant has <a href="#8196d7">type</a>()
+Cursor, or the default arrow cursor otherwise.
+<p>See also  <a href="#0b0158">asCursor</a>().
+<h3 class="fn">double <a name="96e514"></a>QVariant::toDouble () const</h3>
+<p>Returns the variant as a double if the variant has <a href="#8196d7">type</a>()
+Double, Int, UInt or Bool, or 0.0 otherwise.
+<p>See also  <a href="#5c41ed">asDouble</a>().
+<h3 class="fn">const <a href="qfont.html">QFont</a> <a name="56d093"></a>QVariant::toFont () const</h3>
+<p>Returns the variant as a <a href="qfont.html">QFont</a> if the variant has <a href="#8196d7">type</a>()
+Font, or the default font otherwise.
+<p>See also  <a href="#f2d6ac">asFont</a>().
+<h3 class="fn">const <a href="qiconset.html">QIconSet</a> <a name="bb2dbe"></a>QVariant::toIconSet () const</h3>
+<p>Returns the variant as a <a href="qiconset.html">QIconSet</a> if the variant has <a href="#8196d7">type</a>()
+IconSet, or an icon set of null pixmaps otherwise.
+<p>See also  <a href="#8a44b8">asIconSet</a>().
+<h3 class="fn">const <a href="qimage.html">QImage</a> <a name="ffa107"></a>QVariant::toImage () const</h3>
+<p>Returns the variant as a <a href="qimage.html">QImage</a> if the variant has <a href="#8196d7">type</a>()
+Image, or a null image otherwise.
+<p>See also  <a href="#34b17c">asImage</a>().
+<h3 class="fn">int <a name="60b9a1"></a>QVariant::toInt () const</h3>
+<p>Returns the variant as an int if the variant has <a href="#8196d7">type</a>()
+Int, UInt, Double or Bool, or 0 otherwise.
+<p>See also  <a href="#661337">asInt</a>().
+<h3 class="fn">const <a href="qvaluelist.html">QValueList</a>&lt;QVariant&gt; <a name="d15e4b"></a>QVariant::toList () const</h3>
+<p>Returns the variant as a <a href="qvaluelist.html">QValueList</a><QVariant> if the variant has <a href="#8196d7">type</a>()
+List or StringList, or an empty list otherwise.
+<p>See also  <a href="#e4b39f">asList</a>().
+<h3 class="fn">const <a href="qmap.html">QMap</a>&lt;<a href="qstring.html">QString</a>, QVariant&gt; <a name="adc59d"></a>QVariant::toMap () const</h3>
+<p>Returns the variant as a <a href="qmap.html">QMap</a><QString,QVariant> if the variant has <a href="#8196d7">type</a>()
+Map, or an empty map otherwise.
+<p>See also  <a href="#c0c819">asMap</a>().
+<h3 class="fn">const <a href="qpalette.html">QPalette</a> <a name="95c8fb"></a>QVariant::toPalette () const</h3>
+<p>Returns the variant as a <a href="qpalette.html">QPalette</a> if the variant has <a href="#8196d7">type</a>()
+Palette, or a completely black palette otherwise.
+<p>See also  <a href="#81d9be">asPalette</a>().
+<h3 class="fn">const <a href="qpixmap.html">QPixmap</a> <a name="462574"></a>QVariant::toPixmap () const</h3>
+<p>Returns the variant as a <a href="qpixmap.html">QPixmap</a> if the variant has <a href="#8196d7">type</a>()
+Pixmap, or a null pixmap otherwise.
+<p>See also  <a href="#07429d">asPixmap</a>().
+<h3 class="fn">const <a href="qpoint.html">QPoint</a> <a name="edca08"></a>QVariant::toPoint () const</h3>
+<p>Returns the variant as a <a href="qpoint.html">QPoint</a> if the variant has <a href="#8196d7">type</a>()
+Point, or a the point (0,0) otherwise.
+<p>See also  <a href="#2e4245">asPoint</a>().
+<h3 class="fn">const <a href="qpointarray.html">QPointArray</a> <a name="6f585a"></a>QVariant::toPointArray () const</h3>
+<p>Returns the variant as a <a href="qpointarray.html">QPointArray</a> if the variant has <a href="#8196d7">type</a>()
+PointArray, or an empty QPointArray otherwise.
+<p>See also  <a href="#95e164">asPointArray</a>().
+<h3 class="fn">const <a href="qrect.html">QRect</a> <a name="d01bf0"></a>QVariant::toRect () const</h3>
+<p>Returns the variant as a <a href="qrect.html">QRect</a> if the variant has <a href="#8196d7">type</a>()
+Rect, or an empty rectangle otherwise.
+<p>See also  <a href="#54717f">asRect</a>().
+<h3 class="fn">const <a href="qregion.html">QRegion</a> <a name="79c750"></a>QVariant::toRegion () const</h3>
+<p>Returns the variant as a <a href="qregion.html">QRegion</a> if the variant has <a href="#8196d7">type</a>()
+Region, or an empty QRegion otherwise.
+<p>See also  <a href="#8e37ae">asRegion</a>().
+<h3 class="fn">const <a href="qsize.html">QSize</a> <a name="b0883e"></a>QVariant::toSize () const</h3>
+<p>Returns the variant as a <a href="qsize.html">QSize</a> if the variant has <a href="#8196d7">type</a>()
+Size, or an invalid size otherwise.
+<p>See also  <a href="#53f9de">asSize</a>().
+<h3 class="fn"><a href="qsizepolicy.html">QSizePolicy</a> <a name="03166c"></a>QVariant::toSizePolicy () const</h3>
+<p>Returns the variant as a <a href="qsizepolicy.html">QSizePolicy</a> if the variant has <a href="#8196d7">type</a>()
+SizePolicy, or an undefined but legal size policy else.
+<h3 class="fn">const <a href="qstring.html">QString</a> <a name="5426be"></a>QVariant::toString () const</h3>
+<p>Returns the variant as a <a href="qstring.html">QString</a> if the variant has <a href="#8196d7">type</a>()
+String or CString, or QString::null otherwise.
+<p>See also  <a href="#7e2926">asString</a>().
+<h3 class="fn">const <a href="qstringlist.html">QStringList</a> <a name="30009b"></a>QVariant::toStringList () const</h3>
+<p>Returns the variant as a <a href="qstringlist.html">QStringList</a> if the variant has <a href="#8196d7">type</a>()
+StringList or List of a type that can be converted to <a href="qstring.html">QString</a>, or an
+empty list otherwise.
+<p>See also  <a href="#5a07d2">asStringList</a>().
+<h3 class="fn">uint <a name="4f471c"></a>QVariant::toUInt () const</h3>
+<p>Returns the variant as an unsigned int if the variant has <a href="#8196d7">type</a>()
+UInt, Int, Double or Bool, or 0 otherwise.
+<p>See also  <a href="#ae6a9a">asUInt</a>().
+<h3 class="fn"><a href="qvariant.html#Type">Type</a> <a name="8196d7"></a>QVariant::type () const</h3>
+<p>Returns the storage type of the value stored in the variant. Usually
+it's best to test with <a href="#4ccf65">canCast</a>() wether the variant can deliver the
+data type you are interested in.
+<h3 class="fn">const char* <a name="9e1307"></a>QVariant::typeName () const</h3>
+<p>Returns the name of the type stored in the variant.
+The returned strings describe the C++ datatype used to store the
+data, for example "<a href="qfont.html">QFont</a>", "<a href="qstring.html">QString</a>" or "<a href="qvaluelist.html">QValueList</a><QVariant>".
+An Invalid variant returns 0.
+<h3 class="fn">const char* <a name="800071"></a>QVariant::typeToName ( <a href="qvariant.html#Type">Type</a> typ ) <code>[static]</code></h3>
+<p>Converts the enum representation of the storage type to its
+string representation.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

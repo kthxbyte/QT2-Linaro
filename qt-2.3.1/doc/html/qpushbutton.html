@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QPushButton Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QPushButton Class Reference</h1><br clear="all">
+<p>
+The QPushButton widget provides a command button.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qpushbutton-h.html">qpushbutton.h</a>&gt;</code>
+<p>
+Inherits <a href="qbutton.html">QButton</a>.
+<p><a href="qpushbutton-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#a5731d"><b>QPushButton</b></a> ( QWidget * parent, const char * name=0 ) </div>
+<li><div class="fn"><a href="#7f6944"><b>QPushButton</b></a> ( const QString &amp; text, QWidget * parent, const char * name=0 ) </div>
+<li><div class="fn"><a href="#941ec1"><b>QPushButton</b></a> ( const QIconSet &amp; icon, const QString &amp; text, QWidget * parent, const char * name=0 ) </div>
+<li><div class="fn"><a href="#902c73"><b>~QPushButton</b></a> () </div>
+<li><div class="fn">virtual void <a href="#792138"><b>setToggleButton</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#b17f36"><b>autoDefault</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#b242a2"><b>setAutoDefault</b></a> ( bool autoDef ) </div>
+<li><div class="fn">bool <a href="#f0bb63"><b>isDefault</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#02a9e1"><b>setDefault</b></a> ( bool def ) </div>
+<li><div class="fn">virtual void setIsMenuButton ( bool ) <em>(obsolete)</em></div>
+<li><div class="fn">bool isMenuButton () const <em>(obsolete)</em></div>
+<li><div class="fn">void <a href="#22d3ac"><b>setPopup</b></a> ( QPopupMenu * popup ) </div>
+<li><div class="fn">QPopupMenu* <a href="#4ee80d"><b>popup</b></a> () const</div>
+<li><div class="fn">void <a href="#9e3100"><b>setIconSet</b></a> ( const QIconSet &amp; ) </div>
+<li><div class="fn">QIconSet* <a href="#a2fd21"><b>iconSet</b></a> () const</div>
+<li><div class="fn">void <a href="#0014e9"><b>setFlat</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#8c4784"><b>isFlat</b></a> () const</div>
+</ul>
+<h2>Public Slots</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#280d7b"><b>setOn</b></a> ( bool ) </div>
+<li><div class="fn">void <a href="#c683eb"><b>toggle</b></a> () </div>
+</ul>
+<h2>Important Inherited Members</h2>
+<ul>
+<li><div class="fn">QString <a href="qbutton.html#7bda4b"><b>text</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#58c887"><b>setText</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">QString <a href="qbutton.html#7bda4b"><b>text</b></a> () const</div>
+<li><div class="fn">const QPixmap* <a href="qbutton.html#afefbe"><b>pixmap</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#dff0ad"><b>setPixmap</b></a> ( const QPixmap &amp; pixmap ) </div>
+<li><div class="fn">int <a href="qbutton.html#76c9b5"><b>accel</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#ceae5c"><b>setAccel</b></a> ( int key ) </div>
+<li><div class="fn">bool <a href="qbutton.html#27fa01"><b>isToggleButton</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#2ceccd"><b>setDown</b></a> ( bool enable ) </div>
+<li><div class="fn">bool <a href="qbutton.html#d0e4de"><b>isDown</b></a> () const</div>
+<li><div class="fn">bool <a href="qbutton.html#380a2c"><b>isOn</b></a> () const</div>
+<li><div class="fn">bool <a href="qbutton.html#b633c6"><b>autoRepeat</b></a> () const</div>
+<li><div class="fn">bool <a href="qbutton.html#b1945d"><b>isExclusiveToggle</b></a> () const</div>
+<li><div class="fn">QButtonGroup* <a href="qbutton.html#449ec4"><b>group</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#cb67c6"><b>setAutoRepeat</b></a> ( bool enable ) </div>
+<li><div class="fn">void <a href="#c683eb"><b>toggle</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#188321"><b>pressed</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#e9ba3e"><b>released</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#5af7e7"><b>clicked</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#2e08a9"><b>toggled</b></a> ( bool on ) </div>
+<li><div class="fn">void <a href="qbutton.html#606709"><b>stateChanged</b></a> ( int state ) </div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>bool<td>autoDefault<td>autoDefault<td>setAutoDefault<td>&nbsp;
+<tr><td>bool<td>default<td>isDefault<td>setDefault<td>&nbsp;
+<tr><td>bool<td>menuButton<td>isMenuButton<td>&nbsp;<td>&nbsp;
+<tr><td>QIconSet<td>iconSet<td>iconSet<td>setIconSet<td>&nbsp;
+<tr><td>bool<td>flat<td>isFlat<td>setFlat<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QPushButton widget provides a command button.
+<p>
+The push button, also referred to as command button, is perhaps the
+most central widget in any graphical user interface: Push it to
+command the computer to perform some action. Typical actions are Ok,
+Apply, Cancel, Close or Help.
+<p>A command button is rectangular (ca. 80x22 pixel) and typically
+displays a text label describing its action. An underscored
+character in the label, marked with an ampersand in the text,
+signals an accelerator key.
+<p>This code creates a push button labelled "Rock & Roll".  Due to the
+first ampersand, the c displays underscored and the button gets the
+automatic accelerator key, Alt-C:
+<p><pre>    <a href="qpushbutton.html">QPushButton</a> *p = new <a href="qpushbutton.html">QPushButton</a>( "Ro&amp;ck &amp;&amp; Roll", this );
+</pre>
+<p>The text can be changed anytime later with <a href="qbutton.html#58c887">setText</a>(). You can also
+define a pixmap with <a href="qbutton.html#dff0ad">setPixmap</a>(). The text/pixmap is manipulated as
+necessary to create "disabled" appearance according to the
+respective GUI style when the button is disabled. A command button
+can, in addition to the text or pixmap label, also display a little
+icon. Use the extended constructor or <a href="#9e3100">setIconSet</a>() to define this
+icon.
+<p>A push button emits the signal <a href="qbutton.html#5af7e7">clicked</a>() when it is activated,
+either with the mouse, the spacebar or a keyboard accelerator.
+Connect to this signal to perform the button's action.  Other
+signals of less importance are <a href="qbutton.html#188321">pressed</a>() when the button is pressed
+down and <a href="qbutton.html#e9ba3e">released</a>() when it is released, respectively.
+<p>Command buttons in dialogs are by default auto-default buttons,
+i.e. they become the default push button automatically when they
+receive the keyboard input focus. A default button is a command
+button that is activated when the users hits the Enter or Return key
+in a dialog. Adjust this behaviour with <a href="#b242a2">setAutoDefault</a>(). Note that
+auto-default buttons reserve a little extra space necessary to draw
+a default-button indicator. If you do not want this space around
+your buttons, call setAutoDefault( FALSE ).
+<p>Being so central, the widget has grown to accomodate a great many
+variations in the past decade, and by now the Microsoft style guide
+shows about ten different states of Windows push buttons, and the
+text implies that there are dozens more when all the combinations of
+features are taken into consideration.
+<p>The most important modes or states are, sorted roughly by importance: <ul>
+<li> Available or not ("grayed out", disabled).
+<li> Standard push button, toggling push button or menu button.
+<li> On or off (only for toggling push buttons).
+<li> Default or normal.  The default button in a dialog can
+generally be "clicked" using the Enter or Return key.
+<li> Auto-repeat or not.
+<li> Pressed down or not.
+</ul>
+<p>As a general rule, use a push button when the application or dialog
+window performs an action when the user clicks on it (like Apply,
+Cancel, Close, Help, ...) <em>and</em> when the widget is supposed to have
+a wide, rectangular shape with a text label.  Small, typically
+square buttons that change the state of the window rather than
+performing an action (like for example the buttons in the top/right
+corner of the <a href="qfiledialog.html">QFileDialog</a>), are not command buttons, but tool
+buttons. Qt provides a special class <a href="qtoolbutton.html">QToolButton</a> for these.
+<p>Also, if you need toggle behaviour (see <a href="#792138">setToggleButton</a>()) or a button
+that auto-repeats the activation signal when being pushed down like
+the arrows in a scrollbar (see <a href="qbutton.html#cb67c6">setAutoRepeat</a>()), a command button is
+probably not what you want. In case of doubt, go with a tool button.
+<p>A variation of a command button is a menu button. It provides not
+just one command, but several. Use the method <a href="#22d3ac">setPopup</a>() to
+associate a popup menu with a push button.
+<p>Other classes of buttons are option buttons (see <a href="qradiobutton.html">QRadioButton</a>) and
+check boxes (see <a href="qcheckbox.html">QCheckBox</a>).
+<p><img src="qpushbt-m.png"> <img src="qpushbt-w.png">
+<p>In Qt, the <a href="qbutton.html">QButton</a> class provides most of the modes and other API,
+and QPushButton provides GUI logic.  See QButton for more
+information about the API.
+<p>See also  <a href="qtoolbutton.html">QToolButton</a>, <a href="qradiobutton.html">QRadioButton</a>, <a href="qcheckbox.html">QCheckBox</a> and <a href="guibooks.html#fowler">GUI Design Handbook: Push Button</a>
+<p>Examples:
+ <a href="xform-xform-cpp.html#QPushButton">xform/xform.cpp</a>
+ <a href="layout-layout-cpp.html#QPushButton">layout/layout.cpp</a>
+ <a href="i18n-main-cpp.html#QPushButton">i18n/main.cpp</a>
+ <a href="drawdemo-drawdemo-cpp.html#QPushButton">drawdemo/drawdemo.cpp</a>
+ <a href="popup-popup-cpp.html#QPushButton">popup/popup.cpp</a>
+ <a href="qmag-qmag-cpp.html#QPushButton">qmag/qmag.cpp</a>
+ <a href="rot13-rot13-cpp.html#QPushButton">rot13/rot13.cpp</a>
+ <a href="scrollview-scrollview-cpp.html#QPushButton">scrollview/scrollview.cpp</a>
+ <a href="customlayout-main-cpp.html#QPushButton">customlayout/main.cpp</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="a5731d"></a>QPushButton::QPushButton ( <a href="qwidget.html">QWidget</a> * parent, const char * name=0 )</h3>
+<p>Constructs a push button with no text.
+<p>The <em>parent</em> and <em>name</em> arguments are sent to the <a href="qwidget.html">QWidget</a> constructor.
+<h3 class="fn"><a name="941ec1"></a>QPushButton::QPushButton ( const <a href="qiconset.html">QIconSet</a> &amp; icon, const <a href="qstring.html">QString</a> &amp; text, <a href="qwidget.html">QWidget</a> * parent, const char * name=0 )</h3>
+<p>Constructs a push button with an <em>icon</em> and a <em>text.</em>
+<p>Note that you can also pass a <a href="qpixmap.html">QPixmap</a> object as icon (thanks to C++'
+implicit type conversion).
+<p>The <em>parent</em> and <em>name</em> arguments are sent to the <a href="qwidget.html">QWidget</a> constructor.
+<h3 class="fn"><a name="7f6944"></a>QPushButton::QPushButton ( const <a href="qstring.html">QString</a> &amp; text, <a href="qwidget.html">QWidget</a> * parent, const char * name=0 )</h3>
+<p>Constructs a push button with a text.
+<p>The <em>parent</em> and <em>name</em> arguments are sent to the <a href="qwidget.html">QWidget</a> constructor.
+<h3 class="fn"><a name="902c73"></a>QPushButton::~QPushButton ()</h3>
+<p>Destructs the push button.
+<h3 class="fn">bool <a name="b17f36"></a>QPushButton::autoDefault () const</h3>
+<p>Returns TRUE if the button is an auto-default button.
+<p>See also  <a href="#b242a2">setAutoDefault</a>().
+<h3 class="fn">void <a name="64b0ff"></a>QPushButton::drawButton ( <a href="qpainter.html">QPainter</a> * paint ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qbutton.html#806195">QButton.</a>
+<h3 class="fn">void <a name="b2ee67"></a>QPushButton::drawButtonLabel ( <a href="qpainter.html">QPainter</a> * paint ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qbutton.html#2e366a">QButton.</a>
+<h3 class="fn">void <a name="4596d7"></a>QPushButton::focusInEvent ( <a href="qfocusevent.html">QFocusEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#303f18">QWidget.</a>
+<h3 class="fn">void <a name="6016f9"></a>QPushButton::focusOutEvent ( <a href="qfocusevent.html">QFocusEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#bdc4a1">QWidget.</a>
+<h3 class="fn"><a href="qiconset.html">QIconSet</a>* <a name="a2fd21"></a>QPushButton::iconSet () const</h3>
+<p>Returns the button's icon or 0 if no icon has been defined.
+<p>See also  <a href="#9e3100">setIconSet</a>().
+<h3 class="fn">bool <a name="f0bb63"></a>QPushButton::isDefault () const</h3>
+<p>Returns TRUE if the button is currently default.
+<p>See also  <a href="#02a9e1">setDefault</a>().
+<h3 class="fn">bool <a name="8c4784"></a>QPushButton::isFlat () const</h3>
+<p>Returns whether the border is disabled.
+<p>See also  <a href="#0014e9">setFlat</a>().
+<h3 class="fn">bool <a name="4b1991"></a>QPushButton::isMenuButton () const</h3>
+<p><b>This function is obsolete.</b> It is provided to keep old source working, and will probably be removed in a future version of Qt.  We strongly advise against using it in new code.<p>
+<p>Returns TRUE if this button indicates to the user that pressing
+it will pop up a menu, and FALSE otherwise.  The default is FALSE.
+<p>See also  <a href="#0e5203">setIsMenuButton</a>().
+<h3 class="fn">void <a name="38f340"></a>QPushButton::move ( const <a href="qpoint.html">QPoint</a> &amp; p )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="0d7ae4"></a>QPushButton::move ( int x, int y ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#move">drawdemo/drawdemo.cpp</a>
+<p>Reimplemented from <a href="qwidget.html#958bbe">QWidget.</a>
+<h3 class="fn"><a href="qpopupmenu.html">QPopupMenu</a>* <a name="4ee80d"></a>QPushButton::popup () const</h3>
+<p>Returns the associated popup menu or 0 if no popup menu has been
+defined.
+<p>See also  <a href="#22d3ac">setPopup</a>().
+<h3 class="fn">void <a name="a0fd34"></a>QPushButton::resize ( const <a href="qsize.html">QSize</a> &amp; s )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="5f0add"></a>QPushButton::resize ( int w, int h )</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Examples:
+ <a href="drawdemo-drawdemo-cpp.html#resize">drawdemo/drawdemo.cpp</a>
+<h3 class="fn">void <a name="c5fd41"></a>QPushButton::resizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#28c156">QWidget.</a>
+<h3 class="fn">void <a name="b242a2"></a>QPushButton::setAutoDefault ( bool enable ) <code>[virtual]</code></h3>
+<p>Sets the push buttons to an auto-default button if <em>enable</em> is TRUE,
+or to a normal button if <em>enable</em> is FALSE.
+<p>An auto-default button becomes automatically the default push button
+in a dialog when it receives the keyboard input focus.
+<p>In some GUI styles, a default button is drawn with an extra frame
+around it, up to 3 pixels or more. Qt automatically keeps this space
+free around auto-default buttons, i.e. auto-default buttons may have
+a slightly larger size hint.
+<p>See also  <a href="#b17f36">autoDefault</a>() and <a href="#02a9e1">setDefault</a>().
+<h3 class="fn">void <a name="02a9e1"></a>QPushButton::setDefault ( bool enable ) <code>[virtual]</code></h3>
+<p>Sets this button to be the current default button of a
+<a href="qdialog.html">dialog</a> if <em>enable</em> is TRUE, or to be a normal button
+if <em>enable</em> is FALSE.
+<p>The current default button gets clicked when the user presses the
+"Enter" key, independently of which widget in the dialog currently
+has the keyboard input focus.  Only one push button can at any time
+be the default button.  This button is then displayed with an
+additional frame ( depending on the GUI style ).
+<p>The default button behaviour is only provided in dialogs. Buttons
+can always be clicked from the keyboard by pressing return or the
+spacebar when the button has focus.
+<p>See also  <a href="#f0bb63">isDefault</a>(), <a href="#b242a2">setAutoDefault</a>() and <a href="qdialog.html">QDialog</a>.
+<h3 class="fn">void <a name="0014e9"></a>QPushButton::setFlat ( bool f )</h3>
+<p>Disable the border.
+<p>See also  flat().
+<h3 class="fn">void <a name="604169"></a>QPushButton::setGeometry ( const <a href="qrect.html">QRect</a> &amp; r ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Examples:
+ <a href="popup-popup-cpp.html#setGeometry">popup/popup.cpp</a>
+ <a href="qmag-qmag-cpp.html#setGeometry">qmag/qmag.cpp</a>
+<h3 class="fn">void <a name="9e0192"></a>QPushButton::setGeometry ( int x, int y, int w, int h ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="9e3100"></a>QPushButton::setIconSet ( const <a href="qiconset.html">QIconSet</a> &amp; icon )</h3>
+<p>Sets the button to display the icon <em>icon</em> in addition to its text
+or pixmap
+<p>See also  <a href="#a2fd21">iconSet</a>().
+<h3 class="fn">void <a name="0e5203"></a>QPushButton::setIsMenuButton ( bool enable ) <code>[virtual]</code></h3>
+<p><b>This function is obsolete.</b> It is provided to keep old source working, and will probably be removed in a future version of Qt.  We strongly advise against using it in new code.<p>
+<p>Tells this button to draw a menu indication triangle if <em>enable</em>
+is TRUE,  and to not draw one if <em>enable</em> is FALSE (the default).
+<p>setIsMenuButton() does not cause the button to do anything other
+than draw the menu indication.
+<p>See also  <a href="#4b1991">isMenuButton</a>().
+<h3 class="fn">void <a name="280d7b"></a>QPushButton::setOn ( bool enable ) <code>[virtual slot]</code></h3>
+<p>Switches a toggle button on if <em>enable</em> is TRUE or off if <em>enable</em> is
+FALSE.
+<p>See also  <a href="qbutton.html#380a2c">isOn</a>(), <a href="#c683eb">toggle</a>(), <a href="qbutton.html#2e08a9">toggled</a>() and <a href="qbutton.html#27fa01">isToggleButton</a>().
+<p>Examples:
+ <a href="qmag-qmag-cpp.html#setOn">qmag/qmag.cpp</a>
+<h3 class="fn">void <a name="22d3ac"></a>QPushButton::setPopup ( <a href="qpopupmenu.html">QPopupMenu</a> * popup )</h3>
+<p>Associates the popup menu <em>popup</em> with this push button and
+thus turns it into a menu button.
+<p>Ownership of the popup menu is not transferred.
+<p>See also  <a href="#4ee80d">popup</a>().
+<h3 class="fn">void <a name="792138"></a>QPushButton::setToggleButton ( bool enable ) <code>[virtual]</code></h3>
+<p>Makes the push button a toggle button if <em>enable</em> is TRUE, or a normal
+push button if <em>enable</em> is FALSE.
+<p>Toggle buttons have an on/off state similar to <a href="qcheckbox.html">check
+boxes.</a> A push button is initially not a toggle button.
+<p>See also  <a href="#280d7b">setOn</a>(), <a href="#c683eb">toggle</a>(), <a href="qbutton.html#27fa01">isToggleButton</a>() and <a href="qbutton.html#2e08a9">toggled</a>().
+<p>Examples:
+ <a href="qmag-qmag-cpp.html#setToggleButton">qmag/qmag.cpp</a>
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="d91732"></a>QPushButton::sizeHint () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#290bcd">QWidget.</a>
+<h3 class="fn"><a href="qsizepolicy.html">QSizePolicy</a> <a name="df0c4a"></a>QPushButton::sizePolicy () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#2d5d13">QWidget.</a>
+<h3 class="fn">void <a name="c683eb"></a>QPushButton::toggle () <code>[important inherited]</code></h3>
+<p>Toggles the state of a toggle button.
+<p>See also  <a href="qbutton.html#380a2c">isOn</a>(), <a href="#280d7b">setOn</a>(), <a href="qbutton.html#2e08a9">toggled</a>() and <a href="qbutton.html#27fa01">isToggleButton</a>().
+<h3 class="fn">void <a name="c6535e"></a>QPushButton::updateMask () <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#395595">QWidget.</a>
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QDomDocument Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QDomDocument Class Reference<br><small>[ <a href="xml.html">XML module</a> ]</small></h1><br clear="all">
+<p>
+The QDomDocument class is the representation of an XML document.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qdom-h.html">qdom.h</a>&gt;</code>
+<p>
+Inherits <a href="qdomnode.html">QDomNode</a>.
+<p><a href="qdomdocument-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#825084"><b>QDomDocument</b></a> () </div>
+<li><div class="fn"><a href="#7d1c7e"><b>QDomDocument</b></a> ( const QString &amp; name ) </div>
+<li><div class="fn"><a href="#4aa4ff"><b>QDomDocument</b></a> ( const QDomDocument &amp; x ) </div>
+<li><div class="fn">QDomDocument&amp; <a href="#2b3cf3"><b>operator=</b></a> ( const QDomDocument &amp; ) </div>
+<li><div class="fn"><a href="#147159"><b>~QDomDocument</b></a> () </div>
+<li><div class="fn">bool <a href="#7bc119"><b>setContent</b></a> ( const QCString &amp; text ) </div>
+<li><div class="fn">bool <a href="#f7a8f5"><b>setContent</b></a> ( const QByteArray &amp; text ) </div>
+<li><div class="fn">bool <a href="#4885cb"><b>setContent</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">bool <a href="#8b2146"><b>setContent</b></a> ( QIODevice * dev ) </div>
+<li><div class="fn">QDomDocumentType <a href="#1be304"><b>doctype</b></a> () const</div>
+<li><div class="fn">QDomImplementation <a href="#98703f"><b>implementation</b></a> () const</div>
+<li><div class="fn">QDomElement <a href="#6c83d1"><b>documentElement</b></a> () const</div>
+<li><div class="fn">QDomElement <a href="#019a5f"><b>createElement</b></a> ( const QString &amp; tagName ) </div>
+<li><div class="fn">QDomDocumentFragment <a href="#122c7f"><b>createDocumentFragment</b></a> () </div>
+<li><div class="fn">QDomText <a href="#a21308"><b>createTextNode</b></a> ( const QString &amp; data ) </div>
+<li><div class="fn">QDomComment <a href="#7fcd81"><b>createComment</b></a> ( const QString &amp; data ) </div>
+<li><div class="fn">QDomCDATASection <a href="#ad35f6"><b>createCDATASection</b></a> ( const QString &amp; data ) </div>
+<li><div class="fn">QDomProcessingInstruction <a href="#94dd1c"><b>createProcessingInstruction</b></a> ( const QString &amp; target, const QString &amp; data ) </div>
+<li><div class="fn">QDomAttr <a href="#8115dd"><b>createAttribute</b></a> ( const QString &amp; name ) </div>
+<li><div class="fn">QDomEntityReference <a href="#139888"><b>createEntityReference</b></a> ( const QString &amp; name ) </div>
+<li><div class="fn">QDomNodeList <a href="#306d72"><b>elementsByTagName</b></a> ( const QString &amp; tagname ) const</div>
+<li><div class="fn">virtual QDomNode::NodeType <a href="#5ca55f"><b>nodeType</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#810ad2"><b>isDocument</b></a> () const</div>
+<li><div class="fn">QString <a href="#7d21de"><b>toString</b></a> () const</div>
+<li><div class="fn">QCString <a href="#445316"><b>toCString</b></a> () const</div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QDomDocument class is the representation of an XML document.
+<p>
+The QDomDocument class represents the entire XML document. Conceptually, it
+is the root of the document tree, and provides the primary access to the
+document's data.
+<p>Since elements, text nodes, comments, processing instructions, etc. cannot
+exist outside the context of a document, the document class also contains the
+factory functions needed to create these objects. The node objects created
+have an  <a href="qdomnode.html#4a775a">ownerDocument</a>() function which associates them with the document
+within whose context they were created.
+<p>The parsed XML is represented internally by a tree of objects that can be
+accessed using the various QDom classes. All QDom classes do only reference
+objects in the internal tree. The internal objects in the DOM tree will get
+deleted, once the last QDom object referencing them and the QDomDocument are
+deleted.
+<p>Creation of elements, text nodes, etc. is done via the various factory
+functions provided in this class. Using the default constructors of the QDom
+classes will only result in empty objects, that can not be manipulated or
+inserted into the Document.
+<p>The QDom classes are typically used as follows:
+<pre>  <a href="qdomdocument.html">QDomDocument</a> doc( "mydocument" );
+  <a href="qfile.html">QFile</a> f( "mydocument.xml" );
+  if ( !f.<a href="qfile.html#44ae9b">open</a>( IO_ReadOnly ) )
+      return;
+  if ( !doc.<a href="#4885cb">setContent</a>( &amp;f ) ) {
+      f.<a href="qfile.html#e37a87">close</a>();
+      return;
+  }
+  f.<a href="qfile.html#e37a87">close</a>();
+
+  // print out the element names of all elements that are a direct child
+  // of the outermost element.
+  <a href="qdomelement.html">QDomElement</a> docElem = doc.<a href="#6c83d1">documentElement</a>();
+
+  <a href="qdomnode.html">QDomNode</a> n = docElem.<a href="qdomnode.html#7d7903">firstChild</a>();
+  while( !n.<a href="qdomnode.html#aa255a">isNull</a>() ) {
+      <a href="qdomelement.html">QDomElement</a> e = n.<a href="qdomnode.html#7be3a4">toElement</a>(); // try to convert the node to an element.
+      if( !e.<a href="qdomnode.html#aa255a">isNull</a>() ) { // the node was really an element.
+          cout &lt;&lt; e.<a href="qdomelement.html#a75b61">tagName</a>() &lt;&lt; endl;
+      }
+      n = n.<a href="qdomnode.html#c400a2">nextSibling</a>();
+  }
+
+  // lets append a new element to the end of the document
+  <a href="qdomelement.html">QDomElement</a> elem = doc.<a href="#019a5f">createElement</a>( "img" );
+  elem.<a href="qdomelement.html#137828">setAttribute</a>( "src", "myimage.png" );
+  docElem.<a href="qdomnode.html#50474f">appendChild</a>( elem );
+</pre>
+<p>Once <code>doc</code> and <code>elem</code> go out of scode, the whole internal tree representing
+the XML document will get deleted.
+<p>For further information about the Document Objct Model see
+<a href="http://www.w3.org/TR/REC-DOM-Level-1/">http://www.w3.org/TR/REC-DOM-Level-1/</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="825084"></a>QDomDocument::QDomDocument ()</h3>
+<p>Constructs an empty document.
+<h3 class="fn"><a name="7d1c7e"></a>QDomDocument::QDomDocument ( const <a href="qstring.html">QString</a> &amp; name )</h3>
+<p>Creates a document with the name <em>name.</em>
+<h3 class="fn"><a name="4aa4ff"></a>QDomDocument::QDomDocument ( const QDomDocument &amp; x )</h3>
+<p>Copy constructor.
+<p>The data of the copy is shared: modifying one will also change the other. If
+you want to make a real copy, use <a href="qdomnode.html#7b27fa">cloneNode</a>() instead.
+<h3 class="fn"><a name="147159"></a>QDomDocument::~QDomDocument ()</h3>
+<p>Destructor.
+<h3 class="fn"><a href="qdomattr.html">QDomAttr</a> <a name="8115dd"></a>QDomDocument::createAttribute ( const <a href="qstring.html">QString</a> &amp; name )</h3>
+<p>Creates a new attribute that can be inserted into an element.
+<h3 class="fn"><a href="qdomcdatasection.html">QDomCDATASection</a> <a name="ad35f6"></a>QDomDocument::createCDATASection ( const <a href="qstring.html">QString</a> &amp; value )</h3>
+<p>Creates a new CDATA section that can be inserted into the document.
+<h3 class="fn"><a href="qdomcomment.html">QDomComment</a> <a name="7fcd81"></a>QDomDocument::createComment ( const <a href="qstring.html">QString</a> &amp; value )</h3>
+<p>Creates a new comment that can be inserted into the Document.
+<h3 class="fn"><a href="qdomdocumentfragment.html">QDomDocumentFragment</a> <a name="122c7f"></a>QDomDocument::createDocumentFragment ()</h3>
+<p>Creates a new document fragment, that can be used to hold parts
+of the document, when doing complex manipulations of the document tree.
+<h3 class="fn"><a href="qdomelement.html">QDomElement</a> <a name="019a5f"></a>QDomDocument::createElement ( const <a href="qstring.html">QString</a> &amp; tagName )</h3>
+<p>Creates a new element with the name <em>tagName</em> that can be inserted into the
+DOM tree.
+<h3 class="fn"><a href="qdomentityreference.html">QDomEntityReference</a> <a name="139888"></a>QDomDocument::createEntityReference ( const <a href="qstring.html">QString</a> &amp; name )</h3>
+<p>Creates a new entity reference.
+<h3 class="fn"><a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a> <a name="94dd1c"></a>QDomDocument::createProcessingInstruction ( const <a href="qstring.html">QString</a> &amp; target, const <a href="qstring.html">QString</a> &amp; data )</h3>
+<p>Creates a new processing instruction that can be inserted into the document.
+<h3 class="fn"><a href="qdomtext.html">QDomText</a> <a name="a21308"></a>QDomDocument::createTextNode ( const <a href="qstring.html">QString</a> &amp; value )</h3>
+<p>Creates a text node that can be inserted into the document tree.
+<h3 class="fn"><a href="qdomdocumenttype.html">QDomDocumentType</a> <a name="1be304"></a>QDomDocument::doctype () const</h3>
+<p>Returns the document type of this document.
+<h3 class="fn"><a href="qdomelement.html">QDomElement</a> <a name="6c83d1"></a>QDomDocument::documentElement () const</h3>
+<p>Returns the root element of the document.
+<h3 class="fn"><a href="qdomnodelist.html">QDomNodeList</a> <a name="306d72"></a>QDomDocument::elementsByTagName ( const <a href="qstring.html">QString</a> &amp; tagname ) const</h3>
+<p>Returns a <a href="qdomnodelist.html">QDomNodeList</a>, that contains all elements in the document
+with the tag name <em>tagname.</em> The order of the node list, is the
+order they are encountered in a preorder traversal of the element tree.
+<h3 class="fn"><a href="qdomimplementation.html">QDomImplementation</a> <a name="98703f"></a>QDomDocument::implementation () const</h3>
+<p>Returns a <a href="qdomimplementation.html">QDomImplementation</a> object.
+<h3 class="fn">bool <a name="810ad2"></a>QDomDocument::isDocument () const <code>[virtual]</code></h3>
+<p>Returns TRUE.
+<p>Reimplemented from <a href="qdomnode.html#db7d2a">QDomNode.</a>
+<h3 class="fn">QDomNode::NodeType <a name="5ca55f"></a>QDomDocument::nodeType() const <code>[virtual]</code></h3>
+<p>Returns <code>DocumentNode.</code>
+<p>Reimplemented from <a href="qdomnode.html#4aab85">QDomNode.</a>
+<h3 class="fn">QDomDocument&amp; <a name="2b3cf3"></a>QDomDocument::operator= ( const QDomDocument &amp; x )</h3>
+<p>Assignment operator.
+<p>The data of the copy is shared: modifying one will also change the other. If
+you want to make a real copy, use <a href="qdomnode.html#7b27fa">cloneNode</a>() instead.
+<h3 class="fn">bool <a name="4885cb"></a>QDomDocument::setContent ( const <a href="qstring.html">QString</a> &amp; text )</h3>
+<p>This function parses the string <em>text</em> and sets it as the content of the
+document.
+<h3 class="fn">bool <a name="8b2146"></a>QDomDocument::setContent ( <a href="qiodevice.html">QIODevice</a> * dev )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">bool <a name="f7a8f5"></a>QDomDocument::setContent ( const <a href="qbytearray.html">QByteArray</a> &amp; buffer )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn">bool <a name="7bc119"></a>QDomDocument::setContent ( const <a href="qcstring.html">QCString</a> &amp; buffer )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<h3 class="fn"><a href="qcstring.html">QCString</a> <a name="445316"></a>QDomDocument::toCString () const</h3>
+<p>Converts the parsed document back to its textual representation.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="7d21de"></a>QDomDocument::toString () const</h3>
+<p>Converts the parsed document back to its textual representation.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

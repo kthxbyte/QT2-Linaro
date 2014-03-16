@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QCanvasText Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QCanvasText Class Reference<br><small>[ <a href="canvas.html">canvas module</a> ]</small></h1><br clear="all">
+<p>
+A text object on a <a href="qcanvas.html">QCanvas</a>.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qcanvas-h.html">qcanvas.h</a>&gt;</code>
+<p>
+Inherits <a href="qcanvasitem.html">QCanvasItem</a>.
+<p><a href="qcanvastext-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#ec0083"><b>QCanvasText</b></a> ( QCanvas * canvas ) </div>
+<li><div class="fn"><a href="#7adbde"><b>QCanvasText</b></a> ( const QString &amp;, QCanvas * canvas ) </div>
+<li><div class="fn"><a href="#6f14f0"><b>QCanvasText</b></a> ( const QString &amp;, QFont, QCanvas * canvas ) </div>
+<li><div class="fn">virtual <a href="#ced364"><b>~QCanvasText</b></a> () </div>
+<li><div class="fn">void <a href="#58cc91"><b>setText</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">void <a href="#bd3060"><b>setFont</b></a> ( const QFont &amp; ) </div>
+<li><div class="fn">void <a href="#bd6b12"><b>setColor</b></a> ( const QColor &amp; ) </div>
+<li><div class="fn">QString <a href="#99c028"><b>text</b></a> () const</div>
+<li><div class="fn">QFont <a href="#e74f80"><b>font</b></a> () const</div>
+<li><div class="fn">QColor <a href="#e44a24"><b>color</b></a> () const</div>
+<li><div class="fn">int <a href="#1c269b"><b>textFlags</b></a> () const</div>
+<li><div class="fn">void <a href="#37e588"><b>setTextFlags</b></a> ( int ) </div>
+<li><div class="fn">virtual QRect <a href="#f6dcba"><b>boundingRect</b></a> () const</div>
+<li><div class="fn">virtual int <a href="#fd9dd5"><b>rtti</b></a> () const</div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#05a9e6"><b>draw</b></a> ( QPainter &amp; ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+A text object on a <a href="qcanvas.html">QCanvas</a>.
+<p>
+A QCanvasText has text, a font, color, and position.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="ec0083"></a>QCanvasText::QCanvasText ( <a href="qcanvas.html">QCanvas</a> * canvas )</h3>
+<p>Constructs a QCanvasText with the text "<text>", on <em>canvas.</em>
+<h3 class="fn"><a name="7adbde"></a>QCanvasText::QCanvasText ( const <a href="qstring.html">QString</a> &amp; t, <a href="qcanvas.html">QCanvas</a> * canvas )</h3>
+<p>Constructs a QCanvasText with the text <em>t,</em> on <em>canvas.</em>
+<p>The text should not contain newlines.
+<h3 class="fn"><a name="6f14f0"></a>QCanvasText::QCanvasText ( const <a href="qstring.html">QString</a> &amp; t, <a href="qfont.html">QFont</a> f, <a href="qcanvas.html">QCanvas</a> * canvas )</h3>
+<p>Constructs a QCanvasText with the text <em>t</em> and font <em>f,</em> on <em>canvas.</em>
+<p>The text should not contain newlines.
+<h3 class="fn"><a name="ced364"></a>QCanvasText::~QCanvasText () <code>[virtual]</code></h3>
+<p>Destruct the sprite.
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="f6dcba"></a>QCanvasText::boundingRect () const <code>[virtual]</code></h3>
+<p>Returns the bounding rectangle of the text.
+<p>Reimplemented from <a href="qcanvasitem.html#328657">QCanvasItem.</a>
+<h3 class="fn">bool <a name="f7c838"></a>QCanvasText::collidesWith ( const <a href="qcanvasitem.html">QCanvasItem</a> * i ) const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qcanvasitem.html#e006e1">QCanvasItem.</a>
+<h3 class="fn"><a href="qcolor.html">QColor</a> <a name="e44a24"></a>QCanvasText::color () const</h3>
+<p>Returns the color of the text.
+<p>See also  <a href="#bd6b12">setColor</a>().
+<h3 class="fn">void <a name="05a9e6"></a>QCanvasText::draw ( <a href="qpainter.html">QPainter</a> &amp; painter ) <code>[virtual protected]</code></h3>
+<p>Draws the text.
+<h3 class="fn"><a href="qfont.html">QFont</a> <a name="e74f80"></a>QCanvasText::font () const</h3>
+<p>Returns the font in which the text is drawn.
+<p>See also  <a href="#bd3060">setFont</a>().
+<h3 class="fn">void <a name="03c5bd"></a>QCanvasText::moveBy ( double dx, double dy ) <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qcanvasitem.html#95cd3e">QCanvasItem.</a>
+<h3 class="fn">int <a name="fd9dd5"></a>QCanvasText::rtti () const <code>[virtual]</code></h3>
+<p>Returns 3.
+<p>See also  <a href="qcanvasitem.html#f6cf38">QCanvasItem::rtti</a>().
+<h3 class="fn">void <a name="bd6b12"></a>QCanvasText::setColor ( const <a href="qcolor.html">QColor</a> &amp; c )</h3>
+<p>Sets the color of the text.
+<p>See also  <a href="#e44a24">color</a>() and <a href="#bd3060">setFont</a>().
+<h3 class="fn">void <a name="bd3060"></a>QCanvasText::setFont ( const <a href="qfont.html">QFont</a> &amp; f )</h3>
+<p>Sets the font in which the text is drawn.
+<p>See also  <a href="#e74f80">font</a>().
+<h3 class="fn">void <a name="58cc91"></a>QCanvasText::setText ( const <a href="qstring.html">QString</a> &amp; t )</h3>
+<p>Sets the text to be displayed.  The text may contain newlines.
+<p>See also  <a href="#99c028">text</a>(), <a href="#bd3060">setFont</a>() and <a href="#bd6b12">setColor</a>().
+<h3 class="fn">void <a name="37e588"></a>QCanvasText::setTextFlags ( int f )</h3>
+<p>Sets the alignment flags.  These are a bitwise OR or <em>some</em> of the
+flags available to <a href="qpainter.html#8a59ed">QPainter::drawText</a>() - see <a href="qt.html#AlignmentFlags">Qt::AlignmentFlags</a>.
+<p>The DontClip and WordBreak flags are not supported.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="99c028"></a>QCanvasText::text () const</h3>
+<p>Returns the text to be displayed.
+<p>See also  <a href="#58cc91">setText</a>().
+<h3 class="fn">int <a name="1c269b"></a>QCanvasText::textFlags () const</h3>
+<p>Returns the currently set alignment flags.
+<p>See also  <a href="#37e588">setTextFlags</a>() and <a href="qt.html#AlignmentFlags">Qt::AlignmentFlags</a>.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

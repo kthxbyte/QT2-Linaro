@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QSpinBox Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QSpinBox Class Reference</h1><br clear="all">
+<p>
+The QSpinBox class provides a spin box widget, sometimes called up-down widget, little arrows widget or spin button.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qspinbox-h.html">qspinbox.h</a>&gt;</code>
+<p>
+Inherits <a href="qframe.html">QFrame</a> and <a href="qrangecontrol.html">QRangeControl</a>.
+<p><a href="qspinbox-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#767e1a"><b>QSpinBox</b></a> ( QWidget * parent = 0, const char * name = 0 ) </div>
+<li><div class="fn"><a href="#caa337"><b>QSpinBox</b></a> ( int minValue, int maxValue, int step = 1, QWidget * parent = 0, const char * name = 0 ) </div>
+<li><div class="fn"><a href="#283c03"><b>~QSpinBox</b></a> () </div>
+<li><div class="fn">QString <a href="#1cde82"><b>text</b></a> () const</div>
+<li><div class="fn">virtual QString <a href="#812a40"><b>prefix</b></a> () const</div>
+<li><div class="fn">virtual QString <a href="#4221ff"><b>suffix</b></a> () const</div>
+<li><div class="fn">virtual QString <a href="#a6c577"><b>cleanText</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#a89689"><b>setSpecialValueText</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">QString <a href="#f0a00b"><b>specialValueText</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#e3b132"><b>setWrapping</b></a> ( bool on ) </div>
+<li><div class="fn">bool <a href="#2fcc30"><b>wrapping</b></a> () const</div>
+<li><div class="fn">enum <a href="#ButtonSymbols"><b>ButtonSymbols</b></a> { UpDownArrows, PlusMinus }</div>
+<li><div class="fn">void <a href="#1a2b08"><b>setButtonSymbols</b></a> ( ButtonSymbols ) </div>
+<li><div class="fn">ButtonSymbols <a href="#c78106"><b>buttonSymbols</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#cdf588"><b>setValidator</b></a> ( const QValidator * v ) </div>
+<li><div class="fn">const QValidator* <a href="#27ab6c"><b>validator</b></a> () const</div>
+<li><div class="fn">void <a href="#f997f9"><b>setMinValue</b></a> ( int ) </div>
+<li><div class="fn">void <a href="#a799b5"><b>setMaxValue</b></a> ( int ) </div>
+<li><div class="fn">void <a href="#bf132b"><b>setLineStep</b></a> ( int ) </div>
+</ul>
+<h2>Public Slots</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#4960d3"><b>setValue</b></a> ( int value ) </div>
+<li><div class="fn">virtual void <a href="#ad4232"><b>setPrefix</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">virtual void <a href="#38a1a4"><b>setSuffix</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">virtual void <a href="#12d4cb"><b>stepUp</b></a> () </div>
+<li><div class="fn">virtual void <a href="#fb38db"><b>stepDown</b></a> () </div>
+</ul>
+<h2>Signals</h2>
+<ul>
+<li><div class="fn">void <a href="#479976"><b>valueChanged</b></a> ( int value ) </div>
+<li><div class="fn">void <a href="#991cc3"><b>valueChanged</b></a> ( const QString &amp; valueText ) </div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual QString <a href="#6a3292"><b>mapValueToText</b></a> ( int value ) </div>
+<li><div class="fn">virtual int <a href="#3b663d"><b>mapTextToValue</b></a> ( bool * ok ) </div>
+<li><div class="fn">QString <a href="#047e4e"><b>currentValueText</b></a> () </div>
+<li><div class="fn">virtual void <a href="#0181b4"><b>updateDisplay</b></a> () </div>
+<li><div class="fn">virtual void <a href="#189bca"><b>interpretText</b></a> () </div>
+<li><div class="fn">QPushButton* <a href="#e0127f"><b>upButton</b></a> () const</div>
+<li><div class="fn">QPushButton* <a href="#e7f499"><b>downButton</b></a> () const</div>
+<li><div class="fn">QLineEdit* <a href="#1af5fb"><b>editor</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#addedb"><b>valueChange</b></a> () </div>
+<li><div class="fn">virtual void <a href="#f7a505"><b>rangeChange</b></a> () </div>
+<li><div class="fn">virtual bool <a href="#e69a3c"><b>eventFilter</b></a> ( QObject * obj, QEvent * ev ) </div>
+</ul>
+<h2>Protected Slots</h2>
+<ul>
+<li><div class="fn">void <a href="#5b6e4f"><b>textChanged</b></a> () </div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>QString<td>text<td>text<td>&nbsp;<td>&nbsp;
+<tr><td>QString<td>prefix<td>prefix<td>setPrefix<td>&nbsp;
+<tr><td>QString<td>suffix<td>suffix<td>setSuffix<td>&nbsp;
+<tr><td>QString<td>cleanText<td>cleanText<td>&nbsp;<td>&nbsp;
+<tr><td>QString<td>specialValueText<td>specialValueText<td>setSpecialValueText<td>&nbsp;
+<tr><td>bool<td>wrapping<td>wrapping<td>setWrapping<td>&nbsp;
+<tr><td>ButtonSymbols<td>buttonSymbols<td>buttonSymbols<td>setButtonSymbols<td>&nbsp;
+<tr><td>int<td>maxValue<td>maxValue<td>setMaxValue<td>&nbsp;
+<tr><td>int<td>minValue<td>minValue<td>setMinValue<td>&nbsp;
+<tr><td>int<td>lineStep<td>lineStep<td>setLineStep<td>&nbsp;
+<tr><td>int<td>value<td>value<td>setValue<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QSpinBox class provides a spin box widget, sometimes called up-down widget, little arrows widget or spin button.
+<p>
+QSpinBox allows the user to choose a value, either by
+clicking the up/down buttons to increase/decrease the value
+currently displayed, or by typing the value directly into the spin
+box. Usually the value is an integer.
+<p>Every time the value changes, QSpinBox emits the <a href="#479976">valueChanged</a>()
+signal.  The current value can be fetched with <a href="#404d3b">value</a>() and set with
+<a href="#4960d3">setValue</a>().
+<p>The spin box clamps the value within a numeric range, see
+<a href="qrangecontrol.html">QRangeControl</a> for details.  Clicking the up/down down buttons (or
+using the keyboard accelerators: Up-arrow and Down-arrow) will
+increase or decrease the current value in steps of size <a href="#d2623f">lineStep</a>().
+<p>Most spin boxes are directional, but QSpinBox can also operate as a
+circular spin box, i.e. if the range is 0-99 and the current value
+is 99, clicking Up will give 0.  Use <a href="#e3b132">setWrapping</a>() if you want
+circular behavior.
+<p>The displayed value can be prepended and/or appended with an
+arbitrary string indicating for example the unit of measurement.
+See <a href="#ad4232">setPrefix</a>() and <a href="#38a1a4">setSuffix</a>().
+<p>Normally, the spin box displays up and down arrows in the buttons.
+You can use <a href="#1a2b08">setButtonSymbols</a>() to change the display to
+show + and - symbols, if this is clearer for your intended purpose.
+In either case, the up and down arrow keys always work.
+<p>It is often desirable to give the user a special, often default,
+choice in addition to the range of numeric values.  See
+<a href="#a89689">setSpecialValueText</a>() for how to do this with QSpinBox.
+<p>The default <a href="qwidget.html#504321">QWidget::focusPolicy()</a> is StrongFocus.
+<p>QSpinBox can easily be subclassed to allow the user to input other
+things than an integer value, as long as the allowed input can be
+mapped down to a range of integers.  This can be done by overriding
+the virtual functions <a href="#6a3292">mapValueToText</a>() and <a href="#3b663d">mapTextToValue</a>() and
+setting another, suitable validator using <a href="#cdf588">setValidator</a>(). For example,
+these function could be changed so that the user provided values
+from 0.0 to 10.0 while the range of integers used inside the program
+would be 0 to 100:
+<p><pre>  class MySpinBox : public QSpinBox {
+  public:
+    ...
+
+    <a href="qstring.html">QString</a>     mapValueToText( int value )
+    {
+      return QString("%1.%2").arg(value/10).arg(value%10);
+    }
+
+    int         mapTextToValue( bool* ok )
+    {
+      return int(text().toFloat()*10);
+    }
+
+  };
+</pre>
+<p><img src=qspinbox-m.png> <img src=qspinbox-w.png>
+<p>See also  <a href="qscrollbar.html">QScrollBar</a>, <a href="qslider.html">QSlider</a> and <a href="guibooks.html#fowler">GUI Design Handbook: Spin Box</a>
+
+<hr><h2>Member Type Documentation</h2>
+<h3 class="fn"><a name="ButtonSymbols">QSpinBox::ButtonSymbols</a></h3>
+This enum type determines what the buttons in a spin box show.  The
+currently defined values are: <ul>
+<li> <code>UpDownArrows</code> - the buttons show little arrows, in the
+classic style.  This is the default.
+<li> <code>PlusMinus</code> - the buttons show '+' and '-' symbols.  This is
+often considered to be more meaningful than <code>UpDownArrows.</code>
+<p></ul>
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="767e1a"></a>QSpinBox::QSpinBox ( <a href="qwidget.html">QWidget</a> * parent = 0, const char * name = 0 )</h3>
+<p>Constructs a spin box with the default <a href="qrangecontrol.html">QRangeControl</a> range and step
+values.
+<p>See also  <a href="#e37e26">minValue</a>(), <a href="#a91e7e">maxValue</a>(), <a href="qrangecontrol.html#0337f8">setRange</a>(), <a href="#d2623f">lineStep</a>() and <a href="qrangecontrol.html#60ce91">setSteps</a>().
+<h3 class="fn"><a name="caa337"></a>QSpinBox::QSpinBox ( int minValue, int maxValue, int step = 1, <a href="qwidget.html">QWidget</a> * parent = 0, const char * name = 0 )</h3>
+<p>Constructs a spin box with range from <em>minValue</em> to <em>maxValue</em>
+inclusive, with step amount <em>step.</em>  The value is initially
+set to <em>minValue.</em>
+<p>See also  <a href="#e37e26">minValue</a>(), <a href="#a91e7e">maxValue</a>(), <a href="qrangecontrol.html#0337f8">setRange</a>(), <a href="#d2623f">lineStep</a>() and <a href="qrangecontrol.html#60ce91">setSteps</a>().
+<h3 class="fn"><a name="283c03"></a>QSpinBox::~QSpinBox ()</h3>
+<p>Destroys the spin box, freeing all memory and other resources.
+<h3 class="fn">QSpinBox::ButtonSymbols <a name="c78106"></a>QSpinBox::buttonSymbols() const</h3>
+<p>Returns the current button symbol mode.  The default is <code>UpDownArrows.</code>
+<p>See also  <a href="#1a2b08">setButtonSymbols</a>() and <a href="#ButtonSymbols">ButtonSymbols</a>.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="a6c577"></a>QSpinBox::cleanText () const <code>[virtual]</code></h3>
+<p>Returns a copy of the current text of the spin box with any prefix
+and/or suffix and white space at the start and end removed.
+<p>See also  <a href="#1cde82">text</a>(), <a href="#ad4232">setPrefix</a>() and <a href="#38a1a4">setSuffix</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="047e4e"></a>QSpinBox::currentValueText () <code>[protected]</code></h3>
+<p>Returns the full text calculated from the current value, including any
+prefix, suffix or special-value text.
+<h3 class="fn"><a href="qpushbutton.html">QPushButton</a>* <a name="e7f499"></a>QSpinBox::downButton () const <code>[protected]</code></h3>
+<p>Returns a pointer to the embedded 'down' button.
+<h3 class="fn"><a href="qlineedit.html">QLineEdit</a>* <a name="1af5fb"></a>QSpinBox::editor () const <code>[protected]</code></h3>
+<p>Returns a pointer to the embedded <a href="qlineedit.html">QLineEdit</a>.
+<h3 class="fn">bool <a name="e69a3c"></a>QSpinBox::eventFilter ( <a href="qobject.html">QObject</a> * obj, <a href="qevent.html">QEvent</a> * ev ) <code>[virtual protected]</code></h3>
+<p>Intercepts and handles those events coming to the embedded <a href="qlineedit.html">QLineEdit</a>
+which have special meaning for the QSpinBox.
+<p>Reimplemented from <a href="qobject.html#bb8547">QObject.</a>
+<h3 class="fn">void <a name="189bca"></a>QSpinBox::interpretText () <code>[virtual protected]</code></h3>
+<p>QSpinBox calls this after the user has manually edited the contents
+of the spin box (not using the up/down buttons/keys).
+<p>The default implementation of this function interprets the new text
+using <a href="#3b663d">mapTextToValue</a>().  If mapTextToValue() is successful, it
+changes the spin box' value.  If not the value if left unchanged.
+<h3 class="fn">void <a name="2e7144"></a>QSpinBox::leaveEvent ( <a href="qevent.html">QEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#467513">QWidget.</a>
+<h3 class="fn">int <a name="d2623f"></a>QSpinBox::lineStep () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">int <a name="3b663d"></a>QSpinBox::mapTextToValue ( bool * ok ) <code>[virtual protected]</code></h3>
+<p>This virtual function is used by the spin box whenever it needs to
+interpret the text entered by the user as a value.  The default
+implementation tries to interpret it as an integer in the standard
+way, and returns the integer value.
+<p>Reimplement this function in in a subclass if you want a specialized
+spin box, handling something else than integers.  It should call
+<a href="#1cde82">text</a>() (or <a href="#a6c577">cleanText</a>() ) and return the value corresponding to that
+text.  If the text does not represent a legal value
+(uninterpretable), the bool pointed to by <em>ok</em> should be set to
+FALSE.
+<p>This function need not be concerned with <a href="#a89689">special-value text,</a> the QSpinBox handles that
+automatically.
+<p>See also  <a href="#189bca">interpretText</a>() and <a href="#6a3292">mapValueToText</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="6a3292"></a>QSpinBox::mapValueToText ( int v ) <code>[virtual protected]</code></h3>
+<p>This virtual function is used by the spin box whenever it needs to
+display value <em>v.</em>  The default implementation returns a string
+containing <em>v</em> printed in the standard way.
+<p>Reimplement this function in in a subclass if you want a specialized
+spin box, handling something else than integers.  This function need
+not be concerned with <a href="#ad4232">prefix</a> or <a href="#38a1a4">suffix</a> or <a href="#a89689">special-value text,</a> the QSpinBox handles that
+automatically.
+<p>See also  <a href="#0181b4">updateDisplay</a>() and <a href="#3b663d">mapTextToValue</a>().
+<h3 class="fn">int <a name="a91e7e"></a>QSpinBox::maxValue () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">int <a name="e37e26"></a>QSpinBox::minValue () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="812a40"></a>QSpinBox::prefix () const <code>[virtual]</code></h3>
+<p>Returns the currently set prefix, or a null string if no prefix is
+set.
+<p>See also  <a href="#ad4232">setPrefix</a>(), <a href="#38a1a4">setSuffix</a>() and <a href="#4221ff">suffix</a>().
+<h3 class="fn">void <a name="f7a505"></a>QSpinBox::rangeChange () <code>[virtual protected]</code></h3>
+<p>This method gets called by <a href="qrangecontrol.html">QRangeControl</a> whenever the range has
+changed.  It adjusts the default validator and updates the display.
+<h3 class="fn">void <a name="663850"></a>QSpinBox::resizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#28c156">QWidget.</a>
+<h3 class="fn">void <a name="1a2b08"></a>QSpinBox::setButtonSymbols ( <a href="qspinbox.html#ButtonSymbols">ButtonSymbols</a> newSymbols )</h3>
+<p>Sets the spin box to display <em>newSymbols</em> on its buttons.  <em>newSymbols</em> can be either <code>UpDownArrows</code> (the default) or <code>PlusMinus.</code>
+<p>See also  <a href="#c78106">buttonSymbols</a>() and <a href="#ButtonSymbols">ButtonSymbols</a>.
+<h3 class="fn">void <a name="a22f14"></a>QSpinBox::setEnabled ( bool on ) <code>[virtual slot]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="bf132b"></a>QSpinBox::setLineStep ( int i )</h3>
+<p>Sets the line step to <em>i.</em>
+<p>Calls the virtual <a href="qrangecontrol.html#33b3a2">stepChange</a>() function if the new line step is
+different from the previous setting.
+<p>See also  <a href="#d2623f">lineStep</a>(), <a href="qrangecontrol.html#60ce91">QRangeControl::setSteps</a>() and <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="a799b5"></a>QSpinBox::setMaxValue ( int i )</h3>
+<p>A convenience function which just calls
+<a href="qrangecontrol.html#0337f8">setRange</a>( <a href="#e37e26">minValue</a>(), i )
+<p>See also  <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="f997f9"></a>QSpinBox::setMinValue ( int i )</h3>
+<p>A convenience function which just calls
+<a href="qrangecontrol.html#0337f8">setRange</a>( i, <a href="#a91e7e">maxValue</a>() )
+<p>See also  <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn">void <a name="ad4232"></a>QSpinBox::setPrefix ( const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual slot]</code></h3>
+<p>Sets the prefix to <em>text.</em>  The prefix is prepended to the start of
+the displayed value.  Typical use is to indicate the unit of
+measurement to the user. eg.
+<p><pre>    sb-&gt;setPrefix("$");
+</pre>
+<p>To turn off the prefix display, call this function with an empty
+string as parameter.  The default is no prefix.
+<p>See also  <a href="#812a40">prefix</a>(), <a href="#38a1a4">setSuffix</a>() and <a href="#4221ff">suffix</a>().
+<h3 class="fn">void <a name="a89689"></a>QSpinBox::setSpecialValueText ( const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual]</code></h3>
+<p>Sets the special-value text to <em>text.</em>  If set, the spin box will
+display this text instead of a numeric value whenever the current
+value is equal to minVal().  Typically used for indicating that this
+choice has a special (default) meaning.
+<p>For example, if your spin box allows the user to choose the
+margin width in a print dialog, and your application is able to
+automatically choose a good margin width, you can set up the spin
+box like this:
+<pre>    <a href="qspinbox.html">QSpinBox</a> marginBox( -1, 20, 1, parent, "marginBox" );
+    marginBox-&gt;<a href="#38a1a4">setSuffix</a>( " mm" );
+    marginBox-&gt;<a href="#a89689">setSpecialValueText</a>( "Auto" );
+</pre>
+<p>The user will then be able to choose a margin width from 0-20
+millimeters, or select "Auto" to leave it to the application to
+choose.  Your code must then interpret the spin box value of -1 as
+the user requesting automatic margin width.
+<p>Neither <a href="#ad4232">prefix</a> nor <a href="#38a1a4">suffix,</a> if set, are added to the special-value text when
+displayed.
+<p>To turn off the special-value text display, call this function with
+an empty string as parameter. The default is no special-value text,
+i.e. the numeric value is shown as usual.
+<p>See also  <a href="#f0a00b">specialValueText</a>().
+<h3 class="fn">void <a name="38a1a4"></a>QSpinBox::setSuffix ( const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual slot]</code></h3>
+<p>Sets the suffix to <em>text.</em>  The suffix is appended to the end of the
+displayed value.  Typical use is to indicate the unit of measurement
+to the user. eg.
+<p><pre>    sb-&gt;setSuffix("cm");
+</pre>
+<p>To turn off the suffix display, call this function with an empty
+string as parameter.  The default is no suffix.
+<p>See also  <a href="#4221ff">suffix</a>(), <a href="#ad4232">setPrefix</a>() and <a href="#812a40">prefix</a>().
+<h3 class="fn">void <a name="cdf588"></a>QSpinBox::setValidator ( const <a href="qvalidator.html">QValidator</a> * v ) <code>[virtual]</code></h3>
+<p>Sets the validator to <em>v.</em>  The validator controls what keyboard
+input is accepted when the user is editing in the value field.  The
+default is to use a suitable <a href="qintvalidator.html">QIntValidator</a>.
+<p>Use setValidator(0) to turn off input validation (entered input will
+still be clamped to the range of the spinbox).
+<h3 class="fn">void <a name="4960d3"></a>QSpinBox::setValue ( int value ) <code>[virtual slot]</code></h3>
+<p>Sets the current value of the spin box to <em>value.</em>  This is
+<a href="qrangecontrol.html#29bfef">QRangeControl::setValue</a>() made available as a slot.
+<h3 class="fn">void <a name="e3b132"></a>QSpinBox::setWrapping ( bool on ) <code>[virtual]</code></h3>
+<p>Setting wrapping to TRUE will allow the value to be stepped from the
+highest value to the lowest, and vice versa.  By default, wrapping is
+turned off.
+<p>See also  <a href="#2fcc30">wrapping</a>(), <a href="#e37e26">minValue</a>(), <a href="#a91e7e">maxValue</a>() and <a href="qrangecontrol.html#0337f8">setRange</a>().
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="8171ed"></a>QSpinBox::sizeHint () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#290bcd">QWidget.</a>
+<h3 class="fn"><a href="qsizepolicy.html">QSizePolicy</a> <a name="31af00"></a>QSpinBox::sizePolicy () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#2d5d13">QWidget.</a>
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="f0a00b"></a>QSpinBox::specialValueText () const</h3>
+<p>Returns the currently special-value text, or a null string if no
+special-value text is currently set.
+<p>See also  <a href="#a89689">setSpecialValueText</a>().
+<h3 class="fn">void <a name="fb38db"></a>QSpinBox::stepDown () <code>[virtual slot]</code></h3>
+<p>Decreases the current value one step, wrapping as necessary.  This is
+the same as clicking on the pointing-down button, and can be used
+for e.g.  keyboard accelerators.
+<p>See also  <a href="#12d4cb">stepUp</a>(), <a href="qrangecontrol.html#3dd2cd">subtractLine</a>(), <a href="#d2623f">lineStep</a>(), <a href="qrangecontrol.html#60ce91">setSteps</a>(), <a href="#4960d3">setValue</a>() and <a href="#404d3b">value</a>().
+<h3 class="fn">void <a name="12d4cb"></a>QSpinBox::stepUp () <code>[virtual slot]</code></h3>
+<p>Increases the current value one step, wrapping as necessary.  This is
+the same as clicking on the pointing-up button, and can be used for
+e.g.  keyboard accelerators.
+<p>See also  <a href="#fb38db">stepDown</a>(), <a href="qrangecontrol.html#2e2e07">addLine</a>(), <a href="#d2623f">lineStep</a>(), <a href="qrangecontrol.html#60ce91">setSteps</a>(), <a href="#4960d3">setValue</a>() and <a href="#404d3b">value</a>().
+<h3 class="fn">void <a name="800c31"></a>QSpinBox::styleChange ( <a href="qstyle.html">QStyle</a> &amp; old ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#7a14f4">QWidget.</a>
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="4221ff"></a>QSpinBox::suffix () const <code>[virtual]</code></h3>
+<p>Returns the currently set suffix, or a null string if no suffix is
+set.
+<p>See also  <a href="#38a1a4">setSuffix</a>(), <a href="#ad4232">setPrefix</a>() and suffix().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="1cde82"></a>QSpinBox::text () const</h3>
+<p>Returns the current text of the spin box, including any <a href="#812a40">prefix</a>() and <a href="#4221ff">suffix</a>().
+<p>See also  <a href="#404d3b">value</a>().
+<h3 class="fn">void <a name="5b6e4f"></a>QSpinBox::textChanged () <code>[protected slot]</code></h3>
+<p>This slot gets called whenever the user edits the text of the spin box.
+<h3 class="fn"><a href="qpushbutton.html">QPushButton</a>* <a name="e0127f"></a>QSpinBox::upButton () const <code>[protected]</code></h3>
+<p>Returns a pointer to the embedded 'up' button.
+<h3 class="fn">void <a name="0181b4"></a>QSpinBox::updateDisplay () <code>[virtual protected]</code></h3>
+<p>Updates the contents of the embedded <a href="qlineedit.html">QLineEdit</a> to reflect current
+value, using <a href="#6a3292">mapValueToText</a>().  Also enables/disables the push
+buttons accordingly.
+<p>See also  <a href="#6a3292">mapValueToText</a>().
+<h3 class="fn">const <a href="qvalidator.html">QValidator</a> * <a name="27ab6c"></a>QSpinBox::validator () const</h3>
+<p>Returns the validator which constrains editing for this spin box if
+there is any, or else 0.
+<p>See also  <a href="#cdf588">setValidator</a>() and <a href="qvalidator.html">QValidator</a>.
+<h3 class="fn">int <a name="404d3b"></a>QSpinBox::value () const</h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<h3 class="fn">void <a name="addedb"></a>QSpinBox::valueChange () <code>[virtual protected]</code></h3>
+<p>This method gets called by <a href="qrangecontrol.html">QRangeControl</a> whenever the value has changed.
+Updates the display and emits the <a href="#479976">valueChanged</a>() signals.
+<h3 class="fn">void <a name="991cc3"></a>QSpinBox::valueChanged ( const <a href="qstring.html">QString</a> &amp; valueText ) <code>[signal]</code></h3>
+<p>This signal is emitted whenever the <a href="#479976">valueChanged</a>( int ) signal is
+emitted, i.e.  every time the value of the spin box changes (whatever
+the cause - by <a href="#4960d3">setValue</a>(), by a keyboard accelerator, by mouse
+clicks etc.).
+<p>The <em>valueText</em> parameter is the same string that is
+displayed in the edit field of the spin box.
+<p>See also  <a href="#404d3b">value</a>().
+<h3 class="fn">void <a name="479976"></a>QSpinBox::valueChanged ( int value ) <code>[signal]</code></h3>
+<p>This signal is emitted every time the value of the spin box changes
+(whatever the cause - by <a href="#4960d3">setValue</a>(), by a keyboard accelerator, by
+mouse clicks etc.).
+<p>Note that it is emitted <em>every</em> time, not just for the "final" step
+- if the user clicks 'up' three times, this signal is emitted three
+times.
+<p>See also  <a href="#404d3b">value</a>().
+<h3 class="fn">void <a name="abb6c0"></a>QSpinBox::wheelEvent ( <a href="qwheelevent.html">QWheelEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#cd6485">QWidget.</a>
+<h3 class="fn">bool <a name="2fcc30"></a>QSpinBox::wrapping () const</h3>
+<p>Returns the current <a href="#e3b132">setWrapping</a>() value.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

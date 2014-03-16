@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QCheckBox Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QCheckBox Class Reference</h1><br clear="all">
+<p>
+The QCheckBox widget provides a check box with a text label.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qcheckbox-h.html">qcheckbox.h</a>&gt;</code>
+<p>
+Inherits <a href="qbutton.html">QButton</a>.
+<p><a href="qcheckbox-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#5ba6d6"><b>QCheckBox</b></a> ( QWidget * parent, const char * name=0 ) </div>
+<li><div class="fn"><a href="#3cc9fc"><b>QCheckBox</b></a> ( const QString &amp; text, QWidget * parent, const char * name=0 ) </div>
+<li><div class="fn">bool <a href="#30acb4"><b>isChecked</b></a> () const</div>
+<li><div class="fn">void <a href="#f146fc"><b>setChecked</b></a> ( bool check ) </div>
+<li><div class="fn">void <a href="#bf08c6"><b>setNoChange</b></a> () </div>
+<li><div class="fn">void <a href="#5e5018"><b>setTristate</b></a> ( bool y=TRUE ) </div>
+<li><div class="fn">bool <a href="#a300b2"><b>isTristate</b></a> () const</div>
+</ul>
+<h2>Important Inherited Members</h2>
+<ul>
+<li><div class="fn">QString <a href="qbutton.html#7bda4b"><b>text</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#58c887"><b>setText</b></a> ( const QString &amp; text ) </div>
+<li><div class="fn">QString <a href="qbutton.html#7bda4b"><b>text</b></a> () const</div>
+<li><div class="fn">const QPixmap* <a href="qbutton.html#afefbe"><b>pixmap</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#dff0ad"><b>setPixmap</b></a> ( const QPixmap &amp; pixmap ) </div>
+<li><div class="fn">int <a href="qbutton.html#76c9b5"><b>accel</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#ceae5c"><b>setAccel</b></a> ( int key ) </div>
+<li><div class="fn">bool <a href="qbutton.html#27fa01"><b>isToggleButton</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#2ceccd"><b>setDown</b></a> ( bool enable ) </div>
+<li><div class="fn">bool <a href="qbutton.html#d0e4de"><b>isDown</b></a> () const</div>
+<li><div class="fn">bool <a href="qbutton.html#380a2c"><b>isOn</b></a> () const</div>
+<li><div class="fn">bool <a href="qbutton.html#b633c6"><b>autoRepeat</b></a> () const</div>
+<li><div class="fn">bool <a href="qbutton.html#b1945d"><b>isExclusiveToggle</b></a> () const</div>
+<li><div class="fn">QButtonGroup* <a href="qbutton.html#449ec4"><b>group</b></a> () const</div>
+<li><div class="fn">virtual void <a href="qbutton.html#cb67c6"><b>setAutoRepeat</b></a> ( bool enable ) </div>
+<li><div class="fn">void <a href="qbutton.html#1b3964"><b>toggle</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#188321"><b>pressed</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#e9ba3e"><b>released</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#5af7e7"><b>clicked</b></a> () </div>
+<li><div class="fn">void <a href="qbutton.html#2e08a9"><b>toggled</b></a> ( bool on ) </div>
+<li><div class="fn">void <a href="qbutton.html#606709"><b>stateChanged</b></a> ( int state ) </div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>bool<td>checked<td>isChecked<td>setChecked<td>&nbsp;
+<tr><td>bool<td>tristate<td>isTristate<td>setTristate<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QCheckBox widget provides a check box with a text label.
+<p>
+QCheckBox and <a href="qradiobutton.html">QRadioButton</a> are both option buttons. That is, they
+can be switched on (checked) or off (unchecked). The classes differ
+in how the choices for the user are restricted. Radio buttons define
+a "one of many" choice, while check-boxes provide "many of many"
+choices.
+<p>While it is technically possible to implement radio-behaviour with
+check boxes and vice versa, it's strongly recommended to stick with
+the well-known semantics. Otherwise your users would be pretty
+confused.
+<p>Use <a href="qbuttongroup.html">QButtonGroup</a> to group check-buttons visually.
+<p>Whenver a check box is checked or cleared, it emits the signal
+<a href="qbutton.html#2e08a9">toggled</a>(). Connect to this signal if you want to trigger an action
+each time the box changes state. Otherwise, use <a href="#30acb4">isChecked</a>() to query
+whether or not a particular check box is selected.
+<p>In addition to the usual checked and unchecked states, QCheckBox
+optionally provides a third state to indicate "no change".  This is
+useful whenever you need to give the user the option of neither
+setting nor unsetting an option. If you need that third state,
+enable it with <a href="#5e5018">setTristate</a>() and use <a href="qbutton.html#cb70aa">state</a>() to query the current
+toggle state. When a tristate box changes state, it emits the
+<a href="qbutton.html#606709">stateChanged</a>() signal.
+<p><img src=qchkbox-m.png> <img src=qchkbox-w.png>
+<p>See also  <a href="qbutton.html">QButton</a>, <a href="qradiobutton.html">QRadioButton</a> and <a href="guibooks.html#fowler">Fowler: Check Box.</a>
+<p>Examples:
+ <a href="xform-xform-cpp.html#QCheckBox">xform/xform.cpp</a>
+ <a href="i18n-main-cpp.html#QCheckBox">i18n/main.cpp</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="5ba6d6"></a>QCheckBox::QCheckBox ( <a href="qwidget.html">QWidget</a> * parent, const char * name=0 )</h3>
+<p>Constructs a check box with no text.
+<p>The <em>parent</em> and <em>name</em> arguments are sent to the <a href="qwidget.html">QWidget</a> constructor.
+<h3 class="fn"><a name="3cc9fc"></a>QCheckBox::QCheckBox ( const <a href="qstring.html">QString</a> &amp; text, <a href="qwidget.html">QWidget</a> * parent, const char * name=0 )</h3>
+<p>Constructs a check box with a text.
+<p>The <em>parent</em> and <em>name</em> arguments are sent to the <a href="qwidget.html">QWidget</a> constructor.
+<h3 class="fn">void <a name="3718fb"></a>QCheckBox::drawButton ( <a href="qpainter.html">QPainter</a> * paint ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qbutton.html#806195">QButton.</a>
+<h3 class="fn">void <a name="63c739"></a>QCheckBox::drawButtonLabel ( <a href="qpainter.html">QPainter</a> * p ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qbutton.html#2e366a">QButton.</a>
+<h3 class="fn">bool <a name="30acb4"></a>QCheckBox::isChecked () const</h3>
+<p>Returns TRUE if the check box is checked, or FALSE if it is not checked.
+<p>See also  <a href="#f146fc">setChecked</a>().
+<p>Examples:
+ <a href="xform-xform-cpp.html#isChecked">xform/xform.cpp</a>
+<h3 class="fn">bool <a name="a300b2"></a>QCheckBox::isTristate () const</h3>
+<p>Returns TRUE if the checkbox is a tristate checkbox. Otherwise returns
+FALSE.
+<p>See also  <a href="#5e5018">setTristate</a>().
+<h3 class="fn">void <a name="c504d5"></a>QCheckBox::resizeEvent ( <a href="qresizeevent.html">QResizeEvent</a> * ) <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#28c156">QWidget.</a>
+<h3 class="fn">void <a name="f146fc"></a>QCheckBox::setChecked ( bool check )</h3>
+<p>Checks the check box if <em>check</em> is TRUE, or unchecks it if <em>check</em>
+is FALSE.
+<p>See also  <a href="#30acb4">isChecked</a>().
+<h3 class="fn">void <a name="bf08c6"></a>QCheckBox::setNoChange ()</h3>
+<p>Sets the checkbox into the "no change" state.
+<p>See also  <a href="#5e5018">setTristate</a>().
+<h3 class="fn">void <a name="5e5018"></a>QCheckBox::setTristate ( bool y=TRUE )</h3>
+<p>Makes the check box a tristate check box if <em>y</em> is TRUE.  A tristate
+check box provides an additional state NoChange.
+<p>Use tristate check boxes whenever you need to give the user the
+option of neither setting nor unsetting an option. A typical example
+is the "Italic" check box in the font dialog of a word processor
+when the marked text is partially Italic and partially not.
+<p>See also  <a href="#a300b2">isTristate</a>(), <a href="#bf08c6">setNoChange</a>(), <a href="qbutton.html#606709">stateChanged</a>() and <a href="qbutton.html#cb70aa">state</a>().
+<h3 class="fn"><a href="qsize.html">QSize</a> <a name="8de5dc"></a>QCheckBox::sizeHint () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#290bcd">QWidget.</a>
+<h3 class="fn"><a href="qsizepolicy.html">QSizePolicy</a> <a name="dfd0ed"></a>QCheckBox::sizePolicy () const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#2d5d13">QWidget.</a>
+<h3 class="fn">void <a name="6ade48"></a>QCheckBox::updateMask () <code>[virtual protected]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qwidget.html#395595">QWidget.</a>
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

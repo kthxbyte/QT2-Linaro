@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QStack Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QStack Class Reference</h1><br clear="all">
+<p>
+The QStack class is a template class that provides a stack.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qstack-h.html">qstack.h</a>&gt;</code>
+<p><a href="qstack-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#683c66"><b>QStack</b></a> () </div>
+<li><div class="fn"><a href="#70cef9"><b>QStack</b></a> ( const QStack&lt;type&gt; &amp; s ) </div>
+<li><div class="fn"><a href="#55478b"><b>~QStack</b></a> () </div>
+<li><div class="fn">QStack&lt;type&gt;&amp; <a href="#47ded4"><b>operator=</b></a> ( const QStack&lt;type&gt; &amp; s ) </div>
+<li><div class="fn">bool <a href="#857378"><b>autoDelete</b></a> () const</div>
+<li><div class="fn">void <a href="#788bb9"><b>setAutoDelete</b></a> ( bool enable ) </div>
+<li><div class="fn">virtual uint <a href="#402eac"><b>count</b></a> () const</div>
+<li><div class="fn">bool <a href="#6b55ba"><b>isEmpty</b></a> () const</div>
+<li><div class="fn">void <a href="#69ff78"><b>push</b></a> ( const type * d ) </div>
+<li><div class="fn">type* <a href="#943ac0"><b>pop</b></a> () </div>
+<li><div class="fn">bool <a href="#5cdeac"><b>remove</b></a> () </div>
+<li><div class="fn">virtual void <a href="#58f3a1"><b>clear</b></a> () </div>
+<li><div class="fn">type* <a href="#b05fd0"><b>top</b></a> () const</div>
+<li><div class="fn">operator <a href=qstack.html#262236><b>type*</b></a> ()const</div>
+<li><div class="fn">type* <a href="#215f46"><b>current</b></a> () const</div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QStack class is a template class that provides a stack.
+<p>
+QStack is implemented as a template class. Define a template
+instance QStack&lt;X&gt; to create a stack that operates on pointers to
+X, or X*.
+<p>A stack is a Last In, First Out (LIFO) structure. Items are added to
+the top of the stack with <a href="#69ff78">push</a>() and retrieved from the top
+with <a href="#943ac0">pop</a>().
+<p>See also  <a href="collection.html">Collection Classes</a>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="683c66"></a>QStack::QStack ()</h3>
+<p>Creates and empty stack.
+<h3 class="fn"><a name="70cef9"></a>QStack::QStack ( const QStack&lt;type&gt; &amp; s )</h3>
+<p>Creates a stack by making a shallow copy of another stack.
+<h3 class="fn"><a name="55478b"></a>QStack::~QStack ()</h3>
+<p>Destroys the stack.  All items will be deleted if <a href="#857378">autoDelete</a>() is TRUE.
+<h3 class="fn"><a name="262236"></a>QStack::operator type* () const</h3>
+<p>Returns a reference to the top item on the stack (most recently pushed).
+The stack is not changed.
+<h3 class="fn">bool <a name="857378"></a>QStack::autoDelete () const</h3>
+<p>The same as <a href="qcollection.html#05b849">QCollection::autoDelete</a>().
+<p>See also  <a href="#788bb9">setAutoDelete</a>().
+<h3 class="fn">void <a name="58f3a1"></a>QStack::clear () <code>[virtual]</code></h3>
+<p>Removes all items from the stack, deleting them if
+<a href="#857378">autoDelete</a>() is TRUE.
+<p>See also  <a href="#5cdeac">remove</a>().
+<p>Reimplemented from <a href="qcollection.html#10eb2d">QCollection.</a>
+<h3 class="fn">uint <a name="402eac"></a>QStack::count () const <code>[virtual]</code></h3>
+<p>Returns the number of items in the stack.
+<p>See also  <a href="#6b55ba">isEmpty</a>().
+<p>Reimplemented from <a href="qcollection.html#649c42">QCollection.</a>
+<h3 class="fn">type* <a name="215f46"></a>QStack::current () const</h3>
+<p>Returns a reference to the top item on the stack (most recently pushed).
+The stack is not changed.
+<h3 class="fn">bool <a name="6b55ba"></a>QStack::isEmpty () const</h3>
+<p>Returns TRUE is the stack contains no elements to be <a href="#943ac0">popped</a>
+<h3 class="fn">QStack&lt;type&gt;&amp; <a name="47ded4"></a>QStack::operator= ( const QStack&lt;type&gt; &amp; s )</h3>
+<p>Sets the contents of this stack by making a shallow copy of another stack.
+Elements currently in this stack will be deleted if <a href="#857378">autoDelete</a>() is TRUE.
+<h3 class="fn">type* <a name="943ac0"></a>QStack::pop ()</h3>
+<p>Removes the top item from the stack and returns it.
+<h3 class="fn">void <a name="69ff78"></a>QStack::push ( const type * d )</h3>
+<p>Adds an element to the top of the stack.  Last in, first out.
+<h3 class="fn">bool <a name="5cdeac"></a>QStack::remove ()</h3>
+<p>Removes the top item from the stack and deletes it if
+<a href="#857378">autoDelete</a>() is TRUE.  Returns TRUE if there was an item to pop.
+<p>See also  <a href="#58f3a1">clear</a>().
+<h3 class="fn">void <a name="788bb9"></a>QStack::setAutoDelete ( bool enable )</h3>
+<p>The same as <a href="qcollection.html#a3fc3c">QCollection::setAutoDelete</a>().
+<p>See also  <a href="#857378">autoDelete</a>().
+<h3 class="fn">type* <a name="b05fd0"></a>QStack::top () const</h3>
+<p>Returns a reference to the top item on the stack (most recently pushed).
+The stack is not changed.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

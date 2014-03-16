@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QCanvasPolygonalItem Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QCanvasPolygonalItem Class Reference<br><small>[ <a href="canvas.html">canvas module</a> ]</small></h1><br clear="all">
+<p>
+A <a href="qcanvasitem.html">QCanvasItem</a> which renders itself in a polygonal area.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qcanvas-h.html">qcanvas.h</a>&gt;</code>
+<p>
+Inherits <a href="qcanvasitem.html">QCanvasItem</a>.
+<p>Inherited by <a href="qcanvasellipse.html">QCanvasEllipse</a>, <a href="qcanvasline.html">QCanvasLine</a>, <a href="qcanvaspolygon.html">QCanvasPolygon</a> and <a href="qcanvasrectangle.html">QCanvasRectangle</a>.
+<p><a href="qcanvaspolygonalitem-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#c57394"><b>QCanvasPolygonalItem</b></a> ( QCanvas * canvas ) </div>
+<li><div class="fn">virtual <a href="#1ba1e8"><b>~QCanvasPolygonalItem</b></a> () </div>
+<li><div class="fn">virtual void <a href="#0724e7"><b>setPen</b></a> ( QPen p ) </div>
+<li><div class="fn">virtual void <a href="#235f61"><b>setBrush</b></a> ( QBrush b ) </div>
+<li><div class="fn">QPen <a href="#4815ce"><b>pen</b></a> () const</div>
+<li><div class="fn">QBrush <a href="#afd989"><b>brush</b></a> () const</div>
+<li><div class="fn">virtual QPointArray <a href="#3a4360"><b>areaPoints</b></a> () const</div>
+<li><div class="fn">virtual QPointArray <a href="#9ad0b5"><b>areaPointsAdvanced</b></a> () const</div>
+<li><div class="fn">virtual QRect <a href="#3c5dfa"><b>boundingRect</b></a> () const</div>
+<li><div class="fn">virtual int <a href="#ee97f9"><b>rtti</b></a> () const</div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#9b98ed"><b>draw</b></a> ( QPainter &amp; ) </div>
+<li><div class="fn">virtual void <a href="#5b3192"><b>drawShape</b></a> ( QPainter &amp; ) </div>
+<li><div class="fn">bool <a href="#f9d6eb"><b>winding</b></a> () const</div>
+<li><div class="fn">void <a href="#176fba"><b>setWinding</b></a> ( bool ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+A <a href="qcanvasitem.html">QCanvasItem</a> which renders itself in a polygonal area.
+<p>
+QCanvasPolygonalItem is an abstract class that is useful for all items
+which cover a polygonal area of the canvas.
+<a href="qcanvassprite.html">QCanvasSprite</a> and <a href="qcanvastext.html">QCanvasText</a>, the other branches of QCanvasItem derivatives
+usually cover a simple rectangular area and are dealt with specially,
+but typical geometric shapes such as lines and circles would be too
+inefficiently bounded by rectangular areas - a diagonal line from one
+corner of the canvas area to the other would be bounded by a rectangle covering
+the entire area! QCanvasPolygonalItem objects allow the area to be
+defined by a polygon - a sequence of points
+bounding the area covered by the item.
+<p>Derived classes should try to define as small as possible an area
+to maximize efficiency, but must <em>definately</em> be contained completely
+within the polygonal area.  Calculating the exact requirements may
+be difficult, but a small amount of over-estimation is better than
+any under-estimation, which will give drawing errors.
+<p>All subclasses must call <a href="qcanvasitem.html#c2e7f6">hide</a>() in their destructor while the
+functions numAreaPoints() and getAreaPoints() are valid.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="c57394"></a>QCanvasPolygonalItem::QCanvasPolygonalItem ( <a href="qcanvas.html">QCanvas</a> * canvas )</h3>
+<p>Constructs a QCanvasPolygonalItem on <em>canvas.</em>
+<h3 class="fn"><a name="1ba1e8"></a>QCanvasPolygonalItem::~QCanvasPolygonalItem () <code>[virtual]</code></h3>
+<p>Destruct the QCanvasPolygonalItem.  Derived classes <em>must</em>
+call <a href="qcanvasitem.html#c2e7f6">hide</a>() in their
+destructor, as this destructor cannot call the virtual methods.
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a> <a name="3a4360"></a>QCanvasPolygonalItem::areaPoints () const <code>[virtual]</code></h3>
+<p>Must return the points bounding the shape.  Note that the returned
+points are <em>outside</em> the object, not touching it.
+<p>Reimplemented in <a href="qcanvaspolygon.html#da11de">QCanvasPolygon</a>, <a href="qcanvasellipse.html#3c9333">QCanvasEllipse</a>, <a href="qcanvasrectangle.html#5bf1eb">QCanvasRectangle</a> and <a href="qcanvasline.html#1c2b94">QCanvasLine</a>.
+<h3 class="fn"><a href="qpointarray.html">QPointArray</a> <a name="9ad0b5"></a>QCanvasPolygonalItem::areaPointsAdvanced () const <code>[virtual]</code></h3>
+<p>Returns the points advanced by the current <a href="qcanvasitem.html#ff27a3">xVelocity</a>() and <a href="qcanvasitem.html#df5072">yVelocity</a>().
+<h3 class="fn"><a href="qrect.html">QRect</a> <a name="3c5dfa"></a>QCanvasPolygonalItem::boundingRect () const <code>[virtual]</code></h3>
+<p>Returns the bounding rectangle of the polygonal item,
+based on <a href="#3a4360">areaPoints</a>().
+<p>Reimplemented from <a href="qcanvasitem.html#328657">QCanvasItem.</a>
+<h3 class="fn"><a href="qbrush.html">QBrush</a> <a name="afd989"></a>QCanvasPolygonalItem::brush () const</h3>
+<p>Returns the <a href="qbrush.html">QBrush</a> used to fill the item, if filled.
+<p>See also  <a href="#235f61">setBrush</a>().
+<h3 class="fn">bool <a name="2e3ab9"></a>QCanvasPolygonalItem::collidesWith ( const <a href="qcanvasitem.html">QCanvasItem</a> * i ) const <code>[virtual]</code></h3>
+<p>Reimplemented for internal reasons; the API is not affected.
+<p>Reimplemented from <a href="qcanvasitem.html#e006e1">QCanvasItem.</a>
+<h3 class="fn">void <a name="9b98ed"></a>QCanvasPolygonalItem::draw ( <a href="qpainter.html">QPainter</a> &amp; p ) <code>[virtual protected]</code></h3>
+<p>Reimplemented from <a href="qcanvasitem.html">QCanvasItem</a>, this draws the item by setting the
+pen and brush on <em>p</em> and calling <a href="#5b3192">drawShape</a>().
+<p>Reimplemented from <a href="qcanvasitem.html#a3b9d2">QCanvasItem.</a>
+<h3 class="fn">void <a name="5b3192"></a>QCanvasPolygonalItem::drawShape ( <a href="qpainter.html">QPainter</a> &amp; p ) <code>[virtual protected]</code></h3>
+<p>Subclasses must reimplement this function to draw their shape. The
+pen and brush of <em>p</em> are already set to <a href="#4815ce">pen</a>() and <a href="#afd989">brush</a>() prior to
+calling this function.
+<p>See also  <a href="#9b98ed">draw</a>().
+<p>Reimplemented in <a href="qcanvasrectangle.html#e09a4d">QCanvasRectangle</a>, <a href="qcanvaspolygon.html#432eb7">QCanvasPolygon</a>, <a href="qcanvasellipse.html#f643a0">QCanvasEllipse</a> and <a href="qcanvasline.html#fe183c">QCanvasLine</a>.
+<h3 class="fn"><a href="qpen.html">QPen</a> <a name="4815ce"></a>QCanvasPolygonalItem::pen () const</h3>
+<p>Returns the <a href="qpen.html">QPen</a> used to draw the outline of the item, if any.
+<p>See also  <a href="#0724e7">setPen</a>().
+<h3 class="fn">int <a name="ee97f9"></a>QCanvasPolygonalItem::rtti () const <code>[virtual]</code></h3>
+<p>Returns 2.
+<p>See also  <a href="qcanvasitem.html#f6cf38">QCanvasItem::rtti</a>().
+<p>Reimplemented from <a href="qcanvasitem.html#f6cf38">QCanvasItem.</a>
+<h3 class="fn">void <a name="235f61"></a>QCanvasPolygonalItem::setBrush ( <a href="qbrush.html">QBrush</a> b ) <code>[virtual]</code></h3>
+<p>Sets the <a href="qbrush.html">QBrush</a> used when drawing item.
+<p>See also  <a href="#0724e7">setPen</a>(), <a href="#afd989">brush</a>() and <a href="#5b3192">drawShape</a>().
+<h3 class="fn">void <a name="0724e7"></a>QCanvasPolygonalItem::setPen ( <a href="qpen.html">QPen</a> p ) <code>[virtual]</code></h3>
+<p>Sets the <a href="qpen.html">QPen</a> used when drawing the item.
+Note that many QCanvasPolygonalItem do not use the pen value.
+<p>See also  <a href="#235f61">setBrush</a>(), <a href="#4815ce">pen</a>() and <a href="#5b3192">drawShape</a>().
+<p>Reimplemented in <a href="qcanvasline.html#3e825b">QCanvasLine</a>.
+<h3 class="fn">void <a name="176fba"></a>QCanvasPolygonalItem::setWinding ( bool enable ) <code>[protected]</code></h3>
+<p>Sets whether the polygonal item to use <em>winding</em> algorithm
+for determine the "inside" of the polygon, rather than
+the odd-even algorithm.
+<p>See also  <a href="#f9d6eb">winding</a>().
+<h3 class="fn">bool <a name="f9d6eb"></a>QCanvasPolygonalItem::winding () const <code>[protected]</code></h3>
+<p>Returns TRUE if the polygonal item uses the <em>winding</em> algorithm
+for determine the "inside" of the polygon, of FALSE if
+it uses the odd-even algorithm.
+<p>See also  <a href="#176fba">setWinding</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

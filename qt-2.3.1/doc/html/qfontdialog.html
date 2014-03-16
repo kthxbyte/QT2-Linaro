@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QFontDialog Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QFontDialog Class Reference</h1><br clear="all">
+<p>
+The QFontDialog class provides a dialog widget for selecting a text font.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qfontdialog-h.html">qfontdialog.h</a>&gt;</code>
+<p>
+Inherits <a href="qdialog.html">QDialog</a>.
+<p><a href="qfontdialog-members.html">List of all member functions.</a>
+<h2>Signals</h2>
+<ul>
+<li><div class="fn">void <a href="#feaf57"><b>fontSelected</b></a> ( const QFont &amp; font ) </div>
+<li><div class="fn">void <a href="#2b8805"><b>fontHighlighted</b></a> ( const QFont &amp; font ) </div>
+</ul>
+<h2>Static Public Members</h2>
+<ul>
+<li><div class="fn">QFont <a href="#dc93c8"><b>getFont</b></a> ( bool * ok, const QFont &amp; def, QWidget * parent = 0, const char * name = 0 ) </div>
+<li><div class="fn">QFont <a href="#595283"><b>getFont</b></a> ( bool * ok, QWidget * parent = 0, const char * name = 0 ) </div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn">virtual bool <a href="#224fd0"><b>eventFilter</b></a> ( QObject *, QEvent * ) </div>
+<li><div class="fn">QListBox* <a href="#1121f6"><b>familyListBox</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#720796"><b>updateFamilies</b></a> () </div>
+<li><div class="fn">QListBox* <a href="#31235c"><b>styleListBox</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#750903"><b>updateStyles</b></a> () </div>
+<li><div class="fn">QListBox* <a href="#784fca"><b>sizeListBox</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#acc0f6"><b>updateSizes</b></a> () </div>
+<li><div class="fn">QComboBox* <a href="#00c7d2"><b>scriptCombo</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#2dc62f"><b>updateScripts</b></a> () </div>
+</ul>
+<h2>Protected Slots</h2>
+<ul>
+<li><div class="fn">void <a href="#e1984e"><b>sizeChanged</b></a> ( const QString &amp; ) </div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QFontDialog class provides a dialog widget for selecting a text font.
+<p>
+This dialog can be used to let the user choose a font with attributes and so on.
+Normally you may use the static convenience function <a href="#595283">getFont</a>().
+<p><img src=qfontdlg-m.png> <img src=qfontdlg-w.png>
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn">bool <a name="224fd0"></a>QFontDialog::eventFilter ( <a href="qobject.html">QObject</a> * o, <a href="qevent.html">QEvent</a> * e ) <code>[virtual protected]</code></h3>
+<p>Event filter to make up, down, pageup and pagedown work correctly
+in the line edits.
+<p>Reimplemented from <a href="qobject.html#bb8547">QObject.</a>
+<h3 class="fn"><a href="qlistbox.html">QListBox</a> * <a name="1121f6"></a>QFontDialog::familyListBox () const <code>[protected]</code></h3>
+<p>Returns a pointer to the "font family" list box.  This is usable
+mainly if you reimplement updateFontFamilies();.
+<h3 class="fn">void <a name="2b8805"></a>QFontDialog::fontHighlighted ( const <a href="qfont.html">QFont</a> &amp; ) <code>[signal]</code></h3>
+<p>This signal is emitted, when the user changed a setting in the dialog.
+<h3 class="fn">void <a name="feaf57"></a>QFontDialog::fontSelected ( const <a href="qfont.html">QFont</a> &amp; ) <code>[signal]</code></h3>
+<p>This signal is emitted, when the user has chosen a font and clicked ok.
+<h3 class="fn"><a href="qfont.html">QFont</a> <a name="595283"></a>QFontDialog::getFont ( bool * ok, <a href="qwidget.html">QWidget</a> * parent = 0,const char * name = 0 ) <code>[static]</code></h3>
+<p>Opens a modal font dialog and returns the font selected by the user.
+<p>The <em>ok</em> parameter is set to TRUE if the user clicked OK, and FALSE if
+the user clicked Cancel.
+<p>If the user clicks Cancel the Qt default font is returned.
+<p>This static function is less capable than the full QFontDialog object,
+but is convenient and easy to use.
+<p>Example:
+<pre>    // start at the current working directory and with *.cpp as filter
+    bool ok;
+    <a href="qfont.html">QFont</a> f = QFontDialog::getFont( &amp;ok, this );
+    if ( ok ) {
+        // the user selected a valid font
+    } else {
+        // the user cancelled the dialog
+    }
+</pre>
+<h3 class="fn"><a href="qfont.html">QFont</a> <a name="dc93c8"></a>QFontDialog::getFont ( bool * ok, const <a href="qfont.html">QFont</a> &amp; initial, <a href="qwidget.html">QWidget</a> * parent = 0, const char * name = 0 ) <code>[static]</code></h3>
+<p>Opens a modal font dialog and returns the font selected by the user.
+<p><em>initial</em> is the initial selected font.
+<p>The <em>ok</em> parameter is set to TRUE if the user clicked OK, and FALSE if
+the user clicked Cancel.
+<p>If the user clicks Cancel the <em>initial</em> font is returned.
+<p>This static function is less capable than the full QFontDialog object,
+but is convenient and easy to use.
+<p>Example:
+<pre>    // start at the current working directory and with *.cpp as filter
+    bool ok;
+    <a href="qfont.html">QFont</a> f = QFontDialog::getFont( &amp;ok, QFont( "Times", 12 ), this );
+    if ( ok ) {
+        // the user selected a valid font
+    } else {
+        // the user cancelled the dialog
+    }
+</pre>
+<p>Another example:
+<pre>    mywidget.setFont( <a href="#595283">QFontDialog::getFont</a>( 0, mywidget.font() ) );
+</pre>
+<h3 class="fn"><a href="qcombobox.html">QComboBox</a> * <a name="00c7d2"></a>QFontDialog::scriptCombo () const <code>[protected]</code></h3>
+<p>Returns a pointer to the "font style" list box.  This is usable
+mainly if you reimplement updateFontStyles();.
+<h3 class="fn">void <a name="e1984e"></a>QFontDialog::sizeChanged ( const <a href="qstring.html">QString</a> &amp; s ) <code>[protected slot]</code></h3>
+<p>This slot is called if the user changes the font size.
+<h3 class="fn"><a href="qlistbox.html">QListBox</a> * <a name="784fca"></a>QFontDialog::sizeListBox () const <code>[protected]</code></h3>
+<p>Returns a pointer to the "font size" list box.  This is usable
+mainly if you reimplement updateFontSizes();.
+<h3 class="fn"><a href="qlistbox.html">QListBox</a> * <a name="31235c"></a>QFontDialog::styleListBox () const <code>[protected]</code></h3>
+<p>Returns a pointer to the "font style" list box.  This is usable
+mainly if you reimplement updateFontStyles();.
+<h3 class="fn">void <a name="720796"></a>QFontDialog::updateFamilies () <code>[virtual protected]</code></h3>
+<p>Update the contents of the "font family" list box.  This
+function can be reimplemented if you have special requirements.
+<h3 class="fn">void <a name="2dc62f"></a>QFontDialog::updateScripts () <code>[virtual protected]</code></h3>
+<p>Update the contents of the "font script" combo box.  This
+function can be reimplemented if you have special requirements.
+<h3 class="fn">void <a name="acc0f6"></a>QFontDialog::updateSizes () <code>[virtual protected]</code></h3>
+<p>Update the contents of the "font size" list box.  This
+function can be reimplemented if you have special requirements.
+<h3 class="fn">void <a name="750903"></a>QFontDialog::updateStyles () <code>[virtual protected]</code></h3>
+<p>Update the contents of the "font style" list box.  This
+function can be reimplemented if you have special requirements.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QDomNode Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QDomNode Class Reference<br><small>[ <a href="xml.html">XML module</a> ]</small></h1><br clear="all">
+<p>
+The QDomNode class is the base class for all nodes of the DOM tree.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qdom-h.html">qdom.h</a>&gt;</code>
+<p>Inherited by <a href="qdomattr.html">QDomAttr</a>, <a href="qdomcharacterdata.html">QDomCharacterData</a>, <a href="qdomdocument.html">QDomDocument</a>, <a href="qdomdocumentfragment.html">QDomDocumentFragment</a>, <a href="qdomdocumenttype.html">QDomDocumentType</a>, <a href="qdomelement.html">QDomElement</a>, <a href="qdomentity.html">QDomEntity</a>, <a href="qdomentityreference.html">QDomEntityReference</a>, <a href="qdomnotation.html">QDomNotation</a> and <a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a>.
+<p><a href="qdomnode-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn">enum <b>NodeType</b> { BaseNode = 0, ElementNode = 1, AttributeNode = 2, TextNode = 3, CDATASectionNode = 4, EntityReferenceNode = 5, EntityNode = 6, ProcessingInstructionNode = 7, CommentNode = 8, DocumentNode = 9, DocumentTypeNode = 10, DocumentFragmentNode = 11, NotationNode = 12, CharacterDataNode = 13 }</div>
+<li><div class="fn"><a href="#8c5e0b"><b>QDomNode</b></a> () </div>
+<li><div class="fn"><a href="#ed7e21"><b>QDomNode</b></a> ( const QDomNode &amp; ) </div>
+<li><div class="fn">QDomNode&amp; <a href="#633101"><b>operator=</b></a> ( const QDomNode &amp; ) </div>
+<li><div class="fn">bool <a href="#b65c5c"><b>operator==</b></a> ( const QDomNode &amp; ) const</div>
+<li><div class="fn">bool <a href="#df376d"><b>operator!=</b></a> ( const QDomNode &amp; ) const</div>
+<li><div class="fn">virtual <a href="#7365a2"><b>~QDomNode</b></a> () </div>
+<li><div class="fn">virtual QString <a href="#08186f"><b>nodeName</b></a> () const</div>
+<li><div class="fn">virtual QString <a href="#5daaf7"><b>nodeValue</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#7982fc"><b>setNodeValue</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">virtual QDomNode::NodeType <a href="#4aab85"><b>nodeType</b></a> () const</div>
+<li><div class="fn">virtual QDomNode <a href="#1c4785"><b>parentNode</b></a> () const</div>
+<li><div class="fn">virtual QDomNodeList <a href="#9351b0"><b>childNodes</b></a> () const</div>
+<li><div class="fn">virtual QDomNode <a href="#7d7903"><b>firstChild</b></a> () const</div>
+<li><div class="fn">virtual QDomNode <a href="#18fcf9"><b>lastChild</b></a> () const</div>
+<li><div class="fn">virtual QDomNode <a href="#7b9167"><b>previousSibling</b></a> () const</div>
+<li><div class="fn">virtual QDomNode <a href="#c400a2"><b>nextSibling</b></a> () const</div>
+<li><div class="fn">virtual QDomNamedNodeMap <a href="#b801ac"><b>attributes</b></a> () const</div>
+<li><div class="fn">virtual QDomDocument <a href="#4a775a"><b>ownerDocument</b></a> () const</div>
+<li><div class="fn">virtual QDomNode <a href="#8117a3"><b>insertBefore</b></a> ( const QDomNode &amp; newChild, const QDomNode &amp; refChild ) </div>
+<li><div class="fn">virtual QDomNode <a href="#1b1f8c"><b>insertAfter</b></a> ( const QDomNode &amp; newChild, const QDomNode &amp; refChild ) </div>
+<li><div class="fn">virtual QDomNode <a href="#65a298"><b>replaceChild</b></a> ( const QDomNode &amp; newChild, const QDomNode &amp; oldChild ) </div>
+<li><div class="fn">virtual QDomNode <a href="#94a019"><b>removeChild</b></a> ( const QDomNode &amp; oldChild ) </div>
+<li><div class="fn">virtual QDomNode <a href="#50474f"><b>appendChild</b></a> ( const QDomNode &amp; newChild ) </div>
+<li><div class="fn">virtual QDomNode <a href="#7b27fa"><b>cloneNode</b></a> ( bool deep = TRUE ) const</div>
+<li><div class="fn">virtual bool <a href="#c8ff73"><b>isAttr</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#fbabaf"><b>isCDATASection</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#ccde2e"><b>isDocumentFragment</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#db7d2a"><b>isDocument</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#3179ff"><b>isDocumentType</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#c31d27"><b>isElement</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#1b4488"><b>isEntityReference</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#3419b5"><b>isText</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#c7b67e"><b>isEntity</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#1ab3da"><b>isNotation</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#1981ee"><b>isProcessingInstruction</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#bf5e29"><b>isCharacterData</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#b7f577"><b>isComment</b></a> () const</div>
+<li><div class="fn">QDomNode <a href="#59aef3"><b>namedItem</b></a> ( const QString &amp; name ) const</div>
+<li><div class="fn">bool <a href="#aa255a"><b>isNull</b></a> () const</div>
+<li><div class="fn">void <a href="#57da2a"><b>clear</b></a> () </div>
+<li><div class="fn">QDomAttr <a href="#097877"><b>toAttr</b></a> () </div>
+<li><div class="fn">QDomCDATASection <a href="#7c84f9"><b>toCDATASection</b></a> () </div>
+<li><div class="fn">QDomDocumentFragment <a href="#a0e273"><b>toDocumentFragment</b></a> () </div>
+<li><div class="fn">QDomDocument <a href="#7b4006"><b>toDocument</b></a> () </div>
+<li><div class="fn">QDomDocumentType <a href="#9a7e95"><b>toDocumentType</b></a> () </div>
+<li><div class="fn">QDomElement <a href="#7be3a4"><b>toElement</b></a> () </div>
+<li><div class="fn">QDomEntityReference <a href="#9f7473"><b>toEntityReference</b></a> () </div>
+<li><div class="fn">QDomText <a href="#125129"><b>toText</b></a> () </div>
+<li><div class="fn">QDomEntity <a href="#f257b2"><b>toEntity</b></a> () </div>
+<li><div class="fn">QDomNotation <a href="#c9540c"><b>toNotation</b></a> () </div>
+<li><div class="fn">QDomProcessingInstruction <a href="#02710d"><b>toProcessingInstruction</b></a> () </div>
+<li><div class="fn">QDomCharacterData <a href="#ad3287"><b>toCharacterData</b></a> () </div>
+<li><div class="fn">QDomComment <a href="#da2fc1"><b>toComment</b></a> () </div>
+<li><div class="fn">void <a href="#37ea58"><b>save</b></a> ( QTextStream &amp;, int ) const</div>
+</ul>
+<h2>Protected Members</h2>
+<ul>
+<li><div class="fn"><b>QDomNode</b> ( QDOM_NodePrivate * ) (internal)</div>
+</ul>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QDomNode class is the base class for all nodes of the DOM tree.
+<p>
+This class is the base class for almost all other classes in the DOM. Many
+functions in the DOM return a QDomNode. The various isXxx() functions are
+useful to find out the type of the node. A QDomNode can be converted to a
+subclass by using the toXxx() function family.
+<p>Copies of the QDomNode class share their data; this means modifying one will
+change all copies. This is especially useful in combination with functions
+which return a QDomNode, e.g. <a href="#7d7903">firstChild</a>(). You can make an independent copy
+of the node with <a href="#7b27fa">cloneNode</a>().
+<p>The following example looks for the first element in an XML document and
+prints its name:
+<pre>  <a href="qdomdocument.html">QDomDocument</a> d;
+  d.<a href="qdomdocument.html#4885cb">setContent</a>( someXML );
+  <a href="qdomnode.html">QDomNode</a> n = d.<a href="#7d7903">firstChild</a>();
+  while ( !n.<a href="#aa255a">isNull</a>() ) {
+      if ( n.<a href="#c31d27">isElement</a> ) {
+          <a href="qdomelement.html">QDomElement</a> e = n.<a href="#7be3a4">toElement</a>();
+          cout &lt;&lt; "The name of the element is " &lt;&lt; e.<a href="qdomelement.html#a75b61">tagName</a>() &lt;&lt; endl;
+          return;
+      }
+      n = n.<a href="#c400a2">nextSibling</a>();
+  }
+  cout &lt;&lt; "no element in the Document" &lt;&lt; endl;
+</pre>
+<p>For further information about the Document Objct Model see
+<a href="http://www.w3.org/TR/REC-DOM-Level-1/">http://www.w3.org/TR/REC-DOM-Level-1/</a>.
+For a more general introduction of the DOM implementation see the
+<a href="qdomdocument.html">QDomDocument</a> documentation.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="8c5e0b"></a>QDomNode::QDomNode ()</h3>
+<p>Constructs an empty node.
+<h3 class="fn"><a name="ed7e21"></a>QDomNode::QDomNode ( const QDomNode &amp; <a href="n.html">n</a> )</h3>
+<p>Copy constructor.
+<p>The data of the copy is shared: modifying one will also change the other. If
+you want to make a real copy, use <a href="#7b27fa">cloneNode</a>() instead.
+<h3 class="fn"><a name="7365a2"></a>QDomNode::~QDomNode () <code>[virtual]</code></h3>
+<p>Destructor.
+<h3 class="fn">QDomNode <a name="50474f"></a>QDomNode::appendChild ( const QDomNode &amp; newChild ) <code>[virtual]</code></h3>
+<p>Appends <em>newChild</em> to the end of the children list.
+<p>If <em>newChild</em> is currently child of another parent, then it is reparented.
+If <em>newChild</em> is currently a child of this QDomNode, then its position in
+the list of children is changed.
+<p>Returns a new reference to <em>newChild.</em>
+<p>See also  <a href="#8117a3">insertBefore</a>(), <a href="#1b1f8c">insertAfter</a>(), <a href="#65a298">replaceChild</a>() and <a href="#94a019">removeChild</a>().
+<h3 class="fn"><a href="qdomnamednodemap.html">QDomNamedNodeMap</a> <a name="b801ac"></a>QDomNode::attributes () const <code>[virtual]</code></h3>
+<p>Returns a map of all attributes. Attributes are only provided for
+<a href="qdomelement.html">QDomElement</a>.
+<p>Changing the attributes in the map will also change the attributes of this
+QDomNode.
+<p>Reimplemented in <a href="qdomelement.html#ae6460">QDomElement</a>.
+<h3 class="fn"><a href="qdomnodelist.html">QDomNodeList</a> <a name="9351b0"></a>QDomNode::childNodes () const <code>[virtual]</code></h3>
+<p>Returns a list of all child nodes.
+<p>Most often you will call this function on a <a href="qdomelement.html">QDomElement</a> object.
+If the XML document looks like this:
+<p><pre>  &lt;body&gt;
+   &lt;h1&gt;Heading&lt;/h1&gt;
+   &lt;p&gt;Hallo &lt;b&gt;you&lt;/b&gt;&lt;/p&gt;
+  &lt;/body&gt;
+</pre>
+<p>Then the list of child nodes for the "body"-element will contain the node
+created by the &lt;h1&gt; tag and the node created by the &lt;p&gt; tag.
+<p>The nodes in the list are not copied; so changing the nodes in the list will
+also change the children of this node.
+<p>See also  <a href="#7d7903">firstChild</a>() and <a href="#18fcf9">lastChild</a>().
+<h3 class="fn">void <a name="57da2a"></a>QDomNode::clear ()</h3>
+<p>Dereferences the internal object. The node is then a null node.
+<p>See also  <a href="#aa255a">isNull</a>().
+<h3 class="fn">QDomNode <a name="7b27fa"></a>QDomNode::cloneNode ( bool deep = TRUE ) const <code>[virtual]</code></h3>
+<p>Creates a real copy of the QDomNode.
+<p>If <em>deep</em> is TRUE, then the cloning is done recursive.
+That means all children are copied, too. Otherwise the cloned
+node does not contain child nodes.
+<h3 class="fn">QDomNode <a name="7d7903"></a>QDomNode::firstChild () const <code>[virtual]</code></h3>
+<p>Returns the first child of the node. If there is no child node, a null node
+is returned.
+<p>See also  <a href="#18fcf9">lastChild</a>() and <a href="#9351b0">childNodes</a>().
+<h3 class="fn">QDomNode <a name="1b1f8c"></a>QDomNode::insertAfter ( const QDomNode &amp; newChild, const QDomNode &amp; refChild ) <code>[virtual]</code></h3>
+<p>Inserts the node <em>newChild</em> after the child node <em>refChild. refChild</em>
+has to be a direct child of this node. If <em>refChild</em> is null then <em>newChild</em> is appended as last child.
+<p>If <em>newChild</em> is currently child of another parent, then it is reparented.
+If <em>newChild</em> is currently a child of this QDomNode, then its position in
+the list of children is changed.
+<p>If <em>newChild</em> is a <a href="qdomdocumentfragment.html">QDomDocumentFragment</a>, then the children of the fragment
+are removed from the fragment and inserted after <em>refChild.</em>
+<p>Returns a new reference to <em>newChild</em> on success or an empty node on failure.
+<p>See also  <a href="#8117a3">insertBefore</a>(), <a href="#65a298">replaceChild</a>(), <a href="#94a019">removeChild</a>() and <a href="#50474f">appendChild</a>().
+<h3 class="fn">QDomNode <a name="8117a3"></a>QDomNode::insertBefore ( const QDomNode &amp; newChild, const QDomNode &amp; refChild ) <code>[virtual]</code></h3>
+<p>Inserts the node <em>newChild</em> before the child node <em>refChild. refChild</em>
+has to be a direct child of this node. If <em>refChild</em> is null then <em>newChild</em> is inserted as first child.
+<p>If <em>newChild</em> is currently child of another parent, then it is reparented.
+If <em>newChild</em> is currently a child of this QDomNode, then its position in
+the list of children is changed.
+<p>If <em>newChild</em> is a <a href="qdomdocumentfragment.html">QDomDocumentFragment</a>, then the children of the fragment
+are removed from the fragment and inserted after <em>refChild.</em>
+<p>Returns a new reference to <em>newChild</em> on success or an empty node on
+failure.
+<p>See also  <a href="#1b1f8c">insertAfter</a>(), <a href="#65a298">replaceChild</a>(), <a href="#94a019">removeChild</a>() and <a href="#50474f">appendChild</a>().
+<h3 class="fn">bool <a name="c8ff73"></a>QDomNode::isAttr () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is an attribute, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a QDomAttribute; you can get the QDomAttribute with toAttribute().
+<p>See also  toAttribute().
+<p>Reimplemented in <a href="qdomattr.html#893da7">QDomAttr</a>.
+<h3 class="fn">bool <a name="fbabaf"></a>QDomNode::isCDATASection () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a CDATA section, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomcdatasection.html">QDomCDATASection</a>; you can get the QDomCDATASection with <a href="#7c84f9">toCDATASection</a>().
+<p>See also  <a href="#7c84f9">toCDATASection</a>().
+<p>Reimplemented in <a href="qdomcdatasection.html#2c0785">QDomCDATASection</a>.
+<h3 class="fn">bool <a name="bf5e29"></a>QDomNode::isCharacterData () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a character data node, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomcharacterdata.html">QDomCharacterData</a>; you can get the QDomCharacterData with
+<a href="#ad3287">toCharacterData</a>().
+<p>See also  <a href="#ad3287">toCharacterData</a>().
+<p>Reimplemented in <a href="qdomcharacterdata.html#140660">QDomCharacterData</a>.
+<h3 class="fn">bool <a name="b7f577"></a>QDomNode::isComment () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a comment, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomcomment.html">QDomComment</a>; you can get the QDomComment with <a href="#da2fc1">toComment</a>().
+<p>See also  <a href="#da2fc1">toComment</a>().
+<p>Reimplemented in <a href="qdomcomment.html#e8c8d7">QDomComment</a>.
+<h3 class="fn">bool <a name="db7d2a"></a>QDomNode::isDocument () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a document, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomdocument.html">QDomDocument</a>; you can get the QDomDocument with <a href="#7b4006">toDocument</a>().
+<p>See also  <a href="#7b4006">toDocument</a>().
+<p>Reimplemented in <a href="qdomdocument.html#810ad2">QDomDocument</a>.
+<h3 class="fn">bool <a name="ccde2e"></a>QDomNode::isDocumentFragment () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a document fragment, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomdocumentfragment.html">QDomDocumentFragment</a>; you can get the QDomDocumentFragment with
+<a href="#a0e273">toDocumentFragment</a>().
+<p>See also  <a href="#a0e273">toDocumentFragment</a>().
+<p>Reimplemented in <a href="qdomdocumentfragment.html#508352">QDomDocumentFragment</a>.
+<h3 class="fn">bool <a name="3179ff"></a>QDomNode::isDocumentType () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a document type, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomdocumenttype.html">QDomDocumentType</a>; you can get the QDomDocumentType with <a href="#9a7e95">toDocumentType</a>().
+<p>See also  <a href="#9a7e95">toDocumentType</a>().
+<p>Reimplemented in <a href="qdomdocumenttype.html#f3e3f7">QDomDocumentType</a>.
+<h3 class="fn">bool <a name="c31d27"></a>QDomNode::isElement () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is an element, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomelement.html">QDomElement</a>; you can get the QDomElement with <a href="#7be3a4">toElement</a>().
+<p>See also  <a href="#7be3a4">toElement</a>().
+<p>Reimplemented in <a href="qdomelement.html#077a69">QDomElement</a>.
+<h3 class="fn">bool <a name="c7b67e"></a>QDomNode::isEntity () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is an entity, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomentity.html">QDomEntity</a>; you can get the QDomEntity with <a href="#f257b2">toEntity</a>().
+<p>See also  <a href="#f257b2">toEntity</a>().
+<p>Reimplemented in <a href="qdomentity.html#23b16a">QDomEntity</a>.
+<h3 class="fn">bool <a name="1b4488"></a>QDomNode::isEntityReference () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is an entity reference, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomentityreference.html">QDomEntityReference</a>; you can get the QDomEntityReference with
+<a href="#9f7473">toEntityReference</a>().
+<p>See also  <a href="#9f7473">toEntityReference</a>().
+<p>Reimplemented in <a href="qdomentityreference.html#baa0d1">QDomEntityReference</a>.
+<h3 class="fn">bool <a name="1ab3da"></a>QDomNode::isNotation () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a notation, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomnotation.html">QDomNotation</a>; you can get the QDomNotation with <a href="#c9540c">toNotation</a>().
+<p>See also  <a href="#c9540c">toNotation</a>().
+<p>Reimplemented in <a href="qdomnotation.html#a470af">QDomNotation</a>.
+<h3 class="fn">bool <a name="aa255a"></a>QDomNode::isNull () const</h3>
+<p>Returns TRUE if this node does not reference any internal object, otherwise
+FALSE.
+<h3 class="fn">bool <a name="1981ee"></a>QDomNode::isProcessingInstruction () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a processing instruction, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a>; you can get the QProcessingInstruction with
+<a href="#02710d">toProcessingInstruction</a>().
+<p>See also  <a href="#02710d">toProcessingInstruction</a>().
+<p>Reimplemented in <a href="qdomprocessinginstruction.html#761d2f">QDomProcessingInstruction</a>.
+<h3 class="fn">bool <a name="3419b5"></a>QDomNode::isText () const <code>[virtual]</code></h3>
+<p>Returns TRUE if the node is a text, otherwise FALSE.
+<p>If this function returns TRUE, this does not imply that this object is
+a <a href="qdomtext.html">QDomText</a>; you can get the QDomText with <a href="#125129">toText</a>().
+<p>See also  <a href="#125129">toText</a>().
+<p>Reimplemented in <a href="qdomtext.html#15dd4a">QDomText</a>.
+<h3 class="fn">QDomNode <a name="18fcf9"></a>QDomNode::lastChild () const <code>[virtual]</code></h3>
+<p>Returns the last child of the node. If there is no child node then a null
+node is returned.
+<p>See also  <a href="#7d7903">firstChild</a>() and <a href="#9351b0">childNodes</a>().
+<h3 class="fn">QDomNode <a name="59aef3"></a>QDomNode::namedItem ( const <a href="qstring.html">QString</a> &amp; name ) const</h3>
+<p>Returns the first child node for which <a href="#08186f">nodeName</a>() equals <em>name.</em>
+<p>If no such direct child exists, a null node is returned.
+<p>See also  <a href="#08186f">nodeName</a>().
+<h3 class="fn">QDomNode <a name="c400a2"></a>QDomNode::nextSibling () const <code>[virtual]</code></h3>
+<p>Returns the next sibling in the document tree. Changing the returned node
+will also change the node in the document tree.
+<p>If you have XML like this:
+<pre>  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;The text...&lt;/p&gt;
+  &lt;h2&gt;Next heading&lt;/h2&gt;
+</pre>
+<p>and this QDomNode represents the &lt;p&gt; tag, the nextSibling
+will return the node representing the &lt;h2&gt; tag.
+<p>See also  <a href="#7b9167">previousSibling</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="08186f"></a>QDomNode::nodeName () const <code>[virtual]</code></h3>
+<p>Returns the name of the node.
+<p>The meaning of the name depends on the subclass:
+<p><ul>
+<li> <a href="qdomelement.html">QDomElement</a> - the tag name
+<li> <a href="qdomattr.html">QDomAttr</a> - the name of the attribute
+<li> <a href="qdomtext.html">QDomText</a> - the string "#text"
+<li> <a href="qdomcdatasection.html">QDomCDATASection</a> - the string "#cdata-section"
+<li> <a href="qdomentityreference.html">QDomEntityReference</a> - the name of the referenced entity
+<li> <a href="qdomentity.html">QDomEntity</a> - the name of the entity
+<li> <a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a> - the target of the processing instruction
+<li> <a href="qdomdocument.html">QDomDocument</a> - the string "#document"
+<li> <a href="qdomcomment.html">QDomComment</a> - the string "#comment"
+<li> <a href="qdomdocumenttype.html">QDomDocumentType</a> - the name of the document type
+<li> <a href="qdomdocumentfragment.html">QDomDocumentFragment</a> - the string "#document-fragment"
+<li> <a href="qdomnotation.html">QDomNotation</a> - the name of the notation
+</ul>
+<p>See also  <a href="#5daaf7">nodeValue</a>().
+<h3 class="fn">QDomNode::NodeType <a name="4aab85"></a>QDomNode::nodeType() const <code>[virtual]</code></h3>
+<p>Returns the type of the node.
+<p>See also  <a href="#097877">toAttr</a>(), <a href="#7c84f9">toCDATASection</a>(), <a href="#a0e273">toDocumentFragment</a>(), <a href="#7b4006">toDocument</a>(), <a href="#9a7e95">toDocumentType</a>(), <a href="#7be3a4">toElement</a>(), <a href="#9f7473">toEntityReference</a>(), <a href="#125129">toText</a>(), <a href="#f257b2">toEntity</a>(), <a href="#c9540c">toNotation</a>(), <a href="#02710d">toProcessingInstruction</a>(), <a href="#ad3287">toCharacterData</a>() and <a href="#da2fc1">toComment</a>().
+<p>Reimplemented in <a href="qdomdocumentfragment.html#802383">QDomDocumentFragment</a>, <a href="qdomelement.html#4114d9">QDomElement</a>, <a href="qdomdocumenttype.html#d1e5b9">QDomDocumentType</a>, <a href="qdomprocessinginstruction.html#481f85">QDomProcessingInstruction</a>, <a href="qdomentity.html#9479ca">QDomEntity</a>, <a href="qdomdocument.html#5ca55f">QDomDocument</a>, <a href="qdomcomment.html#02d59b">QDomComment</a>, <a href="qdomtext.html#256b05">QDomText</a>, <a href="qdomcharacterdata.html#c224c0">QDomCharacterData</a>, <a href="qdomcdatasection.html#835a93">QDomCDATASection</a>, <a href="qdomattr.html#be9550">QDomAttr</a>, <a href="qdomnotation.html#1c6510">QDomNotation</a> and <a href="qdomentityreference.html#074525">QDomEntityReference</a>.
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="5daaf7"></a>QDomNode::nodeValue () const <code>[virtual]</code></h3>
+<p>Returns the value of the node.
+<p>The meaning of the value depends on the subclass:
+<p><ul>
+<li> <a href="qdomattr.html">QDomAttr</a> - the attribute value
+<li> <a href="qdomtext.html">QDomText</a> - the text
+<li> <a href="qdomcdatasection.html">QDomCDATASection</a> - the content of the CDATA section
+<li> <a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a> - the data of the processing intruction
+<li> <a href="qdomcomment.html">QDomComment</a> - the comment
+</ul>
+<p>All other subclasses not listed above do not have a node value. These classes
+will return a null string.
+<p>See also  <a href="#7982fc">setNodeValue</a>() and <a href="#08186f">nodeName</a>().
+<h3 class="fn">bool <a name="df376d"></a>QDomNode::operator!= ( const QDomNode &amp; <a href="n.html">n</a> ) const</h3>
+<p>Returns TRUE if the two nodes are not equal, otherwise FALSE.
+<h3 class="fn">QDomNode&amp; <a name="633101"></a>QDomNode::operator= ( const QDomNode &amp; <a href="n.html">n</a> )</h3>
+<p>Assignment operator.
+<p>The data of the copy is shared: modifying one will also change the other. If
+you want to make a real copy, use <a href="#7b27fa">cloneNode</a>() instead.
+<h3 class="fn">bool <a name="b65c5c"></a>QDomNode::operator== ( const QDomNode &amp; <a href="n.html">n</a> ) const</h3>
+<p>Returns TRUE if the two nodes are equal, otherwise FALSE.
+<h3 class="fn"><a href="qdomdocument.html">QDomDocument</a> <a name="4a775a"></a>QDomNode::ownerDocument () const <code>[virtual]</code></h3>
+<p>Returns the document to which this node belongs.
+<h3 class="fn">QDomNode <a name="1c4785"></a>QDomNode::parentNode () const <code>[virtual]</code></h3>
+<p>Returns the parent node, If this node has no parent, then a null node is
+returned (i.e. a node for which <a href="#aa255a">isNull</a>() returns TRUE).
+<h3 class="fn">QDomNode <a name="7b9167"></a>QDomNode::previousSibling () const <code>[virtual]</code></h3>
+<p>Returns the previous sibling in the document tree. Changing the returned node
+will also change the node in the document tree.
+<p>If you have XML like this:
+<pre>  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;The text...&lt;/p&gt;
+  &lt;h2&gt;Next heading&lt;/h2&gt;
+</pre>
+<p>and this QDomNode represents the &lt;p&gt; tag, the previousSibling
+will return the node representing the &lt;h1&gt; tag.
+<p>See also  <a href="#c400a2">nextSibling</a>().
+<h3 class="fn">QDomNode <a name="94a019"></a>QDomNode::removeChild ( const QDomNode &amp; oldChild ) <code>[virtual]</code></h3>
+<p>Removes <em>oldChild</em> from the list of children.
+<em>oldChild</em> has to be a direct child of this node.
+<p>Returns a new reference to <em>oldChild</em> on success or a null node on failure.
+<p>See also  <a href="#8117a3">insertBefore</a>(), <a href="#1b1f8c">insertAfter</a>(), <a href="#65a298">replaceChild</a>() and <a href="#50474f">appendChild</a>().
+<h3 class="fn">QDomNode <a name="65a298"></a>QDomNode::replaceChild ( const QDomNode &amp; newChild, const QDomNode &amp; oldChild ) <code>[virtual]</code></h3>
+<p>Replaces <em>oldChild</em> with <em>newChild. oldChild</em> has to be a direct child
+of this node.
+<p>If <em>newChild</em> is currently child of another parent, then it is reparented.
+If <em>newChild</em> is currently a child of this QDomNode, then its position in
+the list of children is changed.
+<p>If <em>newChild</em> is a <a href="qdomdocumentfragment.html">QDomDocumentFragment</a>, then the children of the fragment
+are removed from the fragment and inserted after <em>refChild.</em>
+<p>Returns a new reference to <em>oldChild</em> on success or a null node an failure.
+<p>See also  <a href="#8117a3">insertBefore</a>(), <a href="#1b1f8c">insertAfter</a>(), <a href="#94a019">removeChild</a>() and <a href="#50474f">appendChild</a>().
+<h3 class="fn">void <a name="37ea58"></a>QDomNode::save ( <a href="qtextstream.html">QTextStream</a> &amp; str, int indent ) const</h3>
+<p>Writes the XML representation of the node including all its children
+on the stream.
+<h3 class="fn">void <a name="7982fc"></a>QDomNode::setNodeValue ( const <a href="qstring.html">QString</a> &amp; v ) <code>[virtual]</code></h3>
+<p>Sets the value of the node to <em>v.</em>
+<p>See also  <a href="#5daaf7">nodeValue</a>().
+<h3 class="fn"><a href="qdomattr.html">QDomAttr</a> <a name="097877"></a>QDomNode::toAttr ()</h3>
+<p>Converts a QDomNode into a <a href="qdomattr.html">QDomAttr</a>. If the node is not an attribute,
+the returned object will be null.
+<p>See also  <a href="#c8ff73">isAttr</a>().
+<h3 class="fn"><a href="qdomcdatasection.html">QDomCDATASection</a> <a name="7c84f9"></a>QDomNode::toCDATASection ()</h3>
+<p>Converts a QDomNode into a <a href="qdomcdatasection.html">QDomCDATASection</a>. If the node is not a CDATA
+section, the returned object will be null.
+<p>See also  <a href="#fbabaf">isCDATASection</a>().
+<h3 class="fn"><a href="qdomcharacterdata.html">QDomCharacterData</a> <a name="ad3287"></a>QDomNode::toCharacterData ()</h3>
+<p>Converts a QDomNode into a <a href="qdomcharacterdata.html">QDomCharacterData</a>. If the node is not a character
+data node the returned object will be null.
+<p>See also  <a href="#bf5e29">isCharacterData</a>().
+<h3 class="fn"><a href="qdomcomment.html">QDomComment</a> <a name="da2fc1"></a>QDomNode::toComment ()</h3>
+<p>Converts a QDomNode into a <a href="qdomcomment.html">QDomComment</a>. If the node is not a comment the
+returned object will be null.
+<p>See also  <a href="#b7f577">isComment</a>().
+<h3 class="fn"><a href="qdomdocument.html">QDomDocument</a> <a name="7b4006"></a>QDomNode::toDocument ()</h3>
+<p>Converts a QDomNode into a <a href="qdomdocument.html">QDomDocument</a>. If the node is not a document
+the returned object will be null.
+<p>See also  <a href="#db7d2a">isDocument</a>().
+<h3 class="fn"><a href="qdomdocumentfragment.html">QDomDocumentFragment</a> <a name="a0e273"></a>QDomNode::toDocumentFragment ()</h3>
+<p>Converts a QDomNode into a <a href="qdomdocumentfragment.html">QDomDocumentFragment</a>. If the node is not a
+document fragment the returned object will be null.
+<p>See also  <a href="#ccde2e">isDocumentFragment</a>().
+<h3 class="fn"><a href="qdomdocumenttype.html">QDomDocumentType</a> <a name="9a7e95"></a>QDomNode::toDocumentType ()</h3>
+<p>Converts a QDomNode into a <a href="qdomdocumenttype.html">QDomDocumentType</a>. If the node is not a document
+type the returned object will be null.
+<p>See also  <a href="#3179ff">isDocumentType</a>().
+<h3 class="fn"><a href="qdomelement.html">QDomElement</a> <a name="7be3a4"></a>QDomNode::toElement ()</h3>
+<p>Converts a QDomNode into a <a href="qdomelement.html">QDomElement</a>. If the node is not an element
+the returned object will be null.
+<p>See also  <a href="#c31d27">isElement</a>().
+<h3 class="fn"><a href="qdomentity.html">QDomEntity</a> <a name="f257b2"></a>QDomNode::toEntity ()</h3>
+<p>Converts a QDomNode into a <a href="qdomentity.html">QDomEntity</a>. If the node is not an entity the
+returned object will be null.
+<p>See also  <a href="#c7b67e">isEntity</a>().
+<h3 class="fn"><a href="qdomentityreference.html">QDomEntityReference</a> <a name="9f7473"></a>QDomNode::toEntityReference ()</h3>
+<p>Converts a QDomNode into a <a href="qdomentityreference.html">QDomEntityReference</a>. If the node is not an entity
+reference, the returned object will be null.
+<p>See also  <a href="#1b4488">isEntityReference</a>().
+<h3 class="fn"><a href="qdomnotation.html">QDomNotation</a> <a name="c9540c"></a>QDomNode::toNotation ()</h3>
+<p>Converts a QDomNode into a <a href="qdomnotation.html">QDomNotation</a>. If the node is not a notation
+the returned object will be null.
+<p>See also  <a href="#1ab3da">isNotation</a>().
+<h3 class="fn"><a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a> <a name="02710d"></a>QDomNode::toProcessingInstruction ()</h3>
+<p>Converts a QDomNode into a <a href="qdomprocessinginstruction.html">QDomProcessingInstruction</a>. If the node is not a
+processing instruction the returned object will be null.
+<p>See also  <a href="#1981ee">isProcessingInstruction</a>().
+<h3 class="fn"><a href="qdomtext.html">QDomText</a> <a name="125129"></a>QDomNode::toText ()</h3>
+<p>Converts a QDomNode into a <a href="qdomtext.html">QDomText</a>. If the node is not a text, the returned
+object will be null.
+<p>See also  <a href="#3419b5">isText</a>().
+<h3 class="fn"><a name="985626"></a>QDomNode::QDomNode ( QDOM_NodePrivate * <a href="n.html">n</a> ) <code>[protected]</code></h3>
+<p>For internal use only.
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>

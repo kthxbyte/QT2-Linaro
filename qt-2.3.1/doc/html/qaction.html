@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Qt Toolkit - QAction Class</title><style type="text/css"><!--
+h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }body { background: white; color: black; }
+--></style>
+</head><body bgcolor="#ffffff">
+
+<table width="100%">
+<tr><td><a href="index.html">
+<img width="100" height="100" src="qtlogo.png"
+alt="Home" border="0"><img width="100"
+height="100" src="face.png" alt="Home" border="0">
+</a><td valign=top><div align=right><img src="dochead.png" width="472" height="27"><br>
+<a href="classes.html"><b>Classes</b></a>
+- <a href="annotated.html">Annotated</a>
+- <a href="hierarchy.html">Tree</a>
+- <a href="functions.html">Functions</a>
+- <a href="index.html">Home</a>
+- <a href="topicals.html"><b>Structure</b></a>
+</div>
+</table>
+
+<h1 align=center>QAction Class Reference</h1><br clear="all">
+<p>
+The QAction class abstracts a user interface action that can appear both in menus and tool bars.
+<a href="#details">More...</a>
+<p>
+<code>#include &lt;<a href="qaction-h.html">qaction.h</a>&gt;</code>
+<p>
+Inherits <a href="qobject.html">QObject</a>.
+<p>Inherited by <a href="qactiongroup.html">QActionGroup</a>.
+<p><a href="qaction-members.html">List of all member functions.</a>
+<h2>Public Members</h2>
+<ul>
+<li><div class="fn"><a href="#74257e"><b>QAction</b></a> ( QObject * parent = 0, const char * name = 0, bool toggle = FALSE ) </div>
+<li><div class="fn"><a href="#1411cb"><b>QAction</b></a> ( const QString &amp; text, const QIconSet &amp; icon, const QString &amp; menuText, int accel, QObject * parent, const char * name = 0, bool toggle = FALSE ) </div>
+<li><div class="fn"><a href="#2a6f6a"><b>QAction</b></a> ( const QString &amp; text, const QString &amp; menuText, int accel, QObject * parent, const char * name = 0, bool toggle = FALSE ) </div>
+<li><div class="fn"><a href="#209573"><b>~QAction</b></a> () </div>
+<li><div class="fn">virtual void <a href="#148a6a"><b>setIconSet</b></a> ( const QIconSet &amp; ) </div>
+<li><div class="fn">QIconSet <a href="#d4594b"><b>iconSet</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#fe9569"><b>setText</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">QString <a href="#3f2760"><b>text</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#67b4d4"><b>setMenuText</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">QString <a href="#77b957"><b>menuText</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#bc6ad1"><b>setToolTip</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">QString <a href="#71ad10"><b>toolTip</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#b9636a"><b>setStatusTip</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">QString <a href="#2a20d2"><b>statusTip</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#b31ca1"><b>setWhatsThis</b></a> ( const QString &amp; ) </div>
+<li><div class="fn">QString <a href="#8e941c"><b>whatsThis</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#eff3b3"><b>setAccel</b></a> ( int key ) </div>
+<li><div class="fn">int <a href="#bd7786"><b>accel</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#74af4d"><b>setToggleAction</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#0da453"><b>isToggleAction</b></a> () const</div>
+<li><div class="fn">virtual void <a href="#6c4f01"><b>setOn</b></a> ( bool ) </div>
+<li><div class="fn">bool <a href="#34d879"><b>isOn</b></a> () const</div>
+<li><div class="fn">bool <a href="#324d63"><b>isEnabled</b></a> () const</div>
+<li><div class="fn">virtual bool <a href="#c102ce"><b>addTo</b></a> ( QWidget * ) </div>
+<li><div class="fn">virtual bool <a href="#53e64c"><b>removeFrom</b></a> ( QWidget * ) </div>
+</ul>
+<h2>Public Slots</h2>
+<ul>
+<li><div class="fn">virtual void <a href="#a1b4a7"><b>setEnabled</b></a> ( bool ) </div>
+</ul>
+<h2>Signals</h2>
+<ul>
+<li><div class="fn">void <a href="#1c76dc"><b>activated</b></a> () </div>
+<li><div class="fn">void <a href="#33bf89"><b>toggled</b></a> ( bool ) </div>
+</ul>
+<h2>Properties</h2>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr><th>Type<th>Name<th>READ<th>WRITE<th>Options
+<tr><td>bool<td>toggleAction<td>isToggleAction<td>setToggleAction<td>&nbsp;
+<tr><td>bool<td>on<td>isOn<td>setOn<td>&nbsp;
+<tr><td>bool<td>enabled<td>isEnabled<td>setEnabled<td>&nbsp;
+<tr><td>QIconSet<td>iconSet<td>iconSet<td>setIconSet<td>&nbsp;
+<tr><td>QString<td>text<td>text<td>setText<td>&nbsp;
+<tr><td>QString<td>menuText<td>menuText<td>setMenuText<td>&nbsp;
+<tr><td>QString<td>toolTip<td>toolTip<td>setToolTip<td>&nbsp;
+<tr><td>QString<td>statusTip<td>statusTip<td>setStatusTip<td>&nbsp;
+<tr><td>QString<td>whatsThis<td>whatsThis<td>setWhatsThis<td>&nbsp;
+<tr><td>int<td>accel<td>accel<td>setAccel<td>&nbsp;
+</table>
+<hr><h2><a name="details"></a>Detailed Description</h2>
+The QAction class abstracts a user interface action that can appear both in menus and tool bars.
+<p>
+There are two basic kind of user interface actions, command actions
+and options. QAction usually models a command action, for example
+"open file". When the actual action shall be performed, it emits the
+<a href="#1c76dc">activated</a>() signal. Options, for example the drawing tools in a
+paint program, are represented by toggle actions (see
+<a href="#74af4d">setToggleAction</a>() ). A toggle action emits a <a href="#33bf89">toggled</a>() signal
+whenever it changes state. Several toggle actions can be combined in
+a <a href="qactiongroup.html">QActionGroup</a>.
+<p>To provide an action to the user, use <a href="#c102ce">addTo</a>() to add it to either a
+menu or a tool bar, for example:
+<pre>  <a href="qpopupmenu.html">QPopupMenu</a>* popup = new <a href="qpopupmenu.html">QPopupMenu</a>;
+  <a href="qaction.html">QAction</a>* myAction= new <a href="qaction.html">QAction</a>;
+  myAction-&gt;<a href="#fe9569">setText</a>( "MyAction" );
+  myAction-&gt;<a href="#c102ce">addTo</a>( popup );
+</pre>
+<p>You can add an action to an arbitrary number of menus and toolbars
+and remove it again with <a href="#53e64c">removeFrom</a>().
+<p>Changing an action's properties, for example using <a href="#a1b4a7">setEnabled</a>(),
+<a href="#6c4f01">setOn</a>() or <a href="#fe9569">setText</a>(), immediately shows up in all
+representations. Other properties that define the way an action is
+presented to the user are <a href="#d4594b">iconSet</a>(), <a href="#77b957">menuText</a>(), <a href="#71ad10">toolTip</a>(),
+<a href="#2a20d2">statusTip</a>() and <a href="#8e941c">whatsThis</a>().
+<p>An action may also be triggered by an accelerator key declared with
+<a href="#eff3b3">setAccel</a>(). Since accelerators are window specific, the application
+window has to be an ancestor of the action. Generally, it is
+therefore a good idea to always create actions as direct children of
+the main window.
+
+<hr><h2>Member Function Documentation</h2>
+<h3 class="fn"><a name="74257e"></a>QAction::QAction ( <a href="qobject.html">QObject</a> * parent = 0, const char * name = 0, bool toggle = FALSE )</h3>
+<p>Constructs an action with parent <em>parent</em> and name <em>name.</em>
+<p>If <em>toggle</em> is TRUE, the action becomes a toggle action.
+<p>If the parent is a <a href="qactiongroup.html">QActionGroup</a>, the action automatically becomes a
+member of it.
+<p>Note: for accelerators to work, the parent or one of its ancestors
+has to be the application window.
+<h3 class="fn"><a name="1411cb"></a>QAction::QAction ( const <a href="qstring.html">QString</a> &amp; text, const <a href="qiconset.html">QIconSet</a> &amp; icon, const <a href="qstring.html">QString</a> &amp; menuText, int accel, <a href="qobject.html">QObject</a> * parent, const char * name = 0, bool toggle = FALSE )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Constructs an action with text <em>text,</em> icon <em>icon,</em> menu text
+<em>menuText,</em> a keyboard accelerator <em>accel,</em> a <em>parent</em> and name
+<em>name. text</em> will also show up in tooltips, unless you call
+<a href="#bc6ad1">setToolTip</a>() with a different tip later.
+<p>If the parent is a <a href="qactiongroup.html">QActionGroup</a>, the action automatically becomes a
+member of it.
+<p>Note: for accelerators to work, the parent or one of its ancestors
+has to be the application window.
+<h3 class="fn"><a name="2a6f6a"></a>QAction::QAction ( const <a href="qstring.html">QString</a> &amp; text, const <a href="qstring.html">QString</a> &amp; menuText, int accel, <a href="qobject.html">QObject</a> * parent, const char * name = 0, bool toggle = FALSE )</h3>
+<p>This is an overloaded member function, provided for convenience.  It differs from the above function only in what argument(s) it accepts.
+<p>Constructs an action with text <em>text,</em> menu text <em>menuText,</em> a keyboard accelerator <em>accel,</em> a <em>parent</em> and name <em>name. text</em> will also show up in tooltips, unless you call
+<a href="#bc6ad1">setToolTip</a>() with a different tip later.
+<p>If <em>toggle</em> is TRUE, the action becomes a toggle action.
+<p>If the parent is a <a href="qactiongroup.html">QActionGroup</a>, the action automatically becomes a
+member of it.
+<p>Note: for accelerators to work, the parent or one of its ancestors
+has to be the application window.
+<h3 class="fn"><a name="209573"></a>QAction::~QAction ()</h3>
+<p>Destroys the object and frees any allocated resources.
+<h3 class="fn">int <a name="bd7786"></a>QAction::accel () const</h3>
+<p>Returns the acceleration key.
+<p>See also  <a href="#eff3b3">setAccel</a>().
+<h3 class="fn">void <a name="1c76dc"></a>QAction::activated () <code>[signal]</code></h3>
+<p>This signal is emitted when the action was activated by the user.
+<p>See also  <a href="#33bf89">toggled</a>().
+<h3 class="fn">bool <a name="c102ce"></a>QAction::addTo ( <a href="qwidget.html">QWidget</a> * w ) <code>[virtual]</code></h3>
+<p>Adds this action to widget <em>w.</em>
+<p>Currently supported widget types are <a href="qtoolbar.html">QToolBar</a> and <a href="qpopupmenu.html">QPopupMenu</a>.
+<p>Returns TRUE when the action was added successfully, FALSE
+otherwise.
+<p>See also  <a href="#53e64c">removeFrom</a>().
+<p>Reimplemented in <a href="qactiongroup.html#a3d837">QActionGroup</a>.
+<h3 class="fn"><a href="qiconset.html">QIconSet</a> <a name="d4594b"></a>QAction::iconSet () const</h3>
+<p>Returns the icon set.
+<p>See also  <a href="#148a6a">setIconSet</a>();.
+<h3 class="fn">bool <a name="324d63"></a>QAction::isEnabled () const</h3>
+<p>Returns TRUE if the action is enabled, or FALSE if it is disabled.
+<p>See also  <a href="#a1b4a7">setEnabled</a>().
+<h3 class="fn">bool <a name="34d879"></a>QAction::isOn () const</h3>
+<p>Returns TRUE if this toggle action is switched on, or FALSE if it is
+switched off.
+<p>See also  <a href="#6c4f01">setOn</a>() and <a href="#0da453">isToggleAction</a>().
+<h3 class="fn">bool <a name="0da453"></a>QAction::isToggleAction () const</h3>
+<p>Returns whether the action is a toggle action or not.
+<p>See also  <a href="#74af4d">setToggleAction</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="77b957"></a>QAction::menuText () const</h3>
+<p>Returns the text used for menu items.
+<p>If no menu text has been defined yet, this is the same as <a href="#3f2760">text</a>().
+<p>See also  <a href="#67b4d4">setMenuText</a>() and <a href="#3f2760">text</a>().
+<h3 class="fn">bool <a name="53e64c"></a>QAction::removeFrom ( <a href="qwidget.html">QWidget</a> * w ) <code>[virtual]</code></h3>
+<p>Removes the action from widget <em>w</em>
+<p>Returns TRUE when the action was removed successfully, FALSE
+otherwise.
+<p>See also  <a href="#c102ce">addTo</a>().
+<p>Reimplemented in <a href="qactiongroup.html#147c1f">QActionGroup</a>.
+<h3 class="fn">void <a name="eff3b3"></a>QAction::setAccel ( int key ) <code>[virtual]</code></h3>
+<p>Sets the action's accelerator to <em>key.</em>
+<p>Note: For accelerators to work, the parent or one of its ancestors
+has to be the application window.
+<p>See also  <a href="#bd7786">accel</a>().
+<h3 class="fn">void <a name="a1b4a7"></a>QAction::setEnabled ( bool enable ) <code>[virtual slot]</code></h3>
+<p>Enables the action if <em>enable</em> is TRUE, otherwise disables it.
+<p>Menu items and/or tool buttons presenting the action to the user are
+updated accordingly.
+<p>See also  <a href="#324d63">isEnabled</a>().
+<p>Reimplemented in <a href="qactiongroup.html#bffcf9">QActionGroup</a>.
+<h3 class="fn">void <a name="148a6a"></a>QAction::setIconSet ( const <a href="qiconset.html">QIconSet</a> &amp; icon ) <code>[virtual]</code></h3>
+<p>Sets the icon set to <em>icon.</em>
+<p>See also  <a href="#d4594b">iconSet</a>();.
+<h3 class="fn">void <a name="67b4d4"></a>QAction::setMenuText ( const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual]</code></h3>
+<p>Sets a special text <em>text</em> for menu items. Use this to specify
+ellipses or keyboard shortcuts that should not show up in tooltips or
+as button text.
+<p>See also  <a href="#fe9569">setText</a>() and <a href="#77b957">menuText</a>().
+<h3 class="fn">void <a name="6c4f01"></a>QAction::setOn ( bool enable ) <code>[virtual]</code></h3>
+<p>Switches a toggle action on if <em>enable</em> is TRUE or off if <em>enable</em> is
+FALSE.
+<p>This function should be called only for toggle actions.
+<p>See also  <a href="#34d879">isOn</a>() and <a href="#74af4d">setToggleAction</a>().
+<h3 class="fn">void <a name="b9636a"></a>QAction::setStatusTip ( const <a href="qstring.html">QString</a> &amp; tip ) <code>[virtual]</code></h3>
+<p>Sets the status tip to <em>tip.</em> The tip will be displayed on
+all status bars the topmost parent of the action provides.
+<p>See also  <a href="#2a20d2">statusTip</a>().
+<h3 class="fn">void <a name="fe9569"></a>QAction::setText ( const <a href="qstring.html">QString</a> &amp; text ) <code>[virtual]</code></h3>
+<p>Sets the text to <em>text.</em>
+<p>See also  <a href="#67b4d4">setMenuText</a>() and <a href="#3f2760">text</a>().
+<h3 class="fn">void <a name="74af4d"></a>QAction::setToggleAction ( bool enable ) <code>[virtual]</code></h3>
+<p>Makes the action a toggle action if <em>enable</em> is TRUE, or a
+normal action if <em>enable</em> is FALSE.
+<p>You may want to add toggle actions to a <a href="qactiongroup.html">QActionGroup</a> for exclusive
+toggling.
+<p>See also  <a href="#0da453">isToggleAction</a>().
+<h3 class="fn">void <a name="bc6ad1"></a>QAction::setToolTip ( const <a href="qstring.html">QString</a> &amp; tip ) <code>[virtual]</code></h3>
+<p>Sets the tool tip to <em>tip.</em>
+<p>See also  <a href="#71ad10">toolTip</a>().
+<h3 class="fn">void <a name="b31ca1"></a>QAction::setWhatsThis ( const <a href="qstring.html">QString</a> &amp; whatsThis ) <code>[virtual]</code></h3>
+<p>Sets What's This help to <em>whatsThis.</em>
+<p>See also  <a href="#8e941c">whatsThis</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="2a20d2"></a>QAction::statusTip () const</h3>
+<p>Returns the current status tip.
+<p>If not status tip has been defined yet, this is the same as <a href="#71ad10">toolTip</a>()
+<p>See also  <a href="#b9636a">setStatusTip</a>() and <a href="#71ad10">toolTip</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="3f2760"></a>QAction::text () const</h3>
+<p>Returns the current text.
+<p>See also  <a href="#fe9569">setText</a>() and <a href="#77b957">menuText</a>().
+<h3 class="fn">void <a name="33bf89"></a>QAction::toggled ( bool ) <code>[signal]</code></h3>
+<p>This signal is emitted when a toggle action changes state.
+<p>See also  <a href="#1c76dc">activated</a>() and <a href="#74af4d">setToggleAction</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="71ad10"></a>QAction::toolTip () const</h3>
+<p>Returns the current tool tip.
+<p>If no tool tip has been defined yet, it returns text
+and a hotkey hint.
+<p>See also  <a href="#bc6ad1">setToolTip</a>() and <a href="#3f2760">text</a>().
+<h3 class="fn"><a href="qstring.html">QString</a> <a name="8e941c"></a>QAction::whatsThis () const</h3>
+<p>Returns the What's This help for this action.
+<p>See also  <a href="#b31ca1">setWhatsThis</a>().
+<hr><p>
+Search the documentation, FAQ, qt-interest archive and more (uses
+<a href="http://www.trolltech.com">www.trolltech.com</a>):<br>
+<form method=post action="http://www.trolltech.com/search.cgi">
+<input type=hidden name="version" value="2.3.1"><nobr>
+<input size="50" name="search"><input type=submit value="Search">
+</nobr></form><hr><p>
+This file is part of the <a href="index.html">Qt toolkit</a>,
+copyright &copy; 1995-2000
+<a href="http://www.trolltech.com">Trolltech</a>, all rights reserved.<p><address><hr><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr>
+<td>Copyright © 2000 Trolltech<td><a href="http://www.trolltech.com/trademarks.html">Trademarks</a>
+<td align="right"><div align="right">Qt version 2.3.1</div>
+</table></div></address></body></html>
