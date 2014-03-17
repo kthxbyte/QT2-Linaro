@@ -6,7 +6,7 @@ DASHCROSS		=
 
 # Compiling with support libraries
 SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
-SYSCONF_CXXFLAGS_QT	= -I$(QTDIR)/include
+SYSCONF_CXXFLAGS_QT	= -I/usr/include/freetype2 -I$(QTDIR)/include
 SYSCONF_CXXFLAGS_OPENGL	= -I/usr/X11R6/include
 
 # Compiling YACC output
