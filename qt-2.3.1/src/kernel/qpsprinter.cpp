@@ -2771,10 +2771,6 @@ private:
 };
 
 
-#ifndef _OS_OSF_
-extern "C" char* getenv(char*);
-#endif
-
 QPSPrinterFontTTF::QPSPrinterFontTTF(const QFont &f, QByteArray& d)
 {
     psname = makePSFontName( f );
